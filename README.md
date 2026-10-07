@@ -67,3 +67,10 @@ Mohamed Sacha
 Independent Researcher, Casablanca, Morocco  
 ORCID: 0009-0005-2078-2032  
 Email: www.sachamed@gmail.com
+
+
+## Deduplicated public layout
+This public repository is canonicalized to avoid redundant scientific payloads. Exact repeated
+files are stored once; historical paths that must remain resolvable are Git symbolic links.
+Pure mirror/checkpoint views were removed. DEDUPLICATION_MAP.csv documents the canonical target
+for each removed or aliased duplicate.

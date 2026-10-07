@@ -16,3 +16,11 @@ The current hard-stop scan reports that the physical BOUNDARY_TO_PATH, volume-ma
 - `SHA256_MANIFEST.csv`: hashes for every file in this bundle.
 
 The bundle is intended as the exact restart package for the remaining numerical contraction, not as a false FULL_PASS certificate.
+
+
+## Repository-clean layout
+Exact duplicate payloads are canonicalized in this public repository. 01_SOURCE_PACKAGES
+retains provenance paths; repeated bytes are represented by Git symbolic links to the canonical
+files. The fully redundant 02_EXTRA_CHECKPOINTS mirror was removed. 03_REQUESTED_ELEMENTS
+retains the element-status records and the CN6 compatibility path used by the contract audit.
+DEDUPLICATION_MAP.csv at repository root records every removed or aliased path.

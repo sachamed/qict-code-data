@@ -1,0 +1,20 @@
+{
+  "actions": {
+    "removed_redundant_views": 60,
+    "symlink_aliases": 54,
+    "total": 114
+  },
+  "after": {
+    "regular_duplicate_groups": 0,
+    "regular_duplicate_instances": 0,
+    "symlink_alias_count": 54
+  },
+  "before": {
+    "duplicate_groups": 68,
+    "redundant_bytes": 16641557,
+    "redundant_instances": 115
+  },
+  "classification": "REPOSITORY_DEDUPLICATION_AUDIT",
+  "policy": "Scientific content is stored once. Required historical paths are symlink aliases; redundant mirror views are removed.",
+  "remaining_regular_duplicates": {}
+}
