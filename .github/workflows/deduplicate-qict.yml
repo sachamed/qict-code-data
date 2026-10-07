@@ -55,7 +55,7 @@ jobs:
           if P2.exists():
               for p in sorted(P2.rglob("*")):
                   if p.is_file():
-                      actions.append(("remove_redundant_view",str(p.relative_to(ROOT)),""))
+                      actions.append(("remove_redundant_view",str(p),""))
               shutil.rmtree(P2)
 
           def priority(p):
