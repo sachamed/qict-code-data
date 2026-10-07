@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.so
+*.dylib
+*.dll
+.DS_Store
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+*.log
+*.aux
+*.out
+*.toc
+*.blg
+*.bbl
