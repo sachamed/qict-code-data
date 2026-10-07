@@ -1,0 +1,52 @@
+{
+  "edition_date": "2026-10-06",
+  "quark_masses": {
+    "u": {"value_MeV": 2.20, "unc_MeV": 0.07, "scheme": "MSbar", "scale": "2 GeV", "source": "PDG2026 Eq. 60.7"},
+    "d": {"value_MeV": 4.69, "unc_MeV": 0.05, "scheme": "MSbar", "scale": "2 GeV", "source": "PDG2026 Eq. 60.8"},
+    "s": {"value_MeV": 92.74, "unc_MeV": 0.54, "scheme": "MSbar", "scale": "2 GeV", "source": "PDG2026 Eq. 60.5"},
+    "c": {"value_GeV": 1.275, "unc_GeV": 0.009, "scheme": "MSbar", "scale": "m_c", "source": "PDG2026 Eq. 60.23"},
+    "b": {"value_GeV": 4.196, "unc_GeV": 0.012, "scheme": "MSbar", "scale": "m_b", "source": "PDG2026 Eq. 60.24"},
+    "t": {"value_GeV": 172.52, "unc_GeV": 0.33, "scheme": "direct LHC mass parameter; approximately pole-like", "scale": "direct combination", "source": "PDG2026 Top Quark review"}
+  },
+  "ckm": {
+    "sin_theta12": 0.22501,
+    "sin_theta13": 0.003732,
+    "sin_theta23": 0.04183,
+    "delta_rad": 1.147,
+    "J": 3.12e-5,
+    "source": "PDG global CKM fit quoted in the current review set"
+  },
+  "pmns_normal_ordering": {
+    "theta12_deg": 33.68,
+    "theta13_deg": 8.52,
+    "theta23_deg": 48.5,
+    "delta_deg": 177.0,
+    "delta_m21_eV2": 7.49e-5,
+    "delta_m3l_eV2": 2.534e-3,
+    "source": "NuFIT 6.0 (2024), normal ordering, IC19 without SK atmospheric likelihood"
+  },
+  "absolute_neutrino_constraints": {
+    "m_beta_upper_eV_90cl": 0.45,
+    "m_beta_source": "KATRIN 259-day result (2025)",
+    "m_bb_upper_range_eV_90cl": [0.028, 0.122],
+    "m_bb_source": "KamLAND-Zen complete dataset (2025); range reflects nuclear matrix elements",
+    "sum_mnu_upper_eV_95cl_LCDM": 0.0642,
+    "sum_mnu_upper_eV_95cl_w0wa": 0.163,
+    "sum_mnu_source": "DESI DR2 combined analyses; cosmology-model dependent"
+  },
+  "photon_time_of_flight": {
+    "fermi_grb090510": {"E_QG2_lower_GeV_95cl": 1.3e11, "representative_energy_GeV": 30.0, "source": "Vasileiou et al. 2013"},
+    "lhaaso_grb221009a": {"E_QG2_lower_GeV_95cl": 7.32534e11, "representative_energy_GeV": 7000.0, "source": "LHAASO Collaboration 2024"},
+    "xishu_grb221009a": {"E_QG2_lower_GeV_95cl": 1.0e13, "representative_energy_GeV": 13000.0, "source": "Xi and Shu 2025"},
+    "hua_grb221009a": {"E_QG2_lower_GeV_95cl": 1.37e12, "representative_energy_GeV": 13000.0, "source": "Hua et al. 2026"}
+  },
+  "grb221009a": {
+    "ra_deg_J2000": 288.254,
+    "dec_deg_J2000": 19.809,
+    "source": "Swift-BAT refined position, GCN 32688"
+  },
+  "constants": {
+    "hbar_GeV_s": 6.582119569e-25,
+    "planck_energy_GeV": 1.22089e19
+  }
+}

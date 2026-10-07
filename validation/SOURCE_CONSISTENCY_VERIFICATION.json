@@ -1,0 +1,19 @@
+{
+  "bib_entry_count": 98,
+  "citation_count": 149,
+  "citation_resolution": "verified",
+  "classification": "SOURCE_CONSISTENCY_VERIFICATION",
+  "editorial_language_screen": "verified",
+  "figure_resolution": "verified",
+  "flavor_classification_screen": "verified",
+  "input_resolution": "verified",
+  "label_count": 2675,
+  "label_uniqueness": "verified",
+  "numerical_consistency_screen": "verified",
+  "reference_count": 1075,
+  "reference_resolution": "verified",
+  "structure_freshness_screen": "verified",
+  "tex_file_count": 225,
+  "title_consistency_screen": "verified",
+  "unsupported_claim_screen": "verified"
+}

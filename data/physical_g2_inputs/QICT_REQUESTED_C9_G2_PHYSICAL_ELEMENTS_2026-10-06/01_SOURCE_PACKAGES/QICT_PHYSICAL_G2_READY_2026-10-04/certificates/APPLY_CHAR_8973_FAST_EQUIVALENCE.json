@@ -1,0 +1,9 @@
+{
+  "cases": 60,
+  "corner_kernel": "C++ O3 native",
+  "geometry_cache": true,
+  "max_abs_error": 1.1102230246251565e-16,
+  "scope": "Regression equivalence against generic Python apply_char on physical step4 input states; optimization only, no physics change.",
+  "status": "PASS_APPLY_CHAR_8973_SPECIALIZED_EQUIVALENCE",
+  "support_mismatches": 0
+}

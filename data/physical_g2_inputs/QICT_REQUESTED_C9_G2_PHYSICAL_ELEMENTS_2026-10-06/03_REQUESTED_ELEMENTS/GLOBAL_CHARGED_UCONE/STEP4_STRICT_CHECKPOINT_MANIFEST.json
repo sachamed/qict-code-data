@@ -1,0 +1,17 @@
+{
+  "checkpoint_bytes": 25995849,
+  "checkpoint_file": "STEP4_STRICT_CONSOLIDATED_STATE.pkl",
+  "checkpoint_sha256": "4a22157eefe982fb6ad06564e2e6d779d18045618deedf69fdbd567d6655455a",
+  "cluster_certified_l2_bound": 4.761260928942132e-07,
+  "cluster_margin": 5.238739071057868e-07,
+  "cluster_target_l2": 1e-06,
+  "l2_norm": 0.05890954955450412,
+  "norm2": 0.003470335028714577,
+  "norm2_abs_difference": 4.336808689942018e-19,
+  "norm2_reference": 0.0034703350287145765,
+  "pid": 8973,
+  "scope": "Certified four-incident-plaquette charged SU2 cluster checkpoint only; not selected global Kato/Riesz state, not C9^(6), not G2.",
+  "source_certificate_sha256": "8c8dd230346135121b4fdd10eecfa287a5dd663f5dbac4e0115e9a4a4007c16e",
+  "status": "PASS_STEP4_STRICT_CONSOLIDATED_CHECKPOINT",
+  "support": 77036
+}

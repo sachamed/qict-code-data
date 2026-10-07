@@ -1,0 +1,14 @@
+{
+  "C0_fro_error": 0.0,
+  "L": 24,
+  "moment_count": 24,
+  "moments_file": "CN6_MOMENTS_L24.npz",
+  "moments_sha256": "c0c2a0b79b8a2a2f68d62618099febd0283634a0c4829e878154950f45f4b770",
+  "numerical_diagnostic": "C11_BLOCK_PENCIL_DIAGNOSTIC_L24.json",
+  "physical_G2_promoted": false,
+  "remaining_for_G2": "Validated spectral-support/edge (or exact flat-extension) certificate plus multivolume stability. Numerical block-pencil poles are diagnostics only.",
+  "rigorous_positivity": "C11_RIGOROUS_POSITIVITY_L24.json",
+  "rigorous_positivity_certified": true,
+  "status": "PASS_C11_RIGOROUS_POSITIVITY__SPECTRAL_CERT_STILL_REQUIRED",
+  "support_complexity_diagnostic": "C11_SUPPORT_COMPLEXITY_DIAGNOSTIC_L24.json"
+}

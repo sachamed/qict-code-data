@@ -1,0 +1,159 @@
+{
+  "absolute_neutrino_reference_constraints": {
+    "m_bb_source": "KamLAND-Zen complete dataset (2025); range reflects nuclear matrix elements",
+    "m_bb_upper_range_eV_90cl": [
+      0.028,
+      0.122
+    ],
+    "m_beta_source": "KATRIN 259-day result (2025)",
+    "m_beta_upper_eV_90cl": 0.45,
+    "sum_mnu_source": "DESI DR2 combined analyses; cosmology-model dependent",
+    "sum_mnu_upper_eV_95cl_LCDM": 0.0642,
+    "sum_mnu_upper_eV_95cl_w0wa": 0.163
+  },
+  "angle_differences_deg": {
+    "ckm": {
+      "theta12_deg": -6.030458566597722,
+      "theta13_deg": 4.66636129153525,
+      "theta23_deg": 16.75187769692971
+    },
+    "pmns": {
+      "theta12_deg": -10.978375816755754,
+      "theta13_deg": -1.2054708297342263,
+      "theta23_deg": -41.3150320602256
+    }
+  },
+  "classification": "FINITE_FLAVOR_DIAGNOSTIC_COORDINATES",
+  "experimental_ckm_reference": {
+    "delta_deg": 65.71825910150542,
+    "delta_rad": 1.147,
+    "theta12_deg": 13.003466199369875,
+    "theta13_deg": 0.21382834550537572,
+    "theta23_deg": 2.3973819400182745
+  },
+  "experimental_pmns_reference": {
+    "delta_deg": 177.0,
+    "theta12_deg": 33.68,
+    "theta13_deg": 8.52,
+    "theta23_deg": 48.5
+  },
+  "finite_neutral_shape": {
+    "NuFIT_ratio_delta_m2_21_over_3l": 0.029558011049723762,
+    "delta_s2_21": 0.03558776064847578,
+    "delta_s2_31": 0.18557139808054687,
+    "ratio_delta_s2_21_over_31": 0.19177395340325556,
+    "ratio_factor_relative_to_NuFIT": 6.488053376820421,
+    "single_atmospheric_splitting_normalization": {
+      "interpretation": "one-parameter finite-shape coordinate normalized to the atmospheric splitting and reported as a source-space comparison quantity",
+      "m_bb_aux_phase_interval_eV": [
+        0.013071922648794802,
+        0.024012129183132835
+      ],
+      "m_beta_aux_eV": 0.024550533280420794,
+      "masses_eV": [
+        0.022146046199380504,
+        0.03124744085823582,
+        0.05499497579111291
+      ],
+      "normalization_eV_per_dimensionless_unit": 0.11685513067983949,
+      "predicted_delta_m21_eV2": 0.00048595519792384966,
+      "sum_masses_eV": 0.10838846284872924,
+      "target_delta_m21_eV2": 7.49e-05
+    },
+    "takagi_singular_values_dimensionless": [
+      0.1895171061,
+      0.2674032426,
+      0.470625256
+    ]
+  },
+  "finite_quark_receiver_hierarchy": {
+    "down_ratios": {
+      "s2_over_s1": 37.22276983831224,
+      "s3_over_s1": 52.688354607992615,
+      "s3_over_s2": 1.4154872094919202
+    },
+    "down_singular_values": [
+      0.015499504,
+      0.57693447,
+      0.816643363
+    ],
+    "interpretation": "dimensionless finite-carrier diagnostics; quark masses are defined by the renormalized short-distance interacting two-point function",
+    "up_ratios": {
+      "s2_over_s1": 4.507972583553766,
+      "s3_over_s1": 6.7293996214761576,
+      "s3_over_s2": 1.492777406416961
+    },
+    "up_singular_values": [
+      0.122529666,
+      0.552360375,
+      0.824551088
+    ]
+  },
+  "finite_receiver_ckm_like": {
+    "J_denominator": 0.0031537525139412313,
+    "cos_delta_from_moduli": -0.9999306977314344,
+    "delta_conjugate_rad_from_absJ": 3.1533655384098425,
+    "delta_principal_deg_from_absJ": 179.32546338711754,
+    "delta_principal_rad_from_absJ": 3.1298197687697438,
+    "sin_delta_from_absJ": 0.01177261283536843,
+    "theta12_deg": 6.973007632772153,
+    "theta13_deg": 4.880189637040626,
+    "theta23_deg": 19.149259636947985
+  },
+  "finite_receiver_pmns_like": {
+    "J_denominator": 0.005533703502270303,
+    "cos_delta_from_moduli": -0.9996099044765009,
+    "delta_conjugate_rad_from_absJ": 3.169525330956768,
+    "delta_principal_deg_from_absJ": 178.39957547637175,
+    "delta_principal_rad_from_absJ": 3.1136599762228183,
+    "sin_delta_from_absJ": 0.02792904506694163,
+    "theta12_deg": 22.701624183244245,
+    "theta13_deg": 7.314529170265773,
+    "theta23_deg": 7.184967939774403
+  },
+  "quark_reference_values": {
+    "b": {
+      "scale": "m_b",
+      "scheme": "MSbar",
+      "source": "PDG2026 Eq. 60.24",
+      "unc_GeV": 0.012,
+      "value_GeV": 4.196
+    },
+    "c": {
+      "scale": "m_c",
+      "scheme": "MSbar",
+      "source": "PDG2026 Eq. 60.23",
+      "unc_GeV": 0.009,
+      "value_GeV": 1.275
+    },
+    "d": {
+      "scale": "2 GeV",
+      "scheme": "MSbar",
+      "source": "PDG2026 Eq. 60.8",
+      "unc_MeV": 0.05,
+      "value_MeV": 4.69
+    },
+    "s": {
+      "scale": "2 GeV",
+      "scheme": "MSbar",
+      "source": "PDG2026 Eq. 60.5",
+      "unc_MeV": 0.54,
+      "value_MeV": 92.74
+    },
+    "t": {
+      "scale": "direct combination",
+      "scheme": "direct LHC mass parameter; approximately pole-like",
+      "source": "PDG2026 Top Quark review",
+      "unc_GeV": 0.33,
+      "value_GeV": 172.52
+    },
+    "u": {
+      "scale": "2 GeV",
+      "scheme": "MSbar",
+      "source": "PDG2026 Eq. 60.7",
+      "unc_MeV": 0.07,
+      "value_MeV": 2.2
+    }
+  },
+  "scope": "finite receiver coordinates evaluated alongside the separately defined common interacting mass and mixing maps"
+}

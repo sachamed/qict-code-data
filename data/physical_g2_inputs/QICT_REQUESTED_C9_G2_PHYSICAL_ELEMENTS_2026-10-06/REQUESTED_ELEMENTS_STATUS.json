@@ -1,0 +1,36 @@
+{
+  "package_date": "2026-10-06",
+  "action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "purpose": "Bundle all currently available artifacts relevant to the requested physical L24 C9/G2 payload contract without promoting synthetic/control substitutes.",
+  "requested_elements": {
+    "KATO_BUFFER": {
+      "physical_status": "MISSING_COMPLETE_SET",
+      "available": "B0/factorized controls, geometries, legacy strict checkpoint"
+    },
+    "C10_SHELL_MAPS": {
+      "physical_status": "MISSING",
+      "available": "geometry/DAG/plane-sweep IR and provider code"
+    },
+    "BOUNDARY_TO_PATH": {
+      "physical_status": "MISSING",
+      "available": "provider/source code"
+    },
+    "CORE_RECOUPLING": {
+      "physical_status": "MISSING_EXACT_CONTRACT_OBJECT",
+      "available": "L24 precontraction + SU2 recoupling components"
+    },
+    "RANK6_EMBEDDING": {
+      "physical_status": "MISSING_EXACT_CONTRACT_OBJECT",
+      "available": "precontraction + provider code"
+    },
+    "GLOBAL_CHARGED_UCONE": {
+      "physical_status": "MISSING_FULL_PROVIDER_AND_PASS_CERT",
+      "available": "boundary-conditioned kernel, local layer, Step4 certificates, template"
+    },
+    "CN6_MOMENTS": {
+      "physical_status": "MISSING_PHYSICAL",
+      "available": "synthetic/control moments only + computation code"
+    }
+  },
+  "important": "Synthetic/control files are retained only as validation aids; they are not promoted as physical C9^(6) or G2 inputs."
+}

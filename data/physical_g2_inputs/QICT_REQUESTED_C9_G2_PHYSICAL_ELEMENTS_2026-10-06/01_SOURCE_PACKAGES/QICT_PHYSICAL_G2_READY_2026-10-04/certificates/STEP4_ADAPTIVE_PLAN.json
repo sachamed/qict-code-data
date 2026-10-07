@@ -1,0 +1,63 @@
+{
+  "adaptive_rank_omission_l1_bound_sum": 3.0000000000000004e-08,
+  "input_drop_states": 1192,
+  "input_keep_support": 8293,
+  "input_prune_l2_bound": 4.997319108061438e-08,
+  "per_rank": [
+    {
+      "actual_l1_bound": 4.972857549225012e-09,
+      "allocated_l1_error": 5e-09,
+      "coeff_abs": 0.015173042427044495,
+      "omit_fraction": 0.017002291088870133,
+      "omit_states": 141,
+      "r": 4
+    },
+    {
+      "actual_l1_bound": 4.989502242978263e-09,
+      "allocated_l1_error": 5e-09,
+      "coeff_abs": 0.0024589090739574808,
+      "omit_fraction": 0.07548534908959363,
+      "omit_states": 626,
+      "r": 5
+    },
+    {
+      "actual_l1_bound": 4.999255989667098e-09,
+      "allocated_l1_error": 5e-09,
+      "coeff_abs": 0.00033077339921608903,
+      "omit_fraction": 0.25033160496804535,
+      "omit_states": 2076,
+      "r": 6
+    },
+    {
+      "actual_l1_bound": 4.998760318187446e-09,
+      "allocated_l1_error": 5e-09,
+      "coeff_abs": 3.8040524355307155e-05,
+      "omit_fraction": 0.4892077655854335,
+      "omit_states": 4057,
+      "r": 7
+    },
+    {
+      "actual_l1_bound": 4.994304034466563e-09,
+      "allocated_l1_error": 5e-09,
+      "coeff_abs": 3.821084823269013e-06,
+      "omit_fraction": 0.6929940914023875,
+      "omit_states": 5747,
+      "r": 8
+    },
+    {
+      "actual_l1_bound": 4.987785000436578e-09,
+      "allocated_l1_error": 5e-09,
+      "coeff_abs": 3.4072689160490017e-07,
+      "omit_fraction": 0.8436030387073435,
+      "omit_states": 6996,
+      "r": 9
+    }
+  ],
+  "pre_output_prune_total_bound": 2.2614036227067976e-07,
+  "previous_character_tail_l2_sum": 7.900950019521983e-08,
+  "previous_cum_prune_l2": 3.97673073586614e-08,
+  "scope": "Conservative triangle-bound adaptive character evaluation for fourth incident plaquette 8973; no orthogonality of omitted outputs assumed.",
+  "source_support": 9485,
+  "status": "PASS_CERTIFIED_STEP4_ADAPTIVE_PLAN",
+  "step4_character_tail_l2_r10_to80": 2.7390363636184135e-08
+}

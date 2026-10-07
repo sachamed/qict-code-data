@@ -1,0 +1,159 @@
+{
+  "additional_kato_c10_runs": {
+    "c10_r12_layered_dag": {
+      "physical_boundary_statement": "These files serialize the exact C10 geometric/Wilson-path selector only. They are NOT Kato quantum densities and NOT the shell Kraus blocks K^(r). No physical C9 is emitted from them alone.",
+      "production_R12": {
+        "axis_link_count": 22838,
+        "bcc_edges": 17576,
+        "dag_file": "C10_R12_LAYERED_DAG.npz",
+        "dag_sha256": "2d0e15524254216f9890ca2ec6d8b93159ca7414d0fe3a940d546d5c4ba9cfcb",
+        "max_internal_divergence_abs": 4.202367620553815e-15,
+        "sink_flux": 0.9999999999998832,
+        "sink_probability": 0.999999999999978,
+        "source_divergence": 1.0,
+        "vertices": 3925
+      },
+      "result_file": "kernel/results/C10_R12_GEOMETRY_REEXEC_2026-10-04/shell12_to9/C10_R12_SHELL_GEOMETRY_CERTIFICATE.json",
+      "status": "PASS_EXACT_C10_R12_LAYERED_DAG_AND_SHELL_GEOMETRY"
+    },
+    "c10_shell_plane_sweep": {
+      "radii": [
+        10,
+        11,
+        12
+      ],
+      "result_file": "kernel/results/C10_SHELL_PLANE_SWEEP_2026-10-04/C10_SHELL_PLANE_SWEEP_CERTIFICATE.json",
+      "scope": "Exact shell covering-lattice geometry; no Kato density or C9 moments.",
+      "status": "PASS_C10_SHELL_CAUSAL_PLANE_SWEEP_IR"
+    },
+    "charged_floquet_kato_derivatives": {
+      "physical_mass_claim": false,
+      "relative_tangent_norm2_EW": 6.609147919474708,
+      "result_file": "kernel/results/L24_EXACT_CHARGED_FLOQUET_KATO_DERIVATIVES_REEXEC_2026-10-04.json",
+      "scope": "Exact first two charged-vacuum relative Floquet Kato derivatives at L=24 under the frozen action. Volume-matched preconditioner/input only; not the lambda=1 selected Riesz density and not G2.",
+      "status": "PASS_EXACT_CHARGED_FLOQUET_KATO_DERIVATIVES_L24"
+    },
+    "charged_kb_growth_gate": {
+      "growth_factor": 124434.0,
+      "protocol_decision": "STOP_BEFORE_RIESZ__GROWTH_GT_100X",
+      "result_file": "kernel/results/CHARGED_KB_LOCALITY_REEXEC_2026-10-04/results/L24_EXACT_CHARGED_KB_ONE_MATVEC_LOCALITY.json",
+      "scope": "Exact one-matvec support/growth and Gauss-sector certificate for the charged compact magnetic generator K_B on the frozen relational dipole. This is sufficient for the user-prescribed growth gate. It is not a Riesz-selected state, not C9^(6), and not G2.",
+      "status": "PASS_EXACT_L24_CHARGED_KB_ONE_MATVEC_BY_LOCALITY"
+    },
+    "charged_local_layer": {
+      "gates": {
+        "L_Hdagger_gauss_identity": true,
+        "charge_bridge": true,
+        "cutoffs_match_L24_n9": true,
+        "family_rank_preserved": true,
+        "transporter_isometries": true
+      },
+      "result_file": "kernel/results/CHARGED_LOCAL_LAYER_REEXEC_2026-10-04/L24_N9_EXACT_CHARGED_LOCAL_LAYER.json",
+      "scope": "Exact L24 local charged U1xSU2 matter transporter + four-plaquette Gauss tensor + six-column chiral bridge. This is a local layer witness/preconditioner input; it is not the full charged causal-cone Floquet matvec, Riesz projector, KATO_BUFFER, CN6, or G2.",
+      "status": "PASS_L24_EXACT_CHARGED_LOCAL_LAYER"
+    },
+    "first_order_kato_tangent": {
+      "physical_level": "exact_first_kato_tangent_only",
+      "result_file": "kernel/results/L24_N9_EXACT_GLOBAL_FIRST_KATO_TANGENT_REEXEC_2026-10-04.json",
+      "scope": "Exact first Floquet-Kato tangent on the authentic n=9 covering-lattice causal network. It is not a selected Kato/Riesz density, not KATO_BUFFER, and not physical G2.",
+      "status": "PASS_L24_N9_EXACT_GLOBAL_FIRST_KATO_TANGENT"
+    },
+    "second_order_kato_seed": {
+      "result_file": "kernel/results/L24_N9_EXACT_SECOND_ORDER_KATO_SEED_REEXEC_2026-10-04.json",
+      "scope": "Exact second-order perturbative Kato seed for the neutral electroweak magnetic homotopy on the authentic n=9 causal geometry, including electric Floquet denominators and exact connected SU2 recoupling. It is not the lambda=1 selected Riesz/Kato density, not a KATO_BUFFER, and not physical G2.",
+      "status": "PASS_L24_N9_EXACT_SECOND_ORDER_KATO_SEED"
+    },
+    "strict_c9_gate_recheck": {
+      "C9_status": "NOT_RUN_BLOCKED_AT_STEP2",
+      "Riesz_status": "NOT_RUN_BLOCKED_AT_STEP2",
+      "missing_object": "matrix-free complete frozen charged U_cone application on the L=24,n=9 symmetry-block frontier, including electric phases, all plaquette recouplings, split streams, chiral bridge, Gauss/Haar constraints, C10 exterior dressing/boundary sectors, rank-six source carrier and PiCAR=1 propagation",
+      "physical_result_promoted": false,
+      "result_file": "kernel/results/C9_L24_STRICT_EXECUTION_GATE_RECHECK_2026-10-04.json",
+      "status": "BLOCKED"
+    },
+    "su2_second_order_recoupling": {
+      "same_plaquette_result_file": "kernel/results/L24_N9_LOCAL_SU2_SAME_PLAQUETTE_SQUARED_REEXEC_2026-10-04.json",
+      "same_plaquette_status": "PASS_EXACT_SAME_PLAQUETTE_SU2_FUNDAMENTAL_SQUARED_RECOUPLING",
+      "same_plaquette_support": 2,
+      "scope": "Local SU2 recoupling diagnostic only; not a Kato density or physical G2.",
+      "topology_universal": {
+        "shared_edge": false,
+        "shared_vertex_only": false
+      },
+      "two_plaquette_result_file": "kernel/results/L24_N9_LOCAL_SU2_TWO_PLAQUETTE_TOPOLOGY_TABLES_REEXEC_2026-10-04.json",
+      "two_plaquette_status": "FAIL_TOPOLOGY_NOT_UNIVERSAL"
+    }
+  },
+  "created_utc": "2026-10-03T23:36:07.003907+00:00",
+  "execution_audit": {
+    "all_python_files_executed": false,
+    "official_u1_preflight": "PASS_RESUME_PREFLIGHT",
+    "physical_dependency_stop": "No accepted volume-specific C9 rank-six payload exists for L=24,32,48,64,96,128.",
+    "reason": "The code directory contains task-specific entry points, tests, utilities and platform-specific scripts; only documented, input-valid runs are executed."
+  },
+  "follow_on_cn6_archive_driver": {
+    "L2_core_recoupler": "PASS_L2_CORE_RECOUPLER_VALIDATION__NOT_EXTERNAL_KATO_BOUNDARY_MAP",
+    "physical_C9_emitted": false,
+    "provider_algorithm_self_test": "PASS_SYNTHETIC_COMPLETE_RANK6_PROVIDER_ALGORITHM",
+    "result_file": "kernel/results/CN6_ARCHIVE_MULTIVOLUME_RECHECK_2026-10-04.json",
+    "scope": "Provider self-test and L2 periodic-core recoupler validation only; not physical G2.",
+    "status": "PASS_PROVIDER_AND_REGULATOR_CERTIFICATION__CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE"
+  },
+  "full_physical_task4_closure": "PENDING",
+  "no_synthetic_physical_results_promoted": true,
+  "official_task4_closure_recheck": {
+    "accepted_volume_count": 0,
+    "gates": {
+      "g2_limit": {
+        "status": "MISSING"
+      },
+      "multivolume": {
+        "accepted_volume_count": 0,
+        "status": "PHYSICAL_MULTIVOLUME_CONTRACTION_INCOMPLETE"
+      },
+      "quark_matching": {
+        "status": "MISSING"
+      },
+      "receiver_clock": {
+        "status": "MISSING"
+      }
+    },
+    "multivolume_result_file": "kernel/results/TASK4_CLOSURE_RECHECK_2026-10-04/CN6_MULTIVOLUME_PHYSICAL_EXECUTION.json",
+    "multivolume_status": "PHYSICAL_MULTIVOLUME_CONTRACTION_INCOMPLETE",
+    "task4_gate_result_file": "kernel/results/TASK4_CLOSURE_RECHECK_2026-10-04/TASK4_FULLPASS_GATE.json",
+    "task4_gate_status": "TASK4_FULL_PASS_NOT_REACHED"
+  },
+  "physical_payloads": {
+    "C9_rank6_and_G2": "PENDING; no accepted volume-specific physical payload in the source certificate.",
+    "P_Kato_and_charged_U_cone": "PENDING; required physical boundary/source inputs are not present.",
+    "epsilon_f_Z_f_and_multivolume": "PENDING; no physical C9/G2 promotion."
+  },
+  "project": "QICT_GLOBAL_COMPLETE_BACKUP_2026-10-02",
+  "source_global_manifest": "MANIFEST_SHA256.txt",
+  "task_status": {
+    "1": "FULL_PASS",
+    "10": "FROZEN_DIMENSIONLESS_ONLY",
+    "11": "FULL_PASS",
+    "12": "FULL_PASS",
+    "2": "FULL_PASS",
+    "3": "FULL_PASS",
+    "4": "U1_NEUTRAL_PREFIX_FULL_PASS; PHYSICAL_CLOSURE_PENDING",
+    "5": "BLOCKED_ON_G2",
+    "6": "BLOCKED_ON_PHYSICAL_INPUTS",
+    "7": "PENDING_PHYSICAL_LIMIT",
+    "8": "PENDING_PHYSICAL_SCALAR",
+    "9": "PENDING_GEOMETRIC_RESPONSE"
+  },
+  "u1_neutral_prefix": {
+    "checkpoint_sha256": "3d7914997049e704f09fca99c1ea7f40d705df0f68bb928b5cf357af71a62b3c",
+    "electric_checkpoint_sha256": "a01b8734048c999981b52c7640fce8ebb96832c7447c34904a9598f55d3c1beb",
+    "error_bound": 0.0,
+    "final_metadata_sha256": "5b5bd5b5b692873972447a97cbff8e8a95d9c61671a1fbe0df34f408df8e06f2",
+    "gates_done": 18252,
+    "kmax": 7,
+    "ledger_sha256": "65ef3c4058780a28802b881a3e55665ce190a9461c9054feca16a3d887987dbc",
+    "max_bond": 225,
+    "status": "PASS_U1_TRANSACTIONAL_PREFIX",
+    "total_gates": 18252
+  }
+}

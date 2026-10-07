@@ -1,0 +1,59 @@
+{
+  "Emax": 16,
+  "K_character": 8,
+  "components": [
+    {
+      "center": [
+        0.9880587999416605,
+        -0.1540772788500815
+      ],
+      "certified_node_minimum": 0.04999999999999956,
+      "component_size": 1,
+      "contour_lipschitz_interpolation_loss": 0.0003067956762965976,
+      "dimension": 33,
+      "nearest_eigenvalue_chord_separation": 0.14638543282157407,
+      "projector_commutator_fro_diagnostic": 1.6679102436999468e-16,
+      "projector_hermiticity_fro_diagnostic": 2.9213114718360172e-15,
+      "projector_idempotency_fro_diagnostic": 5.340793523009022e-16,
+      "proof": "Weyl singular-value Lipschitz bound plus nearest-midpoint chord bound 2 r sin(pi/(2N)).",
+      "radius": 0.05,
+      "rho_lambda_max": 0.9999999999999999,
+      "rho_lambda_min": -3.796987309804364e-16,
+      "rho_numerical_rank_gt_1e-10": 1,
+      "rho_trace": 1.0,
+      "rho_vs_continuation_rank1_fro": 3.654087321917695e-15,
+      "sampled_node_minimum": 0.04999999999999956,
+      "uniform_bound_positive": true,
+      "uniform_contour_singular_value_lower_bound": 0.04969320432370296
+    },
+    {
+      "center": [
+        0.6709349285528426,
+        -0.6878756302965933
+      ],
+      "certified_node_minimum": 0.06999999632196917,
+      "component_size": 4,
+      "contour_lipschitz_interpolation_loss": 0.0004295139468152367,
+      "dimension": 33,
+      "nearest_eigenvalue_chord_separation": 0.19134927830734716,
+      "projector_commutator_fro_diagnostic": 1.1102236590177564e-16,
+      "projector_hermiticity_fro_diagnostic": 0.0004220892316047825,
+      "projector_idempotency_fro_diagnostic": 2.813685789175159e-16,
+      "proof": "Weyl singular-value Lipschitz bound plus nearest-midpoint chord bound 2 r sin(pi/(2N)).",
+      "radius": 0.07,
+      "rho_lambda_max": 0.9999999999999997,
+      "rho_lambda_min": -1.9441379434685763e-16,
+      "rho_numerical_rank_gt_1e-10": 1,
+      "rho_trace": 0.9999999999999999,
+      "rho_vs_continuation_rank1_fro": 1.393549870156542e-15,
+      "sampled_node_minimum": 0.06999999632196917,
+      "uniform_bound_positive": true,
+      "uniform_contour_singular_value_lower_bound": 0.06957048237515394
+    }
+  ],
+  "npz": "U1_B0_RIESZ_KATO_COMPONENTS.npz",
+  "npz_sha256": "a9af16524c61627bff73ae60e77c9b0b92c2aa3278e80bd972c5c497e082e2b1",
+  "quadrature_points": 512,
+  "scope": "Riesz certification on actual frozen-action U1 b=0 diamond component operators. Not full electroweak Kato buffer and not physical G2.",
+  "status": "PASS_U1_B0_ACTUAL_RIESZ_COMPONENT_CERTIFICATION"
+}

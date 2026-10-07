@@ -1,0 +1,25 @@
+{
+  "peak_rss_kib": 107824,
+  "physical_promotion_allowed": false,
+  "projector_action_fro_error": 1.4433516438349637e-17,
+  "quadrature_error_source": "analytic normal-matrix self-test only",
+  "retained_rank": 2,
+  "rho_fro_error": 1.5700924586837752e-16,
+  "runtime_s": 0.07613420486450195,
+  "scope": "Infrastructure self-test only. Physical promotion requires a complete charged U_cone LinearOperator, independently certified uniform contour gap, independent quadrature error bound, and certified seed-subspace coverage.",
+  "singular_values": [
+    1.0,
+    1.0,
+    1.21217487951527e-17,
+    5.866976506511137e-18,
+    4.299377706910672e-18,
+    2.8888791009384286e-18
+  ],
+  "solver": {
+    "solve_count": 768,
+    "worst_residual_norm": 8.881784197001252e-16,
+    "worst_solution_error_upper_bound_from_gap": 8.881784197001252e-15
+  },
+  "status": "PASS_MATRIX_FREE_RIESZ_KATO_SELFTEST",
+  "uniform_gap_lower_bound": 0.1
+}

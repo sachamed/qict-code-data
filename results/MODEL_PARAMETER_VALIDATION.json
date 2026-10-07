@@ -1,0 +1,23 @@
+{
+  "checks": {
+    "plaquette_count_equals_3L3": true,
+    "positive_moment_depth": true,
+    "positive_representation_cutoffs": true,
+    "primitive_positive_bridge": true,
+    "receiver_phase_equals_pi_over_63": true,
+    "route_defects_match_channel_assignment": true,
+    "six_unique_sources": true,
+    "source_order_is_declared_family_chirality_order": true
+  },
+  "classification": "MODEL_PARAMETER_CONSISTENCY",
+  "derived": {
+    "plaquette_count": 41472,
+    "receiver_phase_radians": 0.049866550056980846,
+    "route_defects": [
+      1,
+      3,
+      5
+    ]
+  },
+  "parameters_sha256": "f86b3abb9ed054c29e21e2c4d49b92923f7bfdac0747d1cec1053f6d23cf56ca"
+}

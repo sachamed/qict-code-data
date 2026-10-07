@@ -1,0 +1,6 @@
+{
+  "g2_gate_file": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/results/current_physical/G2_PHYSICAL_ACCEPTANCE.json",
+  "physical_g2_gate_returncode": 3,
+  "software_chain_returncode": 0,
+  "status": "END_TO_END_PHYSICAL_G2_INCOMPLETE"
+}

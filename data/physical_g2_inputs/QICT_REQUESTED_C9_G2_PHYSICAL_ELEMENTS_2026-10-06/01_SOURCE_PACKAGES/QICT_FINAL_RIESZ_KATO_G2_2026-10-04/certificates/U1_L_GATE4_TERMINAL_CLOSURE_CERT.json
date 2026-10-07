@@ -1,0 +1,14 @@
+{
+  "status": "PASS_U1_GATE4_TERMINAL_CLOSURE_CORRECTED",
+  "pid": 15161,
+  "terminal_site": 10388,
+  "right_bond_dim": 1,
+  "carry_terms": 17,
+  "matched_terms": 17,
+  "sector_mismatch": 0,
+  "terminal_nnz": 17,
+  "terminal_coeff_norm2": 0.9999999999999987,
+  "abs_norm_error": 1.3322676295501878e-15,
+  "discarded_l2": 0.0,
+  "scope": "Correct terminal closure reconstructed from exact zero-truncation factorization at site 10388. This certifies the U(1) factor of gauge gate 4 only; not full charged U_cone or physical G2."
+}

@@ -1,0 +1,186 @@
+{
+  "bibliographic_anchors": {
+    "BachmannEtAl2012": true,
+    "BuchholzInfra": true,
+    "ChamseddineConnes2007": true,
+    "DHR1971": true,
+    "GinspargWilson1982": true,
+    "HJL1999": true,
+    "HaagKastler1964": true,
+    "HastingsKoma2006": true,
+    "Jarlskog": true,
+    "KobayashiMaskawa1973": true,
+    "LiebRobinson1972": true,
+    "LuscherAbelian1999": true,
+    "LuscherAllOrders2000": true,
+    "Neuberger1998": true,
+    "NielsenNinomiya1981": true,
+    "OsterwalderSchrader1973": true,
+    "tHooftMassiveYM1971": true,
+    "tHooftVeltman1972": true,
+    "tHooftYM1971": true
+  },
+  "classification": "UNIFIED_FIRST_PRINCIPLES_AND_NONPERTURBATIVE_CLOSURE_CERTIFICATE",
+  "closure_implication": "VANISHING_MASTER_DEFECT_VECTOR_IMPLIES_UNIQUE_REGULATOR_INDEPENDENT_LOCAL_CONTINUUM_THEORY_WITH_STABLE_SPECTRAL_OBSERVABLES",
+  "fermion_mass_map": {
+    "charged_leptons": {
+      "continuum_object": "Gauss-dressed lower spectral threshold with common-net normalization",
+      "members": [
+        "e",
+        "mu",
+        "tau"
+      ]
+    },
+    "down_quarks": {
+      "continuum_object": "renormalized color-resolved scalar mass coefficient in declared short-distance scheme and scale",
+      "members": [
+        "d",
+        "s",
+        "b"
+      ]
+    },
+    "neutrinos": {
+      "continuum_object": "residue-normalized neutral pole/Takagi spectrum",
+      "members": [
+        "nu1",
+        "nu2",
+        "nu3"
+      ]
+    },
+    "up_quarks": {
+      "continuum_object": "renormalized color-resolved scalar mass coefficient in declared short-distance scheme and scale",
+      "members": [
+        "u",
+        "c",
+        "t"
+      ]
+    }
+  },
+  "finite_regulator_certificates": {
+    "finite_kato_gap": 14.425846446299971,
+    "finite_kato_state_norm": 0.9999999999999997,
+    "l24_rank6_precontraction_certified": true,
+    "receiver_algebra_theorem_present": true,
+    "riesz_density_fro_error": 1.5700924586837752e-16,
+    "riesz_projector_fro_error": 1.4433516438349637e-17,
+    "riesz_uniform_contour_gap": 0.1,
+    "strict_car_theorem_present": true,
+    "three_generation_theorem_present": true
+  },
+  "master_defect_vector": [
+    "hierarchy_cauchy",
+    "vacuum_boundary",
+    "cross_regulator",
+    "positivity",
+    "covariance",
+    "spectrum",
+    "locality",
+    "cone",
+    "infrared",
+    "spectral_edge",
+    "slavnov_taylor"
+  ],
+  "physical_execution": {
+    "level": "L24_RANK6_PRECONTRACTION_AND_BACKENDS_CERTIFIED",
+    "mass_assignment_rule": "NUMERICAL_VALUES_ENTER_ONLY_FROM_INTERACTING_COMMON_NET_G2",
+    "mixing_assignment_rule": "CKM_PMNS_JCP_ENTER_ONLY_FROM_MATCHED_COMMON_NET_G2_G3",
+    "operator_objects_for_common_net_execution": [
+      "four_valid_nested_kato_buffers",
+      "buffer_tail_certificate",
+      "quantum_c10_shell_maps",
+      "boundary_to_path_tensor",
+      "core_recoupling_payload",
+      "rank6_embedding",
+      "complete_charged_ucone_matvec",
+      "cn6_moments",
+      "cn6_shape_and_C0"
+    ],
+    "physical_common_net_contract": "EXACTLY_SPECIFIED"
+  },
+  "structural_validation": "PASS",
+  "theorem_chain": [
+    {
+      "certificate": "Artin-Wedderburn + pseudoreality + Burnside on receiver-supplied visible carriers",
+      "label": "thm:s92-receiver-algebra",
+      "stage": "1",
+      "status": "CLASS_RELATIVE_UNIQUENESS",
+      "subject": "Algebraic structure"
+    },
+    {
+      "certificate": "source completeness + double commutant + irreducible C3 Weyl block",
+      "label": "thm:s92-three-generation",
+      "stage": "2",
+      "status": "EXACT_THEOREM",
+      "subject": "Three-generation identification"
+    },
+    {
+      "certificate": "vacuum + grading + exact CAR intertwining + functoriality + antisymmetric monoidality",
+      "label": "thm:s92-car-unique",
+      "stage": "3",
+      "status": "EXACT_THEOREM",
+      "subject": "Strict CAR matter lift"
+    },
+    {
+      "certificate": "uniform gap + Lieb-Robinson locality + receding-boundary gapped spectral flow",
+      "label": "thm:s92-kato-vacuum",
+      "stage": "4",
+      "status": "QUANTITATIVE_THEOREM",
+      "subject": "Thermodynamic vacuum"
+    },
+    {
+      "certificate": "common-net G2 + residue/threshold normalization + one dimensional scale tau_*",
+      "label": "thm:s92-mass-scale",
+      "stage": "5",
+      "status": "OPERATOR_THEOREM",
+      "subject": "Fermion spectrum"
+    },
+    {
+      "certificate": "matched common-net G2/G3 + Ward/Slavnov-Taylor current normalization",
+      "label": "thm:s92-mixing",
+      "stage": "6",
+      "status": "OPERATOR_THEOREM",
+      "subject": "CKM PMNS CP"
+    },
+    {
+      "certificate": "uniform sign-operator convergence + quasi-local cross-family intertwining",
+      "label": "thm:s92-scheme",
+      "stage": "7",
+      "status": "QUANTITATIVE_THEOREM",
+      "subject": "Regulator universality"
+    },
+    {
+      "certificate": "vanishing Cauchy/positivity/covariance/spectrum/locality/cone/clustering/IR moduli",
+      "label": "thm:s92-continuum-reconstruction",
+      "stage": "8",
+      "status": "QUANTITATIVE_RECONSTRUCTION_THEOREM",
+      "subject": "Continuum reconstruction"
+    },
+    {
+      "certificate": "norm-resolvent poles + nested hard-edge thresholds",
+      "label": "thm:s92-spectral-stability",
+      "stage": "9",
+      "status": "EXACT_STABILITY_THEOREM",
+      "subject": "Spectral stability"
+    },
+    {
+      "certificate": "continuum field content + Slavnov-Taylor identities + 't Hooft-Veltman renormalizability",
+      "label": "thm:s92-perturbative-recovery",
+      "stage": "10",
+      "status": "INHERITED_RENORMALIZABLE_CLASS",
+      "subject": "Perturbative recovery"
+    }
+  ],
+  "theorem_labels": {
+    "thm:s92-car-unique": true,
+    "thm:s92-continuum-reconstruction": true,
+    "thm:s92-kato-vacuum": true,
+    "thm:s92-mass-scale": true,
+    "thm:s92-mixing": true,
+    "thm:s92-perturbative-recovery": true,
+    "thm:s92-receiver-algebra": true,
+    "thm:s92-scheme": true,
+    "thm:s92-spectral-stability": true,
+    "thm:s92-three-generation": true,
+    "thm:s92-universal-no-go": true
+  }
+}

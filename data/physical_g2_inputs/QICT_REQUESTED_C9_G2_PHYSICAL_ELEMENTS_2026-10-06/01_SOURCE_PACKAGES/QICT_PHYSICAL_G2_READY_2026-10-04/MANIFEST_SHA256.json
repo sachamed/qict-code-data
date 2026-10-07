@@ -1,0 +1,96 @@
+{
+  "file_count": 18,
+  "files": [
+    {
+      "bytes": 2305,
+      "path": "FINAL_SCIENTIFIC_STATUS.json",
+      "sha256": "fe949427d796c5e235924d6b3a0da549132783b34ee186de769b1d67e16ea9b1"
+    },
+    {
+      "bytes": 1162,
+      "path": "NEXT_STAGE_FAIL_CLOSED_DEMO.json",
+      "sha256": "b90fc838831e005f89db89bb2ef9bc3eee18d45c6fa93361d177ffb0a5e31113"
+    },
+    {
+      "bytes": 1941,
+      "path": "PHYSICAL_INPUT_CONTRACT_L24.json",
+      "sha256": "72f19cff5b4586b93fb541aa9b19cf6b7fcda4631f3a98ae86f90e1c70a5dfb8"
+    },
+    {
+      "bytes": 2075,
+      "path": "README.md",
+      "sha256": "34893cb51bb452110aed449da0b4ed8b8c6bdaf2d795bd220ee8a4a8fb1b49cc"
+    },
+    {
+      "bytes": 808,
+      "path": "STEP4_STRICT_CHECKPOINT_MANIFEST.json",
+      "sha256": "567e897bd2370a3c786755952ee9b71fe3cbe64c16380d4d34239b2ff81a90e6"
+    },
+    {
+      "bytes": 351,
+      "path": "certificates/APPLY_CHAR_8973_FAST_EQUIVALENCE.json",
+      "sha256": "7a0345b3edb6e1a19eea37db6975e57ec01b4f4c13b4f5095080b00a38194fbe"
+    },
+    {
+      "bytes": 130,
+      "path": "certificates/STEP3_COVERAGE_CERTIFICATE.json",
+      "sha256": "d68579dff81076c43adb9f509f9120c6464d8f1f4636aded8bcd1c839942ed60"
+    },
+    {
+      "bytes": 1983,
+      "path": "certificates/STEP4_ADAPTIVE_PLAN.json",
+      "sha256": "9766f0e58fc8491c4ec38217dd3875f83c58549a5824d5984b778a42138022e0"
+    },
+    {
+      "bytes": 61032,
+      "path": "certificates/STEP4_STRICT_EXTERNAL_CERTIFICATE.json",
+      "sha256": "8c8dd230346135121b4fdd10eecfa287a5dd663f5dbac4e0115e9a4a4007c16e"
+    },
+    {
+      "bytes": 17513,
+      "path": "code/certified_causal_cone_rank6.py",
+      "sha256": "781e13615228c7f131ce97709d71210da7bd2bb59006ce99749ec5e60ef73d47"
+    },
+    {
+      "bytes": 29525,
+      "path": "code/charged_C10_Kato_boundary_tensor_and_recoupled_plaquette_block_provider.py",
+      "sha256": "d75c009d836a2fc74851caa132b5844c6ad80390aff9fbb0ab697e2d2211bd35"
+    },
+    {
+      "bytes": 1926,
+      "path": "code/exact_matrix_moment_flat_extension.py",
+      "sha256": "41ef20e485c11a0e1123f31203ab98ff4cb495e15c9d944741a8223c82dafd84"
+    },
+    {
+      "bytes": 3854,
+      "path": "code/generate_cn6_taskgraph.py",
+      "sha256": "5288df3fff20ff9875504b534e727eec141e65c03225fd62c0da8b638f915fbc"
+    },
+    {
+      "bytes": 11471,
+      "path": "code/localized_riesz_kato.py",
+      "sha256": "d7a2e185f77db2e01e89f8a77b7423752772964efcee7c32d5d741c46bb3f685"
+    },
+    {
+      "bytes": 356,
+      "path": "preflight/CN6_PREFLIGHT_POST_STEP4.csv",
+      "sha256": "95a9f8453627254188888895e9e110f0c2f33db6e62405b8552ba70491222874"
+    },
+    {
+      "bytes": 4842,
+      "path": "preflight/CN6_PREFLIGHT_POST_STEP4.json",
+      "sha256": "999c83cbc7143a1a4dac10a489bbe274feaa6823f5f96eb312a7d6b75bed20b5"
+    },
+    {
+      "bytes": 1878,
+      "path": "run_next_physical_stage.py",
+      "sha256": "71a7aa92c3a184a223d9e6c24f05c865350153b37540db44304ea3cc32c9a9be"
+    },
+    {
+      "bytes": 994,
+      "path": "verify_step4_strict.py",
+      "sha256": "1bac03a77e411716bd4ee5890dce93d76150b78fc78208c933ebd967e9bce52d"
+    }
+  ],
+  "status": "PASS_PACKAGE_MANIFEST"
+}

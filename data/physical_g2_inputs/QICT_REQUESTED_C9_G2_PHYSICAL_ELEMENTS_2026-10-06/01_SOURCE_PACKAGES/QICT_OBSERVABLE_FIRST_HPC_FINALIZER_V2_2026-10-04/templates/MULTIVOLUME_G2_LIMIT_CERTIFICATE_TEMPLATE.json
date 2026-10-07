@@ -1,0 +1,6 @@
+{
+  "status": "PENDING_PHYSICAL_MULTIVOLUME_G2_LIMIT",
+  "volumes": [24,32,48,64,96,128],
+  "method": "Validated regulator/volume stability of spectral edges/poles/residues with propagated uncertainties.",
+  "limit_results": []
+}

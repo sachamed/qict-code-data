@@ -1,0 +1,178 @@
+{
+  "action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "family_pairs": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "self_test": {
+    "C0_error": 0.0,
+    "exact_structural_positivity": "PASS_BY_TWO_ATOM_UNITARY_GRAM_CONSTRUCTION",
+    "status": "PASS_SYNTHETIC_C11_CAUSAL_CONE_BACKEND_SELF_TEST",
+    "toeplitz_lambda_min_diagnostic": -7.248925454760943e-15
+  },
+  "source_order": [
+    "L1",
+    "L2",
+    "L3",
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "status": "PASS_CAUSAL_CONE_HPC_PREFLIGHT",
+  "volumes": [
+    {
+      "L": 24,
+      "character_cutoffs": {
+        "L": 24,
+        "SU2_twice_j_max": 14,
+        "SU3_max_p_q": 18,
+        "U1_abs_k_max": 7,
+        "nmax": 9,
+        "passes_target": true,
+        "representation_tail_bound": 7.199588798902931e-07
+      },
+      "cone_at_n9": {
+        "link_upper_bound": 20577,
+        "n": 9,
+        "plaquette_upper_bound": 20577,
+        "side": 19,
+        "site_upper_bound": 6859
+      },
+      "kato_buffer_files": 0,
+      "mass_extraction_stage": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE",
+      "no_wrap_depth": 9,
+      "physical_moment_payload_present": false,
+      "status": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE"
+    },
+    {
+      "L": 32,
+      "character_cutoffs": {
+        "L": 32,
+        "SU2_twice_j_max": 15,
+        "SU3_max_p_q": 19,
+        "U1_abs_k_max": 8,
+        "nmax": 13,
+        "passes_target": true,
+        "representation_tail_bound": 1.322332624229798e-07
+      },
+      "cone_at_n9": {
+        "link_upper_bound": 20577,
+        "n": 9,
+        "plaquette_upper_bound": 20577,
+        "side": 19,
+        "site_upper_bound": 6859
+      },
+      "kato_buffer_files": 0,
+      "mass_extraction_stage": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE",
+      "no_wrap_depth": 13,
+      "physical_moment_payload_present": false,
+      "status": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE"
+    },
+    {
+      "L": 48,
+      "character_cutoffs": {
+        "L": 48,
+        "SU2_twice_j_max": 15,
+        "SU3_max_p_q": 20,
+        "U1_abs_k_max": 8,
+        "nmax": 21,
+        "passes_target": true,
+        "representation_tail_bound": 3.743862881097305e-07
+      },
+      "cone_at_n9": {
+        "link_upper_bound": 20577,
+        "n": 9,
+        "plaquette_upper_bound": 20577,
+        "side": 19,
+        "site_upper_bound": 6859
+      },
+      "kato_buffer_files": 0,
+      "mass_extraction_stage": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE",
+      "no_wrap_depth": 21,
+      "physical_moment_payload_present": false,
+      "status": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE"
+    },
+    {
+      "L": 64,
+      "character_cutoffs": {
+        "L": 64,
+        "SU2_twice_j_max": 16,
+        "SU3_max_p_q": 20,
+        "U1_abs_k_max": 8,
+        "nmax": 29,
+        "passes_target": true,
+        "representation_tail_bound": 2.835877641814138e-07
+      },
+      "cone_at_n9": {
+        "link_upper_bound": 20577,
+        "n": 9,
+        "plaquette_upper_bound": 20577,
+        "side": 19,
+        "site_upper_bound": 6859
+      },
+      "kato_buffer_files": 0,
+      "mass_extraction_stage": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE",
+      "no_wrap_depth": 29,
+      "physical_moment_payload_present": false,
+      "status": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE"
+    },
+    {
+      "L": 96,
+      "character_cutoffs": {
+        "L": 96,
+        "SU2_twice_j_max": 16,
+        "SU3_max_p_q": 21,
+        "U1_abs_k_max": 9,
+        "nmax": 45,
+        "passes_target": true,
+        "representation_tail_bound": 3.1825043668604213e-07
+      },
+      "cone_at_n9": {
+        "link_upper_bound": 20577,
+        "n": 9,
+        "plaquette_upper_bound": 20577,
+        "side": 19,
+        "site_upper_bound": 6859
+      },
+      "kato_buffer_files": 0,
+      "mass_extraction_stage": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE",
+      "no_wrap_depth": 45,
+      "physical_moment_payload_present": false,
+      "status": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE"
+    },
+    {
+      "L": 128,
+      "character_cutoffs": {
+        "L": 128,
+        "SU2_twice_j_max": 17,
+        "SU3_max_p_q": 21,
+        "U1_abs_k_max": 9,
+        "nmax": 61,
+        "passes_target": true,
+        "representation_tail_bound": 1.7043204567817196e-07
+      },
+      "cone_at_n9": {
+        "link_upper_bound": 20577,
+        "n": 9,
+        "plaquette_upper_bound": 20577,
+        "side": 19,
+        "site_upper_bound": 6859
+      },
+      "kato_buffer_files": 0,
+      "mass_extraction_stage": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE",
+      "no_wrap_depth": 61,
+      "physical_moment_payload_present": false,
+      "status": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE"
+    }
+  ]
+}

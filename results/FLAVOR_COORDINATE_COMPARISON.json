@@ -1,0 +1,252 @@
+{
+  "ckm_finite_receiver_test": {
+    "angle_differences_deg": {
+      "theta12_deg": -6.030458566597722,
+      "theta13_deg": 4.66636129153525,
+      "theta23_deg": 16.75187769692971
+    },
+    "finite": {
+      "J_abs": 3.71279073252e-05,
+      "delta_conjugate_deg": 180.67453661288246,
+      "delta_principal_deg": 179.32546338711754,
+      "delta_principal_rad": 3.1298197687697438,
+      "theta12_deg": 6.973007632772153,
+      "theta13_deg": 4.880189637040626,
+      "theta23_deg": 19.149259636947985
+    },
+    "finite_receiver_role": "source-space mixing coordinate",
+    "reference": {
+      "J_abs": 3.12e-05,
+      "delta_deg": 65.71825910150542,
+      "theta12_deg": 13.003466199369875,
+      "theta13_deg": 0.21382834550537572,
+      "theta23_deg": 2.3973819400182745
+    }
+  },
+  "classification": "FINITE_FLAVOR_COORDINATE_COMPARISON",
+  "interpretation": {
+    "finite_receiver": "The serialized finite receiver matrices define source-space mass and mixing coordinates whose shape is compared directly with reference observables.",
+    "physical_map": "Quark masses, neutrino masses, CKM and PMNS are defined by the common-regulator interacting G2/G3 observables. The comparison quantifies the transformation from finite receiver coordinates to those interacting observables."
+  },
+  "neutral_direct_identification_test": {
+    "atmospheric_anchor": {
+      "delta_m21_eV2": 0.00048595519792384966,
+      "delta_m31_eV2": 0.002534,
+      "m_bb_phase_interval_eV": [
+        0.013071922648794802,
+        0.024012129183132835
+      ],
+      "m_beta_eV": 0.024550533280420794,
+      "masses_eV": [
+        0.022146046199380504,
+        0.03124744085823582,
+        0.05499497579111291
+      ],
+      "sum_masses_eV": 0.10838846284872924
+    },
+    "atmospheric_anchor_solar_split_ratio_to_reference": 6.488053376820423,
+    "dimensionless_split_ratio": 0.19177395340325556,
+    "dimensionless_takagi_singular_values": [
+      0.1895171061,
+      0.2674032426,
+      0.470625256
+    ],
+    "finite_receiver_role": "source-space Takagi coordinate",
+    "reference_constraints": {
+      "m_bb_source": "KamLAND-Zen complete dataset (2025); range reflects nuclear matrix elements",
+      "m_bb_upper_range_eV_90cl": [
+        0.028,
+        0.122
+      ],
+      "m_beta_source": "KATRIN 259-day result (2025)",
+      "m_beta_upper_eV_90cl": 0.45,
+      "sum_mnu_source": "DESI DR2 combined analyses; cosmology-model dependent",
+      "sum_mnu_upper_eV_95cl_LCDM": 0.0642,
+      "sum_mnu_upper_eV_95cl_w0wa": 0.163
+    },
+    "reference_split_ratio": 0.029558011049723762,
+    "selected_physical_map": "common interacting neutral Nambu kernel constrained jointly by the two oscillation splittings",
+    "shape_ratio_factor": 6.488053376820421,
+    "solar_anchor": {
+      "delta_m21_eV2": 7.490000000000003e-05,
+      "delta_m31_eV2": 0.00039056398781383466,
+      "m_bb_phase_interval_eV": [
+        0.005131948178012475,
+        0.009426999066808286
+      ],
+      "m_beta_eV": 0.009638372863941804,
+      "masses_eV": [
+        0.008694387543179756,
+        0.01226753336050077,
+        0.021590654519139385
+      ],
+      "sum_masses_eV": 0.04255257542281991
+    },
+    "solar_anchor_atmospheric_split_ratio_to_reference": 0.15412943481208946
+  },
+  "pmns_finite_receiver_test": {
+    "angle_differences_deg": {
+      "theta12_deg": -10.978375816755754,
+      "theta13_deg": -1.2054708297342263,
+      "theta23_deg": -41.3150320602256
+    },
+    "finite": {
+      "J_abs": 0.000154551054502,
+      "delta_conjugate_deg": 181.60042452362825,
+      "delta_principal_deg": 178.39957547637175,
+      "delta_principal_rad": 3.1136599762228183,
+      "theta12_deg": 22.701624183244245,
+      "theta13_deg": 7.314529170265773,
+      "theta23_deg": 7.184967939774403
+    },
+    "finite_receiver_role": "source-space mixing coordinate",
+    "reference": {
+      "delta_deg": 177.0,
+      "delta_m21_eV2": 7.49e-05,
+      "delta_m3l_eV2": 0.002534,
+      "theta12_deg": 33.68,
+      "theta13_deg": 8.52,
+      "theta23_deg": 48.5
+    }
+  },
+  "quark_direct_identification_test": {
+    "down_sector": {
+      "b_anchor": {
+        "log_rms_all_three": 2.5835446437839256,
+        "masses_GeV": {
+          "b": 4.196,
+          "d": 0.07963809140024812,
+          "s": 2.9643503465539096
+        },
+        "prediction_to_reference_ratio": {
+          "b": 1.0,
+          "d": 16.980403283634992,
+          "s": 31.964096900516605
+        },
+        "scale_per_dimensionless_unit_GeV": 5.1381058000467705
+      },
+      "best_log_scale": {
+        "log_rms": 1.506439235972931,
+        "masses_GeV": {
+          "b": 0.5143972835652595,
+          "d": 0.009763016655054692,
+          "s": 0.36340652187870987
+        },
+        "prediction_to_reference_ratio": {
+          "b": 0.12259229827580065,
+          "d": 2.0816666641907657,
+          "s": 3.918552101344726
+        },
+        "scale_per_dimensionless_unit_GeV": 0.629892198811955
+      },
+      "d_anchor": {
+        "log_rms_all_three": 1.6753792823548572,
+        "masses_GeV": {
+          "b": 0.24710838311148536,
+          "d": 0.004690000000000001,
+          "s": 0.17457479054168443
+        },
+        "prediction_to_reference_ratio": {
+          "b": 0.05889141637547316,
+          "d": 1.0,
+          "s": 1.8824109396342943
+        },
+        "scale_per_dimensionless_unit_GeV": 0.302590328051788
+      },
+      "s_anchor": {
+        "log_rms_all_three": 2.0333608543256076,
+        "masses_GeV": {
+          "b": 0.13127228380828065,
+          "d": 0.0024914857331370752,
+          "s": 0.09273999999999999
+        },
+        "prediction_to_reference_ratio": {
+          "b": 0.03128510100292675,
+          "d": 0.5312336317989499,
+          "s": 1.0
+        },
+        "scale_per_dimensionless_unit_GeV": 0.160746158918187
+      }
+    },
+    "finite_receiver_role": "source-space hierarchy coordinate",
+    "ratio_tests": {
+      "d_s_ratio_factor": 0.5312336317989499,
+      "finite_c_t": 0.6698922395940129,
+      "finite_d_s": 0.02686527639785503,
+      "finite_s_b": 0.706470530637252,
+      "finite_u_c": 0.22182921068514372,
+      "reference_c_t_mixed_scale": 0.00739044748434964,
+      "reference_d_s_2GeV_MSbar": 0.05057149018762132,
+      "reference_s_b_mixed_scale": 0.02210200190657769,
+      "reference_u_c_mixed_scale": 0.0017254901960784316
+    },
+    "reference_GeV": {
+      "b": 4.196,
+      "c": 1.275,
+      "d": 0.004690000000000001,
+      "s": 0.09273999999999999,
+      "t": 172.52,
+      "u": 0.0022
+    },
+    "selected_physical_map": "common color-resolved renormalized inverse propagator; d/s comparison uses the quoted 2 GeV MSbar convention",
+    "up_sector": {
+      "best_log_scale": {
+        "log_rms": 3.8234488651768106,
+        "masses_GeV": {
+          "c": 1.1348004760041952,
+          "t": 1.6940045113702753,
+          "u": 0.251731893877136
+        },
+        "prediction_to_reference_ratio": {
+          "c": 0.8900395890228983,
+          "t": 0.00981917755257521,
+          "u": 114.42358812597091
+        },
+        "scale_per_dimensionless_unit_GeV": 2.0544567050165305
+      },
+      "c_anchor": {
+        "log_rms_all_three": 3.825222998706937,
+        "masses_GeV": {
+          "c": 1.275,
+          "t": 1.9032911931816252,
+          "u": 0.28283224362355824
+        },
+        "prediction_to_reference_ratio": {
+          "c": 1.0,
+          "t": 0.01103229302794821,
+          "u": 128.560110737981
+        },
+        "scale_per_dimensionless_unit_GeV": 2.308275643414863
+      },
+      "t_anchor": {
+        "log_rms_all_three": 5.999562852190612,
+        "masses_GeV": {
+          "c": 115.56980917475911,
+          "t": 172.52,
+          "u": 25.636759548269495
+        },
+        "prediction_to_reference_ratio": {
+          "c": 90.64298758804637,
+          "t": 1.0,
+          "u": 11653.07252194068
+        },
+        "scale_per_dimensionless_unit_GeV": 209.22900049584317
+      },
+      "u_anchor": {
+        "log_rms_all_three": 6.0897850487935115,
+        "masses_GeV": {
+          "c": 0.009917539683818285,
+          "t": 0.014804679167247547,
+          "u": 0.0022
+        },
+        "prediction_to_reference_ratio": {
+          "c": 0.007778462497112381,
+          "t": 8.581427757504954e-05,
+          "u": 1.0
+        },
+        "scale_per_dimensionless_unit_GeV": 0.01795483552530046
+      }
+    }
+  },
+  "scientific_consequence": "The finite carrier fixes structural ancestry and source coordinates, while the common interacting G2/G3 contraction supplies renormalized flavor observables in the regulator limit."
+}

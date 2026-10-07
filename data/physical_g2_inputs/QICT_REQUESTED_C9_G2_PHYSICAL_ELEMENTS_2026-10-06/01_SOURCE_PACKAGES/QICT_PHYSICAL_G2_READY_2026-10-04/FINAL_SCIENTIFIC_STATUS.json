@@ -1,0 +1,68 @@
+{
+  "closed": {
+    "charged_incident_cluster_steps": [
+      2908,
+      2925,
+      8972,
+      8973
+    ],
+    "checkpoint_sha256": "4a22157eefe982fb6ad06564e2e6d779d18045618deedf69fdbd567d6655455a",
+    "step4_checkpoint": "PASS",
+    "step4_cluster_certified_l2_bound": 4.761260928942132e-07,
+    "step4_norm2": 0.0034703350287145765,
+    "step4_support": 77036
+  },
+  "created_utc": "2026-10-04",
+  "global_physical_status": {
+    "C10_quantum_shell_CP_maps_present": false,
+    "C9_6x6_L24_present": false,
+    "G2_present": false,
+    "KATO_BUFFER_count": 0,
+    "accepted_physical_volumes": 0,
+    "boundary_to_path_present": false,
+    "charged_U_cone_complete": false,
+    "lambda1_riesz_kato_selected": false
+  },
+  "hard_blocker": "No complete frozen matrix-free charged U_cone / selected L24 lambda=1 Kato state and no volume-specific KATO_BUFFER/C10 shell CP/boundary-to-path tensors exist in the supplied corpus.",
+  "next_action": "Run the external/HPC full charged U_cone provider, certify the protecting Riesz gap, generate nested Kato buffers and C10 boundary tensors, then feed the existing rank-six/C11 pipeline.",
+  "scientific_guard": "Do not reinterpret the certified four-plaquette cluster as the selected global Kato/Riesz state or as C9^(6)/G2.",
+  "status": "LOCAL_CHARGED_CLUSTER_CLOSED__GLOBAL_PHYSICAL_G2_BLOCKED_ON_EXTERNAL_DYNAMICAL_PAYLOAD",
+  "volumes": [
+    {
+      "L": 24,
+      "nmax": 9,
+      "physical_moment_payload_present": false,
+      "representation_tail_bound": 7.199588798902931e-07
+    },
+    {
+      "L": 32,
+      "nmax": 13,
+      "physical_moment_payload_present": false,
+      "representation_tail_bound": 1.322332624229798e-07
+    },
+    {
+      "L": 48,
+      "nmax": 21,
+      "physical_moment_payload_present": false,
+      "representation_tail_bound": 3.743862881097305e-07
+    },
+    {
+      "L": 64,
+      "nmax": 29,
+      "physical_moment_payload_present": false,
+      "representation_tail_bound": 2.835877641814138e-07
+    },
+    {
+      "L": 96,
+      "nmax": 45,
+      "physical_moment_payload_present": false,
+      "representation_tail_bound": 3.1825043668604213e-07
+    },
+    {
+      "L": 128,
+      "nmax": 61,
+      "physical_moment_payload_present": false,
+      "representation_tail_bound": 1.7043204567817196e-07
+    }
+  ]
+}

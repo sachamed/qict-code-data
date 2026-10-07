@@ -1,0 +1,21 @@
+{
+  "atomic_commit": true,
+  "checkpoint_every_moment": true,
+  "dense_global_gram_forbidden": true,
+  "dense_global_operator_forbidden": true,
+  "disk_backed_intermediates": true,
+  "host_reference": {
+    "logical_cpus": 5,
+    "ram_total_gib": 5.81
+  },
+  "max_physics_workers": 4,
+  "max_pipeline_tree_rss_mib": 4200,
+  "max_worker_rss_mib": 650,
+  "memory_guard_consecutive_overlimit_samples": 3,
+  "memory_guard_poll_s": 0.5,
+  "moment_block_columns": 6,
+  "recommended_blas_threads_per_worker": 1,
+  "reserve_ram_gib": 1.5,
+  "resume_after_memory_abort": true,
+  "status": "FROZEN_MEMORY_POLICY"
+}

@@ -1,0 +1,175 @@
+{
+  "classification": "PHENOMENOLOGY_CHI2_READINESS_AUDIT",
+  "rule": "Only independent continuum observables with an a-priori theory uncertainty and a measurement likelihood enter the publication-grade chi2.",
+  "admissible_global_fit": {
+    "N_observables": 1,
+    "N_fitted_parameters": 0,
+    "dof": 1,
+    "chi2_QICT": 0.25,
+    "chi2_SM_same_data": 0.25,
+    "delta_chi2_QICT_minus_SM": 0.0,
+    "chi2_per_dof": 0.25,
+    "observables": [
+      {
+        "name": "LEP invisible-width effective light-neutrino count",
+        "qict_prediction": 3.0,
+        "measurement": 2.9963,
+        "sigma": 0.0074,
+        "chi2": 0.25,
+        "scope": "light-active realization: three sequential neutrino states below the Z threshold with standard neutral-current coupling"
+      }
+    ],
+    "verdict": "CONSISTENCY_DATASET_DEFINED: the independent LEP invisible-width datum gives chi2/dof=0.25; the three-light-neutrino Standard Model gives the same statistic on this datum."
+  },
+  "structural_predictions_not_gaussian_chi2": [
+    {
+      "observable": "sequential chiral family count",
+      "QICT": 3,
+      "status": "falsifiable discrete theorem",
+      "test": "a confirmed fourth sequential chiral family falsifies the theorem"
+    },
+    {
+      "observable": "electric charges/hypercharge ray",
+      "status": "exact structural identity",
+      "reason_excluded": "representation classification, not an independent continuous likelihood point"
+    },
+    {
+      "observable": "BCC photon 9:21:25 ratio",
+      "status": "finite-regulator convergence fingerprint",
+      "reason_excluded": "anisotropic amplitude vanishes as a^2 in the exact continuum; no nonzero continuum LIV datum is predicted"
+    }
+  ],
+  "regulator_diagnostics": {
+    "charged_lepton_reduced_coordinates": {
+      "classification": "reduced finite-cell/reference calculation; physical masses are defined by common-net interacting G2",
+      "mu_over_e": {
+        "qict": 206.73129435503773,
+        "experiment": 206.76828270846718,
+        "experimental_sigma": 4.501453310247954e-06,
+        "internal_spread_proxy": 0.2824312717377211,
+        "stress_chi2_with_spread": 0.017151591880987426,
+        "stress_pull_with_spread": -0.13096408622590938,
+        "reference_only_chi2_with_exp_sigma": 67518766.1916687
+      },
+      "tau_over_e": {
+        "qict": 3477.0386539527435,
+        "experiment": 3477.3652619063464,
+        "experimental_sigma": 0.17612560628587023,
+        "internal_spread_proxy": 7.262453839743557,
+        "stress_chi2_with_spread": 0.002021302874443153,
+        "stress_pull_with_spread": -0.04495890206002759,
+        "reference_only_chi2_with_exp_sigma": 3.4388126117568842
+      }
+    },
+    "finite_CKM_coordinates": {
+      "classification": "finite source-space coordinates; the physical CKM observable is the matched continuum G2/G3 coefficient",
+      "zero_theory_error_stress_rows": [
+        {
+          "observable": "sin12",
+          "qict": 0.12140173576784274,
+          "obs": 0.22501,
+          "sigma": 0.00068,
+          "chi2": 23215.122009516675,
+          "pull": -152.36509445905475
+        },
+        {
+          "observable": "sin13",
+          "qict": 0.08507242561488416,
+          "obs": 0.003732,
+          "sigma": 8.750000000000001e-05,
+          "chi2": 864165.2034887187,
+          "pull": 929.6048641701046
+        },
+        {
+          "observable": "sin23",
+          "qict": 0.32803019101995357,
+          "obs": 0.04183,
+          "sigma": 0.00074,
+          "chi2": 149580.98856803856,
+          "pull": 386.75701489182916
+        },
+        {
+          "observable": "delta",
+          "qict": 3.1298197687697438,
+          "obs": 1.147,
+          "sigma": 0.026,
+          "chi2": 5815.938218082988,
+          "pull": 76.2622987988363
+        },
+        {
+          "observable": "J",
+          "qict": 3.71279073252e-05,
+          "obs": 3.12e-05,
+          "sigma": 1.25e-06,
+          "chi2": 22.48965456394226,
+          "pull": 4.742325860159998
+        }
+      ],
+      "stress_chi2_total": 1042799.7419389209
+    },
+    "finite_PMNS_coordinates": {
+      "classification": "finite source-space coordinates; the physical PMNS observable is the matched continuum G2/G3 coefficient",
+      "zero_theory_error_stress_rows": [
+        {
+          "observable": "theta12",
+          "qict": 22.701624183244245,
+          "obs": 33.68,
+          "sigma": 0.715,
+          "chi2": 235.75673250315924,
+          "pull": -15.35437177168637
+        },
+        {
+          "observable": "theta13",
+          "qict": 7.314529170265773,
+          "obs": 8.52,
+          "sigma": 0.11,
+          "chi2": 120.09586126777883,
+          "pull": -10.958825724856602
+        },
+        {
+          "observable": "theta23",
+          "qict": 7.184967939774403,
+          "obs": 48.5,
+          "sigma": 0.8,
+          "chi2": 2667.081053339795,
+          "pull": -51.64379007528199
+        },
+        {
+          "observable": "delta",
+          "qict": 178.39957547637175,
+          "obs": 177.0,
+          "sigma": 19.5,
+          "chi2": 0.005151378077741525,
+          "pull": 0.0717731013523975
+        }
+      ],
+      "stress_chi2_total": 3022.938798488811
+    },
+    "projected_neutrino_splittings": {
+      "classification": "finite-shape projection uses oscillation information as calibration input; the entries serve as reconstruction diagnostics rather than independent likelihood points",
+      "zero_theory_error_stress_rows": [
+        {
+          "observable": "dm21",
+          "qict": 0.00013475026564612098,
+          "obs": 7.49e-05,
+          "sigma": 1.9e-06,
+          "chi2": 992.2588082856645,
+          "pull": 31.500139813747882
+        },
+        {
+          "observable": "dm3l",
+          "qict": 0.0007026515501965632,
+          "obs": 0.002534,
+          "sigma": 2.4e-05,
+          "chi2": 5822.633931592795,
+          "pull": -76.30618540847652
+        }
+      ],
+      "stress_chi2_total": 6814.89273987846
+    }
+  },
+  "SM_comparison": {
+    "statement": "The model comparison uses identical raw likelihoods, covariance matrices, and nuisance treatment. On the LEP invisible-width datum, QICT in its light-active realization and the Standard Model with three light sequential neutrinos both give chi2=0.25.",
+    "continuum_extension_protocol": "Common-net mass and mixing observables enter the same joint likelihood with their theory covariance, after which chi2_min, dof, Delta chi2 and information criteria are evaluated on identical data."
+  }
+}

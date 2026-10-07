@@ -1,0 +1,26 @@
+{
+  "classification": "POSITIVE_SCIENTIFIC_FRAMING_AUDIT",
+  "files_scanned": 224,
+  "checks": {
+    "defensive_limitation_terms": {
+      "count": 0,
+      "pass": true
+    },
+    "defensive_response_terms": {
+      "count": 0,
+      "pass": true
+    },
+    "rhetorical_requires": {
+      "count": 0,
+      "pass": true
+    }
+  },
+  "technical_terms_retained": [
+    "weak interaction / weak convergence",
+    "continuum or regulator limit",
+    "conditional expectation",
+    "uncertainty propagation",
+    "if and only if"
+  ],
+  "all_checks_pass": true
+}

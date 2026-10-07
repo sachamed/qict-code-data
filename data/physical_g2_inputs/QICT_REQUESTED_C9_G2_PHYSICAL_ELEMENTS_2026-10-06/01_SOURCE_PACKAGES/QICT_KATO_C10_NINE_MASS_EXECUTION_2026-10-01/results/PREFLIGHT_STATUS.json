@@ -1,0 +1,36 @@
+{
+  "action": {
+    "expected": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+    "pass": true,
+    "sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7"
+  },
+  "kato": {
+    "meta": {
+      "H_gap": 14.425846446299971,
+      "H_ground": -124.99998815493764,
+      "dim": 122677,
+      "kmax": 12,
+      "nnz": 3727100,
+      "sector": "translation_k0",
+      "steps": 48
+    },
+    "next_idx": 22,
+    "pass": true,
+    "sha256": "de50451e391ab4343fea9706e5199024370a6ff65e9c9e2db152ca154b32aea6",
+    "vector_norm": 0.9999999999999997,
+    "vector_shape": [
+      122677
+    ]
+  },
+  "mass_gate": "AWAITING_G2_NINE_FLAVOR_PAYLOAD_L4_L8_L12",
+  "status": "PASS_KATO_C10_PREFLIGHT",
+  "task3": {
+    "coarse_fine": "3/3",
+    "manifest_status": "TASK3_PHYSICAL_FULL_PASS",
+    "max_certified_total_bound": 3.8913107686035823e-08,
+    "pass": true,
+    "provenance_status": "PASS_TASK3_PHYSICAL_FULL_PASS_CONSOLIDATED",
+    "sha256": "5e88cc98b7412862b790a387125836366b7cfe49fb72855759614623a18f2b79",
+    "zip_test": true
+  }
+}

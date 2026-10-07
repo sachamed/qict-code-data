@@ -1,0 +1,210 @@
+{
+  "C0_fro_error_diagnostic": 0.0,
+  "exact_structural_positivity": "For exact C_k=V^*U^kV with U unitary, the block Toeplitz matrix is a Gram matrix and is positive semidefinite.",
+  "interpretation": "Pencil poles and tolerance-based ranks are candidate-generation diagnostics only. Physical acceptance requires independently certified errors and depth/regulator/volume stability.",
+  "pencils": [
+    {
+      "K": 2,
+      "candidate_poles": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.9999999999999999,
+          0.0
+        ],
+        [
+          0.9999999999999996,
+          0.0
+        ],
+        [
+          -0.9999999999999998,
+          0.0
+        ],
+        [
+          -1.0000000000000004,
+          0.0
+        ],
+        [
+          -1.0000000000000004,
+          0.0
+        ]
+      ],
+      "numerical_rank_diagnostic": 6,
+      "singular_value_ratio_last_kept_diagnostic": 0.9999999999999998,
+      "svd_relative_tolerance_diagnostic": 1e-11,
+      "unit_circle_max_deviation_diagnostic": 4.440892098500626e-16
+    },
+    {
+      "K": 3,
+      "candidate_poles": [
+        [
+          1.0000000000000004,
+          0.0
+        ],
+        [
+          1.0000000000000004,
+          0.0
+        ],
+        [
+          1.0000000000000002,
+          0.0
+        ],
+        [
+          -0.9999999999999996,
+          0.0
+        ],
+        [
+          -0.9999999999999998,
+          0.0
+        ],
+        [
+          -1.0000000000000013,
+          0.0
+        ]
+      ],
+      "numerical_rank_diagnostic": 6,
+      "singular_value_ratio_last_kept_diagnostic": 0.9999999999999996,
+      "svd_relative_tolerance_diagnostic": 1e-11,
+      "unit_circle_max_deviation_diagnostic": 1.3322676295501878e-15
+    },
+    {
+      "K": 4,
+      "candidate_poles": [
+        [
+          1.000000000000001,
+          0.0
+        ],
+        [
+          1.000000000000001,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0
+        ],
+        [
+          -1.000000000000001,
+          0.0
+        ]
+      ],
+      "numerical_rank_diagnostic": 6,
+      "singular_value_ratio_last_kept_diagnostic": 0.9999999999999999,
+      "svd_relative_tolerance_diagnostic": 1e-11,
+      "unit_circle_max_deviation_diagnostic": 1.1102230246251565e-15
+    },
+    {
+      "K": 5,
+      "candidate_poles": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.9999999999999998,
+          0.0
+        ],
+        [
+          -0.9999999999999996,
+          0.0
+        ],
+        [
+          -0.9999999999999996,
+          0.0
+        ],
+        [
+          -1.0000000000000002,
+          0.0
+        ]
+      ],
+      "numerical_rank_diagnostic": 6,
+      "singular_value_ratio_last_kept_diagnostic": 0.9999999999999998,
+      "svd_relative_tolerance_diagnostic": 1e-11,
+      "unit_circle_max_deviation_diagnostic": 4.440892098500626e-16
+    },
+    {
+      "K": 6,
+      "candidate_poles": [
+        [
+          0.9999999999999991,
+          0.0
+        ],
+        [
+          1.0000000000000009,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          -0.9999999999999989,
+          0.0
+        ],
+        [
+          -0.9999999999999994,
+          0.0
+        ],
+        [
+          -0.9999999999999998,
+          0.0
+        ]
+      ],
+      "numerical_rank_diagnostic": 6,
+      "singular_value_ratio_last_kept_diagnostic": 0.999999999999999,
+      "svd_relative_tolerance_diagnostic": 1e-11,
+      "unit_circle_max_deviation_diagnostic": 1.1102230246251565e-15
+    },
+    {
+      "K": 7,
+      "candidate_poles": [
+        [
+          1.0000000000000004,
+          0.0
+        ],
+        [
+          1.0,
+          0.0
+        ],
+        [
+          1.0000000000000004,
+          0.0
+        ],
+        [
+          -0.9999999999999993,
+          0.0
+        ],
+        [
+          -0.9999999999999994,
+          0.0
+        ],
+        [
+          -1.0000000000000013,
+          0.0
+        ]
+      ],
+      "numerical_rank_diagnostic": 6,
+      "singular_value_ratio_last_kept_diagnostic": 0.9999999999999993,
+      "svd_relative_tolerance_diagnostic": 1e-11,
+      "unit_circle_max_deviation_diagnostic": 1.3322676295501878e-15
+    }
+  ],
+  "rigorous_positivity_claim": false,
+  "rigorous_rank_claim": false,
+  "status": "PASS_C11_NUMERICAL_MOMENT_DIAGNOSTIC__RIGOROUS_ACCEPTANCE_SEPARATE",
+  "toeplitz_depth": 16,
+  "toeplitz_lambda_min_diagnostic": -6.5792516313627464e-15
+}

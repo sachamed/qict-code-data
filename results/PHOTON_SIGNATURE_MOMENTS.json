@@ -1,0 +1,24 @@
+{
+  "classification": "PHOTON_DIRECTIONAL_MOMENTS",
+  "high_symmetry": {
+    "axis": {
+      "b": "3/32",
+      "d": "-17/2048"
+    },
+    "body_diagonal": {
+      "b": "25/96",
+      "d": "-1963/55296"
+    },
+    "face_diagonal": {
+      "b": "7/32",
+      "d": "-203/6144"
+    }
+  },
+  "overconstraint_statement": "one BCC orientation and one energy scale fix both the quadratic and quartic directional maps",
+  "sphere_average_b": "31/160",
+  "sphere_average_b_float": 0.19375,
+  "sphere_moment_S4": "3/5",
+  "sphere_moment_S4_squared": "41/105",
+  "sphere_variance_b": "1/525",
+  "sphere_variance_b_float": 0.0019047619047619048
+}

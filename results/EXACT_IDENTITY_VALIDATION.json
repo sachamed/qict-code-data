@@ -1,0 +1,19 @@
+{
+  "bcc_directional_coefficients": {
+    "axis": 0.09375,
+    "body_diagonal": 0.26041666666666663,
+    "face_diagonal": 0.21875000000000006
+  },
+  "bcc_ratio_units_of_1_over_96": [
+    9.0,
+    21.000000000000007,
+    24.999999999999996
+  ],
+  "hypercharge_anomaly_sums": {
+    "SU2_SU2_U1": 0,
+    "SU3_SU3_U1": 0,
+    "U1_cubic": 0,
+    "gravity_gravity_U1": 0
+  },
+  "weyl_relation_fro_error": 6.740105962128839e-16
+}

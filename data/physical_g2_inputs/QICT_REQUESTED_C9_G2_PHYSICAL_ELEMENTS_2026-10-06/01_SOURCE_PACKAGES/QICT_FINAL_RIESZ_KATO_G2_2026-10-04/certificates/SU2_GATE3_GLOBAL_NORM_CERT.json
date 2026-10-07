@@ -1,0 +1,567 @@
+{
+  "status": "PASS_SU2_GATE3_GLOBAL_NORM_BY_ISOMETRIC_CHAIN",
+  "pid": 15162,
+  "span": [
+    10331,
+    10385
+  ],
+  "parent_pair_norm2": 1.0000000000000036,
+  "start_left_env_dim": 1496,
+  "start_left_env_nnz": 1496,
+  "start_left_env_max_diag_dev": 4.440892098500626e-16,
+  "start_left_env_max_offdiag": 0.0,
+  "checked_nonterminal_cores": 54,
+  "max_nonterminal_diag_dev": 1.2212453270876722e-15,
+  "max_nonterminal_offdiag": 0.0,
+  "max_nonterminal_fro_dev": 9.972250391181711e-15,
+  "terminal_core_nnz": 16,
+  "terminal_fro_norm2": 1.0000000000000053,
+  "global_norm2": 1.0000000000000053,
+  "abs_global_norm_error": 5.329070518200751e-15,
+  "discarded_l2": 0.0,
+  "proof_note": "Start left environment is identity. Every nonterminal emitted/inherited core is left-isometric; SVD singular values/right factors are carried forward. Therefore the complete norm is transported to the terminal core. Terminal right bond is scalar.",
+  "runtime_s": 2.8478891849517822,
+  "peak_rss_kib": 563628,
+  "rows": [
+    {
+      "dim": 163064,
+      "nnz": 163064,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10331,
+      "kind": "active_output_core"
+    },
+    {
+      "dim": 163064,
+      "nnz": 163064,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10334,
+      "kind": "active_output_core"
+    },
+    {
+      "dim": 1124,
+      "nnz": 52770,
+      "row_collisions": 0,
+      "max_diag_dev": 1.2212453270876722e-15,
+      "max_offdiag": 0.0,
+      "fro_dev": 9.972250391181711e-15,
+      "site": 10381,
+      "kind": "active_output_core"
+    },
+    {
+      "dim": 210,
+      "nnz": 817,
+      "row_collisions": 0,
+      "max_diag_dev": 6.661338147750939e-16,
+      "max_offdiag": 0.0,
+      "fro_dev": 3.3583099550713978e-15,
+      "site": 10382,
+      "kind": "active_output_core"
+    },
+    {
+      "dim": 16,
+      "nnz": 183,
+      "row_collisions": 0,
+      "max_diag_dev": 4.440892098500626e-16,
+      "max_offdiag": 0.0,
+      "fro_dev": 9.742167503148516e-16,
+      "site": 10383,
+      "kind": "active_output_core"
+    },
+    {
+      "dim": 16,
+      "nnz": 16,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10384,
+      "kind": "active_output_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10332,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10333,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10335,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10336,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10337,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10338,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10339,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10340,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10341,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10342,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10343,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10344,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10345,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10346,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10347,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10348,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10349,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10350,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10351,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10352,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10353,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10354,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10355,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10356,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10357,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10358,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10359,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10360,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10361,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10362,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10363,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10364,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10365,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10366,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10367,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10368,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10369,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10370,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10371,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10372,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10373,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10374,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10375,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10376,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1496,
+      "nnz": 1496,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10377,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 1124,
+      "nnz": 1124,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10378,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 16,
+      "nnz": 819,
+      "row_collisions": 0,
+      "max_diag_dev": 6.661338147750939e-16,
+      "max_offdiag": 0.0,
+      "fro_dev": 1.5141423334015086e-15,
+      "site": 10379,
+      "kind": "inherited_parent_core"
+    },
+    {
+      "dim": 16,
+      "nnz": 16,
+      "row_collisions": 0,
+      "max_diag_dev": 0.0,
+      "max_offdiag": 0.0,
+      "fro_dev": 0.0,
+      "site": 10380,
+      "kind": "inherited_parent_core"
+    }
+  ]
+}

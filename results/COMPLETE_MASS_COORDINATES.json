@@ -1,0 +1,77 @@
+{
+  "charged_lepton_reduced_coordinates": {
+    "electron": 1.0,
+    "koide_Q": 0.6666714160052029,
+    "mu_over_e": 206.73129435503773,
+    "muon": 206.73129435503773,
+    "normalization": "electron reduced coordinate = 1",
+    "tau": 3477.0386539527435,
+    "tau_over_e": 3477.0386539527435,
+    "tau_over_mu": 16.81912099859115
+  },
+  "classification": "MASS_COORDINATE_REGISTRY",
+  "interpretation": "The table collects the mass coordinates numerically determined by the distributed finite data. Source-space and reduced coordinates are reported together with the common interacting conversion laws that define dimensional observables.",
+  "neutrino_finite_takagi_coordinates": {
+    "dimensionless_split_ratio": 0.19177395340325556,
+    "normalized_to_heaviest": [
+      0.40269217107209393,
+      0.5681871918068078,
+      1.0
+    ],
+    "raw": [
+      0.1895171061,
+      0.2674032426,
+      0.470625256
+    ],
+    "weighted_common_scale_projection_eV_per_coordinate": 0.06153390610772211,
+    "weighted_projected_m_bb_phase_interval_eV": [
+      0.006883450099612267,
+      0.01264437508225137
+    ],
+    "weighted_projected_m_beta_eV": 0.012927889438683867,
+    "weighted_projected_masses_eV": [
+      0.01166172781256461,
+      0.016454366023048835,
+      0.02895941031462668
+    ],
+    "weighted_projected_splittings_eV2": {
+      "delta_m21": 0.00013475026564612098,
+      "delta_m31": 0.0007026515501965632
+    },
+    "weighted_projected_sum_masses_eV": 0.057075504150240125,
+    "weighted_split_chi2_contributions": [
+      992.2588082856645,
+      5822.633931592795
+    ],
+    "weighted_split_chi2_total": 6814.89273987846
+  },
+  "physical_conversion_laws": {
+    "charged_stable_or_threshold_channel": "m_f=(hbar/(c^2 tau_*))*epsilon_f",
+    "neutrinos": "m_nu_i=(hbar/(c^2 tau_*))*sigma_i(M_N), Delta m_ij^2=(hbar/(c^2 tau_*))^2*(sigma_i^2-sigma_j^2)",
+    "quarks": "mbar_f(mu) from the scalar chirality-changing part of the common color-resolved renormalized inverse propagator at declared mu"
+  },
+  "quark_finite_receiver_coordinates": {
+    "down_normalized_to_heaviest": [
+      0.018979526072509086,
+      0.706470530637252,
+      1.0
+    ],
+    "down_raw": [
+      0.015499504,
+      0.57693447,
+      0.816643363
+    ],
+    "reference_same_scale_down_ratio_d_over_s": 0.05057149018762131,
+    "same_scale_down_ratio_d_over_s": 0.02686527639785503,
+    "up_normalized_to_heaviest": [
+      0.14860166675324307,
+      0.6698922395940129,
+      1.0
+    ],
+    "up_raw": [
+      0.122529666,
+      0.552360375,
+      0.824551088
+    ]
+  }
+}

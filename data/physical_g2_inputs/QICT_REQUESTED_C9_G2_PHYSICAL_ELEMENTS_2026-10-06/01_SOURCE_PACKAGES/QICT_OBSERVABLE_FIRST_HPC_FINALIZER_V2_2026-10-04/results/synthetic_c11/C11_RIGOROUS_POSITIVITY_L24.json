@@ -1,0 +1,16 @@
+{
+  "certified_computed_toeplitz_lambda_min_lower_bound": 0.0,
+  "certified_exact_lambda_min_lower_bound": 0.0,
+  "depth": 16,
+  "error_bound_method": "Synthetic analytical unit-test: exact two-atom moment sequence; exact Toeplitz lower bound 0 and zero moment error.",
+  "error_certificate_sha256": "eaf69f0932d46a591617c7c7c5fd18672615cfbbbf1db18df60aeb712852ac81",
+  "exact_structural_positivity": {
+    "statement": "For exact C_k=V^*U^kV with U unitary, T_N is a Gram matrix and is positive semidefinite.",
+    "status": "PASS_EXACT_UNITARY_MOMENT_TOEPLITZ_POSITIVITY_THEOREM"
+  },
+  "moments_sha256": "c0c2a0b79b8a2a2f68d62618099febd0283634a0c4829e878154950f45f4b770",
+  "numerical_lambda_min_diagnostic": -6.5792516313627464e-15,
+  "positive_certified": true,
+  "status": "PASS_ERROR_CERTIFIED_C11_POSITIVITY",
+  "toeplitz_perturbation_fro_upper_bound": 0.0
+}

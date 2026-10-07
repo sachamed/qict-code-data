@@ -1,0 +1,11 @@
+stage,subject,status,theorem_label,certificate
+1,Algebraic structure,CLASS_RELATIVE_UNIQUENESS,thm:s92-receiver-algebra,Artin-Wedderburn + pseudoreality + Burnside on receiver-supplied visible carriers
+2,Three-generation identification,EXACT_THEOREM,thm:s92-three-generation,source completeness + double commutant + irreducible C3 Weyl block
+3,Strict CAR matter lift,EXACT_THEOREM,thm:s92-car-unique,vacuum + grading + exact CAR intertwining + functoriality + antisymmetric monoidality
+4,Thermodynamic vacuum,QUANTITATIVE_THEOREM,thm:s92-kato-vacuum,uniform gap + Lieb-Robinson locality + receding-boundary gapped spectral flow
+5,Fermion spectrum,OPERATOR_THEOREM,thm:s92-mass-scale,common-net G2 + residue/threshold normalization + one dimensional scale tau_*
+6,CKM PMNS CP,OPERATOR_THEOREM,thm:s92-mixing,matched common-net G2/G3 + Ward/Slavnov-Taylor current normalization
+7,Regulator universality,QUANTITATIVE_THEOREM,thm:s92-scheme,uniform sign-operator convergence + quasi-local cross-family intertwining
+8,Continuum reconstruction,QUANTITATIVE_RECONSTRUCTION_THEOREM,thm:s92-continuum-reconstruction,vanishing Cauchy/positivity/covariance/spectrum/locality/cone/clustering/IR moduli
+9,Spectral stability,EXACT_STABILITY_THEOREM,thm:s92-spectral-stability,norm-resolvent poles + nested hard-edge thresholds
+10,Perturbative recovery,INHERITED_RENORMALIZABLE_CLASS,thm:s92-perturbative-recovery,continuum field content + Slavnov-Taylor identities + 't Hooft-Veltman renormalizability

@@ -1,0 +1,31 @@
+{
+  "classification": "FINITE_U1_B0_RIESZ_KATO_VALIDATION",
+  "components": {
+    "four_plaquette_boundary_component": {
+      "dimension": 33,
+      "gram_reconstruction_fro_residual": 1.3757509202886844e-15,
+      "hermiticity_fro_residual": 3.804873671892808e-54,
+      "largest_hermitian_eigenvalue": 0.9999999999999997,
+      "numerical_rank_1e-12": 1,
+      "positivity_roundoff_residual": 1.9441379434685763e-16,
+      "quadrature_nodes": 512,
+      "trace": 0.9999999999999999,
+      "uniform_contour_lower_bound_max": 0.06999999729434182,
+      "uniform_contour_lower_bound_min": 0.06999999632196917
+    },
+    "singleton_boundary_component": {
+      "dimension": 33,
+      "gram_reconstruction_fro_residual": 3.6520419119742945e-15,
+      "hermiticity_fro_residual": 1.7705015667994064e-38,
+      "largest_hermitian_eigenvalue": 0.9999999999999999,
+      "numerical_rank_1e-12": 1,
+      "positivity_roundoff_residual": 3.796987309804364e-16,
+      "quadrature_nodes": 512,
+      "trace": 1.0,
+      "uniform_contour_lower_bound_max": 0.05000000000000056,
+      "uniform_contour_lower_bound_min": 0.04999999999999956
+    }
+  },
+  "input_sha256": "a9af16524c61627bff73ae60e77c9b0b92c2aa3278e80bd972c5c497e082e2b1",
+  "interpretation": "The two serialized U(1) boundary components are normalized positive rank-one Riesz densities with explicit Gram factors and uniform contour separation on 512 quadrature nodes."
+}

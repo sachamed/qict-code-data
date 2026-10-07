@@ -1,0 +1,135 @@
+{
+  "file_count": 26,
+  "files": [
+    {
+      "bytes": 2323,
+      "path": "L24_N9_CHARGED_RANK6_PRECONTRACTION_CERTIFICATE.json",
+      "sha256": "68f5e41fc36d6744af693855c6423f6e1c20dcf475f316c824dba1b0b7c51204"
+    },
+    {
+      "bytes": 1787389,
+      "path": "L24_N9_CHARGED_RANK6_PRECONTRACTION_PAYLOAD.npz",
+      "sha256": "020d21f11ce948de0cfa37889e9e050edaf5796e0b2c75fba740bb685dd20c29"
+    },
+    {
+      "bytes": 826,
+      "path": "L24_PHYSICAL_PAYLOAD_COMPLETION_STATUS.json",
+      "sha256": "c4ae76aa84008d125a98a7f76f32cffe387968f1f2ac4c10e2fb6335fe069586"
+    },
+    {
+      "bytes": 2155,
+      "path": "README.md",
+      "sha256": "ec3483719b3d6dab6a3aad8dc7de97992aa180b9b26f02149ea535db595e1d91"
+    },
+    {
+      "bytes": 7474,
+      "path": "code/build_precontraction_payload.py",
+      "sha256": "25af211aedbeae22bb72ebcf81133f852932f9982cb363f4785a0565acd865e8"
+    },
+    {
+      "bytes": 2879,
+      "path": "code/check_physical_payload_completion.py",
+      "sha256": "36ec96668e1356a87f62b65a243fe18bda64f7c1cc1be1a7301035dbbe596bf7"
+    },
+    {
+      "bytes": 29525,
+      "path": "code/source_boundary_provider.py",
+      "sha256": "d75c009d836a2fc74851caa132b5844c6ad80390aff9fbb0ab697e2d2211bd35"
+    },
+    {
+      "bytes": 17513,
+      "path": "code/source_certified_causal_cone_rank6.py",
+      "sha256": "781e13615228c7f131ce97709d71210da7bd2bb59006ce99749ec5e60ef73d47"
+    },
+    {
+      "bytes": 11471,
+      "path": "code/source_localized_riesz_kato.py",
+      "sha256": "d7a2e185f77db2e01e89f8a77b7423752772964efcee7c32d5d741c46bb3f685"
+    },
+    {
+      "bytes": 180023,
+      "path": "components/C10_R12_LAYERED_DAG.npz",
+      "sha256": "2d0e15524254216f9890ca2ec6d8b93159ca7414d0fe3a940d546d5c4ba9cfcb"
+    },
+    {
+      "bytes": 5823,
+      "path": "components/C10_R12_SHELL_GEOMETRY_CERTIFICATE.json",
+      "sha256": "b4fa7c8c4a9226919002f74a58d4430eb831bd5cdf69e09c4d15c807fe277893"
+    },
+    {
+      "bytes": 2067,
+      "path": "components/C10_SHELL_PLANE_SWEEP_CERTIFICATE.json",
+      "sha256": "97920b56a2397160cf2f7ceedc8fbb68ff5af8cc799456d73aa3c2cb86e093c2"
+    },
+    {
+      "bytes": 173547,
+      "path": "components/C10_SHELL_R10_PLANE_SWEEP_IR.npz",
+      "sha256": "cb3ffd68d25be78d5963d2bb33800921a2c2b33f313db5566d7cf2231d9abebc"
+    },
+    {
+      "bytes": 209048,
+      "path": "components/C10_SHELL_R11_PLANE_SWEEP_IR.npz",
+      "sha256": "f5f7cd38299627300308ef6002e7eca43848e7119f99fe5f00db83f60e9cac9a"
+    },
+    {
+      "bytes": 250705,
+      "path": "components/C10_SHELL_R12_PLANE_SWEEP_IR.npz",
+      "sha256": "9357491536a813b7d9f10b27fb36aa2a325fc40455f3a8e276e77bcdac16de6a"
+    },
+    {
+      "bytes": 2767,
+      "path": "components/C9_L24_STRICT_EXECUTION_GATE_RECHECK_2026-10-04.json",
+      "sha256": "e8ea3a3f5ee572a4e59d9fa4948432026cf00d6124dc5b9b1815cc44bb3ee4a0"
+    },
+    {
+      "bytes": 4090,
+      "path": "components/L24_N9_CHARGED_LOCAL_BLOCKS_DETERMINISTIC.json",
+      "sha256": "6000ff5c90326dcfb2cdbb95b9ad59a0112ba2c784e81d483444b7e15a47e8cd"
+    },
+    {
+      "bytes": 5186,
+      "path": "components/L24_N9_EXACT_CHARGED_LOCAL_LAYER.json",
+      "sha256": "b54fe90e6bb344e53865be833e72fe2652a7a1f40eadd2de02fe075cea83cb1f"
+    },
+    {
+      "bytes": 1256,
+      "path": "components/L24_N9_EXACT_GLOBAL_FIRST_KATO_TANGENT_REEXEC_2026-10-04.json",
+      "sha256": "7a7fd59af6ffe9f5631efb5eefa8aee092dd8c99c60955daa8d9604433e6356e"
+    },
+    {
+      "bytes": 381409,
+      "path": "components/L24_N9_EXACT_GLOBAL_FIRST_KATO_TANGENT_REEXEC_2026-10-04.npz",
+      "sha256": "06a0cfe996b06cbf596727b0fdd672e8bddde985ef085f8987d211641b2355bb"
+    },
+    {
+      "bytes": 80711,
+      "path": "components/L24_N9_EXACT_SECOND_ORDER_KATO_SEED_REEXEC_2026-10-04.json",
+      "sha256": "6f821a2505fb11c2bfad10760f73ca510df3b28872f8fe5b9791d8972027a272"
+    },
+    {
+      "bytes": 1259,
+      "path": "components/L24_N9_EXACT_SU2_SECOND_KRYLOV_CONNECTED_FROM_CLASSES.json",
+      "sha256": "679473752c76287c13dac22cc49b5c4ffc961f16862453a1c68c09631b06d80e"
+    },
+    {
+      "bytes": 601471,
+      "path": "components/L24_N9_EXACT_SU2_SECOND_KRYLOV_CONNECTED_FROM_CLASSES.npz",
+      "sha256": "2fef7d23ca5116e1bb87d8b943da8d83a15b61fad4313fd72e2e4b572e4e96e3"
+    },
+    {
+      "bytes": 265798,
+      "path": "components/N9_RELATIVE_CONE_IR.npz",
+      "sha256": "42b844f8228e4e66c256a8037ceea16cf1e342c7250d30c9d4dcb2d8a80eb5d9"
+    },
+    {
+      "bytes": 1781,
+      "path": "components/QICT_LATTICE_ACTION_FREEZE_V3.canonical.json",
+      "sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7"
+    },
+    {
+      "bytes": 2467,
+      "path": "schemas/PHYSICAL_L24_PAYLOAD_CONTRACT.json",
+      "sha256": "d2ed1d412872f88fa7a93dc168af70662733504de8d625376e4349f6232f0230"
+    }
+  ]
+}

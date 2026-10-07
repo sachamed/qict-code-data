@@ -1,0 +1,13 @@
+sector,flavor,coordinate,normalization,physical_map
+charged_lepton_reduced,e,1.0,m_e^red=1,common G2 spectral coordinate + tau_*
+charged_lepton_reduced,mu,206.73129435503773,m_e^red=1,common G2 spectral coordinate + tau_*
+charged_lepton_reduced,tau,3477.0386539527435,m_e^red=1,common G2 spectral coordinate + tau_*
+up_quark_finite,u,0.14860166675324307,heaviest finite coordinate=1,common color-resolved renormalized kernel
+up_quark_finite,c,0.6698922395940129,heaviest finite coordinate=1,common color-resolved renormalized kernel
+up_quark_finite,t,1.0,heaviest finite coordinate=1,common color-resolved renormalized kernel
+down_quark_finite,d,0.018979526072509086,heaviest finite coordinate=1,common color-resolved renormalized kernel
+down_quark_finite,s,0.706470530637252,heaviest finite coordinate=1,common color-resolved renormalized kernel
+down_quark_finite,b,1.0,heaviest finite coordinate=1,common color-resolved renormalized kernel
+neutrino_finite_takagi,nu1,0.40269217107209393,heaviest finite Takagi coordinate=1,common interacting neutral Nambu Takagi kernel + tau_*
+neutrino_finite_takagi,nu2,0.5681871918068078,heaviest finite Takagi coordinate=1,common interacting neutral Nambu Takagi kernel + tau_*
+neutrino_finite_takagi,nu3,1.0,heaviest finite Takagi coordinate=1,common interacting neutral Nambu Takagi kernel + tau_*

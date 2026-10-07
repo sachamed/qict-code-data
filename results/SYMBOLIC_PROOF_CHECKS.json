@@ -1,0 +1,28 @@
+{
+  "all_checks_pass": true,
+  "bcc_b_values": {
+    "axis": "0.0937500000000000",
+    "body": "25/96",
+    "face": "7/32"
+  },
+  "bcc_ratio_after_common_96_factor": [
+    "9.00000000000000",
+    "21",
+    "25"
+  ],
+  "classification": "SYMBOLIC_PROOF_RECONSTRUCTION",
+  "hypercharge_anomaly_residuals": {
+    "SU2_SU2_U1": 0,
+    "SU3_SU3_U1": 0,
+    "U1_cubic": 0,
+    "grav_grav_U1": 0
+  },
+  "primitive_electric_polynomial": "2*E**2 + E",
+  "triangular_identity_residual": "0",
+  "triangular_values_Delta_1_3_5": [
+    3,
+    21,
+    55
+  ],
+  "weyl_relation_max_exact_residual": "0"
+}

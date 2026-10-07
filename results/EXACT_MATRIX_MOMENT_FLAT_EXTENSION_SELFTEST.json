@@ -1,0 +1,17 @@
+{
+  "scope": "exact symbolic algorithmic self-test; not a physical mass result",
+  "source_rank": 6,
+  "atoms_exact": [
+    "1",
+    "-1",
+    "I"
+  ],
+  "toeplitz_rank_K2": 18,
+  "toeplitz_rank_K3": 18,
+  "flat_extension_at_K3": true,
+  "annihilating_polynomial": "z^3 - I*z^2 - z + I",
+  "moment_recurrence_exact_zero": true,
+  "C0_is_identity": true,
+  "mass_extraction_stage": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE",
+  "status": "PASS_EXACT_SYMBOLIC_MATRIX_MOMENT_FLAT_EXTENSION_SELFTEST"
+}

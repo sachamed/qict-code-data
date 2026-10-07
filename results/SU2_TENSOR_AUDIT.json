@@ -1,0 +1,54 @@
+{
+  "classification": "PRIMARY_SU2_TENSOR_VALIDATION",
+  "four_plaquette_SU2": {
+    "cross_shard_duplicate_keys": 0,
+    "manifest_files_verified": 128,
+    "norm2_direct": 0.0034703350287145765,
+    "pickle_global_policy": "Primitive containers and builtins.complex are parsed; executable constructors are disabled.",
+    "plaquette_sequence": [
+      2908,
+      2925,
+      8972,
+      8973
+    ],
+    "shard_count": 128,
+    "shared_link": 10377,
+    "support_direct": 77036,
+    "unique_keys_direct": 77036
+  },
+  "sequential_SU2": {
+    "bond_sector_files": 12,
+    "core_nonzero_counts": {
+      "core_09313.pkl": 201,
+      "core_09314.pkl": 201,
+      "core_09317.pkl": 201,
+      "core_09369.pkl": 201864,
+      "core_09370.pkl": 201864,
+      "core_09373.pkl": 201864,
+      "core_09425.pkl": 201864,
+      "core_10323.pkl": 201864,
+      "core_10324.pkl": 201864,
+      "core_10325.pkl": 201864,
+      "core_10328.pkl": 201864,
+      "core_10377.pkl": 594652,
+      "core_10378.pkl": 594652
+    },
+    "core_tensor_files": 13,
+    "geometry": {
+      "link_records": 21136,
+      "max_open": 652,
+      "max_open_cut": 1282,
+      "moment_depth": 9,
+      "plaquette_edge_records": 18252,
+      "plaquette_interval_records": 18252,
+      "plaquette_records": 18252,
+      "shell_link_records": 5948,
+      "shell_plaquette_records": 5356
+    },
+    "geometry_ir_sha256": "42b844f8228e4e66c256a8037ceea16cf1e342c7250d30c9d4dcb2d8a80eb5d9",
+    "largest_observed_core_bond_index_plus_one": 594652,
+    "manifest_files_verified": 26,
+    "pickle_global_policy": "Primitive containers and builtins.complex are parsed; executable constructors are disabled.",
+    "total_core_nonzero_coefficients": 2804819
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "calculation": "Deterministic matrix-free Riesz contour validation",
+  "density_fro_error": 1.5700924586837752e-16,
+  "linear_solves": 768,
+  "projector_fro_error": 1.4433516438349637e-17,
+  "quadrature_nodes": 128,
+  "retained_rank": 2,
+  "uniform_contour_gap": 0.1,
+  "worst_linear_residual": 8.881784197001252e-16
+}

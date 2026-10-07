@@ -1,0 +1,63 @@
+{
+  "archive_sha256": "111787c717b1976d71728ca5d5b81668f3fb2793fa6abe1e37a2e75e112fab79",
+  "array_shape_consistency": "verified",
+  "classification": "EXACT_L24_N9_RANK6_PRECONTRACTION",
+  "common_space_continuation": {
+    "interpretation": "The archive supplies the finite L=24, n=9 rank-six coordinates used by the common-space spectral construction.",
+    "operator_layer": "coherence-resolved C10 map + boundary-to-path insertion + six-column embedding + charged causal-cone action + selected Riesz state",
+    "spectral_output": "C_n^(6) followed by the matrix spectral measure G_2 on one frozen action"
+  },
+  "description_consistency": "verified",
+  "manifest_consistency": "verified",
+  "primary_members": [
+    "C10_LAYERED_DAG.npz",
+    "C10_SHELL_R10.npz",
+    "C10_SHELL_R11.npz",
+    "C10_SHELL_R12.npz",
+    "CHARGED_LOCAL_LAYER.json",
+    "DATA_DESCRIPTION.json",
+    "KATO_FIRST_TANGENT.npz",
+    "L24_N9_RANK6_PRECONTRACTION.npz",
+    "LATTICE_ACTION.json",
+    "N9_RELATIVE_CONE.npz",
+    "SU2_SECOND_KRYLOV_CONNECTED.npz"
+  ],
+  "statistics": {
+    "L": 24,
+    "c10_edges": 17576,
+    "c10_nodes": 3925,
+    "family_pairs_zero_based": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "links": 21136,
+    "n": 9,
+    "plaquettes": 18252,
+    "shell10_links": 16008,
+    "shell10_plaquettes": 10476,
+    "shell11_links": 19554,
+    "shell11_plaquettes": 12794,
+    "shell12_links": 23456,
+    "shell12_plaquettes": 15344,
+    "source_order": [
+      "L1",
+      "L2",
+      "L3",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "su2_connected_pairs": 261346,
+    "su2_translation_orientation_classes": 48
+  }
+}

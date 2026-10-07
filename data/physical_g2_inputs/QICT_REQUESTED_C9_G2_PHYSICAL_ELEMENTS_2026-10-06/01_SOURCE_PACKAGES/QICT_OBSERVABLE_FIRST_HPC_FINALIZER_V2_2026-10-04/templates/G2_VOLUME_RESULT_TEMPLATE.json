@@ -1,0 +1,7 @@
+{
+  "status": "PENDING_PHYSICAL_G2_VOLUME",
+  "L": 24,
+  "spectral_certificate_sha256": "REPLACE",
+  "branches": [],
+  "note": "Populate only from a rigorous spectral-support/edge certificate."
+}

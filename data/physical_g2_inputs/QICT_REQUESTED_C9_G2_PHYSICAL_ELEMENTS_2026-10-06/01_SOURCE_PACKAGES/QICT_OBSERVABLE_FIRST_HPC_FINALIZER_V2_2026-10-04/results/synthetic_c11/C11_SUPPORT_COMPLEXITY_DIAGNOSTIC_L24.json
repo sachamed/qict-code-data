@@ -1,0 +1,207 @@
+{
+  "flat_extension_detected_numerically": true,
+  "flat_extension_pairs_numerical": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      15,
+      16
+    ]
+  ],
+  "interpretation": "The SVD ranks and lack of a numerical flat pair are conditioning diagnostics only. They do not by themselves prove a rank lower bound or exclude an exact flat extension. The independently serialized finite-volume spectral decomposition shows that this control is highly atomic at the stored precision.  A rigorous support-complexity lower bound is reserved for validated singular-value/minor enclosures or exact arithmetic.",
+  "mass_extraction_stage": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE",
+  "matrix_dimension": 6,
+  "moment_count": 24,
+  "numerical_final_toeplitz_rank": 6,
+  "rank_certification_status": "NUMERICAL_SVD_ONLY__VALIDATED_RANK_CERTIFICATE_REQUIRED_FOR_RIGOROUS_LOWER_BOUND",
+  "rigorous_atomic_residue_rank_sum_lower_bound": null,
+  "serialized_finite_volume_spectrum": {
+    "available": false
+  },
+  "status": "PASS_SUPPORT_COMPLEXITY_DIAGNOSTIC",
+  "svd_relative_tolerance": 1e-11,
+  "toeplitz_depth_scan": [
+    {
+      "depth": 1,
+      "dimension": 12,
+      "lambda_max": 2.0,
+      "lambda_min": 0.0,
+      "rank": 6,
+      "rank_increment": null
+    },
+    {
+      "depth": 2,
+      "dimension": 18,
+      "lambda_max": 3.000000000000001,
+      "lambda_min": -1.0489571175812374e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 3,
+      "dimension": 24,
+      "lambda_max": 4.000000000000003,
+      "lambda_min": -9.761320051875917e-16,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 4,
+      "dimension": 30,
+      "lambda_max": 5.0000000000000036,
+      "lambda_min": -8.423046197334138e-16,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 5,
+      "dimension": 36,
+      "lambda_max": 6.000000000000002,
+      "lambda_min": -2.1381750524276426e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 6,
+      "dimension": 42,
+      "lambda_max": 7.000000000000003,
+      "lambda_min": -2.3506300248389037e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 7,
+      "dimension": 48,
+      "lambda_max": 8.000000000000002,
+      "lambda_min": -4.810019982419201e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 8,
+      "dimension": 54,
+      "lambda_max": 9.000000000000004,
+      "lambda_min": -3.977818843233106e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 9,
+      "dimension": 60,
+      "lambda_max": 10.0,
+      "lambda_min": -5.397398923723741e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 10,
+      "dimension": 66,
+      "lambda_max": 11.0,
+      "lambda_min": -5.587725524539897e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 11,
+      "dimension": 72,
+      "lambda_max": 12.000000000000005,
+      "lambda_min": -6.5256271624112685e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 12,
+      "dimension": 78,
+      "lambda_max": 13.000000000000007,
+      "lambda_min": -5.464507031392679e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 13,
+      "dimension": 84,
+      "lambda_max": 14.000000000000007,
+      "lambda_min": -6.809322997508378e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 14,
+      "dimension": 90,
+      "lambda_max": 15.00000000000001,
+      "lambda_min": -6.571218153328994e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 15,
+      "dimension": 96,
+      "lambda_max": 16.00000000000001,
+      "lambda_min": -9.825350194328026e-15,
+      "rank": 6,
+      "rank_increment": 0
+    },
+    {
+      "depth": 16,
+      "dimension": 102,
+      "lambda_max": 17.0,
+      "lambda_min": -6.5792516313627464e-15,
+      "rank": 6,
+      "rank_increment": 0
+    }
+  ]
+}

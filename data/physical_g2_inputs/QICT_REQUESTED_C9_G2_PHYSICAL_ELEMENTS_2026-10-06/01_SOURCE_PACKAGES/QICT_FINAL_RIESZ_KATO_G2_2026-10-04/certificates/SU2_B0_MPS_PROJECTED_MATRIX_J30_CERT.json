@@ -1,0 +1,19 @@
+{
+  "column_norm_max": 1.0000000000000075,
+  "column_norm_min": 0.60480641623994,
+  "dimension": 31,
+  "eigen_mod_max": 0.9998099451942035,
+  "eigen_mod_min": 0.9802676803536768,
+  "max_offdiag_gram_abs": 0.16526319225055222,
+  "notes": "Matrix assembled from 31 exact MPS-projected columns colfast_00..30, Jlink2<=30, r_character<=15.",
+  "npz_sha256": "5fca01ef4ed637c90051801edaf6b381d9326f2fdd38b26f534c25595991932d",
+  "row_norm_max": 1.0000000000000098,
+  "row_norm_min": 0.6048064162399408,
+  "singular_max": 1.0000000000000056,
+  "singular_min": 0.7280329346701366,
+  "status": "FAIL_PROJECTED_UNITARITY",
+  "unitarity_defect_2_UUd": 0.46996804603558917,
+  "unitarity_defect_2_UdU": 0.4699680460355892,
+  "unitarity_defect_fro_UUd": 0.46997137343718876,
+  "unitarity_defect_fro_UdU": 0.46997137343718876
+}

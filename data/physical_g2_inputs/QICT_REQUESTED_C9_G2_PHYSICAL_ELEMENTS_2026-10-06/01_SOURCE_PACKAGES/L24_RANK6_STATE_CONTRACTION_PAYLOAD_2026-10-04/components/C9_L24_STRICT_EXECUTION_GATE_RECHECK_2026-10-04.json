@@ -1,0 +1,65 @@
+{
+  "action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "forbidden_substitutions_used": false,
+  "np_random_used_in_this_runner": false,
+  "peak_rss_kib": 25412,
+  "physical_result_promoted": false,
+  "runtime_s": 0.3919486999511719,
+  "status": "BLOCKED",
+  "step1_sector_compression": {
+    "PiCAR_charged_frontier_injected": false,
+    "PiCAR_gauge_frontier": 0,
+    "aggregation_peak_rss_kib": 364176,
+    "aggregation_runtime_s": 9.78987979888916,
+    "compression_ratio_raw_to_peak": 1.0604104057883617,
+    "connected_plus_diagonal_exact_states": 1759645,
+    "exact_peak_boundary_sectors": 1797538,
+    "first_tangent_lazy_bond": 1952,
+    "l2_norm": 2340.7844687663055,
+    "max_iota_multiplicity": 2,
+    "memory_peak_rss_kib": 226952,
+    "note": "qY and 2j are exact positional boundary sectors; iota multiplicity is explicitly certified (max 2). The gauge-only second frontier has PiCAR=0. Charged PiCAR=1 cannot be claimed before the complete charged U_cone lift.",
+    "peak_cut": 1278,
+    "raw_lazy_modes": 1906128,
+    "shard_integrity": "PASS",
+    "shard_integrity_errors": [],
+    "shard_rows_max": 59111,
+    "shard_rows_min": 252,
+    "sharding_runtime_s": 1.3056166172027588,
+    "shards": 64,
+    "status": "PASS_GAUGE_FRONTIER_COMPRESSION__CHARGED_LIFT_PENDING"
+  },
+  "step2_charged_matvec": {
+    "bond_drift": null,
+    "charged_growth": null,
+    "global_matvec_pass_markers_found": [],
+    "global_sector_preservation": null,
+    "local_chiral_bridge": "PASS",
+    "local_haar_gauss": "PASS",
+    "local_matter_transporter": "PASS",
+    "local_sector_preservation": "PASS",
+    "preconditioner_growth_is_admissible_for_riesz_decision": false,
+    "preconditioner_only_growth_diagnostic": 920.8698770491803,
+    "required_missing_object": "matrix-free complete frozen charged U_cone application on the L=24,n=9 symmetry-block frontier, including electric phases, all plaquette recouplings, split streams, chiral bridge, Gauss/Haar constraints, C10 exterior dressing/boundary sectors, rank-six source carrier and PiCAR=1 propagation",
+    "status": "BLOCKED_MISSING_COMPLETE_GLOBAL_CHARGED_U_CONE_MATVEC"
+  },
+  "step3_riesz_decision": {
+    "charged_growth_available": false,
+    "decision": "STOP_STEP_2_GLOBAL_CHARGED_MATVEC_ABSENT",
+    "rule": "growth<=10x -> Riesz; 10-100x -> preconditioning; >100x -> STOP"
+  },
+  "step4_riesz_contour": {
+    "status": "NOT_RUN_BLOCKED_AT_STEP2"
+  },
+  "step5_P_Kato": {
+    "status": "NOT_RUN_BLOCKED_AT_STEP2"
+  },
+  "step6_C9_6x6_L24": {
+    "matrix": null,
+    "sha256": null,
+    "status": "NOT_RUN_BLOCKED_AT_STEP2"
+  },
+  "step7_G2_eps_Z": {
+    "status": "NOT_RUN_BLOCKED_AT_STEP2"
+  }
+}

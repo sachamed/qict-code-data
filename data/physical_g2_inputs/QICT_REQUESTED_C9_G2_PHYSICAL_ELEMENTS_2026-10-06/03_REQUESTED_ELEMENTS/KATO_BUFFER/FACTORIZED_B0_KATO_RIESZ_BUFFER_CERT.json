@@ -1,0 +1,69 @@
+{
+  "components": [
+    {
+      "certified_contour_sigma_min_lower_bound_diagonalizable": 0.00044004398244829724,
+      "contour_radius": 0.0006379536339982023,
+      "cutoff_overlap_E16J31_vs_E24J39": 1.0,
+      "density_trace_rank1": 1.0000000000000002,
+      "dimension_su2": 32,
+      "dimension_u1": 33,
+      "eigenvector_condition_product_bound": 1.449749705583483,
+      "eigenvector_condition_su2": 1.4309332657268257,
+      "eigenvector_condition_u1": 1.013149767572913,
+      "product_dimension": 1056,
+      "product_nearest_spectral_separation": 0.002551814535992809,
+      "pure_state_trace_distance_cutoff": 0.0,
+      "riesz_rank": 1,
+      "selected_lambda_product": [
+        0.4453184135270546,
+        -0.8953722748520571
+      ],
+      "selected_lambda_su2": [
+        0.5779573009284777,
+        -0.816067006013274
+      ],
+      "selected_lambda_u1": [
+        0.9880587999416607,
+        -0.1540772788500816
+      ],
+      "selected_product_residual": 3.773604367938355e-15,
+      "u1_component_size": 1,
+      "uniform_contour_bound_positive": true
+    },
+    {
+      "certified_contour_sigma_min_lower_bound_diagonalizable": 0.0006940104914294451,
+      "contour_radius": 0.0010069464466436798,
+      "cutoff_overlap_E16J31_vs_E24J39": 1.0000000000000002,
+      "density_trace_rank1": 1.0,
+      "dimension_su2": 32,
+      "dimension_u1": 33,
+      "eigenvector_condition_product_bound": 1.4509095454301912,
+      "eigenvector_condition_su2": 1.4309332657268257,
+      "eigenvector_condition_u1": 1.01396031539823,
+      "product_dimension": 1056,
+      "product_nearest_spectral_separation": 0.004027785786574719,
+      "pure_state_trace_distance_cutoff": 0.0,
+      "riesz_rank": 1,
+      "selected_lambda_product": [
+        -0.17358086572059106,
+        -0.9450906010345407
+      ],
+      "selected_lambda_su2": [
+        0.5779573009284777,
+        -0.816067006013274
+      ],
+      "selected_lambda_u1": [
+        0.670934928552842,
+        -0.6878756302965908
+      ],
+      "selected_product_residual": 3.902138032161702e-15,
+      "u1_component_size": 4,
+      "uniform_contour_bound_positive": true
+    }
+  ],
+  "construction": "U_Y component tensor U_2 isolated b=0; selected Kato branch is tensor product of independently Riesz-certified rank-1 factors.",
+  "npz": "FACTORIZED_B0_KATO_RIESZ_BUFFER.npz",
+  "npz_sha256": "041320107465e325c6cf847e5d46c6af4b5eb90a0d32dc9967ae8bd47ccaa6c7",
+  "scope": "Certified factorized neutral b=0 Kato/Riesz buffer building block. Not the full lambda=1 electroweak volume Kato density, not C10, not physical C9/G2.",
+  "status": "PASS_FACTORIZED_B0_KATO_RIESZ"
+}

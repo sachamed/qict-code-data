@@ -1,0 +1,1 @@
+AVAILABLE: C10 geometry/DAG/plane-sweep IR plus provider code. MISSING: volume-specific quantum CP/Kraus C10_SHELL_MAPS_<b>.npz required by the physical contract.

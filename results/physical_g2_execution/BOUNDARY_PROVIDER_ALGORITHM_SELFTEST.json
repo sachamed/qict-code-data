@@ -1,0 +1,17 @@
+{
+  "synthetic_two_stage_provider": {
+    "boundary_trace": 1.0,
+    "mass_extraction_stage": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE",
+    "path_weight_max_error": 0.0,
+    "rank6_core_singular_values": [
+      6.0,
+      5.0,
+      4.0,
+      3.0,
+      2.0,
+      1.0
+    ],
+    "rank6_projection_max_error": 0.0,
+    "status": "PASS_SYNTHETIC_COMPLETE_RANK6_PROVIDER_ALGORITHM"
+  }
+}

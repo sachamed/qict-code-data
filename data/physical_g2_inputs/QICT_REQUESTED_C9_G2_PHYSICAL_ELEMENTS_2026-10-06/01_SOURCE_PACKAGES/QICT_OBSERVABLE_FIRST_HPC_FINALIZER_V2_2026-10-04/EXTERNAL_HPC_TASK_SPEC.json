@@ -1,0 +1,52 @@
+{
+  "status": "READY_FOR_EXTERNAL_PHYSICAL_DYNAMICS",
+  "scientific_goal": "Implement the complete frozen relative charged U_cone as a matrix-free six-column provider for each physical volume; do not materialize a dense global operator.",
+  "frozen_action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "certified_local_source_component": {
+    "file": "STEP4_STRICT_CONSOLIDATED_STATE.pkl",
+    "sha256": "4a22157eefe982fb6ad06564e2e6d779d18045618deedf69fdbd567d6655455a",
+    "support": 77036,
+    "norm2": 0.003470335028714577,
+    "certified_l2_bound": 4.761260928942132e-7,
+    "scope": "Local four-incident-plaquette charged SU2 cluster only; not global Kato/Riesz state."
+  },
+  "provider_api": [
+    "metadata() -> dict",
+    "dimension() -> int",
+    "source_matrix_into(out[D,6]) preferred; source_matrix() accepted",
+    "matmat_into(X[D,6], out[D,6]) preferred; matmat(X) accepted"
+  ],
+  "required_physical_content": [
+    "complete charged relative U_cone under frozen action",
+    "PiCAR=1 propagation and exact six-column carrier order L1,L2,L3,R1,R2,R3",
+    "lambda=1 Riesz/Kato selected density",
+    "at least four nested KATO_BUFFER objects",
+    "uniform positive full-contour Riesz gap certificate",
+    "independent operator/Riesz error bound",
+    "summable infinite-buffer tail certificate",
+    "volume-specific C10 shell CP/Kraus maps",
+    "boundary-to-path insertion tensor",
+    "rank-six source carrier certification"
+  ],
+  "volumes_and_moment_depths": {"24":9,"32":13,"48":21,"64":29,"96":45,"128":61},
+  "resource_policy": {
+    "architecture": "observable-first six-column block propagation",
+    "dense_global_operator": "FORBIDDEN",
+    "dense_global_gram": "FORBIDDEN",
+    "disk_backed": true,
+    "atomic_checkpoints": true,
+    "recommended_max_internal_workers_on_reference_host": 4,
+    "reference_host_total_ram_gib": 5.81,
+    "pipeline_tree_rss_guard_mib": 4200,
+    "blas_threads_per_worker": 1,
+    "preferred_native_hotspot_language": "C++ available here; Rust is also suitable externally but not installed on the reference host"
+  },
+  "automatic_downstream_after_provider": [
+    "CN6 matrix moments with resume",
+    "C11 numerical diagnostics",
+    "C11 rigorous positivity gate when independent error certificate is supplied",
+    "spectral-support/edge acceptance gate",
+    "six-volume G2 limit acceptance gate"
+  ],
+  "nonnegotiable_rule": "No synthetic or lower-volume reference object may be promoted as a physical L>=24 Kato/C9/G2 payload."
+}

@@ -1,0 +1,404 @@
+{
+  "b_coefficients": {
+    "axis": 0.09375,
+    "body": 0.2604166666666667,
+    "face": 0.21875
+  },
+  "benchmark_speed_defects": {
+    "1_PeV": {
+      "E_tau_GeV": 1000000.0,
+      "tau_star_s": 6.582119568999999e-31,
+      "values": [
+        {
+          "E_GeV": 30.0,
+          "E_over_Etau": 3e-05,
+          "axis_defect": 8.4375e-11,
+          "body_defect": 2.3437500000000003e-10,
+          "expansion_parameter_squared": 9e-10,
+          "face_defect": 1.96875e-10,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 99.3,
+          "E_over_Etau": 9.93e-05,
+          "axis_defect": 9.244209375000001e-10,
+          "body_defect": 2.5678359375000003e-09,
+          "expansion_parameter_squared": 9.860490000000001e-09,
+          "face_defect": 2.1569821875000002e-09,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 7000.0,
+          "E_over_Etau": 0.007,
+          "axis_defect": 4.593750000000001e-06,
+          "body_defect": 1.2760416666666669e-05,
+          "expansion_parameter_squared": 4.9000000000000005e-05,
+          "face_defect": 1.0718750000000001e-05,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 13000.0,
+          "E_over_Etau": 0.013,
+          "axis_defect": 1.584375e-05,
+          "body_defect": 4.4010416666666665e-05,
+          "expansion_parameter_squared": 0.000169,
+          "face_defect": 3.6968749999999994e-05,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 300000.0,
+          "E_over_Etau": 0.3,
+          "axis_defect": 0.008437499999999999,
+          "body_defect": 0.0234375,
+          "expansion_parameter_squared": 0.09,
+          "face_defect": 0.0196875,
+          "quadratic_regime": "finite_energy_extrapolation"
+        }
+      ]
+    },
+    "1_TeV": {
+      "E_tau_GeV": 1000.0,
+      "tau_star_s": 6.582119569e-28,
+      "values": [
+        {
+          "E_GeV": 30.0,
+          "E_over_Etau": 0.03,
+          "axis_defect": 8.437499999999999e-05,
+          "body_defect": 0.000234375,
+          "expansion_parameter_squared": 0.0009,
+          "face_defect": 0.00019687499999999997,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 99.3,
+          "E_over_Etau": 0.0993,
+          "axis_defect": 0.0009244209375,
+          "body_defect": 0.0025678359375,
+          "expansion_parameter_squared": 0.00986049,
+          "face_defect": 0.0021569821875000003,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 7000.0,
+          "E_over_Etau": 7.0,
+          "axis_defect": 4.59375,
+          "body_defect": 12.760416666666668,
+          "expansion_parameter_squared": 49.0,
+          "face_defect": 10.71875,
+          "quadratic_regime": "finite_energy_extrapolation"
+        },
+        {
+          "E_GeV": 13000.0,
+          "E_over_Etau": 13.0,
+          "axis_defect": 15.84375,
+          "body_defect": 44.01041666666667,
+          "expansion_parameter_squared": 169.0,
+          "face_defect": 36.96875,
+          "quadratic_regime": "finite_energy_extrapolation"
+        },
+        {
+          "E_GeV": 300000.0,
+          "E_over_Etau": 300.0,
+          "axis_defect": 8437.5,
+          "body_defect": 23437.5,
+          "expansion_parameter_squared": 90000.0,
+          "face_defect": 19687.5,
+          "quadratic_regime": "finite_energy_extrapolation"
+        }
+      ]
+    },
+    "Planck_clock_benchmark": {
+      "E_tau_GeV": 1.22089e+19,
+      "tau_star_s": 5.39124701570166e-44,
+      "values": [
+        {
+          "E_GeV": 30.0,
+          "E_over_Etau": 2.4572238285185398e-18,
+          "axis_defect": 5.660577134474353e-37,
+          "body_defect": 1.5723825373539873e-36,
+          "expansion_parameter_squared": 6.03794894343931e-36,
+          "face_defect": 1.3208013313773492e-36,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 99.3,
+          "E_over_Etau": 8.133410872396366e-18,
+          "axis_defect": 6.201784914301446e-36,
+          "body_defect": 1.7227180317504017e-35,
+          "expansion_parameter_squared": 6.615237241921542e-35,
+          "face_defect": 1.4470831466703373e-35,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 7000.0,
+          "E_over_Etau": 5.73352226654326e-16,
+          "axis_defect": 3.081869773213815e-32,
+          "body_defect": 8.560749370038375e-32,
+          "expansion_parameter_squared": 3.287327758094736e-31,
+          "face_defect": 7.191029470832234e-32,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 13000.0,
+          "E_over_Etau": 1.0647969923580338e-15,
+          "axis_defect": 1.062930595251295e-31,
+          "body_defect": 2.952584986809153e-31,
+          "expansion_parameter_squared": 1.1337926349347147e-30,
+          "face_defect": 2.4801713889196885e-31,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 300000.0,
+          "E_over_Etau": 2.4572238285185398e-14,
+          "axis_defect": 5.660577134474354e-29,
+          "body_defect": 1.5723825373539873e-28,
+          "expansion_parameter_squared": 6.03794894343931e-28,
+          "face_defect": 1.3208013313773492e-28,
+          "quadratic_regime": "asymptotic_quadratic"
+        }
+      ]
+    },
+    "strongest_time_of_flight_uniform_bound": {
+      "E_tau_GeV": 4166666666666.667,
+      "tau_star_s": 1.5797086965599999e-37,
+      "values": [
+        {
+          "E_GeV": 30.0,
+          "E_over_Etau": 7.199999999999999e-12,
+          "axis_defect": 4.8599999999999995e-24,
+          "body_defect": 1.35e-23,
+          "expansion_parameter_squared": 5.183999999999999e-23,
+          "face_defect": 1.1339999999999998e-23,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 99.3,
+          "E_over_Etau": 2.3831999999999998e-11,
+          "axis_defect": 5.324664599999999e-23,
+          "body_defect": 1.4790735e-22,
+          "expansion_parameter_squared": 5.679642239999999e-22,
+          "face_defect": 1.2424217399999997e-22,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 7000.0,
+          "E_over_Etau": 1.6799999999999998e-09,
+          "axis_defect": 2.6459999999999992e-19,
+          "body_defect": 7.349999999999998e-19,
+          "expansion_parameter_squared": 2.8223999999999993e-18,
+          "face_defect": 6.173999999999999e-19,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 13000.0,
+          "E_over_Etau": 3.1199999999999996e-09,
+          "axis_defect": 9.125999999999999e-19,
+          "body_defect": 2.5349999999999996e-18,
+          "expansion_parameter_squared": 9.734399999999997e-18,
+          "face_defect": 2.1293999999999992e-18,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 300000.0,
+          "E_over_Etau": 7.2e-08,
+          "axis_defect": 4.859999999999999e-16,
+          "body_defect": 1.3499999999999998e-15,
+          "expansion_parameter_squared": 5.184e-15,
+          "face_defect": 1.1339999999999999e-15,
+          "quadratic_regime": "asymptotic_quadratic"
+        }
+      ]
+    },
+    "strongest_time_of_flight_weak_orientation_bound": {
+      "E_tau_GeV": 2500000000000.0,
+      "tau_star_s": 2.6328478275999996e-37,
+      "values": [
+        {
+          "E_GeV": 30.0,
+          "E_over_Etau": 1.2e-11,
+          "axis_defect": 1.3500000000000002e-23,
+          "body_defect": 3.750000000000001e-23,
+          "expansion_parameter_squared": 1.4400000000000002e-22,
+          "face_defect": 3.1500000000000007e-23,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 99.3,
+          "E_over_Etau": 3.972e-11,
+          "axis_defect": 1.4790735000000001e-22,
+          "body_defect": 4.1085375e-22,
+          "expansion_parameter_squared": 1.5776784e-21,
+          "face_defect": 3.4511715e-22,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 7000.0,
+          "E_over_Etau": 2.8e-09,
+          "axis_defect": 7.349999999999998e-19,
+          "body_defect": 2.0416666666666666e-18,
+          "expansion_parameter_squared": 7.84e-18,
+          "face_defect": 1.715e-18,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 13000.0,
+          "E_over_Etau": 5.2e-09,
+          "axis_defect": 2.5350000000000004e-18,
+          "body_defect": 7.041666666666668e-18,
+          "expansion_parameter_squared": 2.7040000000000004e-17,
+          "face_defect": 5.9150000000000005e-18,
+          "quadratic_regime": "asymptotic_quadratic"
+        },
+        {
+          "E_GeV": 300000.0,
+          "E_over_Etau": 1.2e-07,
+          "axis_defect": 1.3499999999999997e-15,
+          "body_defect": 3.75e-15,
+          "expansion_parameter_squared": 1.4399999999999997e-14,
+          "face_defect": 3.1499999999999995e-15,
+          "quadratic_regime": "asymptotic_quadratic"
+        }
+      ]
+    }
+  },
+  "classification": "PHOTON_OBSERVATIONAL_TRANSLATION",
+  "directional_test": {
+    "exact_b_max": 0.2604166666666667,
+    "exact_b_min": 0.09375,
+    "fit_parameters": "three orientation angles plus E_tau, with source-intrinsic lag nuisance parameters",
+    "grb221009a_identity_frame_demonstrator": {
+      "dec_deg": 19.809,
+      "identity_frame_b": 0.1792420831734678,
+      "ra_deg": 288.254
+    },
+    "interpretation": "the identity-frame value is a coordinate demonstrator; a physical sky test jointly fits the common celestial-to-BCC rotation",
+    "model": "b(R n) with one common R in SO(3) across all sources",
+    "sampled_b_max": 0.260413916015625,
+    "sampled_b_min": 0.09375
+  },
+  "exact_LIV_matching": {
+    "QICT_velocity": "v/c = 1 - b(n)(E/E_tau)^2 + O(E^4)",
+    "axis_ratio_exact": "1/4",
+    "body_ratio_exact": "5/12",
+    "matching": "E_tau/E_QG,2 = sqrt(2 b(n)/3)",
+    "orientation_envelope_exact": "[1/4,5/12]",
+    "standard_quadratic_velocity": "v/c = 1 - (3/2)(E/E_QG,2)^2"
+  },
+  "strongest_cited_time_of_flight_row": {
+    "E_QG2_lower_GeV_95cl": 10000000000000.0,
+    "E_tau_over_E_QG2_by_high_symmetry": {
+      "axis": 0.25,
+      "body": 0.4166666666666667,
+      "face": 0.3818813079129867
+    },
+    "analysis": "xishu_grb221009a",
+    "orientation_envelope_E_tau_lower_GeV": [
+      2500000000000.0,
+      4166666666666.667
+    ],
+    "representative_energy_GeV": 13000.0,
+    "source": "Xi and Shu 2025",
+    "speed_defect_range_at_weakest_orientation_bound": [
+      2.5350000000000004e-18,
+      7.041666666666668e-18
+    ],
+    "uniform_all_directions_E_tau_lower_GeV": 4166666666666.667,
+    "uniform_all_directions_tau_star_upper_s": 1.5797086965599999e-37,
+    "weakest_orientation_E_tau_lower_GeV": 2500000000000.0,
+    "weakest_orientation_tau_star_upper_s": 2.6328478275999996e-37
+  },
+  "time_of_flight_translations": [
+    {
+      "E_QG2_lower_GeV_95cl": 130000000000.0,
+      "E_tau_over_E_QG2_by_high_symmetry": {
+        "axis": 0.25,
+        "body": 0.4166666666666667,
+        "face": 0.3818813079129867
+      },
+      "analysis": "fermi_grb090510",
+      "orientation_envelope_E_tau_lower_GeV": [
+        32500000000.0,
+        54166666666.66667
+      ],
+      "representative_energy_GeV": 30.0,
+      "source": "Vasileiou et al. 2013",
+      "speed_defect_range_at_weakest_orientation_bound": [
+        7.988165680473373e-20,
+        2.2189349112426036e-19
+      ],
+      "uniform_all_directions_E_tau_lower_GeV": 54166666666.66667,
+      "uniform_all_directions_tau_star_upper_s": 1.2151605358153844e-35,
+      "weakest_orientation_E_tau_lower_GeV": 32500000000.0,
+      "weakest_orientation_tau_star_upper_s": 2.0252675596923075e-35
+    },
+    {
+      "E_QG2_lower_GeV_95cl": 732534000000.0,
+      "E_tau_over_E_QG2_by_high_symmetry": {
+        "axis": 0.25,
+        "body": 0.4166666666666667,
+        "face": 0.3818813079129867
+      },
+      "analysis": "lhaaso_grb221009a",
+      "orientation_envelope_E_tau_lower_GeV": [
+        183133500000.0,
+        305222500000.0
+      ],
+      "representative_energy_GeV": 7000.0,
+      "source": "LHAASO Collaboration 2024",
+      "speed_defect_range_at_weakest_orientation_bound": [
+        1.3697198992061397e-16,
+        3.8047774977948324e-16
+      ],
+      "uniform_all_directions_E_tau_lower_GeV": 305222500000.0,
+      "uniform_all_directions_tau_star_upper_s": 2.156498806280664e-36,
+      "weakest_orientation_E_tau_lower_GeV": 183133500000.0,
+      "weakest_orientation_tau_star_upper_s": 3.59416467713444e-36
+    },
+    {
+      "E_QG2_lower_GeV_95cl": 10000000000000.0,
+      "E_tau_over_E_QG2_by_high_symmetry": {
+        "axis": 0.25,
+        "body": 0.4166666666666667,
+        "face": 0.3818813079129867
+      },
+      "analysis": "xishu_grb221009a",
+      "orientation_envelope_E_tau_lower_GeV": [
+        2500000000000.0,
+        4166666666666.667
+      ],
+      "representative_energy_GeV": 13000.0,
+      "source": "Xi and Shu 2025",
+      "speed_defect_range_at_weakest_orientation_bound": [
+        2.5350000000000004e-18,
+        7.041666666666668e-18
+      ],
+      "uniform_all_directions_E_tau_lower_GeV": 4166666666666.667,
+      "uniform_all_directions_tau_star_upper_s": 1.5797086965599999e-37,
+      "weakest_orientation_E_tau_lower_GeV": 2500000000000.0,
+      "weakest_orientation_tau_star_upper_s": 2.6328478275999996e-37
+    },
+    {
+      "E_QG2_lower_GeV_95cl": 1370000000000.0,
+      "E_tau_over_E_QG2_by_high_symmetry": {
+        "axis": 0.25,
+        "body": 0.4166666666666667,
+        "face": 0.3818813079129867
+      },
+      "analysis": "hua_grb221009a",
+      "orientation_envelope_E_tau_lower_GeV": [
+        342500000000.0,
+        570833333333.3334
+      ],
+      "representative_energy_GeV": 13000.0,
+      "source": "Hua et al. 2026",
+      "speed_defect_range_at_weakest_orientation_bound": [
+        1.3506313602216422e-16,
+        3.751753778393451e-16
+      ],
+      "uniform_all_directions_E_tau_lower_GeV": 570833333333.3334,
+      "uniform_all_directions_tau_star_upper_s": 1.1530720412846714e-36,
+      "weakest_orientation_E_tau_lower_GeV": 342500000000.0,
+      "weakest_orientation_tau_star_upper_s": 1.9217867354744525e-36
+    }
+  ]
+}

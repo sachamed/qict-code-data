@@ -1,0 +1,123 @@
+{
+  "c11_numerical_chain": "PASS_SYNTHETIC_TEST",
+  "c11_rigorous_gate": "PASS_ANALYTICAL_SYNTHETIC_TEST",
+  "created_utc": "2026-10-04",
+  "current_g2_gate": {
+    "multivolume_limit_certificate_present": false,
+    "multivolume_limit_pass": false,
+    "physical_G2_promoted": false,
+    "status": "G2_PHYSICAL_ACCEPTANCE_BLOCKED",
+    "volumes": [
+      {
+        "L": 24,
+        "missing": [
+          "cn6",
+          "c11",
+          "spectral",
+          "g2"
+        ],
+        "status": "BLOCKED_MISSING"
+      },
+      {
+        "L": 32,
+        "missing": [
+          "cn6",
+          "c11",
+          "spectral",
+          "g2"
+        ],
+        "status": "BLOCKED_MISSING"
+      },
+      {
+        "L": 48,
+        "missing": [
+          "cn6",
+          "c11",
+          "spectral",
+          "g2"
+        ],
+        "status": "BLOCKED_MISSING"
+      },
+      {
+        "L": 64,
+        "missing": [
+          "cn6",
+          "c11",
+          "spectral",
+          "g2"
+        ],
+        "status": "BLOCKED_MISSING"
+      },
+      {
+        "L": 96,
+        "missing": [
+          "cn6",
+          "c11",
+          "spectral",
+          "g2"
+        ],
+        "status": "BLOCKED_MISSING"
+      },
+      {
+        "L": 128,
+        "missing": [
+          "cn6",
+          "c11",
+          "spectral",
+          "g2"
+        ],
+        "status": "BLOCKED_MISSING"
+      }
+    ]
+  },
+  "current_multivolume_preflight": {
+    "rows": [
+      {
+        "L": 24,
+        "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L24/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+        "status": "BLOCKED_MISSING_PROVIDER"
+      },
+      {
+        "L": 32,
+        "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L32/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+        "status": "BLOCKED_MISSING_PROVIDER"
+      },
+      {
+        "L": 48,
+        "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L48/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+        "status": "BLOCKED_MISSING_PROVIDER"
+      },
+      {
+        "L": 64,
+        "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L64/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+        "status": "BLOCKED_MISSING_PROVIDER"
+      },
+      {
+        "L": 96,
+        "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L96/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+        "status": "BLOCKED_MISSING_PROVIDER"
+      },
+      {
+        "L": 128,
+        "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L128/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+        "status": "BLOCKED_MISSING_PROVIDER"
+      }
+    ],
+    "status": "INCOMPLETE_PHYSICAL_MULTIVOLUME_CHAIN"
+  },
+  "irreducible_missing_object": "Volume-specific complete GLOBAL_CHARGED_UCONE_PROVIDER with certified lambda=1 Riesz/Kato + C10 shell/boundary tensors.",
+  "matrix_free_engine": "READY_AND_COMPILED",
+  "memory_guard": "PASS_SMOKE_TEST",
+  "next_action": "Run the external matrix-free physical provider(s); the included orchestrator resumes automatically and runs all downstream gates.",
+  "physical_G2_promoted": false,
+  "status": "SOFTWARE_FINALIZER_COMPLETE__PHYSICAL_DYNAMICS_PROVIDER_MISSING",
+  "step4_local_checkpoint": {
+    "certified_l2_bound": 4.761260928942132e-07,
+    "norm2": 0.003470335028714577,
+    "scope": "Certified four-incident-plaquette charged SU2 cluster checkpoint only; not selected global Kato/Riesz state, not C9^(6), not G2.",
+    "sha256": "4a22157eefe982fb6ad06564e2e6d779d18045618deedf69fdbd567d6655455a",
+    "status": "PASS_STEP4_STRICT_CHECKPOINT_VERIFY",
+    "support": 77036
+  },
+  "synthetic_provider_fail_closed": "PASS"
+}

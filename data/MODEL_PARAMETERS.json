@@ -1,0 +1,39 @@
+{
+  "compact_gauge_action_multipliers": {
+    "SU2": 32,
+    "SU3": 36,
+    "U1": 4
+  },
+  "lattice_L": 24,
+  "moment_depth": 9,
+  "plaquette_count": 41472,
+  "receiver_central_order": 126,
+  "reduced_lepton_benchmark": {
+    "CAR_trace_dimension": 96,
+    "channel_defect_assignment": {
+      "electron": 5,
+      "muon": 3,
+      "tau": 1
+    },
+    "primitive_positive_bridge_multiplier": 1,
+    "route_cycle_length": 21,
+    "route_lengths": [
+      10,
+      9,
+      8
+    ]
+  },
+  "representation_cutoffs": {
+    "SU2_twice_j": 15,
+    "SU3_p_plus_q": 19,
+    "U1_order": 8
+  },
+  "source_order": [
+    "L1",
+    "L2",
+    "L3",
+    "R1",
+    "R2",
+    "R3"
+  ]
+}

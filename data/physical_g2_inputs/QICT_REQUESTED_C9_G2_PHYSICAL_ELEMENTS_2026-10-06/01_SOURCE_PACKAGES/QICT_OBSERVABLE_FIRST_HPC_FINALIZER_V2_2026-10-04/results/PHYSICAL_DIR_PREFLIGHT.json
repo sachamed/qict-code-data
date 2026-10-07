@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED",
+  "physical_dir": "physical_g2/L24",
+  "missing": [
+    ">=4 KATO_BUFFER_<b>.npz",
+    "C10_SHELL_MAPS_<b>.npz",
+    "BOUNDARY_TO_PATH_<b>.npz",
+    "BUFFER_CONTRACTION_CERTIFICATE.json",
+    "CORE_RECOUPLING_L24.npz",
+    "RANK6_EMBEDDING_L24.npz",
+    "GLOBAL_CHARGED_UCONE_PROVIDER.py"
+  ]
+}

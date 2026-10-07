@@ -1,0 +1,6 @@
+{
+  "status": "PENDING_RIGOROUS_SPECTRAL_SUPPORT",
+  "method": "Validated support-edge enclosure or exact flat extension. Numerical pencil poles alone are not accepted.",
+  "moments_sha256": "REPLACE_WITH_EXACT_SHA256",
+  "support_or_edges": []
+}

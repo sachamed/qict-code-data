@@ -1,0 +1,346 @@
+{
+  "status": "PASS_SU2_GATE3_ZERO_TRUNCATION_OVERLAY",
+  "pid": 15162,
+  "span": [
+    10331,
+    10385
+  ],
+  "parent": "SU2_PAIR_EXACT_CHECKPOINT.pkl",
+  "parent_gate_count": 2,
+  "gate3_active_sites": [
+    10331,
+    10334,
+    10381,
+    10382,
+    10383,
+    10384,
+    10385
+  ],
+  "inert_exact_ranges": [
+    [
+      10332,
+      10333
+    ],
+    [
+      10335,
+      10380
+    ]
+  ],
+  "discarded_l2_total": 0.0,
+  "bad_total": 0,
+  "terminal_closed": true,
+  "rows": [
+    {
+      "file": "su2_gate3_micro/CERT_10331.json",
+      "status": "PASS_SU2_GATE3_MICRO_SITE",
+      "pid": 15162,
+      "site": 10331,
+      "terminal": false,
+      "input_carry": 23936,
+      "input_groups": 1496,
+      "generated": 163064,
+      "max_group_generated": 136,
+      "core_nnz": 163064,
+      "output_carry": 163064,
+      "output_bond": 163064,
+      "bad": 0,
+      "discarded_l2": 0.0,
+      "runtime_s": 12.60807466506958,
+      "peak_rss_kib": 2010556
+    },
+    {
+      "file": "su2_gate3_micro/CERT_10334.json",
+      "status": "PASS_SU2_GATE3_MICRO_SITE",
+      "pid": 15162,
+      "site": 10334,
+      "terminal": false,
+      "input_carry": 163064,
+      "input_groups": 1496,
+      "generated": 163064,
+      "max_group_generated": 136,
+      "core_nnz": 163064,
+      "output_carry": 163064,
+      "output_bond": 163064,
+      "bad": 0,
+      "discarded_l2": 0.0,
+      "runtime_s": 13.349114418029785,
+      "peak_rss_kib": 2521908
+    },
+    {
+      "file": "su2_gate3_micro/CERT_10381.json",
+      "status": "PASS_SU2_GATE3_MICRO_SITE",
+      "pid": 15162,
+      "site": 10381,
+      "terminal": false,
+      "input_carry": 78002,
+      "input_groups": 16,
+      "generated": 61608,
+      "max_group_generated": 6864,
+      "core_nnz": 52770,
+      "output_carry": 1124,
+      "output_bond": 1124,
+      "bad": 0,
+      "discarded_l2": 0.0,
+      "runtime_s": 5.9937474727630615,
+      "peak_rss_kib": 1705928
+    },
+    {
+      "file": "su2_gate3_micro/CERT_10382.json",
+      "status": "PASS_SU2_GATE3_MICRO_SITE",
+      "pid": 15162,
+      "site": 10382,
+      "terminal": false,
+      "input_carry": 1124,
+      "input_groups": 16,
+      "generated": 1124,
+      "max_group_generated": 91,
+      "core_nnz": 817,
+      "output_carry": 183,
+      "output_bond": 210,
+      "bad": 0,
+      "discarded_l2": 0.0,
+      "runtime_s": 1.5680391788482666,
+      "peak_rss_kib": 1435676
+    },
+    {
+      "file": "su2_gate3_micro/CERT_10383.json",
+      "status": "PASS_SU2_GATE3_MICRO_SITE",
+      "pid": 15162,
+      "site": 10383,
+      "terminal": false,
+      "input_carry": 183,
+      "input_groups": 1,
+      "generated": 183,
+      "max_group_generated": 183,
+      "core_nnz": 183,
+      "output_carry": 16,
+      "output_bond": 16,
+      "bad": 0,
+      "discarded_l2": 0.0,
+      "runtime_s": 1.0577197074890137,
+      "peak_rss_kib": 1433084
+    },
+    {
+      "file": "su2_gate3_micro/CERT_10384.json",
+      "status": "PASS_SU2_GATE3_MICRO_SITE",
+      "pid": 15162,
+      "site": 10384,
+      "terminal": false,
+      "input_carry": 16,
+      "input_groups": 1,
+      "generated": 16,
+      "max_group_generated": 16,
+      "core_nnz": 16,
+      "output_carry": 16,
+      "output_bond": 16,
+      "bad": 0,
+      "discarded_l2": 0.0,
+      "runtime_s": 0.8729331493377686,
+      "peak_rss_kib": 1432856
+    },
+    {
+      "file": "su2_gate3_micro/CERT_10385.json",
+      "status": "PASS_SU2_GATE3_MICRO_SITE",
+      "pid": 15162,
+      "site": 10385,
+      "terminal": true,
+      "input_carry": 16,
+      "input_groups": 1,
+      "generated": 16,
+      "max_group_generated": 16,
+      "core_nnz": 16,
+      "output_carry": 0,
+      "output_bond": 1,
+      "bad": 0,
+      "discarded_l2": 0.0,
+      "runtime_s": 1.1975862979888916,
+      "peak_rss_kib": 1432872
+    },
+    {
+      "file": "su2_gate3_agg/CERT_INERT_10332_10333.json",
+      "status": "PASS_SU2_GATE3_INERT_FAST",
+      "range": [
+        10332,
+        10333
+      ],
+      "input": "/mnt/data/QICT_UCONE_DIAMOND_L24_2026-10-04/su2_gate3_agg/carry_10332.pkl",
+      "output": "/mnt/data/QICT_UCONE_DIAMOND_L24_2026-10-04/su2_gate3_agg/carry_10334.pkl",
+      "survivors": 163064,
+      "stats": [
+        {
+          "site": 10332,
+          "survivors": 163064,
+          "bad_degree": 0,
+          "bad_sector": 0
+        },
+        {
+          "site": 10333,
+          "survivors": 163064,
+          "bad_degree": 0,
+          "bad_sector": 0
+        }
+      ],
+      "runtime_s": 20.382110834121704,
+      "peak_rss_kib": 2411296
+    },
+    {
+      "file": "su2_gate3_agg/CERT_SKIP_10335_10380.json",
+      "status": "PASS_SU2_GATE3_SKIP_EXACT",
+      "range": [
+        10335,
+        10380
+      ],
+      "input": 163064,
+      "survivors": 78002,
+      "dropped_parent_zero": 85062,
+      "parent_paths": 1496,
+      "parent_survivors": 819,
+      "max_delta_vertices": 2,
+      "runtime_s": 25.343421936035156,
+      "peak_rss_kib": 2199672
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "su2_gate3_micro/core_10331.pkl",
+      "bytes": 6693989,
+      "sha256": "2cec3ad329637795f1d45eaec02cc81d3b5e3c1364ced22675cd0dcae1a23dfd"
+    },
+    {
+      "file": "su2_gate3_micro/core_10334.pkl",
+      "bytes": 6913468,
+      "sha256": "410e1cc1ccbdf1b048390ffaeb979dbd91cffa89013b5e526f81f7a7f33f921e"
+    },
+    {
+      "file": "su2_gate3_micro/core_10381.pkl",
+      "bytes": 2285137,
+      "sha256": "9a9b81cfe8328136c6b6e1f2e6a59787ddfaa628114b8d544e5673e5f6868f16"
+    },
+    {
+      "file": "su2_gate3_micro/core_10382.pkl",
+      "bytes": 34080,
+      "sha256": "c9b30a6e065c7314823899b4edb0f3e1428d58c0deebbdb9d68900436c64eb79"
+    },
+    {
+      "file": "su2_gate3_micro/core_10383.pkl",
+      "bytes": 6874,
+      "sha256": "834b9da30dc79681d9841e17ed09592802e29d844a1d093a89e009cfd4194eb3"
+    },
+    {
+      "file": "su2_gate3_micro/core_10384.pkl",
+      "bytes": 645,
+      "sha256": "885d9ab1e3cb3e7a5f7796eedbb1fc8ea532661f796efcb00e3d8f80844f1936"
+    },
+    {
+      "file": "su2_gate3_micro/core_10385.pkl",
+      "bytes": 645,
+      "sha256": "52f7fe448f2993718e8bbdd4e323fab83149b05c8fb1347152b62bf977d8e7bd"
+    },
+    {
+      "file": "su2_gate3_micro/bond_10332.pkl",
+      "bytes": 118237969,
+      "sha256": "0c872b0a06b257a12feb30c22e1b32bdaac59e460457670a9e748956bf80142e"
+    },
+    {
+      "file": "su2_gate3_micro/bond_10335.pkl",
+      "bytes": 118237969,
+      "sha256": "4a55d75408ad58b2460719cc381bf2c205610cef1a8f24c4d433b5a59e72ac11"
+    },
+    {
+      "file": "su2_gate3_micro/bond_10382.pkl",
+      "bytes": 815026,
+      "sha256": "29e322fa009ccf04d9eaf191f67d8cc9b4e093d2e4f8cd7da6d04003a461b190"
+    },
+    {
+      "file": "su2_gate3_micro/bond_10383.pkl",
+      "bytes": 152284,
+      "sha256": "0d2b0bf73232e802f3e585f7d846438c7fa303ebdc53edb2d9d36e0922b17b53"
+    },
+    {
+      "file": "su2_gate3_micro/bond_10384.pkl",
+      "bytes": 11616,
+      "sha256": "b6142185fda898e90bd8871ca17e03562ba265dd3e0811922f317489df377833"
+    },
+    {
+      "file": "su2_gate3_micro/bond_10385.pkl",
+      "bytes": 11616,
+      "sha256": "332e057417bd6b2ac83897d15dc2dbe5bcfb772b97d7ddc9e4517371e8a40793"
+    },
+    {
+      "file": "su2_gate3_micro/carry_10332.pkl",
+      "bytes": 124116188,
+      "sha256": "8f192010fca2ead10a21a3e67029d01343f798ab01ef00192b3b4f7ce3817b09"
+    },
+    {
+      "file": "su2_gate3_micro/carry_10334.pkl",
+      "bytes": 124116188,
+      "sha256": "9397b7d375fef3562eb8894263e59ee2886d1c23e0306fdc5bf5e253a3d2e44e"
+    },
+    {
+      "file": "su2_gate3_micro/carry_10335.pkl",
+      "bytes": 124116188,
+      "sha256": "68a6facef409ae827554400350dd69e0aa65bfc27064cc1a07ffe17dac5c4a58"
+    },
+    {
+      "file": "su2_gate3_micro/carry_10381.pkl",
+      "bytes": 59495572,
+      "sha256": "8efb06e7e2a30a2357f3746b2b9e0a90adc039c7ef991763602300624d18e6ad"
+    },
+    {
+      "file": "su2_gate3_micro/carry_10382.pkl",
+      "bytes": 853016,
+      "sha256": "8ca3685ea648d23f12afea09d5d20c5fe13a7a7e1619ee7ba9c3fb6f183bfde5"
+    },
+    {
+      "file": "su2_gate3_micro/carry_10383.pkl",
+      "bytes": 138769,
+      "sha256": "567fc1d81d5d536b95705e23f80e56f416d0a4aa4cda898298255d04a3487c70"
+    },
+    {
+      "file": "su2_gate3_micro/carry_10384.pkl",
+      "bytes": 12165,
+      "sha256": "7b6fa1e799ff247150a38569afb8d24e484a18c3a07880bc4d3da3656c9ccc36"
+    },
+    {
+      "file": "su2_gate3_micro/carry_10385.pkl",
+      "bytes": 12165,
+      "sha256": "01d6b8ed19bfd424d648e145dc438d64e688ce2f2fe4861ff1573c662d86c35f"
+    },
+    {
+      "file": "su2_gate3_agg/carry_10332.pkl",
+      "bytes": 48586460,
+      "sha256": "cab08a3b756ca0829e938af7a8dc402d3fea6752413c0bb6aa67bc7a547c1089"
+    },
+    {
+      "file": "su2_gate3_agg/carry_10334.pkl",
+      "bytes": 124116188,
+      "sha256": "9397b7d375fef3562eb8894263e59ee2886d1c23e0306fdc5bf5e253a3d2e44e"
+    },
+    {
+      "file": "su2_gate3_agg/carry_10381.pkl",
+      "bytes": 59495572,
+      "sha256": "8efb06e7e2a30a2357f3746b2b9e0a90adc039c7ef991763602300624d18e6ad"
+    },
+    {
+      "file": "su2_gate3_agg/bond_10332.pkl",
+      "bytes": 42708241,
+      "sha256": "7617487d1402161d46c454b59f23aae17c77901d90ad7629dae5820f0081d6b5"
+    },
+    {
+      "file": "su2_gate3_agg/core_10331.pkl",
+      "bytes": 6693989,
+      "sha256": "75c0c57c280d31116417470288a137bfbfc58dfd296bcc80d520b50e073b22b5"
+    },
+    {
+      "file": "SU2_PAIR_EXACT_CHECKPOINT.pkl",
+      "bytes": 73207490,
+      "sha256": "e58519503e5de80f2f8c688a89c7bbb6a08341b5dde5cc3f10aa3b6f6ab3be97"
+    },
+    {
+      "file": "SU2_PAIR_EXACT_CHECKPOINT.json",
+      "bytes": 548,
+      "sha256": "aa7902dd62b5df6036f73cb0bfe467becd1ed5cafe7c00e07e3d490ccfaa2b79"
+    }
+  ],
+  "note": "Exact SU(2)-sector third plaquette gate overlay. This is not a physical G2 or complete electroweak U_cone."
+}

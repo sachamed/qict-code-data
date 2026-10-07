@@ -1,0 +1,1 @@
+AVAILABLE: L24 rank-6 precontraction payload and SU2 connected recoupling data/provider code. MISSING: serialized volume-matched CORE_RECOUPLING.npz with the contract labels/amplitudes object.

@@ -1,0 +1,1 @@
+AVAILABLE: B0/factorized Riesz-Kato controls, geometries, and a legacy compatible strict Kato checkpoint. MISSING: >=4 serialized lambda=1 selected charged KATO_BUFFER_<b>.npz satisfying the current physical contract.

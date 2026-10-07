@@ -1,0 +1,27 @@
+{
+  "L": 24,
+  "components": 97,
+  "kernel_npz_sha256": "bfd7ebfaf0d929fbda2e1a6321c89ac1e895a6bfd7e4648141a55233ed31d7fd",
+  "neutral_zero_boundary_unique_su2_r0": true,
+  "neutral_zero_boundary_unique_u1": true,
+  "physical_riesz_api_fail_closed_without_boundary_basis": true,
+  "plaquettes": 157,
+  "random_u1_roundtrips": [
+    {
+      "max_abs_k_error": 0,
+      "scale": 1
+    },
+    {
+      "max_abs_k_error": 0,
+      "scale": 2
+    },
+    {
+      "max_abs_k_error": 0,
+      "scale": 4
+    }
+  ],
+  "scope": "Exact boundary-conditioned causal-diamond reduction. It is Riesz-ready only after a physical lambda=1 Kato boundary basis/density and C10/matter/Gauss insertion are supplied. Not C9/G2.",
+  "status": "PASS_BOUNDARY_CONDITIONED_UCONE_PROVIDER_SELFTEST",
+  "touched_links": 568,
+  "u1_internal_nullity": 0
+}

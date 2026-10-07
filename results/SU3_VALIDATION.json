@@ -1,0 +1,48 @@
+{
+  "identities": {
+    "C2_antisymmetric3bar_error": 3.8459253727671276e-16,
+    "C2_octet_error": 1.2947314098277875e-15,
+    "C2_singlet_error": 0.0,
+    "C2_symmetric6_error": 4.440892098500626e-16,
+    "CG_3x3_completeness_error": 5.438959822042073e-16,
+    "CG_3x3_to_3bar_gram_error": 3.8459253727671276e-16,
+    "CG_3x3_to_6_gram_error": 3.8459253727671276e-16,
+    "CG_3x3bar_completeness_error": 6.661338147750939e-16,
+    "CG_3x3bar_to_1_gram_error": 2.220446049250313e-16,
+    "CG_3x3bar_to_8_gram_error": 5.901404565869395e-16,
+    "anticommutator_max_fro_error": 9.42055475210265e-16,
+    "commutator_max_fro_error": 4.965068306494546e-16,
+    "d_contraction_fro_error": 8.308148362110449e-16,
+    "f_contraction_fro_error": 2.220446049250313e-15,
+    "fundamental_casimir_fro_error": 2.220446049250313e-16,
+    "fundamental_completeness_max_abs_error": 5.551115123125783e-17,
+    "jacobi_max_abs_error": 3.3306690738754696e-16,
+    "trace_gram_fro_error": 4.440892098500626e-16
+  },
+  "summary": {
+    "L24_n9": {
+      "SU2_local_tail": 4.3574547372102104e-14,
+      "SU3_local_tail": 5.429397893174612e-14,
+      "U1_local_tail": 5.488955755172875e-15,
+      "all_gauge_propagated_representation_bound": 3.8577974207694624e-08,
+      "charged_lepton_relative_bound_after_exact_color_cancellation": 1.831285458292909e-08,
+      "color_contribution_removed": 2.0265119624765534e-08
+    },
+    "L_n": {
+      "L": 24,
+      "n": 9
+    },
+    "common_color_relative_operator_validation_fro_error": 2.3337197666077155e-15,
+    "cutoffs": {
+      "SU2_twice_j": 15,
+      "SU3_p_plus_q": 19,
+      "U1_order": 8
+    },
+    "parameters_sha256": "f86b3abb9ed054c29e21e2c4d49b92923f7bfdac0747d1cec1053f6d23cf56ca",
+    "phi_star": "0.0498665500569808450549625933853889346698",
+    "tensor_identity_max_error": 2.220446049250313e-15,
+    "x_SU2": "1.595729601823387041758802988332445909433",
+    "x_SU3": "1.795195802051310421978653361874001648113",
+    "x_U1": "0.1994662002279233802198503735415557386792"
+  }
+}

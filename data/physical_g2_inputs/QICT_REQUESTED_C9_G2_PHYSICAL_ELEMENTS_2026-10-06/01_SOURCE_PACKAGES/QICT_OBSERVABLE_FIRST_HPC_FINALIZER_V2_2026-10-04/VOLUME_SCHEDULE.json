@@ -1,0 +1,12 @@
+{
+  "status": "FROZEN_PHYSICAL_VOLUME_SCHEDULE",
+  "target_total_moment_error_bound": 1e-6,
+  "volumes": {
+    "24": {"nmax": 9,  "representation_tail_bound": 7.1995887989e-7},
+    "32": {"nmax": 13, "representation_tail_bound": 1.3223326242e-7},
+    "48": {"nmax": 21, "representation_tail_bound": 3.7438628811e-7},
+    "64": {"nmax": 29, "representation_tail_bound": 2.8358776418e-7},
+    "96": {"nmax": 45, "representation_tail_bound": 3.1825043669e-7},
+    "128":{"nmax": 61, "representation_tail_bound": 1.7043204568e-7}
+  }
+}

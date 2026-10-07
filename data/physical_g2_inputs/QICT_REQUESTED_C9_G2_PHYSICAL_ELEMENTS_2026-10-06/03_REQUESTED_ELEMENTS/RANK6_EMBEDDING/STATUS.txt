@@ -1,0 +1,1 @@
+AVAILABLE: rank-6 precontraction payload and provider/casual-cone code. MISSING: serialized physical RANK6_EMBEDDING.npz containing six isometric left/right source columns.

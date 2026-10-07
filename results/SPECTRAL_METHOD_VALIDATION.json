@@ -1,0 +1,23 @@
+{
+  "deterministic_matrix_measure": {
+    "C0_identity_fro_error": 3.2168822772660963e-15,
+    "atom_count": 18,
+    "matrix_dimension": 6,
+    "moment_depth": 40,
+    "reconstructed_moment_max_fro_error": 1.837226787607076e-14,
+    "reconstructed_pole_max_abs_error": 1.2008898127460164e-15,
+    "reconstructed_pole_max_radial_error": 1.1102230246251565e-15,
+    "reconstructed_residue_max_fro_error": 1.8936132647472113e-15,
+    "reconstructed_residue_min_hermitian_eigenvalue": 0.035420880219937875,
+    "toeplitz_depth": 16,
+    "toeplitz_lambda_min_numeric": 0.6440312739995873,
+    "trace_hankel_condition_number": 1.1866706890150642
+  },
+  "exact_flat_extension_benchmark": {
+    "C0_identity": true,
+    "flat_extension": true,
+    "recurrence_exact": true,
+    "toeplitz_rank_K2": 18,
+    "toeplitz_rank_K3": 18
+  }
+}

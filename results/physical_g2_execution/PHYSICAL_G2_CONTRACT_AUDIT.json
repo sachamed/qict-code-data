@@ -1,0 +1,138 @@
+{
+  "action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "certified_available_results": {
+    "B3_U1_exact_TV20_abs_relative_bound": 1.4374244318027695e-13,
+    "B3_U1_tail_TV_ge_22_upper": 9.978011687790605e-08,
+    "B3_U1_total_omitted_from_TV_ge_16_upper": 1.0021941103356158e-07,
+    "C11_backend": "PASS_SYNTHETIC_C11_CAUSAL_CONE_BACKEND_SELF_TEST",
+    "SU2_gate3": "PASS exact zero truncation (certificate copied)",
+    "U1_common_core_B2_B3_explicit_aligned_l2": 1.795420077e-13,
+    "U1_gate4_terminal": "PASS corrected zero discard (certificate copied)",
+    "charged_local_layer": "PASS_L24_EXACT_CHARGED_LOCAL_LAYER",
+    "electric_cluster_G2": "PASS control only; degeneracy-corrected 42 Floquet atoms",
+    "global_B0_gauge_Kato": "PASS_IMPLICIT_GLOBAL_B0_GAUGE_KATO_EIGENSTATE",
+    "matrix_free_Riesz_backend": "PASS_MATRIX_FREE_RIESZ_KATO_SELFTEST",
+    "remaining_1e-6_budget": 8.611595765663217e-07,
+    "representation_plus_B3_upper": 1.3884042343367827e-07
+  },
+  "continuum_contraction_operation": "Execute the L24 joint block-sparse charged Kato/C10 boundary-to-iota contraction, retaining all six family/chirality columns. This operation must numerically supply the L24 boundary-density-to-path map (or an equivalent streaming callback), volume-matched core recoupling/source embedding, and complete charged U_cone matvec. Geometry, local Gauss amplitudes, L2 recoupler controls, and static U1 shell weights do not determine this map uniquely.",
+  "continuum_execution_chain": [
+    "serialize >=4 nested lambda=1 charged KATO_BUFFER states and a certified contraction-to-limit bound",
+    "serialize coherence-resolved volume-specific C10 shell CP/Kraus maps",
+    "serialize the boundary-density-to-iota recoupling insertion and volume-matched core recoupling tensor",
+    "serialize six isometric rank-six source columns in order L1,L2,L3,R1,R2,R3",
+    "implement and certify the complete frozen charged U_cone matmat with PiCAR=1",
+    "compute C_n^(6)(L)=V^dagger U_L^n V through the certified moment depth",
+    "certify block-Toeplitz positivity and the spectral support/edge",
+    "repeat on the common multivolume regulator sequence before assigning a physical G2 limit"
+  ],
+  "continuum_sequence_inputs": [
+    "four_valid_nested_kato_buffers",
+    "buffer_tail_certificate",
+    "quantum_c10_shell_maps",
+    "boundary_to_path_tensor",
+    "core_recoupling_payload",
+    "rank6_embedding",
+    "complete_charged_ucone_matvec",
+    "cn6_moments",
+    "cn6_shape_and_C0"
+  ],
+  "interpretation": "The exact L=24,n=9 precontraction and independent backend/local checks are certified. The physical continuum G2 observable is defined by the charged causal-cone contraction, the lambda=1 Kato boundary state, and the declared common multivolume regulator sequence. The continuum_sequence_inputs field enumerates the tensors that activate this numerical stage.",
+  "missing_physical_objects": [
+    "four_valid_nested_kato_buffers",
+    "buffer_tail_certificate",
+    "quantum_c10_shell_maps",
+    "boundary_to_path_tensor",
+    "core_recoupling_payload",
+    "rank6_embedding",
+    "complete_charged_ucone_matvec",
+    "cn6_moments",
+    "cn6_shape_and_C0"
+  ],
+  "physical_G2_promoted": false,
+  "physical_contract_checks": {
+    "boundary_to_path_tensor": false,
+    "buffer_tail_certificate": false,
+    "cn6_moments": false,
+    "cn6_shape_and_C0": false,
+    "complete_charged_ucone_matvec": false,
+    "core_recoupling_payload": false,
+    "four_valid_nested_kato_buffers": false,
+    "quantum_c10_shell_maps": false,
+    "rank6_embedding": false
+  },
+  "precontraction": {
+    "certificate_hash_match": true,
+    "certificate_status": "PASS_EXACT_L24_N9_CHARGED_RANK6_PRECONTRACTION_PAYLOAD",
+    "embedded_copy_bit_identical": true,
+    "payload_sha256": "020d21f11ce948de0cfa37889e9e050edaf5796e0b2c75fba740bb685dd20c29",
+    "statistics": {
+      "L": 24,
+      "c10_edges": 17576,
+      "c10_nodes": 3925,
+      "links": 21136,
+      "n": 9,
+      "plaquettes": 18252,
+      "source_order": [
+        "L1",
+        "L2",
+        "L3",
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "su2_connected_pairs": 261346
+    }
+  },
+  "requested_elements_status": {
+    "BOUNDARY_TO_PATH": {
+      "available": "provider/source code",
+      "physical_status": "MISSING"
+    },
+    "C10_SHELL_MAPS": {
+      "available": "geometry/DAG/plane-sweep IR and provider code",
+      "physical_status": "MISSING"
+    },
+    "CN6_MOMENTS": {
+      "available": "synthetic/control moments only + computation code",
+      "physical_status": "MISSING_PHYSICAL"
+    },
+    "CORE_RECOUPLING": {
+      "available": "L24 precontraction + SU2 recoupling components",
+      "physical_status": "MISSING_EXACT_CONTRACT_OBJECT"
+    },
+    "GLOBAL_CHARGED_UCONE": {
+      "available": "boundary-conditioned kernel, local layer, Step4 certificates, template",
+      "physical_status": "MISSING_FULL_PROVIDER_AND_PASS_CERT"
+    },
+    "KATO_BUFFER": {
+      "available": "B0/factorized controls, geometries, legacy strict checkpoint",
+      "physical_status": "MISSING_COMPLETE_SET"
+    },
+    "RANK6_EMBEDDING": {
+      "available": "precontraction + provider code",
+      "physical_status": "MISSING_EXACT_CONTRACT_OBJECT"
+    }
+  },
+  "source_final_status": null,
+  "status": "PHYSICAL_G2_PRECONTRACTION_CERTIFIED_CONTINUUM_SEQUENCE_DEFINED",
+  "strict_execution_status": "MAXIMUM_EXECUTION_REACHED__PHYSICAL_C9_G2_NOT_PROMOTED",
+  "strict_physical_chain": {
+    "C9_6x6_L24": "BLOCKED_ON_BOUNDARY_TO_PATH_AND_VOLUME_MATCHED_CORE_RANK6_JOIN",
+    "G2_physical": "BLOCKED_ON_PHYSICAL_CN6_MOMENTS",
+    "Riesz_Kato_lambda1_full_charged": "BLOCKED_ON_FULL_CHARGED_UCONE",
+    "U_cone_L24_full_charged_matrix_free": "BLOCKED_NOT_SERIALIZED_OR_GENERATABLE_FROM_AVAILABLE_NUMERICAL_TENSORS"
+  },
+  "synthetic_cn6_control": {
+    "C0_fro_error": 0.0,
+    "classification": "SYNTHETIC_CONTROL_ONLY",
+    "depth": 23,
+    "present": true,
+    "sha256": "c0c2a0b79b8a2a2f68d62618099febd0283634a0c4829e878154950f45f4b770",
+    "shape": [
+      24,
+      6,
+      6
+    ]
+  }
+}

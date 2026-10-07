@@ -1,0 +1,72 @@
+{
+  "L": 24,
+  "buffers": [
+    {
+      "boundary_links": 568,
+      "buffer": 0,
+      "components": 97,
+      "incidence_histogram": {
+        "1": 508,
+        "2": 60
+      },
+      "interior_links": 0,
+      "largest_component": 4,
+      "links": 568,
+      "max_open_plaquettes_canonical_link_sweep": 157,
+      "plaquettes": 157
+    },
+    {
+      "boundary_links": 2750,
+      "buffer": 1,
+      "components": 22,
+      "incidence_histogram": {
+        "1": 1703,
+        "2": 796,
+        "3": 251,
+        "4": 569
+      },
+      "interior_links": 569,
+      "largest_component": 190,
+      "links": 3319,
+      "max_open_plaquettes_canonical_link_sweep": 1221,
+      "plaquettes": 1581
+    },
+    {
+      "boundary_links": 4335,
+      "buffer": 2,
+      "components": 5,
+      "incidence_histogram": {
+        "1": 1646,
+        "2": 1933,
+        "3": 756,
+        "4": 3471
+      },
+      "interior_links": 3471,
+      "largest_component": 4425,
+      "links": 7806,
+      "max_open_plaquettes_canonical_link_sweep": 3934,
+      "plaquettes": 5416
+    },
+    {
+      "boundary_links": 5056,
+      "buffer": 3,
+      "components": 3,
+      "incidence_histogram": {
+        "1": 1695,
+        "2": 2454,
+        "3": 907,
+        "4": 7972
+      },
+      "interior_links": 7972,
+      "largest_component": 7992,
+      "links": 13028,
+      "max_open_plaquettes_canonical_link_sweep": 7281,
+      "plaquettes": 10303
+    }
+  ],
+  "npz": "NESTED_KATO_BUFFER_GEOMETRY_L24.npz",
+  "npz_sha256": "ba51521d189f2cc6046f57dd9756d9a4c05d98506061bd28304540698336b4de",
+  "scope": "Exact periodic lattice geometry for four nested plaquette-sharing buffers. Geometry only; no Kato density or physical G2 claim.",
+  "source_diamond_plaquettes": 157,
+  "status": "PASS_EXACT_NESTED_KATO_BUFFER_GEOMETRY"
+}

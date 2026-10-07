@@ -1,0 +1,201 @@
+{
+  "definition": "G2(z)=sum_a R_a/(z-z_a) from the serialized positive matrix spectral measure.",
+  "lowest_edge": {
+    "epsilon": 0.00038294346006355573,
+    "family_trace_fractions": [
+      0.3333333333333335,
+      0.3333333333333333,
+      0.33333333333333326
+    ],
+    "pole": [
+      0.9999999266771541,
+      -0.0003829434507040542
+    ],
+    "pole_index": 2438,
+    "residue_eigenvalue_edge_channel": 0.0004286261761987646,
+    "residue_rank_tol_1e-12": 1,
+    "residue_trace": 0.00042862617619876444
+  },
+  "moment_reconstruction": {
+    "C9_frobenius_norm": 0.6244433468711296,
+    "max_entrywise_error": 1.163654783408507e-14,
+    "max_frobenius_error": 2.505314455954454e-14
+  },
+  "physical_blocker": "Missing volume-specific GLOBAL_CHARGED_UCONE_L24, selected lambda=1 Kato/Riesz buffers, C10 quantum shell CP/Kraus maps, boundary-to-path insertion, core recoupling, and rank-six embedding.",
+  "physical_promotion": false,
+  "pole_count": 4878,
+  "radial_G2_samples": [
+    {
+      "G2_frobenius_norm": 1.7567223969928667,
+      "G2_spectral_norm": 1.0110954239103909,
+      "absolute_residue_error": 0.007028010705862436,
+      "edge_channel_G2": [
+        0.7071305401869492,
+        0.22953213823540575
+      ],
+      "relative_radial_offset": 0.01,
+      "residue_estimate_from_(z-z0)G": [
+        0.007072183861671882,
+        0.002292613303962985
+      ],
+      "z": [
+        1.0099999259439256,
+        -0.00038677288521109476
+      ]
+    },
+    {
+      "G2_frobenius_norm": 1.7575515649759148,
+      "G2_spectral_norm": 1.0702432429047957,
+      "absolute_residue_error": 0.002039470373188942,
+      "edge_channel_G2": [
+        0.7828259840489701,
+        0.22945209786306198
+      ],
+      "relative_radial_offset": 0.003,
+      "residue_estimate_from_(z-z0)G": [
+        0.0023487413814840714,
+        0.0006874569088660071
+      ],
+      "z": [
+        1.0029999264571854,
+        -0.00038409228105616634
+      ]
+    },
+    {
+      "G2_frobenius_norm": 1.977998822715984,
+      "G2_spectral_norm": 1.356818740953385,
+      "absolute_residue_error": 0.000646329939355874,
+      "edge_channel_G2": [
+        1.0640474169289988,
+        0.11841048158765284
+      ],
+      "relative_radial_offset": 0.001,
+      "residue_estimate_from_(z-z0)G": [
+        0.0010640926834283727,
+        0.00011800300291590118
+      ],
+      "z": [
+        1.0009999266038312,
+        -0.0003833263941547582
+      ]
+    },
+    {
+      "G2_frobenius_norm": 2.595048424701839,
+      "G2_spectral_norm": 2.093992487363054,
+      "absolute_residue_error": 0.00016805454638848247,
+      "edge_channel_G2": [
+        1.987487067186052,
+        0.04080662549755287
+      ],
+      "relative_radial_offset": 0.0003,
+      "residue_estimate_from_(z-z0)G": [
+        0.0005962507644260707,
+        1.201365820492147e-05
+      ],
+      "z": [
+        1.000299926655157,
+        -0.0003830583337392654
+      ]
+    },
+    {
+      "G2_frobenius_norm": 5.079202539881567,
+      "G2_spectral_norm": 4.84643743685133,
+      "absolute_residue_error": 5.211558874923223e-05,
+      "edge_channel_G2": [
+        4.806595743057603,
+        0.030893406881696506
+      ],
+      "relative_radial_offset": 0.0001,
+      "residue_estimate_from_(z-z0)G": [
+        0.0004806607221053488,
+        2.905275025652688e-06
+      ],
+      "z": [
+        1.0000999266698218,
+        -0.0003829817450491246
+      ]
+    },
+    {
+      "G2_frobenius_norm": 14.882889634381689,
+      "G2_spectral_norm": 14.806935565970921,
+      "absolute_residue_error": 1.5202483759758019e-05,
+      "edge_channel_G2": [
+        14.79351893971286,
+        0.03337227716935143
+      ],
+      "relative_radial_offset": 3e-05,
+      "residue_estimate_from_(z-z0)G": [
+        0.0004438059190407778,
+        8.312158059464974e-07
+      ],
+      "z": [
+        1.0000299266749544,
+        -0.00038295493900757533
+      ]
+    },
+    {
+      "G2_frobenius_norm": 43.39488487637213,
+      "G2_spectral_norm": 43.36913405759347,
+      "absolute_residue_error": 5.026131680418193e-06,
+      "edge_channel_G2": [
+        43.364459359392114,
+        0.04419364209700749
+      ],
+      "relative_radial_offset": 1e-05,
+      "residue_estimate_from_(z-z0)G": [
+        0.000433644731034162,
+        2.758750315142676e-07
+      ],
+      "z": [
+        1.0000099266764209,
+        -0.0003829472801385613
+      ]
+    },
+    {
+      "G2_frobenius_norm": 143.38498313785848,
+      "G2_spectral_norm": 143.37721931586393,
+      "absolute_residue_error": 1.503497410921133e-06,
+      "edge_channel_G2": [
+        143.37577766590985,
+        0.08247881767088927
+      ],
+      "relative_radial_offset": 3e-06,
+      "residue_estimate_from_(z-z0)G": [
+        0.00043012739621497173,
+        8.272198973441256e-08
+      ],
+      "z": [
+        1.0000029266769341,
+        -0.0003829445995344063
+      ]
+    },
+    {
+      "G2_frobenius_norm": 429.12923603858775,
+      "G2_spectral_norm": 429.1266446633419,
+      "absolute_residue_error": 5.007523795523467e-07,
+      "edge_channel_G2": [
+        429.12612692113953,
+        0.19190390103879906
+      ],
+      "relative_radial_offset": 1e-06,
+      "residue_estimate_from_(z-z0)G": [
+        0.0004291261688824396,
+        2.7572847129116308e-08
+      ],
+      "z": [
+        1.0000009266770806,
+        -0.0003829438336475049
+      ]
+    }
+  ],
+  "scope": "Compact-U1 N=19 rank-six serialized control only; validates G2/C11/LSZ extraction but is not the electroweak L=24 multivolume physical G2.",
+  "source_order": [
+    "L1",
+    "L2",
+    "L3",
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "status": "PASS_SERIALIZED_CONTROL_G2_EVALUATION__NOT_PHYSICAL_EW_G2"
+}

@@ -1,0 +1,56 @@
+sector,observable,result,classification,provenance
+primitive dynamics,oriented electric polynomial,2*E**2 + E,exact symbolic result,PRIMITIVE_DERIVATION_VALIDATION.json
+primitive dynamics,route-cost identity,P_+(Delta)=T_{2Delta},exact symbolic result under the declared primitive bridge,PRIMITIVE_DERIVATION_VALIDATION.json
+primitive dynamics,SU(2) tangent rotor,H_rot=K_E+K_B; K_E=n(n+2); K_B=32I-16M_chi1/2,representation-theoretic result,PRIMITIVE_DERIVATION_VALIDATION.json
+primitive dynamics,one-cell Schur coefficient alpha_fac,0.15676625721569744891064919413732606191341177827533,derived reduced observable,PRIMITIVE_DERIVATION_VALIDATION.json
+receiver,primitive family multiplicity,3,exact structural result,SECTOR_PREDICTIONS.json
+receiver,neutral Majorana completion rank,21,exact structural result,SECTOR_PREDICTIONS.json
+receiver,route timing ratio,1:3:5,exact structural result,SECTOR_PREDICTIONS.json
+receiver,integer timing structure,"1,3,5,14,21,126 times tau_*",exact structural result,SECTOR_PREDICTIONS.json
+gauge,integer hypercharge ray,"{""H"": 3, ""L"": -3, ""Q"": 1, ""d"": -2, ""e"": -6, ""nu"": 0, ""u"": 4}",exact structural result,SECTOR_PREDICTIONS.json
+gauge,electric charges,"{""H_plus"": ""1"", ""H_zero"": ""0"", ""d_L"": ""-1/3"", ""d_R"": ""-1/3"", ""e_L"": ""-1"", ""e_R"": ""-1"", ""nu_L"": ""0"", ""nu_R"": ""0"", ""u_L"": ""2/3"", ""u_R"": ""2/3""}",exact structural result,SECTOR_PREDICTIONS.json
+gauge,anomaly residuals,"{""SU2_SU2_U1"": 0, ""SU3_SU3_U1"": 0, ""U1_cubic"": 0, ""grav_grav_U1"": 0}",exact algebraic cancellation,SECTOR_PREDICTIONS.json
+photon,quadratic high-symmetry pattern,9:21:25,exact tangent signature,PHOTON_SIGNATURE_MOMENTS.json
+photon,quadratic LIV matching,"E_tau/E_QG,2 = sqrt(2 b(n)/3)",exact convention matching,PHOTON_OBSERVATIONAL_BOUNDS.json
+photon,E_tau observational lower interval,2.5e+12--4.16666666667e+12 GeV,observational translation,PHOTON_OBSERVATIONAL_BOUNDS.json
+photon,tau_* observational upper interval,1.57970869656e-37--2.6328478276e-37 s,observational translation,PHOTON_OBSERVATIONAL_BOUNDS.json
+charged leptons,reduced mass coordinates,e=1; mu=206.731294355038; tau=3477.03865395274,reduced scale-free calculation,COMPLETE_MASS_COORDINATES.json
+charged leptons,reduced Koide quotient,0.666671416005203,reduced scale-free calculation,COMPLETE_MASS_COORDINATES.json
+charged leptons,dimensional mass map,m_f=(hbar/(c^2 tau_*))*epsilon_f,common-regulator spectral definition,COMPLETE_MASS_COORDINATES.json
+quarks,up-sector finite coordinates,"[0.14860166675324307, 0.6698922395940129, 1.0]",finite source-space calculation,COMPLETE_MASS_COORDINATES.json
+quarks,down-sector finite coordinates,"[0.018979526072509086, 0.706470530637252, 1.0]",finite source-space calculation,COMPLETE_MASS_COORDINATES.json
+quarks,same-scale d/s coordinate ratio,0.02686527639785503,finite source-space comparison coordinate,COMPLETE_MASS_COORDINATES.json
+quarks,short-distance mass definition,mbar_f(mu) from the scalar chirality-changing part of the common color-resolved renormalized inverse propagator,common-regulator matched observable,COMPLETE_MASS_COORDINATES.json
+quarks,finite CKM coordinates,"theta=(6.97300763,4.88018964,19.1492596) deg; delta=179.325463 deg",finite source-space calculation,FLAVOR_COORDINATE_COMPARISON.json
+quarks,CKM physical definition,residue-normalized standard-current G3 coefficient = left-mass-frame G2 mismatch in the common regulator limit,common-regulator matched observable,SECTOR_PREDICTIONS.json
+neutrinos,finite normalized Takagi coordinates,"[0.40269217107209393, 0.5681871918068078, 1.0]",finite source-space calculation,COMPLETE_MASS_COORDINATES.json
+neutrinos,simultaneous two-splitting projected masses,"[0.01166172781256461, 0.016454366023048835, 0.02895941031462668] eV",finite-shape projection,COMPLETE_MASS_COORDINATES.json
+neutrinos,simultaneous projected splittings,"{""delta_m21"": 0.00013475026564612098, ""delta_m31"": 0.0007026515501965632} eV^2",finite-shape projection,COMPLETE_MASS_COORDINATES.json
+neutrinos,simultaneous projected sum masses,0.057075504150240125 eV,finite-shape projection,COMPLETE_MASS_COORDINATES.json
+neutrinos,simultaneous projected m_beta,0.012927889438683867 eV,finite-shape projection,COMPLETE_MASS_COORDINATES.json
+neutrinos,simultaneous projected m_beta_beta interval,"[0.006883450099612267, 0.01264437508225137] eV",finite-shape projection,COMPLETE_MASS_COORDINATES.json
+neutrinos,physical mass definition,Takagi singular values of the interacting 6x6 neutral Nambu kernel with the receiver-clock conversion,common-regulator spectral observable,COMPLETE_MASS_COORDINATES.json
+neutrinos,finite PMNS coordinates,"theta=(22.7016242,7.31452917,7.18496794) deg; delta=178.399575 deg",finite source-space calculation,FLAVOR_COORDINATE_COMPARISON.json
+neutrinos,PMNS physical definition,residue-normalized standard-current G3 coefficient = left-mass-frame G2 mismatch in the common regulator limit,common-regulator matched observable,SECTOR_PREDICTIONS.json
+L24 weak tensors,sparse MPS nonzero coefficients,2804819,direct primary-tensor audit,SU2_TENSOR_AUDIT.json
+L24 weak tensors,four-plaquette support,77036,direct primary-tensor audit,SU2_TENSOR_AUDIT.json
+L24 rank-six precontraction,covering-lattice size,"L=24, n=9; 21136 links; 18252 plaquettes",exact primary-data validation,L24_PRECONTRACTION_VALIDATION.json
+L24 rank-six precontraction,connected SU2 pair recouplings,261346 pairs in 48 classes,exact primary-data validation,L24_PRECONTRACTION_VALIDATION.json
+L24 rank-six precontraction,C10 geometric graph,3925 nodes; 17576 directed edges,exact primary-data validation,L24_PRECONTRACTION_VALIDATION.json
+L24 rank-six precontraction,six-channel source order,"L1,L2,L3,R1,R2,R3",exact primary-data validation,L24_PRECONTRACTION_VALIDATION.json
+common contraction,C10 row-stochastic residual,2.220446049250313e-16,direct contraction check,COMMON_CONTRACTION_CHARACTERIZATION.json
+common contraction,SU2 branch-normalization residual,2.220446049250313e-15,direct contraction check,COMMON_CONTRACTION_CHARACTERIZATION.json
+common contraction,C10 coherence witness trace distance,0.4999999999999999,quantum shell-map identifiability result,COMMON_CONTRACTION_CHARACTERIZATION.json
+common contraction,strict Kato dimension and gap,dim=122677; gap=14.425846446299971,finite sparse-state spectral calculation,COMMON_CONTRACTION_CHARACTERIZATION.json
+common contraction,matrix-free Riesz numerical precision,"{""projector_action_fro_error"": 1.4433516438349637e-17, ""retained_rank"": 2, ""rho_fro_error"": 1.5700924586837752e-16, ""solve_count"": 768, ""uniform_gap_lower_bound"": 0.1, ""worst_residual_norm"": 8.881784197001252e-16}",deterministic numerical validation,COMMON_CONTRACTION_CHARACTERIZATION.json
+abelian gauge sector,U(1) singleton Riesz density,dim=33; trace=1; contour gap=0.05,finite L24 boundary-sector validation,U1_SECTOR_VALIDATION.json
+abelian gauge sector,U(1) four-plaquette Riesz density,dim=33; trace=0.9999999999999999; contour gap=0.069999996322,finite L24 boundary-sector validation,U1_SECTOR_VALIDATION.json
+color,local SU3 algebra validation,max residual 2.220446049250313e-15,finite-matrix validation,SU3_VALIDATION.json
+spectral methods,Riesz/Toeplitz/reconstruction,deterministic validation suite,deterministic numerical validation,RIESZ_NUMERICAL_VALIDATION.json; SPECTRAL_METHOD_VALIDATION.json
+spectral methods,C11 block-Toeplitz margin,0.6440312739995873,deterministic positive-matrix validation,C11_NUMERICAL_VALIDATION.json
+spectral methods,C11 depth-18 block pencil,rank=108; radial deviation=9.992e-15,deterministic matrix-pencil validation,C11_NUMERICAL_VALIDATION.json
+spectral methods,exact matrix flat extension,rank(T_2)=rank(T_3)=18,exact symbolic result,C11_NUMERICAL_VALIDATION.json
+physical G2 execution,L24 exact precontraction,"L=24, n=9; 21136 links; 18252 plaquettes; 261346 connected SU2 pairs",exact physical-input certificate,physical_g2_execution/PHYSICAL_G2_CONTRACT_AUDIT.json
+physical G2 execution,physical input-chain status,PHYSICAL_G2_PRECONTRACTION_CERTIFIED_CONTINUUM_SEQUENCE_DEFINED,execution-contract classification,physical_g2_execution/PHYSICAL_G2_CONTRACT_AUDIT.json
+physical G2 execution,continuum-sequence tensor inputs,four_valid_nested_kato_buffers; buffer_tail_certificate; quantum_c10_shell_maps; boundary_to_path_tensor; core_recoupling_payload; rank6_embedding; complete_charged_ucone_matvec; cn6_moments; cn6_shape_and_C0,explicit continuum input set,physical_g2_execution/PHYSICAL_G2_CONTRACT_AUDIT.json
+physical G2 execution,continuum G2 stage,definition and L24 precontraction certified,physical classification,physical_g2_execution/PHYSICAL_G2_CONTRACT_AUDIT.json

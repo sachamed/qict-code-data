@@ -1,0 +1,73 @@
+{
+  "status": "PASS_U1_GATE3_CORRECT_NORM",
+  "order": [
+    15164,
+    15163,
+    15162
+  ],
+  "span": [
+    10325,
+    10385
+  ],
+  "norm2": 0.9999999999999992,
+  "abs_error": 7.771561172376096e-16,
+  "env_nnz": 1,
+  "max_bond": 4913,
+  "runtime_s": 1.773787498474121,
+  "peak_rss_kib": 491268,
+  "source": "/mnt/data/QICT_UCONE_DIAMOND_L24_2026-10-04/factor_L_u1_gate003_correct.pkl",
+  "profile": [
+    {
+      "site": 10325,
+      "env_nnz": 17
+    },
+    {
+      "site": 10330,
+      "env_nnz": 289
+    },
+    {
+      "site": 10335,
+      "env_nnz": 4913
+    },
+    {
+      "site": 10340,
+      "env_nnz": 4913
+    },
+    {
+      "site": 10345,
+      "env_nnz": 4913
+    },
+    {
+      "site": 10350,
+      "env_nnz": 4913
+    },
+    {
+      "site": 10355,
+      "env_nnz": 4913
+    },
+    {
+      "site": 10360,
+      "env_nnz": 4913
+    },
+    {
+      "site": 10365,
+      "env_nnz": 4913
+    },
+    {
+      "site": 10370,
+      "env_nnz": 4913
+    },
+    {
+      "site": 10375,
+      "env_nnz": 4913
+    },
+    {
+      "site": 10380,
+      "env_nnz": 289
+    },
+    {
+      "site": 10385,
+      "env_nnz": 1
+    }
+  ]
+}

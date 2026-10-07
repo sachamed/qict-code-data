@@ -1,0 +1,23 @@
+{
+  "control_g2": {
+    "edge_epsilon": 0.00038294346006355573,
+    "edge_residue": 0.0004286261761987646,
+    "pole_count": 4878,
+    "smallest_offset_residue_error": 5.005459191445368e-10,
+    "smallest_offset_tested": 1e-09
+  },
+  "physical_l24": {
+    "missing": [
+      "GLOBAL_CHARGED_UCONE_L24/provider",
+      ">=4 selected KATO_BUFFERs at lambda=1",
+      "BUFFER_CONTRACTION_CERTIFICATE",
+      "C10_SHELL_MAPS",
+      "BOUNDARY_TO_PATH",
+      "CORE_RECOUPLING_L24",
+      "RANK6_EMBEDDING_L24"
+    ],
+    "status": "BLOCKED_MISSING_GLOBAL_DYNAMICAL_PAYLOAD"
+  },
+  "scientific_rule": "The serialized compact-U1 control G2 is a validation/calibration result only and must not be reported as the physical electroweak L24 G2.",
+  "status": "FINAL_CONTROL_CHAIN_PASS__PHYSICAL_EW_G2_NOT_PROMOTED"
+}

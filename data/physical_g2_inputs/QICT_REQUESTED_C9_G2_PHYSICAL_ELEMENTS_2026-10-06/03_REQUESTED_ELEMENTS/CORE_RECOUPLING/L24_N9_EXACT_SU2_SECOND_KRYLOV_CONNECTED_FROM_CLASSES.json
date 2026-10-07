@@ -1,0 +1,17 @@
+{
+  "class_population_reconstruction_exact": true,
+  "connected_distinct_pairs": 261346,
+  "construction": "Lossless decompression of the accepted exact 48-class pair map: each serialized pair_class_id selects the exact class branch_count, branch_code and branch_amplitude. No new physical approximation is introduced.",
+  "max_class_branch_norm_error_from_unity": 2.220446049250313e-15,
+  "output_npz": "/mnt/data/qict_work/kernel/results/SU2_SECOND_KRYLOV_CONNECTED_DECOMPRESSED_2026-10-04/L24_N9_EXACT_SU2_SECOND_KRYLOV_CONNECTED_FROM_CLASSES.npz",
+  "output_npz_sha256": "2fef7d23ca5116e1bb87d8b943da8d83a15b61fad4313fd72e2e4b572e4e96e3",
+  "scope": "Exact SU(2) second neutral magnetic Krylov connected-pair payload. This remains a preconditioner/component; it is not the full charged U_cone, not a lambda=1 Riesz/Kato state, not C9^(6), and not G2.",
+  "source_class_npz": "/mnt/data/qict_work/kernel/results/L24_N9_EXACT_SU2_SECOND_KRYLOV_CLASSES.npz",
+  "source_class_npz_sha256": "bdc62244c1d40621f067a06e3c55756d02fa4d693eaf8c2e9de22b5cb2f47b0d",
+  "status": "PASS_EXACT_CLASS_DECOMPRESSION_TO_CONNECTED_PAIR_PAYLOAD",
+  "topology_counts": {
+    "shared_edge": 100308,
+    "shared_vertex_only": 161038
+  },
+  "translation_orientation_classes": 48
+}

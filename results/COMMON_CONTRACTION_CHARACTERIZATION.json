@@ -1,0 +1,63 @@
+{
+  "L": 24,
+  "classification": "FINITE_L24_COMMON_CONTRACTION_CHARACTERIZATION",
+  "coherence_resolved_c10_witness": {
+    "basis_population_residual_between_two_CPTP_realizations": 0.0,
+    "coherent_state_output_trace_distance": 0.4999999999999999,
+    "destination_node": 688,
+    "interpretation": "The serialized population transition admits coherence-resolved CPTP realizations with distinct coherent-state responses. The common quantum contraction therefore carries the coherence map together with the population kernel.",
+    "one_minus_p": 0.578165904504141,
+    "p": 0.42183409549585904,
+    "sigma_x_expectation_channel_A": 0.1563318090082819,
+    "sigma_x_expectation_channel_B": 0.0,
+    "source_node": 852
+  },
+  "common_spectral_map": {
+    "charged_fermions": "m_f=(hbar/(c^2 tau_*))*epsilon_f with epsilon_f read from the common charged rank-six matrix spectral measure",
+    "matrix_moments": "C_n^(6)=V^dagger U^n V on the fixed source order (L1,L2,L3,R1,R2,R3)",
+    "neutrinos": "m_nu_i=(hbar/(c^2 tau_*))*sigma_i with sigma_i the active Takagi coordinates of the interacting neutral Nambu kernel",
+    "quarks": "short-distance masses are read from the color-resolved renormalized chirality-changing inverse propagator in the declared scheme and scale",
+    "spectral_measure": "G_2 is the positive 6x6 matrix-valued spectral measure associated with the common frozen action and selected source subspace"
+  },
+  "matrix_free_riesz_validation": {
+    "projector_action_fro_error": 1.4433516438349637e-17,
+    "retained_rank": 2,
+    "rho_fro_error": 1.5700924586837752e-16,
+    "solve_count": 768,
+    "uniform_gap_lower_bound": 0.1,
+    "worst_residual_norm": 8.881784197001252e-16
+  },
+  "moment_depth": 9,
+  "normalization_residuals": {
+    "c10_row_stochasticity_max_residual": 2.220446049250313e-16,
+    "su2_branch_count_histogram": {
+      "1": 69613,
+      "2": 191733
+    },
+    "su2_branch_probability_max_residual": 2.220446049250313e-15
+  },
+  "operator_completion_principle": "The common spectral observable is evaluated after the coherence-resolved C10 map, boundary-to-path insertion, six-column embedding, charged causal-cone action and selected Riesz state are represented on one frozen finite-volume action.",
+  "serialized_primary_counts": {
+    "c10_directed_edges": 17576,
+    "c10_nodes": 3925,
+    "links": 21136,
+    "plaquettes": 18252,
+    "su2_connected_pairs": 261346
+  },
+  "source_order": [
+    "L1",
+    "L2",
+    "L3",
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "strict_kato_checkpoint": {
+    "dimension": 122677,
+    "gap": 14.425846446299971,
+    "ground_energy": -124.99998815493764,
+    "nnz": 3727100,
+    "state_norm": 0.9999999999999997,
+    "steps": 48
+  }
+}

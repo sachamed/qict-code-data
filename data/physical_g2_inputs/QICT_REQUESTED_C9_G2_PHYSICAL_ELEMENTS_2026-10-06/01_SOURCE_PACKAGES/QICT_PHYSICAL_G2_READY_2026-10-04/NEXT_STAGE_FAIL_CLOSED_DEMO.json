@@ -1,0 +1,28 @@
+{
+  "classification": "COMPOSITE_EXECUTION_RECORD",
+  "next_physical_stage_contract": {
+    "boundary_to_path_count": 0,
+    "kato_buffer_count": 0,
+    "missing": [
+      ">=4 KATO_BUFFER_<b>.npz",
+      "C10_SHELL_MAPS_<b>.npz",
+      "BOUNDARY_TO_PATH_<b>.npz",
+      "BUFFER_CONTRACTION_CERTIFICATE.json",
+      "CORE_RECOUPLING_L24.npz",
+      "RANK6_EMBEDDING_L24.npz",
+      "GLOBAL_CHARGED_UCONE_L24.npz or GLOBAL_CHARGED_UCONE_PROVIDER.py"
+    ],
+    "note": "Step-4 local charged cluster is verified but is not a substitute for the selected global Kato/Riesz state.",
+    "physical_dir": "/mnt/data/QICT_PHYSICAL_G2_READY_2026-10-04/physical_g2/L24",
+    "shell_map_count": 0,
+    "status": "BLOCKED_MISSING_PHYSICAL_INPUTS"
+  },
+  "step4_strict_checkpoint": {
+    "certified_l2_bound": 4.761260928942132e-07,
+    "norm2": 0.003470335028714577,
+    "scope": "Certified four-incident-plaquette charged SU2 cluster checkpoint only; not selected global Kato/Riesz state, not C9^(6), not G2.",
+    "sha256": "4a22157eefe982fb6ad06564e2e6d779d18045618deedf69fdbd567d6655455a",
+    "status": "PASS_STEP4_STRICT_CHECKPOINT_VERIFY",
+    "support": 77036
+  }
+}

@@ -1,0 +1,165 @@
+{
+  "family_pairs_zero_based": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "family_redistribution": {
+    "first_moment_with_family_difference_gt_1e-12": 2,
+    "interpretation": "Family-projected moments differ away from the edge although the lowest edge and its residue trace are family symmetric.",
+    "spreads_n0_10": [
+      1.1102244350925152e-16,
+      0.0,
+      0.00899713883789109,
+      0.0,
+      0.00010469022730570224,
+      0.0,
+      1.3877787807814457e-17,
+      0.0,
+      3.892380451516385e-08,
+      0.0,
+      5.417549124790228e-09
+    ]
+  },
+  "finite_rank_pencil_warning": {
+    "hankel_ranks_K2_to_K7_numerical_diagnostic": [
+      12,
+      18,
+      24,
+      30,
+      36,
+      42
+    ],
+    "interpretation": "Ranks grow with depth; 33 moments cannot justify collapsing the known 4878-atom measure to a small pole set. Physical C11 reconstruction must therefore test depth stability before assigning isolated poles."
+  },
+  "lowest_edge": {
+    "epsilon": 0.00038294346006355573,
+    "family_fraction_spread": 2.220446049250313e-16,
+    "family_trace_contributions": [
+      0.00014287539206625489,
+      0.0001428753920662548,
+      0.00014287539206625478
+    ],
+    "family_trace_fractions": [
+      0.3333333333333335,
+      0.3333333333333333,
+      0.33333333333333326
+    ],
+    "pole": [
+      0.9999999266771541,
+      -0.0003829434507040542
+    ],
+    "pole_index": 2438,
+    "rank_one_fro_residual": 3.302618273111943e-19,
+    "residue_eigenvalue": 0.0004286261761987646,
+    "residue_rank_tol_1e-12_diagnostic": 1,
+    "residue_trace": 0.00042862617619876444
+  },
+  "mass_extraction_stage": "CERTIFIED_LARGE_VOLUME_C10_KATO_EXECUTION_STAGE",
+  "measure": {
+    "C0_fro_error": 1.2745341003286062e-14,
+    "direct_vs_spectral_moment_max_entrywise_error": 1.1661710790875472e-14,
+    "pole_count": 4878,
+    "toeplitz_depth": 16,
+    "toeplitz_lambda_min_certified_lower_bound": null,
+    "toeplitz_lambda_min_diagnostic": 0.39982833628703174,
+    "toeplitz_rigorous_acceptance": "An independently validated eigenvalue enclosure and independent moment-error bounds are required for a numerical Weyl certificate; the stored floating minimum is diagnostic only."
+  },
+  "scalar_edge_channel_lsz": {
+    "finite_difference_tests": [
+      {
+        "absolute_error": 5.211558874909909e-05,
+        "relative_step": 0.0001,
+        "residue_estimate": [
+          0.0004806607221052155,
+          2.9052750256518095e-06
+        ]
+      },
+      {
+        "absolute_error": 1.520248376012738e-05,
+        "relative_step": 3e-05,
+        "residue_estimate": [
+          0.0004438059190411477,
+          8.312158059472098e-07
+        ]
+      },
+      {
+        "absolute_error": 5.026131680779423e-06,
+        "relative_step": 1e-05,
+        "residue_estimate": [
+          0.0004336447310345238,
+          2.758750315138694e-07
+        ]
+      },
+      {
+        "absolute_error": 1.5034974096893962e-06,
+        "relative_step": 3e-06,
+        "residue_estimate": [
+          0.00043012739621373796,
+          8.272198973736029e-08
+        ]
+      },
+      {
+        "absolute_error": 5.007523467207555e-07,
+        "relative_step": 1e-06,
+        "residue_estimate": [
+          0.0004291261688495584,
+          2.7572847124034005e-08
+        ]
+      },
+      {
+        "absolute_error": 1.5018219650762701e-07,
+        "relative_step": 3e-07,
+        "residue_estimate": [
+          0.00042877613042231923,
+          8.271818783373992e-09
+        ]
+      },
+      {
+        "absolute_error": 5.005684051546856e-08,
+        "relative_step": 1e-07,
+        "residue_estimate": [
+          0.00042867615704240963,
+          2.7572723699168455e-09
+        ]
+      },
+      {
+        "absolute_error": 1.5016286239833963e-08,
+        "relative_step": 3e-08,
+        "residue_estimate": [
+          0.00042864116968478034,
+          8.27181680525303e-10
+        ]
+      },
+      {
+        "absolute_error": 5.0052070484651265e-09,
+        "relative_step": 1e-08,
+        "residue_estimate": [
+          0.00042863117380544455,
+          2.7572644156431895e-10
+        ]
+      }
+    ],
+    "gamma_prime_exact": 2333.035300989819,
+    "residue_from_serialized_spectral_atom": 0.0004286261761987646
+  },
+  "scope": "Serialized compact-U1 N=19 rank-six control. It validates the matrix-measure/C11/LSZ analysis path at stored precision and is distinct from the electroweak fermion-mass calculation.",
+  "source_order": [
+    "L1",
+    "L2",
+    "L3",
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "status": "PASS_SERIALIZED_C11_LSZ_CONTROL__NOT_PHYSICAL_G2"
+}

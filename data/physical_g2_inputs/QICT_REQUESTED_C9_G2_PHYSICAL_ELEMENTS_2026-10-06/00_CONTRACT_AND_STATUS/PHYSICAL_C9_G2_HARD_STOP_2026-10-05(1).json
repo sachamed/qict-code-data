@@ -1,0 +1,93 @@
+{
+  "action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "constructor_scan": {
+    "named_file_hits": {
+      "BOUNDARY_TO_PATH": [],
+      "CN6_MOMENTS": [
+        {
+          "classification": "candidate",
+          "path": "/mnt/data/finalizer_full/RESULTS/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/results/synthetic_c11/CN6_MOMENTS_L24.npz"
+        }
+      ],
+      "CORE_RECOUPLING_L24": [],
+      "GLOBAL_CHARGED_UCONE_CERTIFICATE": [],
+      "GLOBAL_CHARGED_UCONE_PROVIDER": [
+        {
+          "classification": "candidate",
+          "path": "/mnt/data/finalizer_full/RESULTS/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/templates/GLOBAL_CHARGED_UCONE_PROVIDER_TEMPLATE.py"
+        }
+      ],
+      "RANK6_EMBEDDING_L24": []
+    },
+    "non_synthetic_instantiation_candidates_after_filter": [
+      {
+        "file": "/mnt/data/task12/QICT_D21_TASKS_01_12_MAXIMAL_REEXECUTION_2026-10-01/TASK_12_COMPLETE_SUBMISSION/code/physical_g2/charged_C10_Kato_boundary_tensor_and_recoupled_plaquette_block_provider.py",
+        "line": 205,
+        "text": "left_sources: np.ndarray"
+      },
+      {
+        "file": "/mnt/data/task12/QICT_D21_TASKS_01_12_MAXIMAL_REEXECUTION_2026-10-01/TASK_12_COMPLETE_SUBMISSION/code/physical_g2/charged_C10_Kato_boundary_tensor_and_recoupled_plaquette_block_provider.py",
+        "line": 206,
+        "text": "right_sources: np.ndarray"
+      },
+      {
+        "file": "/mnt/data/task12/QICT_D21_TASKS_01_12_MAXIMAL_REEXECUTION_2026-10-01/TASK_12_COMPLETE_SUBMISSION/code/physical_g2/charged_C10_Kato_boundary_tensor_and_recoupled_plaquette_block_provider.py",
+        "line": 582,
+        "text": "embedding = RankSixCoreEmbedding(np.eye(6, dtype=np.complex128), np.eye(6, dtype=np.complex128),"
+      },
+      {
+        "file": "/mnt/data/obs_first_work/RESULTS/L24_RANK6_STATE_CONTRACTION_PAYLOAD_2026-10-04/code/source_boundary_provider.py",
+        "line": 205,
+        "text": "left_sources: np.ndarray"
+      },
+      {
+        "file": "/mnt/data/obs_first_work/RESULTS/L24_RANK6_STATE_CONTRACTION_PAYLOAD_2026-10-04/code/source_boundary_provider.py",
+        "line": 206,
+        "text": "right_sources: np.ndarray"
+      },
+      {
+        "file": "/mnt/data/obs_first_work/RESULTS/L24_RANK6_STATE_CONTRACTION_PAYLOAD_2026-10-04/code/source_boundary_provider.py",
+        "line": 582,
+        "text": "embedding = RankSixCoreEmbedding(np.eye(6, dtype=np.complex128), np.eye(6, dtype=np.complex128),"
+      }
+    ],
+    "python_references_found": 18
+  },
+  "date": "2026-10-05",
+  "forbidden_substitution_respected": [
+    "No L2 periodic recoupler promoted as L24 core.",
+    "No geometric C10 path probabilities promoted as quantum CP/Kraus maps.",
+    "No first/second Kato tangent promoted as lambda=1 selected charged density.",
+    "No scalar/family route control promoted as C_n^(6).",
+    "No local electric G2 control promoted as physical G2."
+  ],
+  "minimal_unexecuted_operation": "Execute the L24 joint block-sparse charged Kato/C10 boundary-to-iota contraction, retaining all six family/chirality columns. This operation must numerically supply the L24 boundary-density-to-path map (or an equivalent streaming callback), volume-matched core recoupling/source embedding, and complete charged U_cone matvec. Geometry, local Gauss amplitudes, L2 recoupler controls, and static U1 shell weights do not determine this map uniquely.",
+  "new_results": {
+    "B3_U1_exact_TV20_abs_relative_bound": 1.4374244318027695e-13,
+    "B3_U1_tail_TV_ge_22_upper": 9.978011687790605e-08,
+    "B3_U1_total_omitted_from_TV_ge_16_upper": 1.0021941103356158e-07,
+    "C11_backend": "PASS_SYNTHETIC_C11_CAUSAL_CONE_BACKEND_SELF_TEST",
+    "SU2_gate3": "PASS exact zero truncation (certificate copied)",
+    "U1_common_core_B2_B3_explicit_aligned_l2": 1.795420077e-13,
+    "U1_gate4_terminal": "PASS corrected zero discard (certificate copied)",
+    "charged_local_layer": "PASS_L24_EXACT_CHARGED_LOCAL_LAYER",
+    "electric_cluster_G2": "PASS control only; degeneracy-corrected 42 Floquet atoms",
+    "global_B0_gauge_Kato": "PASS_IMPLICIT_GLOBAL_B0_GAUGE_KATO_EIGENSTATE",
+    "matrix_free_Riesz_backend": "PASS_MATRIX_FREE_RIESZ_KATO_SELFTEST",
+    "remaining_1e-6_budget": 8.611595765663217e-07,
+    "representation_plus_B3_upper": 1.3884042343367827e-07
+  },
+  "physical_chain": {
+    "C9_6x6_L24": "BLOCKED_ON_BOUNDARY_TO_PATH_AND_VOLUME_MATCHED_CORE_RANK6_JOIN",
+    "G2_physical": "BLOCKED_ON_PHYSICAL_CN6_MOMENTS",
+    "Riesz_Kato_lambda1_full_charged": "BLOCKED_ON_FULL_CHARGED_UCONE",
+    "U_cone_L24_full_charged_matrix_free": "BLOCKED_NOT_SERIALIZED_OR_GENERATABLE_FROM_AVAILABLE_NUMERICAL_TENSORS"
+  },
+  "status": "MAXIMUM_EXECUTION_REACHED__PHYSICAL_C9_G2_NOT_PROMOTED",
+  "why_not_memory": {
+    "B3_tail_budget_passed": true,
+    "matrix_free_backend_passed": true,
+    "missing_is_numerical_dynamical_map_not_RAM": true,
+    "observable_first_route_available": true
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "rows": [
+    {
+      "L": 24,
+      "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L24/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+      "status": "BLOCKED_MISSING_PROVIDER"
+    },
+    {
+      "L": 32,
+      "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L32/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+      "status": "BLOCKED_MISSING_PROVIDER"
+    },
+    {
+      "L": 48,
+      "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L48/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+      "status": "BLOCKED_MISSING_PROVIDER"
+    },
+    {
+      "L": 64,
+      "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L64/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+      "status": "BLOCKED_MISSING_PROVIDER"
+    },
+    {
+      "L": 96,
+      "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L96/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+      "status": "BLOCKED_MISSING_PROVIDER"
+    },
+    {
+      "L": 128,
+      "provider": "/mnt/data/QICT_OBSERVABLE_FIRST_HPC_FINALIZER_V2_2026-10-04/providers/L128/GLOBAL_CHARGED_UCONE_PROVIDER.py",
+      "status": "BLOCKED_MISSING_PROVIDER"
+    }
+  ],
+  "status": "INCOMPLETE_PHYSICAL_MULTIVOLUME_CHAIN"
+}

@@ -1,0 +1,72 @@
+{
+  "action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "physical_scope": "Exact shell covering-lattice geometry only; no Kato density, Kraus amplitude, or C9 moment inferred.",
+  "rows": [
+    {
+      "bcc_crossing_edges": 2168,
+      "coordinate_permutation": [
+        0,
+        2,
+        1
+      ],
+      "coordinate_signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "file": "C10_SHELL_R10_PLANE_SWEEP_IR.npz",
+      "matter_splitstep_links": 3797,
+      "max_open_cut": 842,
+      "max_open_plaquettes": 713,
+      "network_links": 16008,
+      "plaquettes": 10476,
+      "radius": 10,
+      "sha256": "cb3ffd68d25be78d5963d2bb33800921a2c2b33f313db5566d7cf2231d9abebc"
+    },
+    {
+      "bcc_crossing_edges": 2648,
+      "coordinate_permutation": [
+        0,
+        2,
+        1
+      ],
+      "coordinate_signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "file": "C10_SHELL_R11_PLANE_SWEEP_IR.npz",
+      "matter_splitstep_links": 4637,
+      "max_open_cut": 991,
+      "max_open_plaquettes": 850,
+      "network_links": 19554,
+      "plaquettes": 12794,
+      "radius": 11,
+      "sha256": "f5f7cd38299627300308ef6002e7eca43848e7119f99fe5f00db83f60e9cac9a"
+    },
+    {
+      "bcc_crossing_edges": 3176,
+      "coordinate_permutation": [
+        0,
+        2,
+        1
+      ],
+      "coordinate_signs": [
+        -1,
+        -1,
+        -1
+      ],
+      "file": "C10_SHELL_R12_PLANE_SWEEP_IR.npz",
+      "matter_splitstep_links": 5561,
+      "max_open_cut": 1152,
+      "max_open_plaquettes": 999,
+      "network_links": 23456,
+      "plaquettes": 15344,
+      "radius": 12,
+      "sha256": "9357491536a813b7d9f10b27fb36aa2a325fc40455f3a8e276e77bcdac16de6a"
+    }
+  ],
+  "rule": "all BCC edges crossing graph-distance r-1/r -> frozen Sz,Sy,Sx split-step links -> all elementary plaquettes incident to those links -> optimized plane sweep",
+  "status": "PASS_C10_SHELL_CAUSAL_PLANE_SWEEP_IR",
+  "synthetic_data_used": false
+}

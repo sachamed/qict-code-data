@@ -1,0 +1,11 @@
+{
+  "classification": "FERMION_OBSERVABLE_COVARIANCE_VALIDATION",
+  "color_singlet_weak_current_commutator_residual": 2.5438405243138006e-16,
+  "dirac_mass_singular_value_basis_covariance_residual": 2.220446049250313e-15,
+  "jarlskog_rephasing_residual": 1.734723475976807e-17,
+  "mixing_modulus_rephasing_residual": 2.220446049250313e-16,
+  "mixing_unitarity_residual": 1.0550245896892759e-15,
+  "neutral_nambu_symmetry_residual": 0.0,
+  "scope": "deterministic algebraic validation of the observable maps; physical quark and neutrino values are assigned by the common interacting contraction",
+  "takagi_singular_value_congruence_residual": 2.6645352591003757e-15
+}

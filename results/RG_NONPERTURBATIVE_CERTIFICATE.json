@@ -1,0 +1,59 @@
+{
+  "charged_sector": {
+    "charged_leptons": "Gauss-dressed lower spectral support edge",
+    "neutral_neutrinos": "isolated pole/Takagi data when spectrally isolated",
+    "quarks": "renormalized short-distance mass parameter m_q^S(mu) in confined color sector"
+  },
+  "chiral_uniformity": {
+    "finite_wall_bound": "epsilon_chi <= 2*((1-delta_0)/(1+delta_0))^L_s",
+    "multiscale_numeric_status": "requires Wilson-kernel interval lower bounds along the RG path",
+    "theorem": "delta(a) >= delta_ref - ||H_W(a)-H_W_ref(a)||",
+    "uniform_target": "delta_0 = delta_ref/2 under perturbation <= delta_ref/2"
+  },
+  "classification": "RG_NONPERTURBATIVE_SPECIALIZATION_CERTIFICATE",
+  "excluded_scale_datum": {
+    "number": "m_e c^2 = 0.51099895069(16) MeV",
+    "rule": "do not use to determine tau_* in an absolute electron-mass prediction"
+  },
+  "gap_separation": {
+    "chiral_kernel_gap": "delta(a)=dist(0,sigma(H_W_hat(a)))",
+    "distinct_roles_verified": true,
+    "kato_branch_gap_finite_L24": 14.425846446299971,
+    "physical_sector_gap": "defined sectorwise; massless photon excluded from a global positive-gap statement"
+  },
+  "gravity_interface": {
+    "formula": "g_eff^{mu nu} proportional to d^2 Gamma^(2)/dp_mu dp_nu at p=0",
+    "next_dynamical_quantity": "two-derivative metric effective action coefficient / Newton coupling",
+    "object": "conformal metric from common continuum principal symbol"
+  },
+  "gribov": {
+    "finite_cone_representative": "rooted maximal-tree gauge",
+    "landau_comparison": "fundamental modular region / absolute minimum",
+    "physical_moments_gauge_invariant": true,
+    "primary_observables": "Gauss-projected gauge-invariant algebra"
+  },
+  "photon_directional_test": {
+    "R_gamma": 0.7499999999999999,
+    "coefficients": {
+      "b100": 0.09375,
+      "b110": 0.21875,
+      "b111": 0.2604166666666667
+    },
+    "five_sigma_refutation": "abs(Rhat_gamma-0.75) > 5 sigma_R, conditional on resolved quadratic propagation",
+    "integer_ratio": "9:21:25",
+    "profiled_shape_refutation": "Delta chi^2 >= 25 for one effective shape degree of freedom"
+  },
+  "physical_g2_contract_status": "PHYSICAL_G2_PRECONTRACTION_CERTIFIED_CONTINUUM_SEQUENCE_DEFINED",
+  "rg_path": {
+    "a_sequence": "a_n = a_0 2^{-n}",
+    "defect_bound": "||D(a)||_1 <= C_D (a mu_*)^p",
+    "numeric_p_status": "requires interacting block-map Jacobian spectrum",
+    "p_definition": "min(2, omega_*)",
+    "reference_scale": "mu_* fixed"
+  },
+  "source_files": [
+    "COMMON_CONTRACTION_CHARACTERIZATION.json",
+    "PHOTON_SIGNATURE_MOMENTS.json",
+    "physical_g2_execution/PHYSICAL_G2_CONTRACT_AUDIT.json"
+  ]
+}
