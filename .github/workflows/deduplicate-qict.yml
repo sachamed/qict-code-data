@@ -206,6 +206,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          python -m pip install -r code/requirements.txt
           sha256sum -c GITHUB_EXPORT_SHA256.txt >/tmp/qict_sha_check.txt
           python code/execute_physical_g2_contract_audit.py \
             --input-root data/physical_g2_inputs \
