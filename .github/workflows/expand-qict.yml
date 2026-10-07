@@ -1,10 +1,59 @@
-name: Expand QICT archive
+name: Expand QICT reproducibility archive
+
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.qict_archive_parts/**'
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
-  noop:
+  expand:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     steps:
-      - run: echo ready
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reassemble and verify archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat \
+            .qict_archive_parts/part-000 \
+            .qict_archive_parts/part-001 \
+            .qict_archive_parts/chunk-{004..054} \
+            > /tmp/QICT_GITHUB_CODE_DATA_RELEASE_2026-10-07.zip
+          echo "3bbc2f8da66fcd3d6f5f5d36234ff2ac96fad1b7cbe03b66c61f3093b7f59a38  /tmp/QICT_GITHUB_CODE_DATA_RELEASE_2026-10-07.zip" | sha256sum -c -
+
+      - name: Expand publication payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/qict_release
+          mkdir -p /tmp/qict_release
+          unzip -q /tmp/QICT_GITHUB_CODE_DATA_RELEASE_2026-10-07.zip -d /tmp/qict_release
+          rm -rf code data results validation
+          rm -f .gitignore GITHUB_EXPORT_SHA256.txt MANIFEST_SHA256.txt README.md REPRODUCE_ALL.py AUTH_WRITE_TEST.txt
+          cp -a /tmp/qict_release/. .
+          sha256sum -c GITHUB_EXPORT_SHA256.txt
+
+      - name: Commit expanded code and data
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .qict_archive_parts
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Publish complete QICT reproducibility code and data"
+          git push origin HEAD:main
