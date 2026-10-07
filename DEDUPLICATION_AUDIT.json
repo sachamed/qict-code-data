@@ -1,13 +1,13 @@
 {
   "actions": {
     "removed_redundant_views": 60,
-    "symlink_aliases": 54,
-    "total": 114
+    "symlink_aliases": 55,
+    "total": 115
   },
   "after": {
     "regular_duplicate_groups": 0,
     "regular_duplicate_instances": 0,
-    "symlink_alias_count": 54
+    "symlink_alias_count": 55
   },
   "before": {
     "duplicate_groups": 68,
