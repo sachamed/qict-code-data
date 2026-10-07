@@ -1,0 +1,229 @@
+name: Deduplicate QICT repository
+
+on:
+  push:
+    paths:
+      - ".github/workflows/deduplicate-qict.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  deduplicate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Deduplicate exact copies safely
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, os, csv, json, shutil
+
+          ROOT=Path(".").resolve()
+          C9=Path("data/physical_g2_inputs/QICT_REQUESTED_C9_G2_PHYSICAL_ELEMENTS_2026-10-06")
+          P1=C9/"01_SOURCE_PACKAGES"
+          P2=C9/"02_EXTRA_CHECKPOINTS"
+          P3=C9/"03_REQUESTED_ELEMENTS"
+          L24=Path("data/physical_g2_inputs/L24_RANK6_STATE_CONTRACTION_PAYLOAD_2026-10-04")
+
+          def digest(p):
+              h=hashlib.sha256()
+              with p.open("rb") as f:
+                  for b in iter(lambda:f.read(1<<20),b""): h.update(b)
+              return h.hexdigest()
+
+          def files_now():
+              return [p for p in ROOT.rglob("*") if p.is_file() and ".git" not in p.parts]
+
+          initial=files_now()
+          by={}
+          for p in initial:
+              by.setdefault(digest(p),[]).append(p)
+
+          before_groups=sum(1 for a in by.values() if len(a)>1)
+          before_instances=sum(len(a)-1 for a in by.values() if len(a)>1)
+          before_bytes=sum(p.stat().st_size for a in by.values() if len(a)>1 for p in a[1:])
+
+          actions=[]
+
+          if P2.exists():
+              for p in sorted(P2.rglob("*")):
+                  if p.is_file():
+                      actions.append(("remove_redundant_view",str(p.relative_to(ROOT)),""))
+              shutil.rmtree(P2)
+
+          def priority(p):
+              s=str(p.relative_to(ROOT))
+              if s.startswith("code/"): return (0,s)
+              if s.startswith(str(L24)+"/"): return (1,s)
+              if s.startswith("data/common_physical_chain/"): return (2,s)
+              if s.startswith("results/"): return (3,s)
+              if s.startswith("validation/"): return (4,s)
+              if s.startswith("data/"): return (5,s)
+              if s.startswith(str(P1)+"/"): return (20,s)
+              if s.startswith(str(P3)+"/"): return (30,s)
+              return (10,s)
+
+          current=files_now()
+          by={}
+          for p in current:
+              if p.name in {"GITHUB_EXPORT_SHA256.txt","MANIFEST_SHA256.txt","DEDUPLICATION_MAP.csv","DEDUPLICATION_AUDIT.json"}:
+                  continue
+              by.setdefault(digest(p),[]).append(p)
+
+          cn6_rel="data/physical_g2_inputs/QICT_REQUESTED_C9_G2_PHYSICAL_ELEMENTS_2026-10-06/03_REQUESTED_ELEMENTS/CN6_MOMENTS/CN6_MOMENTS_L24.npz"
+
+          for sha,arr in sorted(by.items()):
+              if len(arr)<2: continue
+              arr=sorted(arr,key=priority)
+              keep=arr[0]
+              for p in arr[1:]:
+                  rel=str(p.relative_to(ROOT))
+                  if rel.startswith(str(P3)+"/") and rel != cn6_rel:
+                      p.unlink()
+                      actions.append(("remove_redundant_view",rel,str(keep.relative_to(ROOT))))
+                      continue
+                  p.unlink()
+                  target=os.path.relpath(keep, p.parent)
+                  p.symlink_to(target)
+                  actions.append(("symlink_alias",rel,str(keep.relative_to(ROOT))))
+
+          if P3.exists():
+              for d in sorted([x for x in P3.rglob("*") if x.is_dir()], key=lambda x:len(x.parts), reverse=True):
+                  try: d.rmdir()
+                  except OSError: pass
+
+          c9read=C9/"README.md"
+          if c9read.exists():
+              txt=c9read.read_text()
+              marker="## Repository-clean layout"
+              if marker not in txt:
+                  txt += """
+          \n## Repository-clean layout
+          Exact duplicate payloads are canonicalized in this public repository. 01_SOURCE_PACKAGES
+          retains provenance paths; repeated bytes are represented by Git symbolic links to the canonical
+          files. The fully redundant 02_EXTRA_CHECKPOINTS mirror was removed. 03_REQUESTED_ELEMENTS
+          retains the element-status records and the CN6 compatibility path used by the contract audit.
+          DEDUPLICATION_MAP.csv at repository root records every removed or aliased path.
+          """
+                  c9read.write_text(txt)
+
+          readme=Path("README.md")
+          if readme.exists():
+              txt=readme.read_text()
+              marker="## Deduplicated public layout"
+              if marker not in txt:
+                  txt += """
+          \n## Deduplicated public layout
+          This public repository is canonicalized to avoid redundant scientific payloads. Exact repeated
+          files are stored once; historical paths that must remain resolvable are Git symbolic links.
+          Pure mirror/checkpoint views were removed. DEDUPLICATION_MAP.csv documents the canonical target
+          for each removed or aliased duplicate.
+          """
+                  readme.write_text(txt)
+
+          with Path("DEDUPLICATION_MAP.csv").open("w",newline="") as f:
+              w=csv.writer(f)
+              w.writerow(["action","path","canonical_target"])
+              w.writerows(actions)
+
+          c9manifest=C9/"SHA256_MANIFEST.csv"
+          rows=[]
+          for p in sorted(C9.rglob("*")):
+              if p.is_file() and p != c9manifest:
+                  rows.append((str(p.relative_to(C9)),p.stat().st_size,digest(p)))
+          with c9manifest.open("w",newline="") as f:
+              w=csv.writer(f)
+              w.writerow(["path","bytes","sha256"])
+              w.writerows(rows)
+
+          rm=Path("results/RUN_MANIFEST.json")
+          if rm.exists():
+              obj=json.loads(rm.read_text())
+              def hash_tree(base,patterns):
+                  out={}
+                  for pat in patterns:
+                      for p in sorted(base.rglob(pat)):
+                          if p.is_file(): out[str(p.relative_to(ROOT))]=digest(p)
+                  return out
+              obj["code_sha256"]=hash_tree(Path("code"),("*.py","requirements.txt"))
+              obj["primary_data_sha256"]=hash_tree(Path("data"),("*.json","*.zip","*.npz","*.csv","*.txt"))
+              obj["result_sha256"]={str(p.relative_to(ROOT)):digest(p) for p in sorted(Path("results").rglob("*")) if p.is_file() and p.name!="RUN_MANIFEST.json"}
+              rm.write_text(json.dumps(obj,indent=2,sort_keys=True)+"\n")
+
+          wf=Path(".github/workflows/deduplicate-qict.yml")
+          if wf.exists(): wf.unlink()
+          wdir=Path(".github/workflows")
+          if wdir.exists():
+              try: wdir.rmdir()
+              except OSError: pass
+              try: Path(".github").rmdir()
+              except OSError: pass
+
+          def build_manifest(path,prefix=""):
+              rows=[]
+              for p in sorted(ROOT.rglob("*")):
+                  if not p.is_file(): continue
+                  if ".git" in p.parts: continue
+                  if p.resolve()==path.resolve(): continue
+                  if p.name in {"GITHUB_EXPORT_SHA256.txt","MANIFEST_SHA256.txt"}: continue
+                  rel=str(p.relative_to(ROOT))
+                  rows.append(f"{digest(p)}  {prefix}{rel}")
+              path.write_text("\n".join(rows)+"\n")
+
+          build_manifest(Path("GITHUB_EXPORT_SHA256.txt"))
+          build_manifest(Path("MANIFEST_SHA256.txt"),"./")
+
+          regular=[p for p in ROOT.rglob("*") if p.is_file() and not p.is_symlink() and ".git" not in p.parts
+                   and p.name not in {"GITHUB_EXPORT_SHA256.txt","MANIFEST_SHA256.txt","DEDUPLICATION_AUDIT.json"}]
+          rb={}
+          for p in regular: rb.setdefault(digest(p),[]).append(p)
+          rem={k:[str(p.relative_to(ROOT)) for p in v] for k,v in rb.items() if len(v)>1}
+          aliases=[str(p.relative_to(ROOT)) for p in ROOT.rglob("*") if p.is_symlink()]
+          audit={
+              "classification":"REPOSITORY_DEDUPLICATION_AUDIT",
+              "before":{"duplicate_groups":before_groups,"redundant_instances":before_instances,"redundant_bytes":before_bytes},
+              "actions":{"total":len(actions),"symlink_aliases":sum(a[0]=="symlink_alias" for a in actions),
+                         "removed_redundant_views":sum(a[0]=="remove_redundant_view" for a in actions)},
+              "after":{"regular_duplicate_groups":len(rem),"regular_duplicate_instances":sum(len(v)-1 for v in rem.values()),
+                       "symlink_alias_count":len(aliases)},
+              "remaining_regular_duplicates":rem,
+              "policy":"Scientific content is stored once. Required historical paths are symlink aliases; redundant mirror views are removed."
+          }
+          Path("DEDUPLICATION_AUDIT.json").write_text(json.dumps(audit,indent=2,sort_keys=True)+"\n")
+          if rem:
+              raise SystemExit("Regular duplicate payloads remain: "+json.dumps(rem,indent=2))
+          print(json.dumps(audit,indent=2))
+          PY
+
+      - name: Verify manifests and physical contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum -c GITHUB_EXPORT_SHA256.txt >/tmp/qict_sha_check.txt
+          python code/execute_physical_g2_contract_audit.py \
+            --input-root data/physical_g2_inputs \
+            --out /tmp/PHYSICAL_G2_CONTRACT_AUDIT.json >/tmp/qict_contract_check.txt
+          python code/evaluate_common_contraction.py >/tmp/qict_common_contraction.txt
+          python - <<'PY'
+          import json
+          a=json.load(open("DEDUPLICATION_AUDIT.json"))
+          assert a["after"]["regular_duplicate_groups"] == 0
+          print("DEDUPLICATION_VERIFIED")
+          PY
+
+      - name: Commit cleaned repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Deduplicate and canonicalize QICT reproducibility repository"
+          git push origin main
