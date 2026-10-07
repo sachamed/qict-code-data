@@ -150,11 +150,11 @@ jobs:
                   out={}
                   for pat in patterns:
                       for p in sorted(base.rglob(pat)):
-                          if p.is_file(): out[str(p.relative_to(ROOT))]=digest(p)
+                          if p.is_file(): out[str(p)]=digest(p)
                   return out
               obj["code_sha256"]=hash_tree(Path("code"),("*.py","requirements.txt"))
               obj["primary_data_sha256"]=hash_tree(Path("data"),("*.json","*.zip","*.npz","*.csv","*.txt"))
-              obj["result_sha256"]={str(p.relative_to(ROOT)):digest(p) for p in sorted(Path("results").rglob("*")) if p.is_file() and p.name!="RUN_MANIFEST.json"}
+              obj["result_sha256"]={str(p):digest(p) for p in sorted(Path("results").rglob("*")) if p.is_file() and p.name!="RUN_MANIFEST.json"}
               rm.write_text(json.dumps(obj,indent=2,sort_keys=True)+"\n")
 
           wf=Path(".github/workflows/deduplicate-qict.yml")
