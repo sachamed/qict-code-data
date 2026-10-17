@@ -1,0 +1,74 @@
+\subsection{Spectral compatibility of the finite neutral triplet}
+\label{sec:qict-neutral-spectral-compatibility-2026}
+Let $M_0=M_0^T$ be the complex-symmetric neutral finite-receiver matrix,
+with ordered Takagi singular values
+\[
+(a,b,c)=(0.1895171061,\;0.2674032426,\;0.4706252560).
+\]
+These are finite-model coordinates, not masses extracted from poles of an
+interacting, kinetically normalized neutrino two-point function. Their
+scale-independent squared-splitting ratio is
+\[
+R_0=\frac{b^2-a^2}{c^2-a^2}=0.1917739534\ldots.
+\]
+NuFIT 6.1 (2025, normal ordering, IC23 without SK atmospheric data)
+reports central values $\Delta m_{21}^2=7.537\times10^{-5}\,
+{\rm eV}^2$ and $\Delta m_{31}^2=2.521\times10^{-3}\,
+{\rm eV}^2$, giving $R_{\rm exp}=0.0298968663\ldots$.
+A common mass scale cancels from the ratio and cannot account for the
+difference.
+
+\paragraph{Sharp compatibility bound.}
+Suppose a complex-symmetric additive correction $E=E^T$ is admitted,
+with $\varepsilon=\|E\|_2<(b-a)/2$. Weyl's singular-value
+perturbation inequality, combined with monotonicity of
+$(b^2-a^2)/(c^2-a^2)$ on strictly ordered positive triplets, gives
+\[
+R(M_0+E)\ge
+\frac{(b-\varepsilon)^2-(a+\varepsilon)^2}
+{(c+\varepsilon)^2-(a+\varepsilon)^2}.
+\]
+For a target $0<r<R_0$, the necessary condition is
+\begin{equation}\label{eq:qict-nu-epsilon-sharp-2026}
+\|E\|_2\ge\varepsilon_*(r)
+=\frac{(b^2-a^2)-r(c^2-a^2)}
+{2(a+b+r(c-a))}.
+\end{equation}
+The bound is attained as an abstract norm-optimization problem by the
+Takagi-frame deformation
+$\operatorname{diag}(\varepsilon_*,-\varepsilon_*,\varepsilon_*)$.
+For the NuFIT 6.1 central ratio,
+$\varepsilon_*=0.0322782819468\ldots$, or
+$\varepsilon_*/c=0.06858595355\ldots$.
+The NuFIT 6.0 central values instead give
+$\varepsilon_*=0.0323524724310\ldots$.
+The optimizing matrix is not a microscopic QICT self-energy.
+
+\paragraph{Kinetic normalization.}
+If $K=K^\dagger>0$ is the neutral kinetic matrix and
+$d=\|K-I\|_2<1$, the Majorana mass matrix after canonical normalization
+has the congruence form
+\[
+M_{\rm can}=K^{-T/2}(M_0+E)K^{-1/2}.
+\]
+Since
+$\|M_{\rm can}-M_0\|_2\le(\|E\|_2+cd)/(1-d)$,
+compatibility with the external reference ratio requires
+\[
+\|E\|_2\ge\max\{0,\varepsilon_*(1-d)-cd\}.
+\]
+In particular, if $E=0$, then
+$d\ge\varepsilon_*/(c+\varepsilon_*)
+=0.06418384344\ldots$ for the NuFIT 6.1 benchmark.
+This is a necessary bound, not a calculation of $K$.
+
+\paragraph{Statistical and physical interpretation.}
+The reported $\chi^2_{\rm split}=6814.89274$ is a two-observable
+diagonal-Gaussian diagnostic in which a common squared mass scale is
+profiled using NuFIT 6.0 central values and symmetrized marginal
+uncertainties. It is not the correlated NuFIT likelihood.
+A physical neutrino-mass prediction requires the neutral interacting
+resolvent, complementary self-energy and kinetic normalization to be
+evaluated in one compatible microscopic state. The bound introduces no
+adjustable parameter into QICT: the oscillation data specify an external
+compatibility test rather than a dynamical input.
