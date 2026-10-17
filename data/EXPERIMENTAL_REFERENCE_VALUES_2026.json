@@ -64,7 +64,6 @@
     "delta_m21_sigma_plus_eV2": 0.0000019,
     "delta_m3l_sigma_minus_eV2": 0.000023,
     "delta_m3l_sigma_plus_eV2": 0.000025,
-    "source_url": "https://www.nu-fit.org/?q=node/294",
     "uncertainty_status": "symmetrized one-dimensional 1σ errors, diagnostic only"
   },
   "absolute_neutrino_constraints": {
