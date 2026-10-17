@@ -1,0 +1,23 @@
+{
+  "classification": "FINITE_NEUTRAL_DIAGNOSTIC_NOT_PHYSICAL_POLE_PREDICTION",
+  "method": "sharp singular-value perturbation bound; no fitted QICT constants",
+  "finite_takagi_singular_values": [
+    0.1895171061,
+    0.2674032426,
+    0.470625256
+  ],
+  "NuFIT_6_0_NO": {
+    "observed_ratio": 0.029558011049723755,
+    "finite_ratio": 0.19177395340325562,
+    "sharp_minimum_additive_norm": 0.032352472430970475,
+    "kinetic_only_necessary_norm": 0.06432187868813477,
+    "chi2_diagonal_gaussian_surrogate": 6814.89273987846
+  },
+  "NuFIT_6_1_NO_IC23_noSK": {
+    "observed_ratio": 0.029896866322887742,
+    "finite_ratio": 0.19177395340325562,
+    "sharp_minimum_additive_norm": 0.0322782819468144,
+    "kinetic_only_necessary_norm": 0.06418384344360699
+  },
+  "caution": "The norm thresholds are external-data compatibility conditions; they do not derive the physical neutral self-energy, masses, or PMNS mixing from QICT."
+}
