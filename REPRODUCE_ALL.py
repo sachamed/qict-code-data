@@ -53,12 +53,19 @@ def build_manifest():
     manifest.write_text('\n'.join(rows)+'\n')
 
 ap=argparse.ArgumentParser(description='Regenerate all numerical results and, optionally, the publication PDFs.')
-ap.add_argument('--compile-pdfs',action='store_true',help='also compile manuscript and Supplement using the local TeX toolchain')
+ap.add_argument('--compile-pdfs',action='store_true',help='compile publication PDFs; requires the separate paper/ and cover_letter/ source packages')
+ap.add_argument('--publication-audits',action='store_true',help='audit publication source files only if the separate paper/ and cover_letter/ packages are provided')
 args=ap.parse_args()
 
 run([sys.executable,str(ROOT/'code/run_all.py')],log='reproduce_numerics.txt')
-run([sys.executable,str(ROOT/'code/audit_latex_submission.py')],log='reproduce_source_audit.txt')
-run([sys.executable,str(ROOT/'code/audit_publication_claims.py')],log='reproduce_publication_claim_audit.txt')
+run([sys.executable,str(ROOT/'code/verify_neutrino_shape_obstruction.py')],log='reproduce_neutrino_shape.txt')
+if args.publication_audits or args.compile_pdfs:
+    required=[PAPER/'manuscript_final.tex', PAPER/'supplement_final.tex', PAPER/'preamble.tex', PAPER/'references.bib', COVER/'QICT_COVER_LETTER.tex']
+    absent=[str(p.relative_to(ROOT)) for p in required if not p.is_file()]
+    if absent:
+        raise SystemExit('Publication source package not available in this code/data-only repository; missing: '+', '.join(absent))
+    run([sys.executable,str(ROOT/'code/audit_latex_submission.py')],log='reproduce_source_audit.txt')
+    run([sys.executable,str(ROOT/'code/audit_publication_claims.py')],log='reproduce_publication_claim_audit.txt')
 if args.compile_pdfs:
     if not shutil.which('pdflatex') or not bibtex_exe():
         raise SystemExit('TeX toolchain unavailable')
@@ -72,4 +79,4 @@ if args.compile_pdfs:
     shutil.copy2(PAPER/'supplement_final.pdf', ROOT/'QICT_SUPPLEMENTARY_INFORMATION.pdf')
     shutil.copy2(COVER/'QICT_COVER_LETTER.pdf', ROOT/'QICT_COVER_LETTER.pdf')
 build_manifest()
-print('All numerical results regenerated successfully.' + (' PDFs compiled.' if args.compile_pdfs else ''))
+print('Available finite numerical and diagnostic calculations finished.' + (' PDFs compiled.' if args.compile_pdfs else ' Physical Kato/C10/Ucone and dark-sector masses remain blocked pending independent certificates.'))

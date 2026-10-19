@@ -25,6 +25,29 @@ def validate_provider(mod, expected_L:int):
     if not meta.get('rank6_source_carrier_certified',False): raise ValueError('rank-six source carrier not certified')
     err=float(meta.get('operator_or_state_error_bound',float('inf')))
     if not (0<=err<1e-6): raise ValueError(f'uncertified/too-large operator_or_state_error_bound={err}')
+    # A provider is executable code, not a certificate. Metadata flags alone
+    # are never sufficient to promote a matrix-free kernel to physical status.
+    # Require an independently authored receipt bound to the source bytes.
+    import hashlib, json
+    from pathlib import Path
+    source=Path(getattr(mod,'__file__',''))
+    if not source.is_file():
+        raise ValueError('provider source file required for hash validation')
+    receipt=source.with_name(source.name+'.independent.json')
+    if not receipt.is_file() or receipt.is_symlink():
+        raise ValueError('independent provider certificate missing')
+    try:
+        cert=json.loads(receipt.read_text(encoding='utf-8'))
+    except (OSError, ValueError) as exc:
+        raise ValueError('invalid independent provider certificate') from exc
+    digest=hashlib.sha256(source.read_bytes()).hexdigest()
+    if (cert.get('status')!='PASS' or cert.get('provider_sha256')!=digest or
+        cert.get('action_sha256')!=ACTION_SHA256 or
+        cert.get('synthetic_data_used') is not False or
+        cert.get('independent_validation') is not True or
+        not isinstance(cert.get('evidence_hashes'),dict) or
+        not cert['evidence_hashes']):
+        raise ValueError('provider is not independently certified against code/action/evidence hashes')
     D=int(mod.dimension())
     if D<=0: raise ValueError('invalid dimension')
     return meta,D

@@ -1,76 +1,51 @@
-# Quantum Copy-Time Geometry — Code and Data
+# Quantum Information Copy Time — Reproducible Code and Data
 
-Reproducibility repository for the manuscript:
-
-**Quantum Copy-Time Geometry: Standard-Model Gauge Algebra, Family Structure, and a Parameter-Free BCC Photon Signature**
-
-Author: **Mohamed Sacha**  
-Independent Researcher, Casablanca, Morocco  
-ORCID: 0009-0005-2078-2032
-
-## Repository scope
-
-This repository contains the computational and machine-readable materials supporting the submission. It is intentionally limited to reproducibility assets rather than publication PDFs.
-
-- `code/` — executable calculations, symbolic checks, validation scripts, and numerical pipelines.
-- `data/` — primary numerical inputs, finite-regulator payloads, SU(2) state data, and source archives used by the calculations.
-- `results/` — regenerated numerical outputs and machine-readable certificates.
-- `validation/` — publication-claim, source-consistency, and scientific-framing audits.
-- `REPRODUCE_ALL.py` — top-level reproduction entry point.
-- `MANIFEST_SHA256.txt` — original submission-package checksum manifest.
-- `GITHUB_EXPORT_SHA256.txt` — checksum manifest for this repository export.
-
-## Main reproducibility targets
-
-The distributed calculations cover, among other components:
-
-- finite-algebra and gauge-structure checks;
-- anomaly and hypercharge consistency;
-- BCC photon angular invariants;
-- finite-regulator Kato/Riesz calculations;
-- charged and neutral spectral observables;
-- flavor-sector diagnostics;
-- RG operator-space bookkeeping and convergence diagnostics;
-- phenomenology and machine-readable statistical outputs.
-
-The normalized BCC photon signature used in the manuscript is fixed geometrically, with high-symmetry pattern `9:21:25`, spherical variance `1/525`, and invariant `R_gamma = 3/4`.
-
-## Reproduction
-
-From the repository root:
-
-```bash
-python REPRODUCE_ALL.py
-```
-
-Individual calculations can also be run from `code/`. Some finite-regulator/HPC stages use precomputed payloads distributed under `data/` so that the numerical provenance is preserved exactly.
-
-## Data integrity
-
-All files in this export are covered by `GITHUB_EXPORT_SHA256.txt`. Verify with:
-
-```bash
-sha256sum -c GITHUB_EXPORT_SHA256.txt
-```
+This is the public computational repository for **Sacha Mohamed's Quantum Information Copy Time (QICT)** research. It contains finite calculations, benchmark comparisons, source archives and an explicitly **fail-closed** HPC preflight. It is not a validated execution of the complete interacting QICT operator or a physical dark-matter mass prediction.
 
 ## Scientific status
 
-The repository separates exact algebraic/theorem-level results, finite-regulator numerical certificates, and continuum/RG diagnostics in machine-readable form. The corresponding JSON certificates under `results/` and `validation/` record the status and provenance of each computational layer.
+- Finite receiver, SU(2) rotor, BCC transport and reduced-flavor checks are available under their stated assumptions.
+- Neutrino-shape results compare a **reduced** finite Takagi spectrum with external oscillation benchmarks; they are not a prediction of the interacting physical neutrino masses.
+- The Kato buffers, quantum C10 maps, boundary-to-path maps, certified global U-cone and physical CN6 moments needed for a fully interacting spectral extraction are **not** provided in complete certified form.
+- No isolated physical dark-sector pole, positive physical residue or mass has been established by the available preflight.
 
-## Citation
+## Repository entry points
 
-When citing the code or data, cite the associated manuscript title above and this repository. A journal/DOI citation can be added after publication.
+- `code/`, `data/`, `results/`: currently available computational resources.
+- `snapshot-2026-10-17/`: frozen historical source snapshot.
+- `QICT_FULL_PHYSICAL_EXECUTION/`: HPC preflight, missing-input inventory and fail-closed guards.
+- `REPRODUCE_ALL.py`: reproduces finite numerical calculations. Optional publication audits require separately supplied `paper/` and `cover_letter/` sources.
 
-## Correspondence
+To set up and reproduce the supported numerical calculations:
 
-Mohamed Sacha  
-Independent Researcher, Casablanca, Morocco  
-ORCID: 0009-0005-2078-2032  
-Email: www.sachamed@gmail.com
+```bash
+git clone https://github.com/sachamed/qict-code-data.git
+cd qict-code-data
+python -m pip install -r code/requirements.txt
+python REPRODUCE_ALL.py
+python code/verify_neutrino_shape_obstruction.py
+python -m unittest discover -s QICT_FULL_PHYSICAL_EXECUTION/tests -v
+```
 
+The numeric pipeline may be computationally demanding. Do not interpret successful arithmetic or synthetic/diagnostic tests as full interacting physics.
 
-## Deduplicated public layout
-This public repository is canonicalized to avoid redundant scientific payloads. Exact repeated
-files are stored once; historical paths that must remain resolvable are Git symbolic links.
-Pure mirror/checkpoint views were removed. DEDUPLICATION_MAP.csv documents the canonical target
-for each removed or aliased duplicate.
+The optional publication-source audit is invoked by `python REPRODUCE_ALL.py --publication-audits`. It intentionally refuses to run without the corresponding manuscript source files. The optional `--compile-pdfs` requires a TeX toolchain and those same source packages.
+
+## Integrity and provenance
+
+Git commit IDs identify exact immutable source revisions. Files `MANIFEST_SHA256.txt` and `GITHUB_EXPORT_SHA256.txt` document a **historical export**, not every later addition. Generate and verify an up-to-date tree-wide SHA-256 manifest with `tools/repository_integrity.py`, as described in its help and the CI workflow. Do not treat an old checksum list as proof that the current checkout is complete.
+
+## HPC handoff
+
+```bash
+cd QICT_FULL_PHYSICAL_EXECUTION
+python src/stage_guard.py --stage mass
+```
+
+This command must return a non-zero exit code and `BLOCKED_MISSING_INPUT` until all physical contracts have independent evidence. The supplied SLURM files are preflight guards, not actual full-volume HPC executions.
+
+## Source citations
+
+Use the exact repository commit when citing code. Mathematical statements and assumptions belong to the associated QICT manuscript or book, rather than being inferred from file names.
+
+Author: **Sacha Mohamed** · ORCID: 0009-0005-2078-2032.
