@@ -14,7 +14,7 @@ This directory contains **exact byte-for-byte copies of every one of the 137 fil
 - All **47 Python scripts** passed Python AST parsing.
 - Primitive mathematical package: **66/66 unit tests passed**.
 - Dark-sector package: the targeted finite-operator validation and operator-closure test both passed.
-- Complete dark-sector calculations-only reproduction involves a costly 3-D particle-mesh step and was **not certified as completed** during this import.
+- The dark-sector `python code/reproduce.py --calculations-only` run completed in a separate extracted working copy, including the finite spectral tests, 3-D particle-mesh calculations and regeneration of the 76-entry calculations-only prediction register. The full LaTeX PDF regeneration step was not part of this command.
 - Every distributed file's Git blob SHA has been matched against its original bytes. Full SHA-256 manifests are in [UPLOAD_VERIFICATION_MANIFEST.json](UPLOAD_VERIFICATION_MANIFEST.json).
 
 ## Scientific interpretation

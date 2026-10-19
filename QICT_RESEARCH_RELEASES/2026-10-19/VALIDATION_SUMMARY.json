@@ -1,0 +1,30 @@
+{
+  "import_date": "2026-10-19",
+  "integrity": {
+    "original_zip_crc": "PASS_BOTH",
+    "original_zip_sha256_manifests": "PASS_BOTH",
+    "git_sha1_exact_match_files": 137,
+    "missing": 0,
+    "unmatched": 0
+  },
+  "static_python": {
+    "scripts": 47,
+    "ast_parse_failures": 0
+  },
+  "executed": {
+    "primitive_unit_tests": {
+      "tests": 66,
+      "failures": 0,
+      "errors": 0,
+      "status": "PASS"
+    },
+    "dark_operator_certificate_validator": "PASS",
+    "dark_operator_closure_test": "PASS",
+    "dark_calculations_only_reproduce": {
+      "status": "PASS_COMPLETED_LOG",
+      "mode": "--calculations-only",
+      "notes": "Finite moment reconstructions, operator spectrum tests, physical identity tests, figures/tables and modelled 3D particle-mesh runs completed; full manuscript PDF build not run in this execution."
+    }
+  },
+  "scientific_scope": "Only finite/primitive and reference calculations; full dark-matter particle pole or mass still unestablished."
+}
