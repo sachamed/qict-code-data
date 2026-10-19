@@ -1,0 +1,81 @@
+{
+  "classification": "INFINITE_FLUX_SINGLE_PLAQUETTE_PRIMITIVE_LOCAL_POLE_CERTIFICATE",
+  "excited_spectrum_lower": 8,
+  "full_interacting_C10": false,
+  "ground_energy_lower_exact_rational_outward": "3.08972279178517290353473362494222666834545246422",
+  "ground_energy_upper_exact_rational_outward": "3.08972279178517290353473362494222887949530385153",
+  "isolating_contour": "|z|=6",
+  "local_resolvent_definition": "G_00(z)=<delta0,(z-H)^(-1)delta0>; residue at E0 is |<delta0,ground>|^2",
+  "local_source": "delta_r0",
+  "minimum_contour_spectral_distance_lower": 2,
+  "operator": "H=8r^2+4-2(S+S_dagger), r in Z",
+  "original_primitive_npz_sha256": "f1aea6ba46f3e92267eb12bb1f2131726e84f54de1391ade0c177134f6bdfe83",
+  "physical_QICT_charged_or_dark_pole": false,
+  "physical_gev_mass": null,
+  "residue_coarse_analytic_lower_from_H_ge_8r2": "0.613784651026853387058158296882221390063087018558",
+  "residue_lower_from_E0_le_4": 0.5,
+  "rigorously_isolated_hamiltonian_ground_pole": true,
+  "spectral_residue_at_site_zero_lower_exact_rational_outward": "0.905830198089339768628931948085536735094712064125",
+  "spectral_residue_at_site_zero_upper_exact_rational_outward": "0.905830198089339812628931948085536735094712064126",
+  "three_calculations": {
+    "Jacobi_even_parity_tridiagonal": "FLOAT64_DIAGNOSTIC",
+    "Schur_continued_fraction": "FLOAT64_DIAGNOSTIC",
+    "cutoffs": [
+      {
+        "continued_fraction_pole_float64": 3.089722791785172,
+        "continued_fraction_residue_float64": 0.9058301980893397,
+        "flux_cutoff": 8,
+        "jacobi_pole_float64": 3.0897227917851726,
+        "jacobi_residue_float64": 0.9058301980893401,
+        "pole_methods_difference": 4.440892098500626e-16,
+        "residue_methods_difference": 3.3306690738754696e-16
+      },
+      {
+        "continued_fraction_pole_float64": 3.089722791785172,
+        "continued_fraction_residue_float64": 0.9058301980893397,
+        "flux_cutoff": 12,
+        "jacobi_pole_float64": 3.0897227917851726,
+        "jacobi_residue_float64": 0.9058301980893403,
+        "pole_methods_difference": 4.440892098500626e-16,
+        "residue_methods_difference": 5.551115123125783e-16
+      },
+      {
+        "continued_fraction_pole_float64": 3.089722791785172,
+        "continued_fraction_residue_float64": 0.9058301980893397,
+        "flux_cutoff": 16,
+        "jacobi_pole_float64": 3.0897227917851726,
+        "jacobi_residue_float64": 0.9058301980893403,
+        "pole_methods_difference": 4.440892098500626e-16,
+        "residue_methods_difference": 5.551115123125783e-16
+      },
+      {
+        "continued_fraction_pole_float64": 3.089722791785172,
+        "continued_fraction_residue_float64": 0.9058301980893397,
+        "flux_cutoff": 20,
+        "jacobi_pole_float64": 3.089722791785173,
+        "jacobi_residue_float64": 0.9058301980893401,
+        "pole_methods_difference": 8.881784197001252e-16,
+        "residue_methods_difference": 3.3306690738754696e-16
+      },
+      {
+        "continued_fraction_pole_float64": 3.089722791785172,
+        "continued_fraction_residue_float64": 0.9058301980893397,
+        "flux_cutoff": 28,
+        "jacobi_pole_float64": 3.0897227917851726,
+        "jacobi_residue_float64": 0.90583019808934,
+        "pole_methods_difference": 4.440892098500626e-16,
+        "residue_methods_difference": 2.220446049250313e-16
+      },
+      {
+        "continued_fraction_pole_float64": 3.089722791785172,
+        "continued_fraction_residue_float64": 0.9058301980893397,
+        "flux_cutoff": 40,
+        "jacobi_pole_float64": 3.0897227917851735,
+        "jacobi_residue_float64": 0.9058301980893397,
+        "pole_methods_difference": 1.3322676295501878e-15,
+        "residue_methods_difference": 0.0
+      }
+    ],
+    "exact_dyadic_trial_Temple_and_residue_enclosure": "CERTIFIED_FOR_PRIMITIVE_ONLY"
+  }
+}

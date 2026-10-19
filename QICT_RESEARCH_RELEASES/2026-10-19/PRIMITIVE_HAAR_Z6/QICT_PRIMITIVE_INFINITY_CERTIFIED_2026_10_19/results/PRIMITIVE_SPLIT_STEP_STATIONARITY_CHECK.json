@@ -1,0 +1,58 @@
+{
+  "K_B": "4-2(S+S_dagger)",
+  "K_E": "8*r^2",
+  "frozen_factor_order": "exp(-i phi K_B) exp(-i phi K_E)",
+  "full_U_int_route_first_implemented": false,
+  "logical_conclusion": "The primitive Hamiltonian pole and residue cannot be equated with a Floquet pole of the ordered microscopic product.",
+  "numerical_optimized_phase_defect": [
+    {
+      "N": 8,
+      "classification": "FINITE_SOURCE_SPLIT_STEP_U1_DIAGNOSTIC",
+      "independent_padded_expm_overlap_discrepancy": 2.7755575615628914e-17,
+      "optimized_Floquet_eigenphase_defect": 0.0321115824978895,
+      "overlap_Bessel_complex": [
+        0.9872803416334361,
+        -0.15571332349272762
+      ],
+      "source_distance_to_primitive_ground_upper": "0.000000000000004425"
+    },
+    {
+      "N": 12,
+      "classification": "FINITE_SOURCE_SPLIT_STEP_U1_DIAGNOSTIC",
+      "independent_padded_expm_overlap_discrepancy": 1.1443916996305594e-16,
+      "optimized_Floquet_eigenphase_defect": 0.032111582497899874,
+      "overlap_Bessel_complex": [
+        0.9872803416334358,
+        -0.15571332349272754
+      ],
+      "source_distance_to_primitive_ground_upper": "0.000000000000000089"
+    },
+    {
+      "N": 16,
+      "classification": "FINITE_SOURCE_SPLIT_STEP_U1_DIAGNOSTIC",
+      "independent_padded_expm_overlap_discrepancy": 2.7755575615628914e-17,
+      "optimized_Floquet_eigenphase_defect": 0.0321115824978895,
+      "overlap_Bessel_complex": [
+        0.9872803416334361,
+        -0.15571332349272762
+      ],
+      "source_distance_to_primitive_ground_upper": "0.000000000000000075"
+    },
+    {
+      "N": 20,
+      "classification": "FINITE_SOURCE_SPLIT_STEP_U1_DIAGNOSTIC",
+      "independent_padded_expm_overlap_discrepancy": 1.2412670766236366e-16,
+      "optimized_Floquet_eigenphase_defect": 0.032111582497899874,
+      "overlap_Bessel_complex": [
+        0.9872803416334358,
+        -0.15571332349272757
+      ],
+      "source_distance_to_primitive_ground_upper": "0.000000000000000022"
+    }
+  ],
+  "phi": "pi/63",
+  "physical_Floquet_pole_certified": false,
+  "scope": "SINGLE_PLAQUETTE_U1_SPLIT_STEP_GAUGE_SUBSYSTEM_NOT_FULL_QICT",
+  "two_independent_finite_source_overlap_algorithms": true,
+  "unwrapped_H_ground_stationary_for_split_step_numerically": false
+}

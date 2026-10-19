@@ -1,0 +1,18 @@
+{
+  "Floquet_order": "U_BE=exp(-i*pi*K_B/63) exp(-i*pi*K_E/63)",
+  "Hamiltonian_unwrapped_H_commutes_with_shift": false,
+  "Hilbert_space": "ell2(Z) U1 electric-flux representation",
+  "U_BE_commutes_with_shift": true,
+  "all_nonzero_finite_rank_Riesz_projections_of_U_BE_forbidden": true,
+  "classification": "EXACT_FLOQUET_SINGLE_PLAQUETTE_SHIFT_NO_FINITE_RANK_RIESZ",
+  "electric_generator": "K_E=8*r^2",
+  "electric_phase_commutes_with_shift": true,
+  "electric_phase_shift_identity": "K_E(r+126)-K_E(r)=126*(16r+1008)",
+  "full_QICT_micro_operator_no_go_proved": false,
+  "magnetic_gate_commutes_with_shift": true,
+  "magnetic_generator": "K_B=4-2(S+S_dagger)",
+  "primitive_H_rank_one_ground_projector_allowed": true,
+  "reason_full_operator_not_proved": "Missing U_int route-first gauge and matter amplitudes may change the translation commutator.",
+  "shift": "T_126: e_r -> e_(r+126)",
+  "shift_T126_has_no_nonzero_eigenvectors_on_ell2Z": true
+}

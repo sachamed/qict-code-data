@@ -1,0 +1,51 @@
+{
+  "theorem": "||P(U)-P(U_prime)|| <= length(Gamma)/(2*pi*g^2) ||U-U_prime||, with Gamma uniformly g away from both spectra",
+  "source_bound": "||V*PV-V_prime*P_prime*V_prime|| <= ||P-P_prime||+2||V-V_prime||",
+  "models": [
+    {
+      "classification": "NON_QICT_FINITE_SPECTRAL_PERTURBATION_WITNESS",
+      "epsilon": 0.02,
+      "haar_grid_m": 3,
+      "common_gap": 0.5,
+      "contour_radius": 0.5,
+      "operator_difference_norm": 0.02828238566709074,
+      "projector_difference_norm": 0.01999866669333308,
+      "rigorous_projector_difference_upper": 0.05656477133418148,
+      "six_source_compressed_residue_difference": 0.0003999466695110421,
+      "rigorous_compressed_residue_difference_upper": 0.05656477133418148,
+      "smallest_compressed_residue_eigenvalue": 0.9996000533304892,
+      "residue_lower_from_perturbation": 0.9434352286658185,
+      "physical_qict_pole_certified": false
+    },
+    {
+      "classification": "NON_QICT_FINITE_SPECTRAL_PERTURBATION_WITNESS",
+      "epsilon": 0.04,
+      "haar_grid_m": 5,
+      "common_gap": 0.5,
+      "contour_radius": 0.5,
+      "operator_difference_norm": 0.05655345875700809,
+      "projector_difference_norm": 0.03998933418663416,
+      "rigorous_projector_difference_upper": 0.11310691751401618,
+      "six_source_compressed_residue_difference": 0.001599146848690336,
+      "rigorous_compressed_residue_difference_upper": 0.11310691751401618,
+      "smallest_compressed_residue_eigenvalue": 0.9984008531513096,
+      "residue_lower_from_perturbation": 0.8868930824859839,
+      "physical_qict_pole_certified": false
+    },
+    {
+      "classification": "NON_QICT_FINITE_SPECTRAL_PERTURBATION_WITNESS",
+      "epsilon": 0.07,
+      "haar_grid_m": 7,
+      "common_gap": 0.5,
+      "contour_radius": 0.5,
+      "operator_difference_norm": 0.09891412329572977,
+      "projector_difference_norm": 0.06994284733753278,
+      "rigorous_projector_difference_upper": 0.19782824659145953,
+      "six_source_compressed_residue_difference": 0.00489200189368133,
+      "rigorous_compressed_residue_difference_upper": 0.19782824659145953,
+      "smallest_compressed_residue_eigenvalue": 0.9951079981063183,
+      "residue_lower_from_perturbation": 0.8021717534085404,
+      "physical_qict_pole_certified": false
+    }
+  ]
+}

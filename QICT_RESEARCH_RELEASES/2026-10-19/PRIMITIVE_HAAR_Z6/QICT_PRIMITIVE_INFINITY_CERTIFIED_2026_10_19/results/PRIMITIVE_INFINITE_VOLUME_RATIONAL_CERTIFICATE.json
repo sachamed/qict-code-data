@@ -1,0 +1,171 @@
+{
+  "classification": "RIGOROUS_RATIONAL_PRIMITIVE_INFINITE_FLUX_CERTIFICATE",
+  "model": "single Abelian plaquette unwrapped H_1; not QICT full Floquet/Kato",
+  "original_primitive_certificate_sha256": "85b330b3e1db1d2722ebfd172feffc3790f12a1e3c0f0fe3305be375997912e9",
+  "pairwise_bounds": [
+    {
+      "common_embedding": "matching integer electric-flux labels in ell2(Z)",
+      "cutoffs": [
+        8,
+        12
+      ],
+      "trace_distance_direct_dyadic_upper": "0.000000000000000062",
+      "trace_distance_pairwise_upper_from_infinite_ground": "4.514E-15"
+    },
+    {
+      "common_embedding": "matching integer electric-flux labels in ell2(Z)",
+      "cutoffs": [
+        8,
+        16
+      ],
+      "trace_distance_direct_dyadic_upper": "0.000000000000000034",
+      "trace_distance_pairwise_upper_from_infinite_ground": "4.500E-15"
+    },
+    {
+      "common_embedding": "matching integer electric-flux labels in ell2(Z)",
+      "cutoffs": [
+        8,
+        20
+      ],
+      "trace_distance_direct_dyadic_upper": "0.000000000000000052",
+      "trace_distance_pairwise_upper_from_infinite_ground": "4.447E-15"
+    },
+    {
+      "common_embedding": "matching integer electric-flux labels in ell2(Z)",
+      "cutoffs": [
+        12,
+        16
+      ],
+      "trace_distance_direct_dyadic_upper": "0.000000000000000053",
+      "trace_distance_pairwise_upper_from_infinite_ground": "1.64E-16"
+    },
+    {
+      "common_embedding": "matching integer electric-flux labels in ell2(Z)",
+      "cutoffs": [
+        12,
+        20
+      ],
+      "trace_distance_direct_dyadic_upper": "0.000000000000000038",
+      "trace_distance_pairwise_upper_from_infinite_ground": "1.11E-16"
+    },
+    {
+      "common_embedding": "matching integer electric-flux labels in ell2(Z)",
+      "cutoffs": [
+        16,
+        20
+      ],
+      "trace_distance_direct_dyadic_upper": "0.000000000000000040",
+      "trace_distance_pairwise_upper_from_infinite_ground": "9.7E-17"
+    }
+  ],
+  "physical_charged_kato_completed": false,
+  "quantitative_continuum_regulator_result": "four source-backed finite vectors rigorously enclose one infinite-flux primitive ground state",
+  "rows": [
+    {
+      "coefficient_semantics": "stored finite binary64 input values treated as exact dyadic numbers",
+      "component_count": 17,
+      "diagnostics_float64": {
+        "rayleigh": 3.089722791785173,
+        "variance": 4.720161889709617e-28
+      },
+      "energy_gap_lower_rational_outward": "4.91027720821482709646526637505702978577123216717",
+      "exact_checks": {
+        "nontrivial_overlap": true,
+        "rayleigh_below_excited_threshold": true,
+        "source_norm_positive": true,
+        "variance_nonnegative": true
+      },
+      "excited_spectrum_lower_exact": 8,
+      "file": "PRIMITIVE_A7_KATO_GROUND_N8_DIAGNOSTIC.npz",
+      "ground_energy_lower_rational_outward": "3.08972279178517290353473362484684199804959061088",
+      "ground_energy_upper_rational_outward": "3.08972279178517290353473362494297021422876783283",
+      "operator": "8*r^2+4-2*(S+S_dagger) on ell2(Z)",
+      "orthogonal_weight_upper_exact_comparison": "1.95769428288806223662963565960716316352714020039E-29",
+      "physical_interacting_KATO_BUFFER": false,
+      "sha256": "79a4622b6333617b7327204197a72a07cc89866054cea545aaa00b7eccda9978",
+      "support_flux_N": 8,
+      "temple_enclosure_width_upper": "9.61282161791772219436749694254470910486567975240E-29",
+      "trace_distance_to_infinite_ground_upper_exact_comparison": "0.000000000000004425"
+    },
+    {
+      "coefficient_semantics": "stored finite binary64 input values treated as exact dyadic numbers",
+      "component_count": 25,
+      "diagnostics_float64": {
+        "rayleigh": 3.089722791785173,
+        "variance": 1.8829546004258348e-31
+      },
+      "energy_gap_lower_rational_outward": "4.91027720821482709646526637505775287887753447898",
+      "exact_checks": {
+        "nontrivial_overlap": true,
+        "rayleigh_below_excited_threshold": true,
+        "source_norm_positive": true,
+        "variance_nonnegative": true
+      },
+      "excited_spectrum_lower_exact": 8,
+      "file": "PRIMITIVE_A7_KATO_GROUND_N12_DIAGNOSTIC.npz",
+      "ground_energy_lower_rational_outward": "3.08972279178517290353473362494220877390660415015",
+      "ground_energy_upper_rational_outward": "3.08972279178517290353473362494224712112246552102",
+      "operator": "8*r^2+4-2*(S+S_dagger) on ell2(Z)",
+      "orthogonal_weight_upper_exact_comparison": "7.80958268450027539089496465181277518718469648864E-33",
+      "physical_interacting_KATO_BUFFER": false,
+      "sha256": "2c1114ff3fd015a1c4bc677f8f316642dc25734596192adece968ed3eee3e61c",
+      "support_flux_N": 12,
+      "temple_enclosure_width_upper": "3.83472158613708670943514502515193936825179816608E-32",
+      "trace_distance_to_infinite_ground_upper_exact_comparison": "0.000000000000000089"
+    },
+    {
+      "coefficient_semantics": "stored finite binary64 input values treated as exact dyadic numbers",
+      "component_count": 33,
+      "diagnostics_float64": {
+        "rayleigh": 3.089722791785173,
+        "variance": 1.3465410683956225e-31
+      },
+      "energy_gap_lower_rational_outward": "4.91027720821482709646526637505775712225022286694",
+      "exact_checks": {
+        "nontrivial_overlap": true,
+        "rayleigh_below_excited_threshold": true,
+        "source_norm_positive": true,
+        "variance_nonnegative": true
+      },
+      "excited_spectrum_lower_exact": 8,
+      "file": "PRIMITIVE_A7_KATO_GROUND_N16_DIAGNOSTIC.npz",
+      "ground_energy_lower_rational_outward": "3.08972279178517290353473362494221545483633870482",
+      "ground_energy_upper_rational_outward": "3.08972279178517290353473362494224287774977713306",
+      "operator": "8*r^2+4-2*(S+S_dagger) on ell2(Z)",
+      "orthogonal_weight_upper_exact_comparison": "5.58479944727969166648520849052309243784416512323E-33",
+      "physical_interacting_KATO_BUFFER": false,
+      "sha256": "01e7b8abcf4e133115e52465f8fa3b365f2ccb5aa1072a2fcacd0756e91c5ad3",
+      "support_flux_N": 16,
+      "temple_enclosure_width_upper": "2.74229134384282338408097773748904303593997723240E-32",
+      "trace_distance_to_infinite_ground_upper_exact_comparison": "0.000000000000000075"
+    },
+    {
+      "coefficient_semantics": "stored finite binary64 input values treated as exact dyadic numbers",
+      "component_count": 41,
+      "diagnostics_float64": {
+        "rayleigh": 3.089722791785173,
+        "variance": 1.0857358719214703e-32
+      },
+      "energy_gap_lower_rational_outward": "4.91027720821482709646526637505777112050469614847",
+      "exact_checks": {
+        "nontrivial_overlap": true,
+        "rayleigh_below_excited_threshold": true,
+        "source_norm_positive": true,
+        "variance_nonnegative": true
+      },
+      "excited_spectrum_lower_exact": 8,
+      "file": "PRIMITIVE_A7_KATO_GROUND_N20_DIAGNOSTIC.npz",
+      "ground_energy_lower_rational_outward": "3.08972279178517290353473362494222666834545246422",
+      "ground_energy_upper_rational_outward": "3.08972279178517290353473362494222887949530385153",
+      "operator": "8*r^2+4-2*(S+S_dagger) on ell2(Z)",
+      "orthogonal_weight_upper_exact_comparison": "4.50310595028745991368274912141119612421591336912E-34",
+      "physical_interacting_KATO_BUFFER": false,
+      "sha256": "f1aea6ba46f3e92267eb12bb1f2131726e84f54de1391ade0c177134f6bdfe83",
+      "support_flux_N": 20,
+      "temple_enclosure_width_upper": "2.21114985138730846387457695141116229423011116668E-33",
+      "trace_distance_to_infinite_ground_upper_exact_comparison": "0.000000000000000022"
+    }
+  ],
+  "spectral_argument": "H>=8r^2; minmax lambda_1>=8; E0<=4; compact resolvent and positivity improving imply unique ground state. Temple lower bound and spectral second moment bound are exact for dyadic trial vectors.",
+  "tail_certified_for_full_interacting_QICT": false
+}

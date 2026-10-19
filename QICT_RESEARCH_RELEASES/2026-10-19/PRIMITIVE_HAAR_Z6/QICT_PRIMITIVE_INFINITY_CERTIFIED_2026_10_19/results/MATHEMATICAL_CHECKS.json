@@ -1,0 +1,153 @@
+{
+  "action": {
+    "hash": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+    "source_gate_order": [
+      "Gamma(S_z)",
+      "Gamma(S_y)",
+      "Gamma(S_x)",
+      "U_cell",
+      "exp(-i phi_* K_E)",
+      "exp(-i phi_* K_B)",
+      "U_int^rf"
+    ],
+    "gauge_group_header": "U(1)_Y x SU(2)_L x SU(3)_c modulo the frozen faithful central kernel",
+    "magnetic_gate_domain_required": "product_group_cover",
+    "full_quotient_link_dynamics_verified": false,
+    "lambda1_kato_states_verified": false,
+    "complete_route_holonomies_serialized": false
+  },
+  "magnetic_quotient": {
+    "original_magnetic_cost_difference_exact": 120,
+    "original_magnetic_cost_difference_computed": 120.0,
+    "phase_difference_abs_from_one": 0.29808453235234855,
+    "original_gate_descends_to_quotient": false,
+    "quotient_candidate_center_difference": 3.552713678800501e-15,
+    "weak_field_relative_discrepancy_at_t_1e-3": 4.4903384562811296e-07,
+    "quotient_candidate_is_original_frozen_action": false,
+    "status": "PASS_EXACT_COVER_NON_DESCENT"
+  },
+  "central_lift_orbit": {
+    "central_lift_powers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "magnetic_costs_exact": [
+      "0",
+      "120",
+      "60",
+      "72",
+      "60",
+      "120"
+    ],
+    "original_gate_fails_quotient_descent": true,
+    "original_action_modified": false
+  },
+  "moment_non_identifiability": [
+    {
+      "depth": 1,
+      "max_moment_discrepancy": 6.123233995736766e-17,
+      "haar_measure_has_atoms": false,
+      "discrete_measure_atom_at_one": 0.5,
+      "discrete_positive_source_residue": 0.5,
+      "logical_conclusion": "Finite moments and Toeplitz PSD do not determine whether the spectrum has atoms."
+    },
+    {
+      "depth": 9,
+      "max_moment_discrepancy": 4.668220486087868e-16,
+      "haar_measure_has_atoms": false,
+      "discrete_measure_atom_at_one": 0.1,
+      "discrete_positive_source_residue": 0.1,
+      "logical_conclusion": "Finite moments and Toeplitz PSD do not determine whether the spectrum has atoms."
+    },
+    {
+      "depth": 21,
+      "max_moment_discrepancy": 1.9655329983957015e-15,
+      "haar_measure_has_atoms": false,
+      "discrete_measure_atom_at_one": 0.045454545454545456,
+      "discrete_positive_source_residue": 0.045454545454545456,
+      "logical_conclusion": "Finite moments and Toeplitz PSD do not determine whether the spectrum has atoms."
+    }
+  ],
+  "auxiliary_poles": [
+    {
+      "classification": "AUXILIARY_NON_QICT_HAAR_MODEL",
+      "haar_angle_grid": 4,
+      "global_isolated_projector_rank_finite_cutoff": 24,
+      "physical_QICT_pole_certified": false,
+      "copy_odd_parity_commutation_error": 0.0,
+      "haar_loop_translation_commutation_error": 0.0,
+      "source_isometry_error": 0.0,
+      "uniform_spectral_gap": 1.414213562373095,
+      "contour_gap": 0.5,
+      "Riesz_midpoint_exact_arithmetic_error_bound": 1.2621774483536245e-29,
+      "Riesz_midpoint_bound_excludes_roundoff": true,
+      "source_residue_trace": 6.0,
+      "min_residue_eigenvalue": 1.0,
+      "method_Riesz_discrepancy": 4.7210936837154803e-17,
+      "method_Fourier_discrepancy": 0.0,
+      "finite_rank_haar_endpoint_asserted": false,
+      "note": "Limit projection rank grows as 6*m, while its six-channel residue is I6."
+    },
+    {
+      "classification": "AUXILIARY_NON_QICT_HAAR_MODEL",
+      "haar_angle_grid": 5,
+      "global_isolated_projector_rank_finite_cutoff": 30,
+      "physical_QICT_pole_certified": false,
+      "copy_odd_parity_commutation_error": 0.0,
+      "haar_loop_translation_commutation_error": 0.0,
+      "source_isometry_error": 2.7194799110210365e-16,
+      "uniform_spectral_gap": 1.414213562373095,
+      "contour_gap": 0.5,
+      "Riesz_midpoint_exact_arithmetic_error_bound": 1.2621774483536245e-29,
+      "Riesz_midpoint_bound_excludes_roundoff": true,
+      "source_residue_trace": 5.999999999999999,
+      "min_residue_eigenvalue": 0.9999999999999999,
+      "method_Riesz_discrepancy": 4.7210936837154803e-17,
+      "method_Fourier_discrepancy": 0.0,
+      "finite_rank_haar_endpoint_asserted": false,
+      "note": "Limit projection rank grows as 6*m, while its six-channel residue is I6."
+    },
+    {
+      "classification": "AUXILIARY_NON_QICT_HAAR_MODEL",
+      "haar_angle_grid": 11,
+      "global_isolated_projector_rank_finite_cutoff": 66,
+      "physical_QICT_pole_certified": false,
+      "copy_odd_parity_commutation_error": 0.0,
+      "haar_loop_translation_commutation_error": 0.0,
+      "source_isometry_error": 5.438959822042073e-16,
+      "uniform_spectral_gap": 1.414213562373095,
+      "contour_gap": 0.5,
+      "Riesz_midpoint_exact_arithmetic_error_bound": 1.2621774483536245e-29,
+      "Riesz_midpoint_bound_excludes_roundoff": true,
+      "source_residue_trace": 6.000000000000001,
+      "min_residue_eigenvalue": 1.0000000000000002,
+      "method_Riesz_discrepancy": 4.721093683715481e-17,
+      "method_Fourier_discrepancy": 0.0,
+      "finite_rank_haar_endpoint_asserted": false,
+      "note": "Limit projection rank grows as 6*m, while its six-channel residue is I6."
+    },
+    {
+      "classification": "AUXILIARY_NON_QICT_HAAR_MODEL",
+      "haar_angle_grid": 13,
+      "global_isolated_projector_rank_finite_cutoff": 78,
+      "physical_QICT_pole_certified": false,
+      "copy_odd_parity_commutation_error": 0.0,
+      "haar_loop_translation_commutation_error": 0.0,
+      "source_isometry_error": 0.0,
+      "uniform_spectral_gap": 1.414213562373095,
+      "contour_gap": 0.5,
+      "Riesz_midpoint_exact_arithmetic_error_bound": 1.2621774483536245e-29,
+      "Riesz_midpoint_bound_excludes_roundoff": true,
+      "source_residue_trace": 6.0,
+      "min_residue_eigenvalue": 1.0,
+      "method_Riesz_discrepancy": 4.7210936837154803e-17,
+      "method_Fourier_discrepancy": 0.0,
+      "finite_rank_haar_endpoint_asserted": false,
+      "note": "Limit projection rank grows as 6*m, while its six-channel residue is I6."
+    }
+  ]
+}

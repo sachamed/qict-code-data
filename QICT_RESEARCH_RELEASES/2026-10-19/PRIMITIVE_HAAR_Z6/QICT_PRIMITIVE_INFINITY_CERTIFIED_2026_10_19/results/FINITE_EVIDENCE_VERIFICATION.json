@@ -1,0 +1,143 @@
+{
+  "cutoff_states": [
+    {
+      "Rayleigh_quotient": 3.0897227917851726,
+      "classification": "FINITE_PRIMITIVE_SINGLE_PLAQUETTE",
+      "cutoff": 8,
+      "endpoint_gap_minmax_lower": 4.910277208214827,
+      "full_Hamiltonian_residual_float64": 2.1733008435843748e-14,
+      "gram_factor_fro_error": 0.0,
+      "gram_psd_by_construction": true,
+      "source_sha256": "79a4622b6333617b7327204197a72a07cc89866054cea545aaa00b7eccda9978",
+      "trace_abs_error": 0.0
+    },
+    {
+      "Rayleigh_quotient": 3.0897227917851735,
+      "classification": "FINITE_PRIMITIVE_SINGLE_PLAQUETTE",
+      "cutoff": 12,
+      "endpoint_gap_minmax_lower": 4.9102772082148265,
+      "full_Hamiltonian_residual_float64": 9.060437541122338e-16,
+      "gram_factor_fro_error": 0.0,
+      "gram_psd_by_construction": true,
+      "source_sha256": "2c1114ff3fd015a1c4bc677f8f316642dc25734596192adece968ed3eee3e61c",
+      "trace_abs_error": 2.220446049250313e-16
+    },
+    {
+      "Rayleigh_quotient": 3.0897227917851726,
+      "classification": "FINITE_PRIMITIVE_SINGLE_PLAQUETTE",
+      "cutoff": 16,
+      "endpoint_gap_minmax_lower": 4.910277208214827,
+      "full_Hamiltonian_residual_float64": 6.676148025885896e-16,
+      "gram_factor_fro_error": 0.0,
+      "gram_psd_by_construction": true,
+      "source_sha256": "01e7b8abcf4e133115e52465f8fa3b365f2ccb5aa1072a2fcacd0756e91c5ad3",
+      "trace_abs_error": 0.0
+    },
+    {
+      "Rayleigh_quotient": 3.0897227917851735,
+      "classification": "FINITE_PRIMITIVE_SINGLE_PLAQUETTE",
+      "cutoff": 20,
+      "endpoint_gap_minmax_lower": 4.9102772082148265,
+      "full_Hamiltonian_residual_float64": 4.798106802707347e-16,
+      "gram_factor_fro_error": 0.0,
+      "gram_psd_by_construction": true,
+      "source_sha256": "f1aea6ba46f3e92267eb12bb1f2131726e84f54de1391ade0c177134f6bdfe83",
+      "trace_abs_error": 2.220446049250313e-16
+    }
+  ],
+  "full_interacting_QICT_provider_validated": false,
+  "numerical_method": "complex128 dense small-block verification; analytic proofs stated separately",
+  "physical_dark_mass_certified": false,
+  "scope": "INDEPENDENT_FINITE_DATA_RECALCULATION",
+  "source_action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "static_charge_GNS": [
+    {
+      "C0_frobenius_error_float64": 2.873353060819328e-15,
+      "classification": "STATIC_EXTERNAL_CHARGE_GNS_ONLY",
+      "cutoff": 8,
+      "external_charge": -3,
+      "moment_depth": 12,
+      "source": "PRIMITIVE_STATIC_GNS_CN6_N8_Q-3.npz",
+      "source_sha256": "b2971be225fa88eed4eecc9ef40d5e0e01a30c54f214d58ca05e7910652410b7",
+      "toeplitz_certified_positive": false,
+      "toeplitz_smallest_eigenvalue_float64": -1.836825435050654e-15
+    },
+    {
+      "C0_frobenius_error_float64": 2.873353060819328e-15,
+      "classification": "STATIC_EXTERNAL_CHARGE_GNS_ONLY",
+      "cutoff": 8,
+      "external_charge": -6,
+      "moment_depth": 12,
+      "source": "PRIMITIVE_STATIC_GNS_CN6_N8_Q-6.npz",
+      "source_sha256": "8fc0d41ab4aa6a0cbd4c35695a984c67a0a33c3d5159debec9fd38cd1205249b",
+      "toeplitz_certified_positive": false,
+      "toeplitz_smallest_eigenvalue_float64": -2.5789162456673246e-15
+    },
+    {
+      "C0_frobenius_error_float64": 3.180343824639885e-15,
+      "classification": "STATIC_EXTERNAL_CHARGE_GNS_ONLY",
+      "cutoff": 12,
+      "external_charge": -3,
+      "moment_depth": 12,
+      "source": "PRIMITIVE_STATIC_GNS_CN6_N12_Q-3.npz",
+      "source_sha256": "69c74aa53dd6c966d7049b456abf54f52e3fc7c5b9c0ebbe68dec3e78e0856ef",
+      "toeplitz_certified_positive": false,
+      "toeplitz_smallest_eigenvalue_float64": -1.0931951162531655e-15
+    },
+    {
+      "C0_frobenius_error_float64": 3.180343824639885e-15,
+      "classification": "STATIC_EXTERNAL_CHARGE_GNS_ONLY",
+      "cutoff": 12,
+      "external_charge": -6,
+      "moment_depth": 12,
+      "source": "PRIMITIVE_STATIC_GNS_CN6_N12_Q-6.npz",
+      "source_sha256": "e480e35d022790e5e7d302a0ec3b0651dc69aff3f15a4e234fda1faf6a977025",
+      "toeplitz_certified_positive": false,
+      "toeplitz_smallest_eigenvalue_float64": -1.6073870218045564e-15
+    },
+    {
+      "C0_frobenius_error_float64": 4.0411564805960714e-15,
+      "classification": "STATIC_EXTERNAL_CHARGE_GNS_ONLY",
+      "cutoff": 16,
+      "external_charge": -3,
+      "moment_depth": 12,
+      "source": "PRIMITIVE_STATIC_GNS_CN6_N16_Q-3.npz",
+      "source_sha256": "d45679ab53d26e525dcf774333d0b2eeaa27e74b4e285b826ba6066de11bcc15",
+      "toeplitz_certified_positive": false,
+      "toeplitz_smallest_eigenvalue_float64": -1.3674502878206936e-15
+    },
+    {
+      "C0_frobenius_error_float64": 4.0411564805960714e-15,
+      "classification": "STATIC_EXTERNAL_CHARGE_GNS_ONLY",
+      "cutoff": 16,
+      "external_charge": -6,
+      "moment_depth": 12,
+      "source": "PRIMITIVE_STATIC_GNS_CN6_N16_Q-6.npz",
+      "source_sha256": "39a89833069c43d326277cd93d2f3ba8bd587a7e958e50a9eab0be0337c62db6",
+      "toeplitz_certified_positive": false,
+      "toeplitz_smallest_eigenvalue_float64": -1.800713615170487e-15
+    },
+    {
+      "C0_frobenius_error_float64": 2.4630690753587887e-15,
+      "classification": "STATIC_EXTERNAL_CHARGE_GNS_ONLY",
+      "cutoff": 20,
+      "external_charge": -3,
+      "moment_depth": 12,
+      "source": "PRIMITIVE_STATIC_GNS_CN6_N20_Q-3.npz",
+      "source_sha256": "3201cc2f7ceddef2afdf340f60c207755c3571e4b60eebf13ec3e51851fc642d",
+      "toeplitz_certified_positive": false,
+      "toeplitz_smallest_eigenvalue_float64": -6.806935522913757e-16
+    },
+    {
+      "C0_frobenius_error_float64": 2.4630690753587887e-15,
+      "classification": "STATIC_EXTERNAL_CHARGE_GNS_ONLY",
+      "cutoff": 20,
+      "external_charge": -6,
+      "moment_depth": 12,
+      "source": "PRIMITIVE_STATIC_GNS_CN6_N20_Q-6.npz",
+      "source_sha256": "0c8ff90ef6f04ac42f426a630024340cdb8fda636202fbb5e4ae053d983ebfb1",
+      "toeplitz_certified_positive": false,
+      "toeplitz_smallest_eigenvalue_float64": -8.302869822024775e-16
+    }
+  ]
+}
