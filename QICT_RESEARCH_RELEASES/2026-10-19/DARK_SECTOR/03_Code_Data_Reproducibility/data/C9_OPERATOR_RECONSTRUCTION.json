@@ -1,0 +1,50 @@
+{
+  "joint_cluster_chord_tolerance": 1e-12,
+  "regulators": [
+    {
+      "computed_basis_coherence_trace_norm_majorant": 0.0,
+      "joint_cluster_count": 45,
+      "joint_dephasing_coherence_trace_norm_majorant": 0.0,
+      "max_entry_discrepancy": 0.0,
+      "moment_orders": [
+        0,
+        12
+      ],
+      "regulator": "R1"
+    },
+    {
+      "computed_basis_coherence_trace_norm_majorant": 0.0,
+      "joint_cluster_count": 350,
+      "joint_dephasing_coherence_trace_norm_majorant": 0.0,
+      "max_entry_discrepancy": 0.0,
+      "moment_orders": [
+        0,
+        12
+      ],
+      "regulator": "R2"
+    },
+    {
+      "computed_basis_coherence_trace_norm_majorant": 1.542949705874114e-14,
+      "joint_cluster_count": 1380,
+      "joint_dephasing_coherence_trace_norm_majorant": 1.542949705874114e-14,
+      "max_entry_discrepancy": 1.2412670766236366e-16,
+      "moment_orders": [
+        0,
+        12
+      ],
+      "regulator": "R3"
+    },
+    {
+      "computed_basis_coherence_trace_norm_majorant": 3.0006624404860764e-14,
+      "joint_cluster_count": 3960,
+      "joint_dephasing_coherence_trace_norm_majorant": 1.0514842466154301e-14,
+      "max_entry_discrepancy": 2.6720707411500914e-14,
+      "moment_orders": [
+        0,
+        12
+      ],
+      "regulator": "R4"
+    }
+  ],
+  "scope": "Floating-point reproduction of the recorded joint-dephasing construction"
+}

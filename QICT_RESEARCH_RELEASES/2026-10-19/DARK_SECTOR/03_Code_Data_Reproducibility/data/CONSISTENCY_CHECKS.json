@@ -1,0 +1,28 @@
+{
+  "checks": {
+    "unitary_feshbach_independent_blocks": "PASS",
+    "noncommuting_nonzero_phase_and_nested_bounds": "PASS",
+    "freezeout_endpoint_independence": {
+      "relative_spread": 1.2212453270876722e-14,
+      "yields": [
+        1.2195737783395264e-12,
+        1.2195737783395175e-12,
+        1.2195737783395115e-12
+      ]
+    },
+    "portal_refined_quadrature_and_high_energy_limit": {
+      "x20_relative_change": 2.220446049250313e-16
+    },
+    "spherical_collapse_independent_equation": {
+      "a_collapse": 0.46142177721866384,
+      "background_identity": "PASS"
+    },
+    "finite_kato_contact_curvature": {
+      "finite_difference": 0.05084819232337168,
+      "spectral": 0.050848203783845636
+    },
+    "angular_and_equal_time_observables_distinct": "PASS"
+  },
+  "all_pass": true,
+  "scope": "Analytic identities and numerical consistency in the explicitly declared finite/effective models."
+}
