@@ -1,0 +1,19 @@
+{
+  "status": "DIAGNOSTIC_ONLY",
+  "canonical_action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "physical_results": null,
+  "available": [
+    "L24 rank-six precontraction",
+    "Kato strict K0-K12 diagnostics",
+    "C10 shell geometry only",
+    "nested Kato geometry only"
+  ],
+  "not_substitutes_for": [
+    "four physical Kato buffers",
+    "physical CP/C10 maps",
+    "rank-six source isometry",
+    "full Ucone operator",
+    "physical CN6",
+    "neutral dark-sector source"
+  ]
+}

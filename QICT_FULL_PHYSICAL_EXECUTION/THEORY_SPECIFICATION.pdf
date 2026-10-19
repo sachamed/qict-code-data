@@ -1,0 +1,114 @@
+%PDF-1.4
+%ASCII
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1859 >>
+stream
+BT
+/F1 10 Tf
+50 798 Td
+14 TL
+(QICT INDEPENDENT PHYSICAL-POLE EXECUTION) Tj T*
+(Mathematical specification and fail-closed HPC handoff - 19 October 2026) Tj T*
+(STATUS: BLOCKED_MISSING_INPUT) Tj T*
+(Source repository: github.com/sachamed/qict-code-data) Tj T*
+(Observed main commit: fd664503ca92d2d88007d68d6e3873f7df2beeb8) Tj T*
+(Canonical action SHA256: c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7) Tj T*
+() Tj T*
+(1. CANONICAL ACTION) Tj T*
+(The frozen source describes a compact U\(1\), SU\(2\), SU\(3\) discrete-time gauge transfer.) Tj T*
+(Its BCC overlap/domain-wall class uses the primitive phase phi_star = pi/63.) Tj T*
+(The six source order is L1,L2,L3,R1,R2,R3 and spatial boundaries are periodic.) Tj T*
+(The action hash is verified; the complete physical U-cone and contour are not.) Tj T*
+() Tj T*
+(2. SPECTRAL REQUIREMENTS) Tj T*
+(For full physical W and source isometry V, C_n = V* W^n V and C_0 = I_6.) Tj T*
+(Projected resolvent G\(z\) = V* \(z-W\)^\(-1\) V, initially outside unit spectrum.) Tj T*
+(Toeplitz positivity alone cannot identify a physical pole from finite moments.) Tj T*
+(A true excitation requires an isolated pole with a positive, nonzero residue.) Tj T*
+(Its location and weight must be stable under volume, buffer and regulator changes.) Tj T*
+() Tj T*
+(3. AVAILABLE EVIDENCE IS INCOMPLETE) Tj T*
+(The L24 N9 rank-six file is a physical precontraction, not full apply_U.) Tj T*
+(Kato diagnostic and nested geometry files are not four physical Kato densities.) Tj T*
+(C10 shell geometry is not a verified complete quantum CP/Kraus map.) Tj T*
+(Synthetic control moments cannot establish a mass.) Tj T*
+() Tj T*
+(4. PHYSICAL OBSERVABLES) Tj T*
+(No dark particle pole, residue, dispersion or mass in GeV is computed.) Tj T*
+(A local NPZ read diagnostic is not a physical HPC matvec benchmark.) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1970 >>
+stream
+BT
+/F1 10 Tf
+50 798 Td
+14 TL
+(QICT INDEPENDENT PHYSICAL-POLE EXECUTION) Tj T*
+(5. COMPLETE PHYSICAL COMPUTATION ORDER) Tj T*
+(Kato/Riesz convergence with tail and contour gap; complete quantum C10 maps;) Tj T*
+(boundary-to-path amplitudes; physical core recoupling; rank-six isometry;) Tj T*
+(full interacting U-cone plus adjoint; CN6 moments and error-certified Toeplitz;) Tj T*
+(independent dark-sector source; isolated pole with positive residue;) Tj T*
+(multi-volume and regulator limits; independent clock calibration; physical mass.) Tj T*
+() Tj T*
+(6. MANDATORY VALIDATION) Tj T*
+(For each Kato buffer rho = F F* / Tr\(F F*\) with rho >= 0, Tr\(rho\) = 1.) Tj T*
+(The protecting Riesz gap must be positive on the entire contour.) Tj T*
+(Boundary insertion and C10 maps need independent CP/normalization checks.) Tj T*
+(The source map must obey V*V = I_6 and the unitary pass norm/adjoint tests.) Tj T*
+(Moment errors and Toeplitz positivity require independent rigorous bounds.) Tj T*
+(A finite-volume root or a block-pencil fit is diagnostic only.) Tj T*
+() Tj T*
+(7. VOLUME / DEPTH CHECKS) Tj T*
+(Volumes L = 24,32,48,64,96,128; depths 9,13,21,29,45,61.) Tj T*
+(Compare extrapolations, omit-one-volume tests and regulator sensitivity.) Tj T*
+(Never calibrate against a target particle mass.) Tj T*
+() Tj T*
+(8. DARK-SECTOR IDENTIFIABILITY) Tj T*
+(If W = W_charged direct-sum W_dark, and V = \(V_charged,0\), charged) Tj T*
+(moments do not depend on the spectrum of W_dark.) Tj T*
+(A stable neutral source V_chi with physical overlap must be constructed.) Tj T*
+() Tj T*
+(9. INDEPENDENT POLICY) Tj T*
+(Freeze the author-designated Git commit and entire computing environment.) Tj T*
+(Record SHA256 hashes, positive evidence and negative test results.) Tj T*
+(Perform a blinded physical extraction only after all gates pass.) Tj T*
+() Tj T*
+(DECISION: BLOCKED_MISSING_INPUT.) Tj T*
+(No numerical dark-particle mass may be reported as a QICT prediction.) Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000016 00000 n 
+0000000065 00000 n 
+0000000128 00000 n 
+0000000254 00000 n 
+0000002164 00000 n 
+0000002290 00000 n 
+0000004311 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4381
+%%EOF

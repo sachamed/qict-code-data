@@ -1,0 +1,13 @@
+{
+  "source": "audit record 2026-10-19",
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "architecture": "x86_64",
+  "gpu_detected": false,
+  "mpi": null,
+  "slurm": null,
+  "physical_HPC_benchmark": false,
+  "direct_git_clone_from_compute_container": "DNS unavailable",
+  "git_api_repository_inspection": true
+}

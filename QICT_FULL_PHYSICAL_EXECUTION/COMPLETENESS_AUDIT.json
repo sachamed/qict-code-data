@@ -1,0 +1,126 @@
+{
+  "status": "BLOCKED_MISSING_INPUT",
+  "audit_type": "repository-verified frozen-commit audit",
+  "inspected_repo": "https://github.com/sachamed/qict-code-data",
+  "inspected_commit": "fd664503ca92d2d88007d68d6e3873f7df2beeb8",
+  "author_approved_commit": null,
+  "action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "required_canonical_inputs": [
+    {
+      "name": "KATO_BUFFER_0.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "KATO_BUFFER_1.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "KATO_BUFFER_2.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "KATO_BUFFER_3.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "BUFFER_CONTRACTION_CERTIFICATE.json",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "C10_SHELL_MAPS_0.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "C10_SHELL_MAPS_1.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "C10_SHELL_MAPS_2.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "C10_SHELL_MAPS_3.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "BOUNDARY_TO_PATH_0.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "BOUNDARY_TO_PATH_1.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "BOUNDARY_TO_PATH_2.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "BOUNDARY_TO_PATH_3.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "CORE_RECOUPLING_L24.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "RANK6_EMBEDDING_L24.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "GLOBAL_CHARGED_UCONE_PROVIDER.py",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "GLOBAL_CHARGED_UCONE_PASS_CERTIFICATE.json",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "CN6_MOMENTS.npz",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    },
+    {
+      "name": "CN6_SHAPE_AND_C0_CERTIFICATE.json",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "no independent artifact plus qualified physical certification under input/verified"
+    }
+  ],
+  "available_genuine_evidence": [
+    {
+      "name": "KATO_STRICT_K0_K12_48_CP.npz",
+      "type": "Kato diagnostics / not four physical buffers"
+    },
+    {
+      "name": "L24_N9_CHARGED_RANK6_PRECONTRACTION_PAYLOAD.npz",
+      "type": "partial physical precontraction / not global unitary provider"
+    },
+    {
+      "name": "QICT_LATTICE_ACTION_FREEZE_V3.canonical.json",
+      "type": "frozen action specification"
+    }
+  ],
+  "excluded_from_physical_promotion": [
+    "synthetic_c11/CN6_MOMENTS_L24.npz",
+    "GLOBAL_CHARGED_UCONE_PROVIDER_TEMPLATE.py",
+    "NESTED_KATO_BUFFER_GEOMETRY_L24.npz"
+  ],
+  "physical_mass": null,
+  "scope_limit": "Repository data were inspected at pinned commit; additional offline archives are documented by the separate local delivery."
+}

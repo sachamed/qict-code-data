@@ -1,0 +1,24 @@
+{
+  "status": "ACTION_ARTIFACT_SHA_VERIFIED__PHYSICAL_OPERATOR_NOT_AVAILABLE",
+  "canonical_file": "QICT_LATTICE_ACTION_FREEZE_V3.canonical.json",
+  "action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "observed_main_commit": "fd664503ca92d2d88007d68d6e3873f7df2beeb8",
+  "author_git_commit": null,
+  "volume_L": 24,
+  "moment_depth_n": 9,
+  "boundary_condition": "periodic",
+  "source_order": [
+    "L1",
+    "L2",
+    "L3",
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "phi_star": "pi/63",
+  "qict_lambda_physical": "1 (state selection unverified)",
+  "metrological_tau_star": null,
+  "full_ucone_operator_hash": null,
+  "kato_contour": null,
+  "notes": "Do not treat canonical action SHA as an executed full Ucone operator."
+}
