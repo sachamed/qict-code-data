@@ -1,0 +1,10 @@
+{
+  "freezeout_three_resolutions_yield": [
+    1.2195737729855985e-12,
+    1.2195737782876067e-12,
+    1.2195737783290471e-12
+  ],
+  "freezeout_max_fractional_spread": 4.38140661872358e-09,
+  "spectral_moment_N": 6,
+  "pass": true
+}
