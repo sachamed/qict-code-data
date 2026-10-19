@@ -1,0 +1,218 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage{booktabs,longtable,array,xcolor,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=blue!50!black,urlcolor=blue!50!black}
+\pagestyle{fancy}\fancyhf{}\lhead{QICT: Supplementary Information}\rhead{Physical matching and convergence}\cfoot{S\thepage}
+\setlength{\parskip}{4pt}\setlength{\parindent}{13pt}\setlength{\emergencystretch}{4em}
+\renewcommand{\thesection}{S\arabic{section}}\numberwithin{equation}{section}
+\newtheorem{proposition}{Proposition}\renewcommand{\theproposition}{S\arabic{proposition}}
+\newcommand{\dd}{\mathrm{d}}\DeclareMathOperator{\Tr}{Tr}
+\title{\bfseries Supplementary Information\\[6pt]\large Spectral Tests of Dark Matter and Cosmic Structure in Quantum Information Copy Time}
+\author{Sacha Mohamed\\\small Casablanca, Morocco}\date{19 October 2026}
+\begin{document}\maketitle
+\begin{abstract}
+We give quantitative conditions for an isolated source-visible pole to persist across regulator, volume and scheme limits. The same source normalization fixes its spectral residue and the external-leg factors entering scattering. Explicit Legendre-transform identities relate connected QICT source cumulants to interaction vertices, and an initial-state construction identifies the additional information that determines a cosmological abundance. These results specify the physical content of the finite calculations in the main article and the hypotheses under which they extend to particle and cosmological predictions.
+\end{abstract}
+
+\section{Physical source, energy branch and residue}
+\label{si:source}
+The microscopic QICT specification assigns an update, a selected state and source insertions on each regulator. A dark-particle interpretation uses a gauge-invariant source in the copy-odd physical sector, together with exact copy-parity conservation and the decay-threshold condition proved in the main article. The static C9 arrays supplied here contain six chiral matter-source channels. Their finite spectral certificates refer to those channels.
+
+For a normalized candidate source $V_{\chi,\mathcal R}$, write
+\begin{equation}
+W_{\chi,\mathcal R}=\overline U_{0,\mathcal R}\otimes U_{\chi,\mathcal R},\qquad
+C_{n,\mathcal R}=V_{\chi,\mathcal R}^{\dagger}W_{\chi,\mathcal R}^nV_{\chi,\mathcal R}.
+\end{equation}
+An isolated relative eigenvalue $z_{\chi,\mathcal R}=e^{-i\theta_{\chi,\mathcal R}}$ has spectral weight
+\begin{equation}\label{si:eq:unitary-residue}
+Z_{\chi,\mathcal R}=V_{\chi,\mathcal R}^{\dagger}P_{\chi,\mathcal R}V_{\chi,\mathcal R}\succeq0,
+\qquad
+G_{\mathcal R}(z)=\frac{Z_{\chi,\mathcal R}}{z-z_{\chi,\mathcal R}}+G_{{\rm reg},\mathcal R}(z).
+\end{equation}
+Here $P_{\chi,\mathcal R}$ is the complete spectral projector of the isolated eigenvalue. Once the physical relative-energy branch is selected,
+\begin{equation}\label{si:eq:mass-map}
+E_{\chi,\mathcal R}(\mathbf p)
+=\frac{\hbar}{\tau_{*,\mathcal R}}\bigl[\theta_{\chi,\mathcal R}(\mathbf p)+2\pi n_{\chi,\mathcal R}(\mathbf p)\bigr],
+\qquad m_{\chi,\mathcal R}=\frac{E_{\chi,\mathcal R}(\mathbf0)}{c^2}.
+\end{equation}
+The reference vacuum energy is included in the relative prescription. Consistent continuation fixes the integer branch across momenta and regulators. A positive relativistic particle branch further obeys its physical dispersion relation and spectral-norm conditions.
+
+The residue in Eq.~\eqref{si:eq:unitary-residue} belongs to a normalized source resolvent. The Hamiltonian resolvent $V^\dagger(E-H)^{-1}V$ has the same projector weight $Z_\chi$ at $E=E_\chi$. By contrast, direct substitution into the unitary resolvent, $G(z(E))$, gives residue $Z_\chi/z'(E_\chi)$ when $z'(E_\chi)\ne0$. The residue of a relativistic field propagator additionally includes the field and temporal normalization. These conventions are fixed before applying scattering reduction formulas.
+
+\section{Persistence of an isolated pole in a common physical limit}
+\label{si:continuum}
+The regulator label $\mathcal R$ can include representation cutoff, spatial volume, lattice scale, boundary prescription and computational scheme. All operator comparisons below are made after the specified embeddings into one physical Hilbert space. This condition gives meaning to the comparison of states and sources in different volumes. The physical energy branch and its units are fixed before taking the limit.
+
+\begin{proposition}[Quantitative pole and residue persistence]\label{si:prop:persistence}
+Let $H_{\mathcal R}$ and $H$ be self-adjoint operators on a common Hilbert space. Let $\mathcal C$ be a positively oriented circle of radius $r$ lying in the resolvent sets of $H$ and all sufficiently advanced $H_{\mathcal R}$. Assume
+\begin{equation}\label{si:eq:resolvent-limit}
+\sup_{z\in\mathcal C}\|(z-H_{\mathcal R})^{-1}-(z-H)^{-1}\|\leq\eta_{\mathcal R}\longrightarrow0.
+\end{equation}
+Suppose each $H_{\mathcal R}$ has a rank-one Riesz projector $P_{\mathcal R}$ inside $\mathcal C$. Let $V_{\mathcal R},V:\mathbb C^d\to\mathcal H$ be isometries with $\|V_{\mathcal R}-V\|\leq\varepsilon_{\mathcal R}\to0$. Then $H$ has one isolated eigenvalue $E_\chi$ inside $\mathcal C$, with rank-one projector $P$. For sufficiently advanced regulators,
+\begin{align}
+\|P_{\mathcal R}-P\|&\leq r\eta_{\mathcal R},\label{si:eq:projector-bound}\\
+|E_{\chi,\mathcal R}-E_\chi|&\leq2r^2\eta_{\mathcal R},\label{si:eq:energy-bound}\\
+\|Z_{\mathcal R}-Z\|&\leq r\eta_{\mathcal R}+2\varepsilon_{\mathcal R},\qquad
+Z_{\mathcal R}=V_{\mathcal R}^\dagger P_{\mathcal R}V_{\mathcal R},\quad Z=V^\dagger PV.\label{si:eq:residue-bound}
+\end{align}
+If a fixed unit source vector $u$ satisfies $u^\dagger Z_{\mathcal R}u\geq z_*>0$ for every sufficiently advanced regulator, then $u^\dagger Zu\geq z_*$. Under this visibility condition, the limiting source resolvent has the nonzero pole term $Z/(z-E_\chi)$. The operator eigenvalue and its visibility to the specified source are separate conclusions. At zero momentum, the rest-mass error is bounded by the right-hand side of Eq.~\eqref{si:eq:energy-bound} divided by $c^2$.
+\end{proposition}
+\begin{proof}
+Contour integration gives
+\[
+P_{\mathcal R}=\frac1{2\pi i}\oint_{\mathcal C}(z-H_{\mathcal R})^{-1}\dd z,
+\qquad
+P=\frac1{2\pi i}\oint_{\mathcal C}(z-H)^{-1}\dd z.
+\]
+The contour length is $2\pi r$, which proves Eq.~\eqref{si:eq:projector-bound}. Once this bound is less than one, the two orthogonal projections have equal rank: restriction of either projection to the other's range is injective, because a nonzero vector in its kernel would give a projection difference of norm at least one. Thus $P$ has rank one. Its invariant range carries exactly one eigenvalue of the self-adjoint $H$, isolated by the contour.
+
+Let $c_0$ denote the centre of $\mathcal C$. The centred first spectral moments satisfy
+\[
+(H_{\mathcal R}-c_0)P_{\mathcal R}-(H-c_0)P
+=\frac1{2\pi i}\oint_{\mathcal C}(z-c_0)\bigl[(z-H_{\mathcal R})^{-1}-(z-H)^{-1}\bigr]\dd z.
+\]
+Their difference has rank at most two and norm at most $r^2\eta_{\mathcal R}$, because $|z-c_0|=r$ on the contour. Both projectors have trace one, so the trace of this difference is $E_{\chi,\mathcal R}-E_\chi$. The finite-rank inequality $|\Tr A|\leq\operatorname{rank}(A)\|A\|$ proves Eq.~\eqref{si:eq:energy-bound}. This bound is invariant under a common shift of the energy origin and contour. For the residue, add and subtract $V_{\mathcal R}^\dagger PV_{\mathcal R}$ and use the isometry norms. This gives Eq.~\eqref{si:eq:residue-bound}. The source lower bound passes to the limit. The spectral theorem gives the resolvent decomposition with residue $Z$ and an analytic complementary term in a neighbourhood of $E_\chi$. The visibility condition makes $Z$ nonzero and therefore makes the singularity a source-visible pole.
+\end{proof}
+
+\paragraph{A finite-regulator visibility certificate.}
+For any fixed unit source vector $u$, Eq.~\eqref{si:eq:residue-bound} gives the directly usable lower enclosure
+\begin{equation}\label{si:eq:visibility-certificate}
+u^\dagger Zu\geq
+u^\dagger Z_{\mathcal R}u-r\eta_{\mathcal R}-2\varepsilon_{\mathcal R}.
+\end{equation}
+It follows by taking the quadratic form of $Z-Z_{\mathcal R}$ and bounding its absolute value by its operator norm. A strictly positive right-hand side certifies a nonzero limiting residue, provided the resolvent and source error enclosures relative to the common limit have been established. This criterion converts the convergence estimates into a source-visibility test at a finite regulator. With a verified numerical residue error $\delta_Z$, replace the first term on the right by its computed value minus $\delta_Z$.
+
+The role of visibility is exact even in three dimensions. Let $H=\operatorname{diag}(E_\chi,E_2,E_3)$ have distinct eigenvalues and choose $V=(0,0,1)^{\mathsf T}$. The Riesz projector at $E_\chi$ has rank one, whereas $V^\dagger P V=0$ and $V^\dagger(z-H)^{-1}V=(z-E_3)^{-1}$ is analytic near $E_\chi$. Thus isolation is a statement about the operator spectrum; a particle source also supplies a positive residue in that channel.
+
+\paragraph{An amplitude enclosure for weak source overlap.}
+A complementary bound controls the square root of the spectral weight. For the same unit vector $u$, set $z=u^\dagger Zu$, $z_{\mathcal R}=u^\dagger Z_{\mathcal R}u$ and $d_{\mathcal R}=r\eta_{\mathcal R}+\varepsilon_{\mathcal R}$. Since $\sqrt z=\|PVu\|$ and $\sqrt{z_{\mathcal R}}=\|P_{\mathcal R}V_{\mathcal R}u\|$, the reverse triangle inequality gives
+\[
+\left|\sqrt z-\sqrt{z_{\mathcal R}}\right|
+\leq\|(P-P_{\mathcal R})V_{\mathcal R}u\|
++\|P(V-V_{\mathcal R})u\|\leq d_{\mathcal R}.
+\]
+Consequently,
+\begin{equation}\label{si:eq:amplitude-residue}
+\boxed{\left[\max\{0,\sqrt{z_{\mathcal R}}-d_{\mathcal R}\}\right]^2
+\leq z\leq
+\min\{1,(\sqrt{z_{\mathcal R}}+d_{\mathcal R})^2\}.}
+\end{equation}
+The upper truncation uses the contraction property of an orthogonal projector and the isometric source normalization. This enclosure can certify visibility whenever $\sqrt{z_{\mathcal R}}>d_{\mathcal R}$, including cases where the linear lower bound in Eq.~\eqref{si:eq:visibility-certificate} is nonpositive. Neither enclosure dominates the other for every source; their intersection retains the larger lower endpoint and smaller upper endpoint. If a numerical calculation encloses $z_{\mathcal R}$ in $[z_-,z_+]\subseteq[0,1]$, monotonicity gives a validated lower endpoint using $\sqrt{z_-}$ and an upper endpoint using $\sqrt{z_+}$. Both conclusions remain conditional on verified common-limit operator and source errors.
+
+In a translation-invariant infinite-volume theory, the dispersion relation is formulated in fixed-momentum fibers of the physical Hilbert-space decomposition. The proposition then applies to the corresponding fiber Hamiltonian and its specified nondegenerate channel; plane waves have distributional normalization in the full spatial Hilbert space. The rank-one hypothesis thus refers to the internal spectral branch at fixed momentum. Spin or other exact degeneracies require the corresponding finite-rank spectral projector and residue matrix.
+
+Uniform estimates in momentum give the corresponding statement for an isolated energy branch. The proposition uses a physical-energy contour. If a temporal regulator changes, an energy gap $\Delta E$ corresponds locally to an angular gap of order $\tau_*\Delta E/\hbar$. A dimensionless phase gap and a fixed physical-energy gap therefore have distinct scaling conditions.
+
+Two convergent schemes give the same pole and residue when their embedded resolvents and physical sources approach one another in these norms. Indeed, the triangle inequality transfers Eq.~\eqref{si:eq:resolvent-limit} from either scheme to the other, and contour integration gives the same limiting projector. This criterion applies to boundary changes as well as regulator changes. The four static representation cutoffs in the main article supply finite operator certificates; the hypotheses of Proposition~\ref{si:prop:persistence} specify the additional common-space information entering a continuum particle statement.
+
+\subsection{Separate roles of isolation and source visibility}
+The two positive conditions can be distinguished by explicit measures. In dimensionless energy units, let
+\[
+\nu_R=\frac1R\delta_1+\frac{1-1/R}{R}\sum_{j=1}^R\delta_{2+j/R}.
+\]
+Every finite measure has an isolated atom at energy one. Its weight tends to zero, and the weak limit is the uniform measure on $[2,3]$. A second family,
+\[
+\widetilde\nu_R=Z\delta_1+\frac{1-Z}{R}\sum_{j=1}^R\delta_{1+j/R},\qquad0<Z<1,
+\]
+retains weight $Z$ at energy one, while its separation from the other support tends to zero. Its limit has an atom at the edge of a continuum. These exact constructions establish the distinct roles of a positive limiting residue and spectral isolation.
+
+\section{Interactions from connected source functions}
+\label{si:vertices}
+At a fixed regulator, a physically specified Hamiltonian branch and source protocol define a normalized Euclidean functional, when the Euclidean construction exists,
+\begin{equation}\label{si:eq:generating-functional}
+\mathcal Z_E[J]=\frac{\Tr\,\mathcal T_\tau\exp\{-\int_0^\beta[H-J_a(\tau)O_a]\dd\tau\}}{\Tr e^{-\beta H}},
+\qquad W[J]=\log\mathcal Z_E[J].
+\end{equation}
+Here $\hbar=c=1$, the physical source normalization is fixed, and repeated source labels include integration. The vacuum limit uses the selected state and its spectral assumptions. For bosonic sources, derivatives of $W$ give connected Euclidean correlation functions. Fermionic source slots use the corresponding graded functional derivatives.
+
+\begin{proposition}[Vertices determined by connected cumulants]\label{si:prop:vertices}
+Assume that the bosonic source-to-field map $\varphi_a=W_{,a}$ is locally invertible, with $G_{ab}=W_{,ab}$, and define the Legendre transform $\Gamma[\varphi]=J_a\varphi_a-W[J]$. Write $K=G^{-1}$. Its first interaction vertices are
+\begin{align}
+\Gamma_{,ab}&=K_{ab},\\
+\Gamma_{,abc}&=-K_{ai}K_{bj}K_{ck}W_{,ijk},\label{si:eq:three-vertex}\\
+\Gamma_{,abcd}&=K_{ai}K_{bj}K_{ck}K_{dl}
+\Bigl[-W_{,ijkl}+W_{,ijm}K_{mn}W_{,nkl}\nonumber\\
+&\hspace{31mm}+W_{,ikm}K_{mn}W_{,njl}
++W_{,ilm}K_{mn}W_{,njk}\Bigr].\label{si:eq:four-vertex}
+\end{align}
+All derivatives are evaluated at the same matched field and state.
+\end{proposition}
+\begin{proof}
+Differentiate $\Gamma_{,a}=J_a$ to obtain $\Gamma_{,ab}=K_{ab}$. Differentiation of $KG=I$ gives $\dd K=-K(\dd G)K$, while $\dd J_a/\dd\varphi_b=K_{ab}$. One further field derivative gives Eq.~\eqref{si:eq:three-vertex}. Differentiating it gives one fourth connected derivative and three derivatives of inverse two-point factors, producing the three pairings in Eq.~\eqref{si:eq:four-vertex}.
+\end{proof}
+These identities express interactions through the specified QICT source functional. The four-point amplitude uses the complete connected function, including one-particle-reducible exchange contributions. The vertices and residues together fix its normalization.
+
+\subsection{On-shell reduction and the cross-section}
+We use the particle-physics signature $(+,-,-,-)$ in this subsection, with $p^2=E^2-\mathbf p^2$ and $\hbar=c=1$, as in the main article's scattering section. For an established stable scalar branch, write its Minkowski propagator near the pole as $i\mathcal Z_i/(p_i^2-m_i^2+i0)$, with $\mathcal Z_i>0$. A Lorentzian continuation with asymptotic particle states gives the LSZ relation \cite{Tong}
+\begin{equation}\label{si:eq:lsz}
+i\mathcal M=\prod_{i=1}^4\left[\mathcal Z_i^{-1/2}
+\lim_{p_i^2\to m_i^2}\frac{p_i^2-m_i^2}{i}\right]
+\widetilde G_c^{(4)}(p_1,p_2,p_3,p_4).
+\end{equation}
+The momentum-conserving delta function is removed from both sides. Spinor and vector particles use their physical polarization or spinor projections in the reduction. This equation specifies the scalar case without assigning a spin to an uncomputed QICT dark branch.
+
+For a specified $2\to f$ process in natural units,
+\begin{equation}\label{si:eq:cross-section}
+\dd\sigma=\frac{\overline{|\mathcal M|^2}}{4\sqrt{(p_1\cdot p_2)^2-m_1^2m_2^2}}
+\frac{\dd\Phi_f}{S_f},\qquad
+\dd\Phi_f=(2\pi)^4\delta^{(4)}\!\left(p_1+p_2-\sum_jk_j\right)
+\prod_j\frac{\dd^3k_j}{(2\pi)^3 2E_j}.
+\end{equation}
+$S_f$ is the product of factorials for identical final particles; the bar denotes the specified spin average and sum. Equations~\eqref{si:eq:generating-functional}--\eqref{si:eq:cross-section} define the amplitude and rate once the physical QICT correlators and their pole matching are evaluated. Source rescalings cancel between the connected correlator and the external-leg residues. Positive scalar rescalings $O_i\mapsto a_iO_i$, for example, multiply the correlator by $\prod_i a_i$ and the residue factors by $\prod_i a_i^{-1}$.
+
+\section{The cosmological state and the same metric response}
+\label{si:cosmology}
+The collision functional uses the derived amplitudes together with phase-space populations. In the single-species, kinetic-equilibrium and conserved-entropy regime, it reduces to the abundance equation and thermal average given in the main article. A cosmological solution also includes its initial state and thermal history.
+
+\begin{proposition}[Independent initial-state content at fixed dynamics]\label{si:prop:state}
+Fix a Hamiltonian and all source operators on one physical Hilbert space, with a convex set of admissible initial densities. If two such density operators $\rho_a,\rho_b$ have different initial expectations of a particle-number observable $N_\chi$, then the same dynamics and interaction operators admit a continuous family of initial abundances.
+\end{proposition}
+\begin{proof}
+For $0\leq q\leq1$, the density $\rho_q=(1-q)\rho_a+q\rho_b$ is positive and normalized. Its expectation is
+\[
+\Tr(\rho_qN_\chi)=(1-q)\Tr(\rho_aN_\chi)+q\Tr(\rho_bN_\chi).
+\]
+The Hamiltonian, source operators and microscopic couplings are fixed throughout the family. Unitary evolution propagates each specified density. Thus a rule selecting the physical initial density carries information additional to the dynamics alone.
+\end{proof}
+Thermal equilibration can erase particular initial populations under the specified expansion and interaction conditions. Such an attractor statement includes those conditions and its error estimate. The initial-state selection remains part of a first-principles cosmological prediction.
+
+On the matched two-derivative Einstein branch, define $\widehat t=t/\tau_*$, $\ell_*=c\tau_*$, $h=H\tau_*$ and
+$\widehat u=uc^3\tau_*^4/\hbar$, $\widehat p=pc^3\tau_*^4/\hbar$.
+Substituting the main article's gravitational matching identities into the Friedmann equations gives
+\begin{align}
+h^2+k\frac{\ell_*^2}{a^2}&=\frac{\widehat u+\epsilon_0}{3\gamma_R},\label{si:eq:copy-friedmann}\\
+\tau_*^2\frac{\ddot a}{a}&=-\frac{\widehat u+3\widehat p}{6\gamma_R}+\frac{\epsilon_0}{3\gamma_R}.
+\end{align}
+Here $a$ is the dimensional curvature scale factor and $k\in\{-1,0,1\}$. The energy density $u$ excludes the constant vacuum term already represented by $\epsilon_0$. These are conditional physical identities; the same-state values of $\gamma_R$, $\epsilon_0$, $\widehat u$ and $\widehat p$ specify the expansion history.
+
+For the weak-field metric convention in the main article, circular motion in a static spherical system and light deflection satisfy
+\begin{equation}\label{si:eq:common-galaxy-metric}
+v_c^2(r)=r\frac{\dd\Psi}{\dd r},\qquad
+\bm\alpha=\frac{D_{ls}}{c^2D_s}\int\nabla_\perp(\Phi+\Psi)\dd\ell.
+\end{equation}
+The first relation is radial force balance for a circular geodesic; the second is the integrated weak-field null-geodesic equation. A prediction for a galaxy sample uses the resulting fields from one metric and matter evolution, with specified observed baryonic inputs or a derived formation history. The NFW and SIS calculations in the main article are analytic reference models with declared profile inputs.
+
+For a homogeneous and isotropic primordial state, the curvature spectrum is fixed by
+\begin{equation}\label{si:eq:primordial-state}
+\langle\mathcal R_{\mathbf k}\mathcal R_{\mathbf k'}\rangle_{\rho_{\rm in}}
+=(2\pi)^3\delta^{(3)}(\mathbf k+\mathbf k')\frac{2\pi^2}{k^3}\mathcal P_{\mathcal R}(k).
+\end{equation}
+Under the main article's linear scalar adiabatic assumptions, this covariance and the corresponding kinetic transfer functions determine the primary TT, TE and EE spectra and the lensing-potential spectrum. Lensing remapping uses the resulting deflection field. The reference acoustic scale uses separately stated background and recombination inputs. A predicted primordial covariance and complete transfer evolution have their own operator and state content.
+
+\section{Scope of the supplied calculations and reproducibility}
+\label{si:scope}
+The original QICT sections on stable neutral sectors state the conditional copy-parity criterion and assign the existence and mass of the odd singlet to its spectral calculation. The supplied finite C9 input realizes six static chiral matter sources. Its operator certificate proves a finite zero-phase result for those sources. The original C10 archive describes a specified quantum completion of geometric shell data, with a separate physical interacting-operator certificate. The accompanying precontraction certificate identifies the geometric and recoupling content of that input. These distinctions fix the provenance of the calculations used here.
+
+The nine-state metric input gives connected finite response and contact derivatives at one nonzero momentum. The main article proves how momentum and contact data enter a physical curvature coefficient. The scalar-portal mass and coupling, reference cosmological densities, halo profiles and recombination redshift are explicitly declared inputs to the numerical comparisons. Their reproduced values retain that interpretation.
+
+Propositions~\ref{si:prop:persistence}--\ref{si:prop:state} and Eqs.~\eqref{si:eq:lsz}--\eqref{si:eq:primordial-state} give the additional mathematical relations linking an odd-sector pole, physical interactions and cosmological observables. Their application to QICT is conditional on the stated source, state and convergence hypotheses. A numerical value for the physical dark-particle mass, its continuum residue, the common-state couplings, a QICT relic abundance, the physical gravitational coefficients, sample-wide rotation curves and full primordial CMB spectra is not established by the supplied finite calculations. This statement concerns the available calculation, rather than the existence of a possible completed QICT realization.
+
+The program \texttt{verify\_physical\_identities.py} checks the pole-error inequalities and their energy-origin invariance on a declared dimensionless Hermitian matrix sequence and verifies the scalar Legendre identities against an independently inverted finite generating function. These tests validate the formulas and their numerical implementation. The actual C9 and metric input arrays remain separately identified and byte-preserved.
+
+For prospective empirical tests, a prediction record specifies the microscopic inputs, state-selection prescription, normalization, regulator extrapolation, observable definition and error enclosure before comparison with the designated data. The reference calculations in this package use their declared observational inputs and are classified accordingly. External replication and agreement with held-out observations are empirical results in their own right.
+
+\input{references}
+
+\end{document}

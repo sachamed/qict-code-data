@@ -1,0 +1,151 @@
+{
+  "classification": "QICT_HAAR_SPECTRAL_LOGICAL_AUDIT_NOT_PHYSICAL_CLOSURE",
+  "source_action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "points": [
+    {
+      "id": 1,
+      "requirement": "T28_43_ENDPOINT_STATE_SELECTION",
+      "status": "DIAGNOSTIC_ONLY",
+      "reason": "Proof of finite-rank no-go; infinite-rank spectral projector and finite source residue possible. Physical QICT state selector still undefined."
+    },
+    {
+      "id": 2,
+      "requirement": "FULL_INTERACTING_GATES",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "Full unitary route-first holonomies SU2/SU3/CAR and physical operator not specified/executed."
+    },
+    {
+      "id": 3,
+      "requirement": "Z6_ACTION_CONVENTION",
+      "status": "PASS",
+      "reason": "Non-descent of the frozen magnetic gate is exact and the centre-charge selection rule is proved; full charged Gauss/CAR quotient dynamics is not certified."
+    },
+    {
+      "id": 4,
+      "requirement": "FOUR_PHYSICAL_KATO_STATES",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "The infinite-flux primitive Abelian ground state is rigorously localized, but its four flux cutoffs are not interacting spatial Kato buffers."
+    },
+    {
+      "id": 5,
+      "requirement": "PHYSICAL_C10_MAPS",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "Missing physical Kraus/quantum shell contraction and matter route labels."
+    },
+    {
+      "id": 6,
+      "requirement": "SIX_PHYSICAL_CHIRAL_SOURCES",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "No jointly authenticated CAR/Gauss/isometric 6-chiral source embedding."
+    },
+    {
+      "id": 7,
+      "requirement": "PHYSICAL_CN6_MOMENTS",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "No physical U,V to evaluate C_n=V^dagger U^n V."
+    },
+    {
+      "id": 8,
+      "requirement": "LOCALIZED_RESIDUE_UNIFORM_LOWER_BOUND",
+      "status": "DIAGNOSTIC_ONLY",
+      "reason": "Infinite-flux primitive Hamiltonian localized residue is rigorously positive; no full interacting QICT charged/dark uniform gap or residue certificate."
+    },
+    {
+      "id": 9,
+      "requirement": "PHYSICAL_POLE_THREE_METHODS",
+      "status": "DIAGNOSTIC_ONLY",
+      "reason": "Temple dyadic enclosure, Jacobi spectral calculation and Schur continued fraction verify a genuine primitive Hamiltonian pole; the interacting Floquet dark pole is not established."
+    },
+    {
+      "id": 10,
+      "requirement": "PHYSICAL_ODD_SECTOR",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "Q copy grading of complete U and gauge-neutral odd Vchi are not constructed."
+    },
+    {
+      "id": 11,
+      "requirement": "INDEPENDENT_TAU_CLOCK",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "No independently measured tau_star or unambiguous Floquet branch/dispersion."
+    },
+    {
+      "id": 12,
+      "requirement": "INDEPENDENT_BLIND_REPLICATION",
+      "status": "DIAGNOSTIC_ONLY",
+      "reason": "Independent mathematical cross-check completed; physical blind replication impossible without physical data."
+    },
+    {
+      "id": 13,
+      "requirement": "HPC_PRODUCTION",
+      "status": "BLOCKED_MISSING_INPUT",
+      "reason": "Strictly deferred until all physical stages 1-12 are independently verified."
+    }
+  ],
+  "verified_mathematical_gauge_result": {
+    "original_magnetic_cost_difference_exact": 120,
+    "original_magnetic_cost_difference_computed": 120.0,
+    "phase_difference_abs_from_one": 0.29808453235234855,
+    "original_gate_descends_to_quotient": false,
+    "quotient_candidate_center_difference": 3.552713678800501e-15,
+    "weak_field_relative_discrepancy_at_t_1e-3": 4.4903384562811296e-07,
+    "quotient_candidate_is_original_frozen_action": false,
+    "status": "PASS_EXACT_COVER_NON_DESCENT"
+  },
+  "central_lift_orbit": {
+    "central_lift_powers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "magnetic_costs_exact": [
+      "0",
+      "120",
+      "60",
+      "72",
+      "60",
+      "120"
+    ],
+    "original_gate_fails_quotient_descent": true,
+    "original_action_modified": false
+  },
+  "quotient_link_dynamics_physically_implemented": false,
+  "physical_interacting_inputs_complete": false,
+  "physical_mass_GeV": null,
+  "physical_pole": null,
+  "physical_residue": null,
+  "external_mass_injection": false,
+  "HPC_production_permitted": false,
+  "provenance_source_file_sha256": {
+    "evidence/PRIMITIVE_A7_GROUND_CERTIFICATE.json": "85b330b3e1db1d2722ebfd172feffc3790f12a1e3c0f0fe3305be375997912e9",
+    "evidence/QICT_LATTICE_ACTION_FREEZE_V3.canonical.json": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+    "evidence/PRIMITIVE_STATIC_GNS_AUDIT.json": "65191961704daae03aec91311ef42f6602ae0889cfe256135c5c0f57c59f6bca"
+  },
+  "all_13_requirements_closed": false,
+  "missing_critical_physical_inputs": [
+    "FULL_INTERACTING_GATES",
+    "FOUR_PHYSICAL_KATO_STATES",
+    "PHYSICAL_C10_MAPS",
+    "SIX_PHYSICAL_CHIRAL_SOURCES",
+    "PHYSICAL_CN6_MOMENTS",
+    "PHYSICAL_ODD_SECTOR",
+    "INDEPENDENT_TAU_CLOCK"
+  ],
+  "further_certified_mathematics": {
+    "primitive_infinite_volume_H_ground": "PROVED_FOR_UNWRAPPED_U1_SINGLE_PLAQUETTE",
+    "primitive_gap_lower": 4,
+    "primitive_energy_enclosure": "results/PRIMITIVE_INFINITE_VOLUME_RATIONAL_CERTIFICATE.json",
+    "primitive_local_H_resolvent_atom": "PROVED_FOR_INFINITE_FLUX_SINGLE_PLAQUETTE",
+    "primitive_local_residue_lower_analytic": "1/2",
+    "primitive_local_residue_interval": "results/PRIMITIVE_LOCAL_RESOLVENT_POLE_CERTIFICATE.json",
+    "Z6_character_selection": "Y+3*(2j)+2*t = 0 (mod 6)",
+    "Z6_character_certificate": "results/CENTER_CHARACTER_SELECTION_RULE.json",
+    "primitive_split_step_Floquet_stationarity": "NUMERICAL_COUNTEREVIDENCE_NONSTATIONARY",
+    "primitive_split_step_defect_file": "results/PRIMITIVE_SPLIT_STEP_STATIONARITY_CHECK.json",
+    "elementary_U1_Floquet_shift_no_finite_rank": "PROVED_FOR_U_BE_ONLY",
+    "elementary_U1_Floquet_no_go_certificate": "results/PRIMITIVE_FLOQUET_SHIFT_NO_GO.json",
+    "full_interacting_dark_physics_promoted": false
+  }
+}

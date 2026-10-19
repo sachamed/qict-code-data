@@ -1,0 +1,34 @@
+{
+  "canonical_action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "certified": {
+    "U1_elementary_Floquet_finite_rank_no_go": true,
+    "central_Z6_character_selection_rule": "Y+3*(2j)+2*t=0 mod 6",
+    "infinite_primitive_ground_state": true,
+    "primitive_ground_spectral_gap_lower": 4,
+    "primitive_local_pole_residue_analytic_lower": "1/2",
+    "primitive_local_pole_residue_lower_exact_rational": "0.905830198089339768628931948085536735094712064125",
+    "primitive_local_pole_residue_upper_exact_rational": "0.905830198089339812628931948085536735094712064126",
+    "primitive_local_resolvent_isolated_pole": true
+  },
+  "classification": "SOURCE_BACKED_MATHEMATICAL_CLOSURE_WITH_PHYSICAL_BOUNDARIES",
+  "local_tests_passed": 66,
+  "not_certified": {
+    "copy_odd_dark_pole": true,
+    "four_charged_kato_buffers": true,
+    "full_interacting_microscopic_U": true,
+    "independent_tau_star_and_GeV_mass": true,
+    "physical_CN6": true,
+    "physical_HPC_production": true,
+    "quantum_C10_maps": true,
+    "six_physical_chiral_sources": true
+  },
+  "numerical": {
+    "primitive_pole_algorithms": [
+      "exact rational enclosure",
+      "Jacobi",
+      "Schur continued fraction"
+    ],
+    "primitive_split_step_optimized_defect_approx": 0.0321115825
+  },
+  "status": "PASS_PRIMITIVE_MATHEMATICS__BLOCKED_FULL_PHYSICAL_QICT"
+}

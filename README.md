@@ -49,3 +49,7 @@ This command must return a non-zero exit code and `BLOCKED_MISSING_INPUT` until 
 Use the exact repository commit when citing code. Mathematical statements and assumptions belong to the associated QICT manuscript or book, rather than being inferred from file names.
 
 Author: **Sacha Mohamed** · ORCID: 0009-0005-2078-2032.
+
+## Scientific source releases (19 October 2026)
+
+The two independently supplied research packages are now published in their entirety at [`QICT_RESEARCH_RELEASES/2026-10-19/`](QICT_RESEARCH_RELEASES/2026-10-19/README.md). This source-preserving release includes 137 SHA-verified files, 47 Python scripts, PDF articles, LaTeX sources and matrices. The explicit scope remains mathematical, finite-model and conditional; this publication does not validate a full interacting dark-sector particle mass.

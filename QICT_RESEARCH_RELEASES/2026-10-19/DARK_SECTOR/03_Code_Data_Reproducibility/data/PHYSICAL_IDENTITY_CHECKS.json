@@ -1,0 +1,179 @@
+{
+  "scope": "Dimensionless identity controls; no QICT dark-particle mass or coupling assigned.",
+  "pole_sequence": [
+    {
+      "regulator": 2,
+      "projection_error": 0.04997916927067833,
+      "projection_bound": 0.27604725894912424,
+      "energy_error": 0.0050000000000001155,
+      "energy_bound": 0.16562835536947454,
+      "residue_error": 0.002497917360987034,
+      "residue_bound": 0.27604725894912424,
+      "contour_error": 1.1125175897143236e-16,
+      "energy_origin_checks": [
+        {
+          "energy_offset": -7.5,
+          "energy_error_drift": 2.220446049250313e-16,
+          "contour_error": 2.2237466811367127e-16
+        },
+        {
+          "energy_offset": 80.0,
+          "energy_error_drift": 4.6629367034256575e-15,
+          "contour_error": 1.9304183239152234e-15
+        }
+      ],
+      "convergent_source_error": 0.014999859375395505,
+      "convergent_source_residue": 0.9987755001266398,
+      "full_source_residue_bound": 0.30604697769991523,
+      "visibility_lower_bound": 0.6927285224267246,
+      "amplitude_delta": 0.29104711832451974,
+      "amplitude_lower_bound": 0.5017461848879926,
+      "amplitude_upper_bound": 1.0,
+      "orthogonal_source_residue": 0.0
+    },
+    {
+      "regulator": 4,
+      "projection_error": 0.02499739591471233,
+      "projection_bound": 0.12145550025132992,
+      "energy_error": 0.0025000000000000577,
+      "energy_bound": 0.07287330015079795,
+      "residue_error": 0.0006248698025169697,
+      "residue_bound": 0.12145550025132992,
+      "contour_error": 7.775253069667242e-16,
+      "energy_origin_checks": [
+        {
+          "energy_offset": -7.5,
+          "energy_error_drift": 1.2212453270876722e-15,
+          "contour_error": 4.451053040696489e-16
+        },
+        {
+          "energy_offset": 80.0,
+          "energy_error_drift": 2.3314683517128287e-15,
+          "contour_error": 1.88849272253997e-15
+        }
+      ],
+      "convergent_source_error": 0.00749998242188736,
+      "convergent_source_residue": 0.9996937812617442,
+      "full_source_residue_bound": 0.13645546509510464,
+      "visibility_lower_bound": 0.8632383161666396,
+      "amplitude_delta": 0.12895548267321727,
+      "amplitude_lower_bound": 0.7584518240354864,
+      "amplitude_upper_bound": 1.0,
+      "orthogonal_source_residue": 0.0
+    },
+    {
+      "regulator": 8,
+      "projection_error": 0.012499674481709794,
+      "projection_bound": 0.05728467182708889,
+      "energy_error": 0.0012500000000000844,
+      "energy_bound": 0.03437080309625334,
+      "residue_error": 0.00015624186214857616,
+      "residue_bound": 0.05728467182708889,
+      "contour_error": 3.3320970367081883e-16,
+      "energy_origin_checks": [
+        {
+          "energy_offset": -7.5,
+          "energy_error_drift": 1.2212453270876722e-15,
+          "contour_error": 4.443641161316173e-16
+        },
+        {
+          "energy_offset": 80.0,
+          "energy_error_drift": 1.2212453270876722e-15,
+          "contour_error": 1.2256457117498839e-15
+        }
+      ],
+      "convergent_source_error": 0.003749997802734761,
+      "convergent_source_residue": 0.9999234394539191,
+      "full_source_residue_bound": 0.06478466743255841,
+      "visibility_lower_bound": 0.9351387720213608,
+      "amplitude_delta": 0.06103466962982365,
+      "amplitude_lower_bound": 0.8815840040281728,
+      "amplitude_upper_bound": 1.0,
+      "orthogonal_source_residue": 0.0
+    },
+    {
+      "regulator": 16,
+      "projection_error": 0.006249959309975376,
+      "projection_bound": 0.0278522076719864,
+      "energy_error": 0.0006249999999998757,
+      "energy_bound": 0.01671132460319184,
+      "residue_error": 3.9061991376487804e-05,
+      "residue_bound": 0.0278522076719864,
+      "contour_error": 4.44094951816912e-16,
+      "energy_origin_checks": [
+        {
+          "energy_offset": -7.5,
+          "energy_error_drift": 4.440892098500626e-16,
+          "contour_error": 3.3320808067050213e-16
+        },
+        {
+          "energy_offset": 80.0,
+          "energy_error_drift": 1.4654943925052066e-14,
+          "contour_error": 8.936569434581597e-16
+        }
+      ],
+      "convergent_source_error": 0.001874999725341809,
+      "convergent_source_residue": 0.9999808594971208,
+      "full_source_residue_bound": 0.03160220712267002,
+      "visibility_lower_bound": 0.9683786523744508,
+      "amplitude_delta": 0.02972720739732821,
+      "amplitude_lower_bound": 0.9414107205585295,
+      "amplitude_upper_bound": 1.0,
+      "orthogonal_source_residue": 0.0
+    },
+    {
+      "regulator": 32,
+      "projection_error": 0.0031249949137395353,
+      "projection_bound": 0.013736568016909341,
+      "energy_error": 0.00031250000000004885,
+      "energy_bound": 0.008241940810145605,
+      "residue_error": 9.76559321075321e-06,
+      "residue_bound": 0.013736568016909341,
+      "contour_error": 5.551145337175232e-16,
+      "energy_origin_checks": [
+        {
+          "energy_offset": -7.5,
+          "energy_error_drift": 5.551115123125783e-16,
+          "contour_error": 7.771696242712917e-16
+        },
+        {
+          "energy_offset": 80.0,
+          "energy_error_drift": 7.438494264988549e-15,
+          "contour_error": 1.7776067165980597e-15
+        }
+      ],
+      "convergent_source_error": 0.0009374999656677249,
+      "convergent_source_residue": 0.9999952148513829,
+      "full_source_residue_bound": 0.015611567948244792,
+      "visibility_lower_bound": 0.9843836469031381,
+      "amplitude_delta": 0.014674067982577066,
+      "amplitude_lower_bound": 0.970862477375066,
+      "amplitude_upper_bound": 1.0,
+      "orthogonal_source_residue": 0.0
+    }
+  ],
+  "weak_source_visibility": {
+    "finite_residue": 0.00044099117220544593,
+    "limiting_residue": 0.0004,
+    "resolvent_error_bound": 0.013946999060474087,
+    "amplitude_delta": 0.004184099718142226,
+    "linear_lower_bound": -0.0037431085459367804,
+    "amplitude_lower_bound": 0.0002827674333785233,
+    "amplitude_upper_bound": 0.0006342282919350844,
+    "status": "PASS"
+  },
+  "legendre_transform": {
+    "cumulants_exact": {
+      "2": "10/7",
+      "3": "-6/7",
+      "4": "-146/49"
+    },
+    "gamma3_exact": "147/500",
+    "gamma4_exact": "13573/12500",
+    "gamma3_inverse_map": 0.29400000000887716,
+    "gamma4_inverse_map": 1.0858400032237225,
+    "gamma3_absolute_error": 8.877176771449058e-12,
+    "gamma4_absolute_error": 3.223722622180958e-09
+  },
+  "status": "PASS"
+}

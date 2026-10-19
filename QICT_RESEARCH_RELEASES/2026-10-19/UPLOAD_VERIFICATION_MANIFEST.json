@@ -1,0 +1,842 @@
+{
+  "schema": "qict-github-release-integrity-v1",
+  "verified_on": "2026-10-19",
+  "original_archives": {
+    "PRIMITIVE_HAAR_Z6": {
+      "filename": "QICT_FERMETURE_PRIMITIVE_HAAR_Z6_POLE_CERTIFIEE_2026-10-19(3).zip",
+      "sha256": "54f69374681a9c5d9ed0fa656d032b7abe8ebe900bf40d747c5c45e6a45a4254",
+      "file_count": 55
+    },
+    "DARK_SECTOR": {
+      "filename": "QICT_DARK_SECTOR_SCIENTIFIC_PACKAGE_2026-10-19 3(2).zip",
+      "sha256": "fd22e5ecbb224dbe25857a8e3f8779c32f4b835a314d77fedbe32d6f287ee017",
+      "file_count": 82
+    }
+  },
+  "total_files": 137,
+  "source_integrity": "all original SHA256SUMS files validated; Git SHA1 blobs matched byte-for-byte by re-computation",
+  "files": [
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/cluster_kappa_map.pdf",
+      "size_bytes": 36786,
+      "sha256": "9c58563bc350451f2b31ac5157653d0f358b7751d1b95f0e18325bcc6fe908cf",
+      "git_blob_sha": "4db1c3823025be43ae9c1537cbb9991bf6fbe3bf"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/cluster_lensing_reference.pdf",
+      "size_bytes": 17633,
+      "sha256": "357a8a6b3e5f590c0c2f446704f25224089c28417318da9399be8525f8e07e3b",
+      "git_blob_sha": "476969cddae462aebcb1d52b2f8cd4034c017e72"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/freezein_yield.pdf",
+      "size_bytes": 18123,
+      "sha256": "5d83f1ca6cb3a97c98fa21928f4d93d065a1e6f616c4347f10063049ca3849ea",
+      "git_blob_sha": "4e5741cae28b44eb46965bb7d14a231050f7230a"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/freezeout_toy_exact_ode.pdf",
+      "size_bytes": 18014,
+      "sha256": "16d96007e6ea84f6d5407ee33d7f2d3784eab795b529939c2a6fbcbd747ee08c",
+      "git_blob_sha": "e93053a08191ad26c9f8780ca6ac6d1ec16431ff"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/galaxy_correlation_reference.pdf",
+      "size_bytes": 18012,
+      "sha256": "491e8afb70c47d4d4769bc0a572e463c0434209c4dbcdcbd186461ebf8a5590b",
+      "git_blob_sha": "eae39796c06665f36f8f0159e22459c236ff96a2"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/growth_reference.pdf",
+      "size_bytes": 13545,
+      "sha256": "a447ddb507cdf66318a5044f8f6f1b7bb5b487d6f0b07e82632b28acf40297b2",
+      "git_blob_sha": "1a9e44a97f00de2e2ff23ceb1210ab738659d9ed"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/halo_mass_function.pdf",
+      "size_bytes": 17849,
+      "sha256": "585d6fc425219c63a822c25663c33acf35e53097622a3bd5927d1956b4742794",
+      "git_blob_sha": "91df3b99a1f6393aba02515dfdf3f491b54672a8"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/linear_cosmic_shear_limber.pdf",
+      "size_bytes": 16748,
+      "sha256": "2306381def1ad7f6bbc609a81418232c3213cf4f971852d05bc97537e5e651be",
+      "git_blob_sha": "626eefa65ecea414cb2a43bafbd22745cc128d10"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/matter_power_reference.pdf",
+      "size_bytes": 16730,
+      "sha256": "a90f6aa426ddd153d9a2bf63986a7cc661b8f189f4d86015673a4c60f8516d83",
+      "git_blob_sha": "fc2c193039718cd54d80a96af793ff4d85aeb4a9"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/particle_mesh_3d.pdf",
+      "size_bytes": 17938,
+      "sha256": "abf0db7d7c65afaa5383a1199197beecd796378de7e5e2609c1e201ba1fcd29b",
+      "git_blob_sha": "f2a0674c643a27472d35f6e271b23bcc18c295a6"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/portal_thermal_rates.pdf",
+      "size_bytes": 17610,
+      "sha256": "01b28bb18042607e002e2b1e6d1864b07c916814ee1f0d97bbe0a2ada46fd327",
+      "git_blob_sha": "5cec1693dcc2f0aa8aa969cec6da1cd776b23336"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/saha_ionization_reference.pdf",
+      "size_bytes": 16887,
+      "sha256": "3f8a1a4e6c5108b540cab0acfc26c7ad6d9cd4854719557b723a122060448b42",
+      "git_blob_sha": "24204460014306091b877d39f02922edaa2af960"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/spectral_atom_bounds.pdf",
+      "size_bytes": 12959,
+      "sha256": "2e07016efc9913e79d71201adf64fd0aa99d88ad0a6c04e0150e95525b8495dd",
+      "git_blob_sha": "0c48a81c933c720a9fdbe8f0324046377869eca9"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/spherical_collapse_reference.pdf",
+      "size_bytes": 13857,
+      "sha256": "90c9638723ab83deb714b30ede0b230fdc827121f85ac0ccc9b2d73a312fb121",
+      "git_blob_sha": "dfd4feebaccad411ebf3cae162e9dada601f5003"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/figures/stellar_mass_function.pdf",
+      "size_bytes": 18822,
+      "sha256": "bc1610702eaaf191fc896d32f783726be0c3624730ed1acd1344a489a92aa1be",
+      "git_blob_sha": "610d5ad35046feee0b22e34c11b99a3b9860597f"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/manuscript.pdf",
+      "size_bytes": 872318,
+      "sha256": "38bdd80c1a12d1472d51f3ffab798e8f2eaecdad05a543622329c7eed3b8220b",
+      "git_blob_sha": "e7d53def864f226a78af868af5344b5a1beb2503"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/manuscript.tex",
+      "size_bytes": 13555,
+      "sha256": "d00a5faceb88530dc6e128e5b6a7f93a0be270c9f629e50f06e7a4742752ab9b",
+      "git_blob_sha": "92895583649374691922f319180e36739d805641"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/references.tex",
+      "size_bytes": 5127,
+      "sha256": "588f98d3f418c23f8a501c66982bb6871d227b42e6e8b7dd86d1f285e152661d",
+      "git_blob_sha": "a8173b3ee26c395e84a6324da72996a1b95d86d8"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/sections/01_spectral.tex",
+      "size_bytes": 34735,
+      "sha256": "ce2c965998a7da2fe3371d40ab728bfd0015bca339272093c8e345a8a5337203",
+      "git_blob_sha": "820b6ee58fdcd6a40327d112c0790d7d46cb7a77"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/sections/01b_operator_spectra.tex",
+      "size_bytes": 11219,
+      "sha256": "1196c996e6d1f31165384d9b875872db4c529ceb60fe1f918451e807c1b8d58d",
+      "git_blob_sha": "5c1c8839e55f1f52d3de2e6fe39a2963039c027c"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/sections/02_metric.tex",
+      "size_bytes": 12572,
+      "sha256": "ba4c7d94cb9d256763d81bb768a5e28dda615ba9e278261d4218b936110d927d",
+      "git_blob_sha": "a0986d38e9898f03e61b176e781858a65a72f0ea"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/sections/03_thermal.tex",
+      "size_bytes": 22727,
+      "sha256": "c9dadb75d59801b9d88cf09bcbfad2a592b090ba547fe7c360f213f828184849",
+      "git_blob_sha": "70e715c6c0d08de291fb6c24e5be29f14928833c"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/sections/04_structure.tex",
+      "size_bytes": 15569,
+      "sha256": "8f7c0d7b4f87862424f768bb9155ed69cd840d678010c9abe20a8129715e519d",
+      "git_blob_sha": "168172ec505c597e121e72ca3abba02706634efc"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/sections/05_lensing.tex",
+      "size_bytes": 11038,
+      "sha256": "7bd954d2036cb6737529cf6d45a979e0890a93d32fe151a8af97a862a467d551",
+      "git_blob_sha": "0c831f22f4e8506fa99751ba51a9f158fe9d9549"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/sections/06_cmb.tex",
+      "size_bytes": 10025,
+      "sha256": "180035ef9befb7963c7f6fd51fcfd5aa043e26d710274143cb53a02629b741cc",
+      "git_blob_sha": "e9b933779e583c8b99d5efc1f1af38446581cd25"
+    },
+    {
+      "path": "DARK_SECTOR/01_Main_Manuscript/sections/07_inference.tex",
+      "size_bytes": 3850,
+      "sha256": "96cda9f13d82f4f9d9438aef1ef503ad968d8e68dc145b770f40c5c8025b8993",
+      "git_blob_sha": "9bf85011ea7bac990d8593e5edd5bd8d331273a0"
+    },
+    {
+      "path": "DARK_SECTOR/02_Supplementary_Information/references.tex",
+      "size_bytes": 221,
+      "sha256": "8af38297e321a3ce43b4970be4077cdfd84f6bdb1f3f26c70c31ae2ac59e771e",
+      "git_blob_sha": "747e9e35eeec5ebaeaac4bfb8bf8ddcf68823ba2"
+    },
+    {
+      "path": "DARK_SECTOR/02_Supplementary_Information/supplement.pdf",
+      "size_bytes": 336404,
+      "sha256": "632f6dc1c457f4b22e2090b0f555c73f978840b42568a24f11340b6a4f72706f",
+      "git_blob_sha": "524cf249e2e9526cba20a7356830d9920dbbf5ce"
+    },
+    {
+      "path": "DARK_SECTOR/02_Supplementary_Information/supplement.tex",
+      "size_bytes": 23755,
+      "sha256": "bdd33461fe3437c0671dbc4c8d7ed1ff23b63c782511b663667919af81daa93a",
+      "git_blob_sha": "6911f8f8db746592ac9866704914a7a3a4b08994"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/README.md",
+      "size_bytes": 11697,
+      "sha256": "09e3114d18cdfa7ca13dfcd5d1883b786204f7d3d6ea6184f9a9435fbfa5742e",
+      "git_blob_sha": "dbc7f9ed34738c362092d434d3894667962a3cbe"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/FINITE_C9_COMMON_STATE_AND_MOMENTS.npz",
+      "size_bytes": 963937,
+      "sha256": "b325c3869deac41bb61031406d6912e348319f81af603567e50352886f863cb2",
+      "git_blob_sha": "dea42cf02e8361634f156648547266e1495f75dc"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/SPECTRAL_GRAVITY_SELFTEST_INPUT.npz",
+      "size_bytes": 4950,
+      "sha256": "c19c7ad3b9a239cb4e8b9b57e70776d514cc9f94bc5cc468e702ea1d4253edc5",
+      "git_blob_sha": "0fadce3f586c632fa2942c9a1f17f763cfc5a9a1"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/build_manuscript.py",
+      "size_bytes": 11227,
+      "sha256": "e547ef43f257c9d6c52d33b47d382f8788984f43e1e8003f7eb40c538f61ed7b",
+      "git_blob_sha": "e181a53a99004c15242ac35914f84d868926dc94"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/certify_moment_bounds.py",
+      "size_bytes": 3902,
+      "sha256": "4e5dade1ba34dc62deb6fd2ca5f4a19f113435d74291554abfd921cdb56a9e27",
+      "git_blob_sha": "7f82404a982d83d61e2f1aacc9447c3017d84bb3"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/certify_operator_spectra.py",
+      "size_bytes": 6965,
+      "sha256": "f2a7eeb6d830b1a1adff90c58fbc14fec27a1b60896455470cf024567631fa75",
+      "git_blob_sha": "2ed3d5698ea688cb0439afe204d1e1e609697a9c"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/closure_results.json",
+      "size_bytes": 7631,
+      "sha256": "f3bdfc8791c9fab0706ea062a100b01453e3033d1d7799bf960c6a43f3115255",
+      "git_blob_sha": "e7e64e3566dae55f179eae3a5b37a32cc74af51c"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/compute_closure_tests.py",
+      "size_bytes": 7411,
+      "sha256": "cb3dfc19bc7682f9131b4118c528a4aed686f7171b181533717f937846d3a387",
+      "git_blob_sha": "1859458fa863ba009165c046d85d912312e615ea"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/compute_cosmology.py",
+      "size_bytes": 15407,
+      "sha256": "1c207ebcc6d9d286cd5ce06a77d4eaa8996b2408b9b59b1637ccd4ba1bf65ee0",
+      "git_blob_sha": "a90def70e349e06500a9bed8b3a79b7f4906665a"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/compute_operator_closure.py",
+      "size_bytes": 8008,
+      "sha256": "a08a85699209feadaedb4ae8ce6641ecd7981b5a42c19ebfc84d58a4ee6aeada",
+      "git_blob_sha": "f0505226d0a701a74f4601281204ae44c3b88fcf"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/compute_portal_thermal.py",
+      "size_bytes": 4868,
+      "sha256": "6e3dc7f9047e31dbd0b01c1d97488f8dca43e4fe93f54b8c80e4b36488b9101f",
+      "git_blob_sha": "862703d45a5c787ca489145e837ef2f191b810d4"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/compute_response_extensions.py",
+      "size_bytes": 2060,
+      "sha256": "526efca03f071d2db705dfe7ebfd65832389219bea4941ab84b6e1d49bf2fd19",
+      "git_blob_sha": "b22754ae7878cd1029842f0907686c69a21ec362"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/convergence_checks.py",
+      "size_bytes": 1759,
+      "sha256": "3f2e855e58f109cf93cf13ee1d7ee14e1156c11a46e554d7f370d9103789969f",
+      "git_blob_sha": "2d7cb9d860844cc22672c4722e3d763e3e832950"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/derive_extended_results.py",
+      "size_bytes": 14130,
+      "sha256": "edad4469b6de78e4762001da9bc5bccf6a90b80a0a81f008c557ad58dbef166d",
+      "git_blob_sha": "193c75299a1e3939253bf61b369020390d9947f2"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/generate_tables.py",
+      "size_bytes": 5269,
+      "sha256": "83f2d5d73ca92db6da423b8e9de415d302a11fb0924dca20b4e552d4594142d4",
+      "git_blob_sha": "3c95f4336b3cb4401fb37cf5122955d495a1bfc8"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/numerical_convergence.json",
+      "size_bytes": 232,
+      "sha256": "5ee180358391f5de1146211d147aa71efcb3acd14531636f9f74a23b156b2848",
+      "git_blob_sha": "567feaf0b82e548474dfb36e4176a1772a1323b1"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/numerical_methods.py",
+      "size_bytes": 1943,
+      "sha256": "6cd716d0f4bfe130f2dd8b9232a2f6af565f9ffef5d6a50ae14196c19518ef11",
+      "git_blob_sha": "72785e981426de995ebf567f593d3e802bf8b19e"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/operator_closure_results.json",
+      "size_bytes": 6111,
+      "sha256": "f2588b4534f67e396f5dd4b1514102defc0333b0b5103e426908b2b017918bba",
+      "git_blob_sha": "3f28f2856645832a496da43a141839f84d79316a"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/particle_mesh_3d.py",
+      "size_bytes": 4179,
+      "sha256": "737d29775b41dd2c47f1430ba94f8a626ac71437e1b76a76a100b913c302a8ea",
+      "git_blob_sha": "5a1389bfd05e35a039eee7d8a8fe3eb4a61ee898"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/plot_style.py",
+      "size_bytes": 1232,
+      "sha256": "3f99535d6c30a3f74d9d60088f9439b3ce8473fd2eb125c9e581c75a75a8dd32",
+      "git_blob_sha": "8a947164496e0b4b6ab80abf03c141da0f9ac1b7"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/reconstruct_c9_moments.py",
+      "size_bytes": 4027,
+      "sha256": "ee52d290f151d410a5d0abf77af65303e4b0023984335a82aae82b628cc2886e",
+      "git_blob_sha": "6ae6e0a9b5c88c5e76fdb99106390b910649bff0"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/render_particle_mesh_figure.py",
+      "size_bytes": 1447,
+      "sha256": "b2a5bc8d96a62e67d292f690d132fc22963d81d5add02843d00f7a665ebe7076",
+      "git_blob_sha": "4552ae97e6cfe08cbe766fa3219310e560602bf9"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/reproduce.py",
+      "size_bytes": 1507,
+      "sha256": "a0373d8b8d823a4a37cd52b441bad3596e8dd0d4c48f3947e73b1b30f33195a9",
+      "git_blob_sha": "1432ca0cb3591da8045e03936cf2be93000da4db"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/results.json",
+      "size_bytes": 3350,
+      "sha256": "b1b7b7b65e4da4b6f7c94c992524dfd63e57d80d60515e6deffe4d25b83c103c",
+      "git_blob_sha": "3024ac797e5e6276d9a8b192c15904c2eb2e8583"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/run_pm_convergence.py",
+      "size_bytes": 1190,
+      "sha256": "e7b74b1842aab9184891cefae0e2afeee693ecd88f5f424b9a432d73d8e6c73d",
+      "git_blob_sha": "41b3ac0f20b463cd64de0765856ca148ca9b3a63"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/structure_metric_and_galaxies.py",
+      "size_bytes": 4361,
+      "sha256": "562fba35344229aabfa3e8ebbe6a64d01558095d0d71a05ac1b12a7449506caf",
+      "git_blob_sha": "0c692a34fd9879d438c38b604a5abeaff3116695"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/test_operator_closure.py",
+      "size_bytes": 2922,
+      "sha256": "968503a4d5b8e17eaf9896d98feb6976bb113ea750fc164bceaf5ac1270f303b",
+      "git_blob_sha": "2711406f1d8c4c4074107b2f361aaffce5ea07e0"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/validate_closure.py",
+      "size_bytes": 1430,
+      "sha256": "89c1b00a9931b5ed28e2ddab7480436a794e4af84b2e58719f5be03be9241754",
+      "git_blob_sha": "e55b8660e4a67bfc5f0b4e28c2712015a304c1fd"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/validate_extended.py",
+      "size_bytes": 1355,
+      "sha256": "45eba5acb744089ac96fcc55442198e52a4d70b5df47f4543a6201e69968678c",
+      "git_blob_sha": "f7ad8e8a964f118cd0ee8aa55f36d66c49b33ace"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/validate_operator_certificate.py",
+      "size_bytes": 3054,
+      "sha256": "7cdadc27d2172bafd225d0b9631a69a393c362f2d50c91f28a1efb45507c9ea6",
+      "git_blob_sha": "faa9041ea6df068b4ed57acb5b18ac38cc2dc272"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/validate_results.py",
+      "size_bytes": 1564,
+      "sha256": "6bad586eb122340aa82f678e28fa1e62b0747244ff0bf556e6274361db79d9b9",
+      "git_blob_sha": "20be3125eb97f16256b880d6979e3d8562310902"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/validate_scientific_domains.py",
+      "size_bytes": 4893,
+      "sha256": "cd30b74e6a68091407abbf66b9fd80a8371a07427dfbda3fa017a246e370c2a5",
+      "git_blob_sha": "6b26126110406911c44dd392abe93bb8a887a759"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/code/verify_physical_identities.py",
+      "size_bytes": 8967,
+      "sha256": "cadd58f809f7097ae096cce50890e41d52c59c5c6640a1d7e638d6b3921568ce",
+      "git_blob_sha": "d1cc3377ce4903381790aca55394113e995092c5"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/ANALYTIC_EXTENSION_RESULTS.json",
+      "size_bytes": 4243,
+      "sha256": "ed78b317bb36c76772ee0ed7dbcd04cd16f253d6f083f3bf6d92f6a93c91200e",
+      "git_blob_sha": "0bcf6446d399edd8c5c5372a559bf63244af7409"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/C9_OPERATOR_RECONSTRUCTION.json",
+      "size_bytes": 1395,
+      "sha256": "8a66fff2f99186e4877b44aef863f31902b2e1b731fb7aa5eb0e30d108340793",
+      "git_blob_sha": "e6b43413eac54c07cede0238856a292f0d4bd974"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/CONSISTENCY_CHECKS.json",
+      "size_bytes": 922,
+      "sha256": "db2229b7b48801d3930b18d611cb771133002585730383a2dfd7d07f3edd6c8a",
+      "git_blob_sha": "e882d870cf268cd8a6c352a4ea0796c1faae903b"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/EXACT_MOMENT_POLYNOMIAL_CERTIFICATE.json",
+      "size_bytes": 17233,
+      "sha256": "b76df0ddb85653a810b08a9a88d7c7dcdc88f921206fe71d60dac8c55a2aab47",
+      "git_blob_sha": "aacd672e7f646ca1d4e012804e509130b37464f9"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/OPERATOR_CERTIFICATE_VALIDATION.json",
+      "size_bytes": 193,
+      "sha256": "3298a4518165ea91d45ee106eefafd155c202b7e6a2bdb878d588b4703254a4e",
+      "git_blob_sha": "d4e86ef6f8be0e235fda9172b41a7a978fcb85f7"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/OPERATOR_SPECTRAL_CERTIFICATE.json",
+      "size_bytes": 9150,
+      "sha256": "05ab879550eb55f811ba0068caf239765a5ec3d4f7862812201aeeb6fe26270a",
+      "git_blob_sha": "3e98a2fa2cda1d39ef33de5f02a3bbb7f6dd3c40"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/PHYSICAL_IDENTITY_CHECKS.json",
+      "size_bytes": 6427,
+      "sha256": "3ca042c030d15aaef7b1a99337c9c9282ff4ef63c8298b61a11eea3804ccf62a",
+      "git_blob_sha": "c51786c55fe7fdaf4b6453c02b748ad918cc30b8"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/PORTAL_THERMAL_RESULTS.json",
+      "size_bytes": 10476,
+      "sha256": "5fb51e30faad59c681a6da0d726ec5f8a8900da99d1af05f3f7d76c2c30684b6",
+      "git_blob_sha": "afe278bf8755f0e13d5746251dc2b3ff97590862"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/PREDICTION_LEDGER.csv",
+      "size_bytes": 16442,
+      "sha256": "f06490058deae7886b2ceb9fb02632794021b9f9205d8cf7a4f13a9bb7e8d720",
+      "git_blob_sha": "53f2240af988df4cfc565ba5225882f12dcfb704"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/RESPONSE_AND_REHEATING_RESULTS.json",
+      "size_bytes": 1622,
+      "sha256": "d35d741d8c41f63826787593611256f2ea74886c7d4651366c7fb331359ead02",
+      "git_blob_sha": "8b0318c7cbe44aa8adc4ac7377029ee711072d53"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/environment.json",
+      "size_bytes": 194,
+      "sha256": "1eb71f4b34c6e76ff7dac69ad2e11750649f3b72ec4a33a10100d314dbcb5512",
+      "git_blob_sha": "ea9dcab98eff85c28b2b046112ba443259c51444"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/metric_growth_galaxy.json",
+      "size_bytes": 1184,
+      "sha256": "173c0708ac64bd71d0000a3e532f28b6940a1aac8c24dde62341938cfceb35ab",
+      "git_blob_sha": "7025eeeb72f9649d7ceedc7dee1fc34b97812c8a"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/particle_mesh_results.json",
+      "size_bytes": 3149,
+      "sha256": "0285824899576721af5cd72688c23f20499d7f5f28a577bdc280ad3a07c951fb",
+      "git_blob_sha": "e640d3da5e6d28592718de3c56d0d0c78be20916"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/particle_mesh_snapshots.npz",
+      "size_bytes": 914368,
+      "sha256": "66bff3ee9abef2432b3925c8d9e2698a49f3cbb79e4928745a855c2173f25410",
+      "git_blob_sha": "42bf49bf439ef348edbeda8221c33791c3265aa4"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/data/pm_convergence.json",
+      "size_bytes": 685,
+      "sha256": "18a024f749b9fbe958e3d2997a54463a9f6568b4c419ce2a8b412d1094fded28",
+      "git_blob_sha": "337a25ecaf92cc6e1cfe24a346a6617ebaec0d71"
+    },
+    {
+      "path": "DARK_SECTOR/03_Code_Data_Reproducibility/requirements.txt",
+      "size_bytes": 46,
+      "sha256": "815360a00e0e1d7a128cade3de11b66d3fe997cbd6e2c69f8081eb9bc8b88197",
+      "git_blob_sha": "471f776f67541bcaadd042782a1c0a438d0009f3"
+    },
+    {
+      "path": "DARK_SECTOR/04_Theoretical_Predictions/predictions.pdf",
+      "size_bytes": 234638,
+      "sha256": "7f286946adff6abfb19bc7e55cea8e3e6d822ec40798098650c50c8fff666e86",
+      "git_blob_sha": "90754fa0612116ce1ae76464669fdd4b5ac122fe"
+    },
+    {
+      "path": "DARK_SECTOR/04_Theoretical_Predictions/predictions.tex",
+      "size_bytes": 3718,
+      "sha256": "481dae15680bbc89607aa7507a0a4b4a316ba57371b71c35e0d9ffe1c2508c2e",
+      "git_blob_sha": "585eee578d67e807a20e6099e0d369ce2f577968"
+    },
+    {
+      "path": "DARK_SECTOR/04_Theoretical_Predictions/rows.tex",
+      "size_bytes": 16171,
+      "sha256": "68ac01ec75a8d01e2dbca2f60b8e8edffd2a1acee544fa122aa3f6b8cc74ee8c",
+      "git_blob_sha": "7355e51bdd767a24e81420cdb75d20822f1ab7cb"
+    },
+    {
+      "path": "DARK_SECTOR/SHA256SUMS.txt",
+      "size_bytes": 9771,
+      "sha256": "501eb551d84bb50fcc734a267276584927e3669d1d179664e014a4c2ad02a4af",
+      "git_blob_sha": "0337f08a8166a49fc14a975907791e9cafe15bb3"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/MATHEMATICAL_FOUNDATIONS.md",
+      "size_bytes": 19211,
+      "sha256": "d0391be2a520753637e19cee10b5d06e422988e42a664573702fbbd72d85a018",
+      "git_blob_sha": "cbc579da6fde8e63233646ef7fca906b768392de"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/README.md",
+      "size_bytes": 4809,
+      "sha256": "73817bb5aea5a2098b82b2b27ba9b8b871b71c9cc275d3903d16851476981b3b",
+      "git_blob_sha": "81f6a4752c38862e225c7b4e59dcd7449fb16c11"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/SCIENTIFIC_PROGRESS_REPORT_FR.md",
+      "size_bytes": 6730,
+      "sha256": "4b43fcf1ef81d52dc8f604e285b0889fdf36a83cec4fac9f644d7f134f7ee103",
+      "git_blob_sha": "f83966a2ca4a6bcbb08c7f31f163cfac5376e981"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/SHA256SUMS.txt",
+      "size_bytes": 5652,
+      "sha256": "3088e181ed4c147e02c16e735e41cd94d5d819718066827be2e9def248e336f3",
+      "git_blob_sha": "6282d56eb2e2164017b8dbffcb30d5b94c523d28"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/VALIDATION_REPORT.md",
+      "size_bytes": 8823,
+      "sha256": "55db3222e8d625ff4dbe5c6639945b871ed6ff6af12ca70d3dbfb6f0f678735e",
+      "git_blob_sha": "9ed43992b82e6c7f57219f6b9bf3b1c1f2fef841"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_A7_GROUND_CERTIFICATE.json",
+      "size_bytes": 10540,
+      "sha256": "85b330b3e1db1d2722ebfd172feffc3790f12a1e3c0f0fe3305be375997912e9",
+      "git_blob_sha": "4ff5fcc9d630c13f0cb5458b1aab6d7d8f265691"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_A7_KATO_GROUND_N12_DIAGNOSTIC.npz",
+      "size_bytes": 3350,
+      "sha256": "2c1114ff3fd015a1c4bc677f8f316642dc25734596192adece968ed3eee3e61c",
+      "git_blob_sha": "b7b0d6cb9e073ab97d7804e31692d1f82d42da69"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_A7_KATO_GROUND_N16_DIAGNOSTIC.npz",
+      "size_bytes": 4150,
+      "sha256": "01e7b8abcf4e133115e52465f8fa3b365f2ccb5aa1072a2fcacd0756e91c5ad3",
+      "git_blob_sha": "198d102a006a1af0d2061a6bc2a10215a90b7f15"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_A7_KATO_GROUND_N20_DIAGNOSTIC.npz",
+      "size_bytes": 7414,
+      "sha256": "f1aea6ba46f3e92267eb12bb1f2131726e84f54de1391ade0c177134f6bdfe83",
+      "git_blob_sha": "b7175478c936fcf8b1dce54403df1026f744849d"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_A7_KATO_GROUND_N8_DIAGNOSTIC.npz",
+      "size_bytes": 2235,
+      "sha256": "79a4622b6333617b7327204197a72a07cc89866054cea545aaa00b7eccda9978",
+      "git_blob_sha": "ea76fd25b8df40f4fc7c8acdbec9f2f6aa0df412"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_STATIC_GNS_AUDIT.json",
+      "size_bytes": 8708,
+      "sha256": "65191961704daae03aec91311ef42f6602ae0889cfe256135c5c0f57c59f6bca",
+      "git_blob_sha": "ef8e8f61d199e5996eaf9632e16263860db94d1a"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_STATIC_GNS_CN6_N12_Q-3.npz",
+      "size_bytes": 8360,
+      "sha256": "69c74aa53dd6c966d7049b456abf54f52e3fc7c5b9c0ebbe68dec3e78e0856ef",
+      "git_blob_sha": "140a0c33342f9793f13ce08c9f557c3b5e4db04d"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_STATIC_GNS_CN6_N12_Q-6.npz",
+      "size_bytes": 8345,
+      "sha256": "e480e35d022790e5e7d302a0ec3b0651dc69aff3f15a4e234fda1faf6a977025",
+      "git_blob_sha": "302aa2f6c9d3704071708c77bf7e9c6c28e9cf84"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_STATIC_GNS_CN6_N16_Q-3.npz",
+      "size_bytes": 8354,
+      "sha256": "d45679ab53d26e525dcf774333d0b2eeaa27e74b4e285b826ba6066de11bcc15",
+      "git_blob_sha": "caed79664544f70ac0283d36c3ad70376e5af3b4"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_STATIC_GNS_CN6_N16_Q-6.npz",
+      "size_bytes": 8344,
+      "sha256": "39a89833069c43d326277cd93d2f3ba8bd587a7e958e50a9eab0be0337c62db6",
+      "git_blob_sha": "f60b91ca6c53c8e403c5af4299025f0c320d1576"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_STATIC_GNS_CN6_N20_Q-3.npz",
+      "size_bytes": 8358,
+      "sha256": "3201cc2f7ceddef2afdf340f60c207755c3571e4b60eebf13ec3e51851fc642d",
+      "git_blob_sha": "1d22b7b36d0b7c7c4eaee77f8c48e29072b1e194"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_STATIC_GNS_CN6_N20_Q-6.npz",
+      "size_bytes": 8338,
+      "sha256": "0c8ff90ef6f04ac42f426a630024340cdb8fda636202fbb5e4ae053d983ebfb1",
+      "git_blob_sha": "b7b642a58d04211a881a1feef6748c891fbf48d5"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_STATIC_GNS_CN6_N8_Q-3.npz",
+      "size_bytes": 8372,
+      "sha256": "b2971be225fa88eed4eecc9ef40d5e0e01a30c54f214d58ca05e7910652410b7",
+      "git_blob_sha": "7388f914b380b741db4bb530f00c9b48baf93ef3"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/PRIMITIVE_STATIC_GNS_CN6_N8_Q-6.npz",
+      "size_bytes": 8355,
+      "sha256": "8fc0d41ab4aa6a0cbd4c35695a984c67a0a33c3d5159debec9fd38cd1205249b",
+      "git_blob_sha": "c4eb1a3fd09c015ed5ac0782d180a1d0fe18783a"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/evidence/QICT_LATTICE_ACTION_FREEZE_V3.canonical.json",
+      "size_bytes": 1781,
+      "sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+      "git_blob_sha": "83ce62b0f0de501a31ba700e267b2392d3395857"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/reproduce.py",
+      "size_bytes": 1234,
+      "sha256": "bf1ddf5b3578db97190562646021c2bda39e6f6865392352a1aa69aa160097c4",
+      "git_blob_sha": "0b73f1afaff7d51bdf08f5512068f57b3dfcfefb"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/requirements.txt",
+      "size_bytes": 30,
+      "sha256": "33e595f189c15b150218880058c990a2db542bb7afa7c5fe8d89829d5ce67e53",
+      "git_blob_sha": "c75a194aef8bd3dc2dfd341164c24a1fa967e0a1"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/CANONICAL_ACTION_EXECUTABILITY_AUDIT.json",
+      "size_bytes": 1631,
+      "sha256": "b9e5ded7860d960192dd214a551148f3875c5dd16015c25960841739964131cc",
+      "git_blob_sha": "e835e12b996c7e1acb4d5b08e0fd36a1821b2d90"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/CENTER_CHARACTER_SELECTION_RULE.json",
+      "size_bytes": 2078,
+      "sha256": "7c87a3d204063c7813f3c7ba81baae87b44cf051f3359e5a3e0b0f4c434a0d61",
+      "git_blob_sha": "8bd3991318bca7ad1cb81080fa28e6f02673fbb9"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/EXACT_ELECTRIC_ENDPOINT_OBSTRUCTION.json",
+      "size_bytes": 1204,
+      "sha256": "c5fa540117f5e092dc9c135cadaebf4c74346aefbe704376ae3cc3b3dc6fbc5b",
+      "git_blob_sha": "32947863d4e5f1ed0fa1a16810a7b9560e33c83f"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/FINITE_EVIDENCE_VERIFICATION.json",
+      "size_bytes": 5997,
+      "sha256": "ac31e4e42a501a146c68240fd2778488bb8fb09693e79330f48121a13769d028",
+      "git_blob_sha": "0cdcea0e1b62efc8e3ebfa8fb37a6cc27d52d792"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/INDEPENDENT_MATHEMATICAL_CROSSCHECK.json",
+      "size_bytes": 248,
+      "sha256": "772c68a408b121d5792c820cc4fb2e109bc1bd4d4bd024a4c759874935b31cd6",
+      "git_blob_sha": "c98fa47dcad9b7840ec5b677ebc5c27e730fe549"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/MATHEMATICAL_CHECKS.json",
+      "size_bytes": 5991,
+      "sha256": "7558b8c35bb36d78f9a5f2dac08cb6f2027c1afdb995f3bbd0ee4e02f08d4f41",
+      "git_blob_sha": "3498dc7cec170c68aaeda935dd9c478246269c7e"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/PHYSICAL_CLOSURE_STATUS.json",
+      "size_bytes": 6142,
+      "sha256": "bd56ade42337c9ed3a71560f52ff2db69846820be20c340e5e219397cb09df22",
+      "git_blob_sha": "a68fd474deea54843e2c216566c1dac358d34e52"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/PRIMITIVE_FLOQUET_SHIFT_NO_GO.json",
+      "size_bytes": 955,
+      "sha256": "fa72a6d7b1944c3cfe7fc197eda826558767b5fc3d5f70dbdcd47f8867aaca35",
+      "git_blob_sha": "6a73424516a4e4f56f842e57944b1396c8eff127"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/PRIMITIVE_INFINITE_VOLUME_RATIONAL_CERTIFICATE.json",
+      "size_bytes": 7908,
+      "sha256": "a5203dc01397990c44f8c36f23417b07c59485e57a48153eea320f69e770b368",
+      "git_blob_sha": "f8806e3a93e4457d1477a2cc84ca71a0ec4f2c19"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/PRIMITIVE_LOCAL_RESOLVENT_POLE_CERTIFICATE.json",
+      "size_bytes": 3836,
+      "sha256": "9ddc91593178991f2b82e67f83125ec437f8c485d65593adf7fa1369bf34cc57",
+      "git_blob_sha": "ce53ab2908188839ce638f3532922ffb7fd4d0b0"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/PRIMITIVE_SPLIT_STEP_STATIONARITY_CHECK.json",
+      "size_bytes": 2253,
+      "sha256": "2da467016c27d21510d5811696bbc06ff3e9d388c5aeec5f0a7f3f4bba32b1a1",
+      "git_blob_sha": "bf20b805c49296f16a1a037d64f1de7ecf1af9c8"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/QUANTITATIVE_SPECTRAL_STABILITY.json",
+      "size_bytes": 2284,
+      "sha256": "ea581c84dbd19b5d4d716a62577faca37ab14ad1feaef215b45aba1427749cbf",
+      "git_blob_sha": "f9f923f2a702ff4df1c47eea78b3389810a3b919"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/results/RESULTS_INDEX.json",
+      "size_bytes": 1379,
+      "sha256": "22a9214144d775437fa974a7dadcefde8502f9c7db908e4a3368b9ce6966fc0f",
+      "git_blob_sha": "3b2c8b6c1211760910191e4fc515312763022bea"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/central_character_rule.py",
+      "size_bytes": 3137,
+      "sha256": "9f50a6c2596828720ab093eb985819ee18cd691a2351f80dbabac9429e06a541",
+      "git_blob_sha": "c03a69b5caebfe03900b14785d1d8fb84e89200b"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/contract_inspection.py",
+      "size_bytes": 2164,
+      "sha256": "9869886fe2f244d8b72aa8bb3eb35c556f4d328ce2ea6eb3e190f06c9facd489",
+      "git_blob_sha": "93c11ae7fccd107b5b4a7aef3f458be3c84dc09d"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/electric_phase_obstruction.py",
+      "size_bytes": 2057,
+      "sha256": "8262565f368533912e26a6e1572c770d08a97e67f8633cade22c25bc347a72a3",
+      "git_blob_sha": "c4ba2805de55eb9e24fe2e29ceb4e2a9d0706c12"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/generate_status.py",
+      "size_bytes": 4686,
+      "sha256": "7cdbe983d81a2de4f335ff84356de4ec89d3b3c4aea4ed45b4018b95f0c6b146",
+      "git_blob_sha": "7dd6ea30cfbe125093711768cfdf943a826487a3"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/hpc_gate.py",
+      "size_bytes": 2330,
+      "sha256": "e100899695ac360983359e5616b79c61e721d620a387a27cb71015679e381096",
+      "git_blob_sha": "753fcdb0877c08bba9134748065390956abe8900"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/independent_analytical_verification.py",
+      "size_bytes": 1303,
+      "sha256": "b143022dc0538df1a1c9eb8cd019530350a21533eb091998b663e4f3fb0c356d",
+      "git_blob_sha": "be03236d2a85bd12d1635443e863a72aa4200163"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/mathematical_checks.py",
+      "size_bytes": 11046,
+      "sha256": "2e28282f08066fdceca0e4a55c0ec989689faf88190017dab0d5eead632950ab",
+      "git_blob_sha": "99f105e73e5af8592327096b6aa9dfa22ace986d"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/primitive_floquet_shift_no_go.py",
+      "size_bytes": 2203,
+      "sha256": "ab04e78972e3001c55322ebac2e557fd9a5438dff77048e565f54bb8a310b624",
+      "git_blob_sha": "b338214783ee8b72a7d4e9c8797be0f369513784"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/primitive_infinite_volume_certificate.py",
+      "size_bytes": 8018,
+      "sha256": "07636099e6b996537615154d89c563cd7129dfb474a52e255e4b4abd5f8d4563",
+      "git_blob_sha": "dac4937e82fb84db40e32d49f37418f5e9f3d995"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/primitive_pole_triple_method.py",
+      "size_bytes": 5615,
+      "sha256": "3724c3bbfb473f1f970e99a2837199cd0ce602293af4b80dad9fea63bc995850",
+      "git_blob_sha": "76c7d06bacaa5c118d16c87ad904382a3b3fe1d9"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/primitive_splitstep_diagnostic.py",
+      "size_bytes": 3864,
+      "sha256": "150ff604c6a0b5ec345ba0401f9134b4d468a488313246d7b4d048ac17413633",
+      "git_blob_sha": "5b71afa8bb3510e312a37db616bfed59a804fee8"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/quantitative_stability.py",
+      "size_bytes": 4708,
+      "sha256": "78d6ba72e9cbd88e799be1d28f034c037543a4bc6bc93e1185293d0ac9495828",
+      "git_blob_sha": "9919f2ad1ea0f1a2930810cde76ae618a4a054a8"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/src/verify_finite_evidence.py",
+      "size_bytes": 5101,
+      "sha256": "968ff125c26dbdb4cb6fb9d64e326d1b085c48c20e1e8ef23b33e67aea7a93a5",
+      "git_blob_sha": "7743eebde1c45975a6a30129e642eb490672b87e"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/tests/test_contract_inspection.py",
+      "size_bytes": 673,
+      "sha256": "31ae9e9198d02fa62de8c834af6f13aefc3745065365567c26ad281e165ccfd2",
+      "git_blob_sha": "72ddb38871c34fbf6951d92b70c773a011f3aa88"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/tests/test_electric_phase_obstruction.py",
+      "size_bytes": 796,
+      "sha256": "1f28752337bcc58a3cb2c11cc658d5a38d60d22316b78532064c71290eae9e7c",
+      "git_blob_sha": "3c1e633ee87da989b4df85a5cec3b4149c914f97"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/tests/test_hpc_gate.py",
+      "size_bytes": 903,
+      "sha256": "c354a49b5fd03bfed94e1f29eb4f3b45ce3c15520c45774d2e400e4eaa9e0d96",
+      "git_blob_sha": "13108a2d5759579f4bba571cae3a55f7cfe4a1da"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/tests/test_mathematical_checks.py",
+      "size_bytes": 4371,
+      "sha256": "7b7c8f434478f7120bad45de6275e793207e0c3364634c25b6725cbf656d82f9",
+      "git_blob_sha": "7792180b2c7c6a139a6283a594c1634adb198e9a"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/tests/test_primitive_infinite_volume.py",
+      "size_bytes": 8551,
+      "sha256": "429cf918f3e227d014359b530113a324e9eeec76b7398275ab7e9315682b38af",
+      "git_blob_sha": "209357f64e2dcc51fa02603c5a459e59be3d4d04"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/tests/test_quantitative_stability.py",
+      "size_bytes": 1536,
+      "sha256": "a6560efb6bc3088e920bebc51b54ddc72a74bcd866c2287ef260cba47e29777b",
+      "git_blob_sha": "8ded54f55499d9bd3101a7399e243bcaff98e9e1"
+    },
+    {
+      "path": "PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19/tests/test_strict_certificates.py",
+      "size_bytes": 6835,
+      "sha256": "4f2de301eddf8877e77ef06719b898653d3bcef489533f8666e3bf3b27e25e32",
+      "git_blob_sha": "b9a2951f529194cd7d45ede9b3f4db2e689f744e"
+    }
+  ]
+}

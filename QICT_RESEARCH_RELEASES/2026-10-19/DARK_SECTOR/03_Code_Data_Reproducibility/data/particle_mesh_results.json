@@ -1,0 +1,104 @@
+{
+  "assumptions": {
+    "Planck_background": 0.315,
+    "N": 32,
+    "ngrid": 32,
+    "L_Mpc_over_h": 100.0,
+    "initial_three_wave_amplitude_at_a1": 1.1,
+    "nsteps": 300,
+    "initial_scale_factor": 0.05,
+    "not_gaussian": true
+  },
+  "snapshots": {
+    "a0.05": {
+      "scale_factor": 0.05,
+      "mean_delta": 0.0,
+      "rms_delta": 0.08546598136407613,
+      "p99_delta": 0.19764273128212917,
+      "peak_delta": 0.2240060801219299,
+      "min_delta": -0.19485919662617246,
+      "total_particle_mass_units": 32768.0,
+      "nparticles": 32768
+    },
+    "a0.24": {
+      "scale_factor": 0.24463348489078893,
+      "mean_delta": -6.938893903907228e-18,
+      "rms_delta": 0.4874162066387455,
+      "p99_delta": 1.7944054160388225,
+      "peak_delta": 3.8137699895443333,
+      "min_delta": -0.7053294656206472,
+      "total_particle_mass_units": 32768.0,
+      "nparticles": 32768
+    },
+    "a0.25": {
+      "scale_factor": 0.25460267872922376,
+      "mean_delta": 6.938893903907228e-18,
+      "rms_delta": 0.5115234843533623,
+      "p99_delta": 1.8918833045473815,
+      "peak_delta": 3.9130288400751905,
+      "min_delta": -0.7224751971487993,
+      "total_particle_mass_units": 32768.0,
+      "nparticles": 32768
+    },
+    "a0.26": {
+      "scale_factor": 0.25973860395343273,
+      "mean_delta": 0.0,
+      "rms_delta": 0.5232418910228166,
+      "p99_delta": 1.9740048159547012,
+      "peak_delta": 3.964876434051095,
+      "min_delta": -0.7310160771058629,
+      "total_particle_mass_units": 32768.0,
+      "nparticles": 32768
+    },
+    "a0.49": {
+      "scale_factor": 0.49214102301937385,
+      "mean_delta": 2.7755575615628914e-17,
+      "rms_delta": 2.5628743618150978,
+      "p99_delta": 4.720794360753835,
+      "peak_delta": 325.86904039031975,
+      "min_delta": -1.0,
+      "total_particle_mass_units": 32768.0,
+      "nparticles": 32768
+    },
+    "a0.50": {
+      "scale_factor": 0.5020686463523606,
+      "mean_delta": -6.938893903907228e-18,
+      "rms_delta": 3.1435510954900945,
+      "p99_delta": 4.928434035518799,
+      "peak_delta": 454.4309951989213,
+      "min_delta": -1.0,
+      "total_particle_mass_units": 32768.0,
+      "nparticles": 32768
+    },
+    "a0.51": {
+      "scale_factor": 0.5071073061004074,
+      "mean_delta": 6.938893903907228e-17,
+      "rms_delta": 3.5390001040001056,
+      "p99_delta": 4.804930151709091,
+      "peak_delta": 540.2717137281313,
+      "min_delta": -1.0,
+      "total_particle_mass_units": 32768.0,
+      "nparticles": 32768
+    },
+    "a0.99": {
+      "scale_factor": 0.9900639180555424,
+      "mean_delta": -5.551115123125783e-17,
+      "rms_delta": 10.267939659143167,
+      "p99_delta": 7.060513698853815,
+      "peak_delta": 1442.2815496496255,
+      "min_delta": -1.0,
+      "total_particle_mass_units": 32768.0,
+      "nparticles": 32768
+    },
+    "a1.00": {
+      "scale_factor": 1.0,
+      "mean_delta": 1.6653345369377348e-16,
+      "rms_delta": 10.46902427613877,
+      "p99_delta": 5.419592068708565,
+      "peak_delta": 1484.2996508011784,
+      "min_delta": -1.0,
+      "total_particle_mass_units": 32768.00000000001,
+      "nparticles": 32768
+    }
+  }
+}

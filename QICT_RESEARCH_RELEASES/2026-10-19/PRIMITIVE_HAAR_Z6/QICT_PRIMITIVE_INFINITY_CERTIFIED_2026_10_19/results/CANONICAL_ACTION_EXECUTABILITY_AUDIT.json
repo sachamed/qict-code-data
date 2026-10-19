@@ -1,0 +1,47 @@
+{
+  "status": "BLOCKED_MISSING_INPUT",
+  "verified_action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "action_source_sha_verified": true,
+  "derived_from_action_json_keys": [
+    "action_type",
+    "cell_collision",
+    "electric_generator",
+    "factor_order",
+    "fermion_discretization",
+    "freeze_date",
+    "gauge_group",
+    "nonidentification",
+    "phi_star",
+    "plaquette_generator",
+    "schema_version",
+    "small_lattice_pilot",
+    "status",
+    "u_micro_expression"
+  ],
+  "contract": {
+    "ordered_factor_names": [
+      "Gamma(S_z)",
+      "Gamma(S_y)",
+      "Gamma(S_x)",
+      "U_cell",
+      "exp(-i phi_* K_E)",
+      "exp(-i phi_* K_B)",
+      "U_int^rf"
+    ],
+    "U1_SU2_SU3_generator_formulae": true,
+    "microscopic_route_first_full_sparse_matrix": false,
+    "route_labels_and_holonomy_maps": false,
+    "common_full_gauge_matter_Hilbert_basis": false,
+    "interaction_kernel_apply_U": false,
+    "interaction_kernel_apply_U_dagger": false,
+    "four_interacting_lambda1_state_densities": false,
+    "C10_Kraus_CP_maps": false,
+    "six_chiral_sources_gauss_CAR_embedding": false,
+    "physical_dark_source_and_parity": false,
+    "independent_tau_star_SI_calibration": false
+  },
+  "gauge_group_header": "U(1)_Y x SU(2)_L x SU(3)_c modulo the frozen faithful central kernel",
+  "required_magnetic_gate_domain": "U(1) x SU(2) x SU(3) product cover",
+  "quotient_link_action_currently_defined": false,
+  "note": "False means action JSON does not provide that executable numeric object; no claim that it can never be derived from additional complete theory."
+}

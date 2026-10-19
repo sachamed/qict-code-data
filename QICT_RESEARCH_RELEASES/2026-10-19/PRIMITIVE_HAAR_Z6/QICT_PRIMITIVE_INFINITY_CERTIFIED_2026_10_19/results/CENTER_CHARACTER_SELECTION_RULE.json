@@ -1,0 +1,77 @@
+{
+  "cases": [
+    {
+      "Y_integer": 1,
+      "central_residue_mod6": 1,
+      "descends_to_quotient": false,
+      "name": "U1_fundamental",
+      "triality_SU3": 0,
+      "twice_spin_SU2": 0
+    },
+    {
+      "Y_integer": 0,
+      "central_residue_mod6": 3,
+      "descends_to_quotient": false,
+      "name": "SU2_fundamental",
+      "triality_SU3": 0,
+      "twice_spin_SU2": 1
+    },
+    {
+      "Y_integer": 0,
+      "central_residue_mod6": 2,
+      "descends_to_quotient": false,
+      "name": "SU3_fundamental",
+      "triality_SU3": 1,
+      "twice_spin_SU2": 0
+    },
+    {
+      "Y_integer": 1,
+      "central_residue_mod6": 0,
+      "descends_to_quotient": true,
+      "name": "mixed_Y1_doublet_triplet",
+      "triality_SU3": 1,
+      "twice_spin_SU2": 1
+    },
+    {
+      "Y_integer": 6,
+      "central_residue_mod6": 0,
+      "descends_to_quotient": true,
+      "name": "U1_sixth_power",
+      "triality_SU3": 0,
+      "twice_spin_SU2": 0
+    },
+    {
+      "Y_integer": 0,
+      "central_residue_mod6": 0,
+      "descends_to_quotient": true,
+      "name": "SU2_adjoint",
+      "triality_SU3": 0,
+      "twice_spin_SU2": 2
+    },
+    {
+      "Y_integer": 0,
+      "central_residue_mod6": 0,
+      "descends_to_quotient": true,
+      "name": "SU3_adjoint",
+      "triality_SU3": 0,
+      "twice_spin_SU2": 0
+    },
+    {
+      "Y_integer": -5,
+      "central_residue_mod6": 0,
+      "descends_to_quotient": true,
+      "name": "mixed_Yminus5_doublet_triplet",
+      "triality_SU3": 1,
+      "twice_spin_SU2": 1
+    }
+  ],
+  "classification": "EXACT_Z6_CHARACTER_DESCENT_THEOREM_WITH_NUMERICAL_WITNESS",
+  "descent_iff": "(Y+3*(2j)+2*t) mod 6 = 0",
+  "frozen_action_modified": false,
+  "full_quotient_gauge_dynamics_constructed": false,
+  "kernel_generator": "(exp(i pi/3), -I2, exp(2 pi i/3) I3)",
+  "mixed_character_definition": "exp(i theta) Tr_2(u) Tr_3(v) / 6",
+  "mixed_character_is_action_original_K_B": false,
+  "representation_center_phase": "exp(i pi*(Y + 3*(2j) + 2*t)/3)",
+  "six_central_lifts_max_character_error_float64": 2.7290944067463696e-15
+}

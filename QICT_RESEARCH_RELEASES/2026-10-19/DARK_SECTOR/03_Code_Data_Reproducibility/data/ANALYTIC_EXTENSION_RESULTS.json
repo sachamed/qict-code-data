@@ -1,0 +1,144 @@
+{
+  "spectral": {
+    "flat_reconstruction": {
+      "example_dimension": 7,
+      "source_dimension": 2,
+      "rank_T4": 7,
+      "rank_T5": 7,
+      "max_moment_error_orders_0_to_21": 2.4081764954563692e-14,
+      "unitarity_error": 1.2505620224092244e-14
+    },
+    "near_invariant_source": {
+      "epsilon": 0.005082225950499191,
+      "largest_error_to_bound_ratio": 0.9986529255725163
+    },
+    "gapped_filter_example": {
+      "gap_radians": 0.55,
+      "degree": 12,
+      "chebyshev_remainder_factor": 0.004986608415273495,
+      "fejer_remainder_factor": 0.080246015757293,
+      "quadratic_form_error": 7.139825203269532e-17
+    }
+  },
+  "energy_and_vertices": {
+    "energy_branch_aliasing_unitary_error": 2.0014830212433607e-16,
+    "fixed_two_point_variable_four_point_example": [
+      {
+        "coupling": 0.0,
+        "one_particle_energy": 0.8,
+        "two_particle_energy": 1.6,
+        "connected_four_point_abs": 2.220446049250313e-16
+      },
+      {
+        "coupling": 0.6,
+        "one_particle_energy": 0.8,
+        "two_particle_energy": 2.2,
+        "connected_four_point_abs": 0.8338395993843983
+      },
+      {
+        "coupling": 1.4,
+        "one_particle_energy": 0.8,
+        "two_particle_energy": 3.0,
+        "connected_four_point_abs": 1.8825035526846314
+      }
+    ]
+  },
+  "recorded_metric_response": {
+    "taylor_coefficients_a0_to_a3": [
+      0.14949336107465527,
+      0.353606477627025,
+      1.2964281533159456,
+      5.532355252365083
+    ],
+    "guaranteed_analytic_disk_radius_s": 0.22090000000000007,
+    "positive_real_axis_enclosures": [
+      {
+        "s": 0.01,
+        "response": 0.14608164272432575,
+        "lower_Jensen": 0.14603900446681375,
+        "upper_chord": 0.146106792590733
+      },
+      {
+        "s": 0.1,
+        "response": 0.1232649333762581,
+        "lower_Jensen": 0.1208968371633216,
+        "upper_chord": 0.1248923075322938
+      },
+      {
+        "s": 1.0,
+        "response": 0.05897905426808994,
+        "lower_Jensen": 0.04442113331435384,
+        "upper_chord": 0.07933950015534341
+      },
+      {
+        "s": 10.0,
+        "response": 0.013036053860112801,
+        "lower_Jensen": 0.006063739648805827,
+        "upper_chord": 0.03525389512804391
+      }
+    ],
+    "normalized_spectral_weight_sum": 1.0
+  },
+  "thermal": {
+    "freezeout_source_tail": {
+      "x_endpoint": 30.0,
+      "Y_endpoint": 4.876959327746534e-12,
+      "Y_infinity_lower": 1.2195732824018317e-12,
+      "Y_infinity_upper": 1.2195737783406341e-12,
+      "independent_continuation": 1.2195737783398881e-12,
+      "relative_interval_width": 4.066494483367933e-07,
+      "inverse_yield_correction_bound": 333435.7097461422,
+      "quadrature_error_estimate": 4.6267189255044805e-05
+    },
+    "finite_reheating_sensitivity": [
+      {
+        "x_reheat": 0.1,
+        "dlogY_dlogT_reheat": 0.00020911973436655494,
+        "finite_difference": 0.0002091197215392526
+      },
+      {
+        "x_reheat": 1.0,
+        "dlogY_dlogT_reheat": 0.1345140615894051,
+        "finite_difference": 0.1345140616115792
+      },
+      {
+        "x_reheat": 10.0,
+        "dlogY_dlogT_reheat": 7.78357323553453,
+        "finite_difference": 7.783573235697893
+      }
+    ]
+  },
+  "cosmological_inversions": {
+    "growth_lensing_inversion": [
+      {
+        "mu_input": 1.0,
+        "eta_input": 1.0,
+        "mu_recovered": 0.999999999931831,
+        "eta_recovered": 1.000000000136338
+      },
+      {
+        "mu_input": 1.05,
+        "eta_input": 0.9,
+        "mu_recovered": 1.0499999999299408,
+        "eta_recovered": 0.9000000001267738
+      }
+    ],
+    "gas_mass_conservation": {
+      "cumulative_wind_Msun": 9103138571.84315,
+      "cumulative_inflow_Msun": 23449138744.68594,
+      "mass_balance_residual_Msun": 3.814697265625e-06
+    }
+  },
+  "transfer_covariance": {
+    "transfer_covariance_min_eigenvalue": 0.0004156373462074587,
+    "negative_cross_spectrum_example": -0.02249934119891213,
+    "finite_filter_nullspace_example": [
+      -1.0,
+      3.0,
+      -3.0,
+      1.0
+    ]
+  },
+  "all_checks_pass": true,
+  "scope": "Analytic propositions and independent numerical examples in their stated domains; physical operator inputs retain their explicit provenance."
+}

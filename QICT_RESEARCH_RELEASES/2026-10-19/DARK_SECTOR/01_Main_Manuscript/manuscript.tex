@@ -1,0 +1,76 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage{amsmath,amssymb,amsthm,bm,mathtools}
+\usepackage{graphicx,booktabs,tabularx,longtable,array}
+\usepackage{hyperref,fancyhdr,xcolor}
+\usepackage{caption}
+\setlength{\emergencystretch}{4em}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=blue!50!black,urlcolor=blue!50!black,pdftitle={Spectral tests of dark matter and cosmic structure in QICT}}
+\pagestyle{fancy}\fancyhf{}\lhead{QICT spectral and cosmological tests}\rhead{Mathematical and numerical analysis}\cfoot{\thepage}
+\setlength{\parskip}{4pt}\setlength{\parindent}{13pt}
+\numberwithin{equation}{section}
+\newtheorem{proposition}{Proposition}
+\DeclareMathOperator{\sech}{sech}
+\newcommand{\mc}{\mathrm{c}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Gev}{\mathrm{GeV}}
+\newcommand{\Mp}{\mathrm{Mpc}}
+\newcommand{\msun}{M_\odot}
+\newcommand{\Om}{\Omega}
+\newcommand{\sigv}{\langle\sigma v\rangle}
+\newcommand{\cmb}{\mathrm{CMB}}
+\title{\bfseries Spectral Tests of Dark Matter and Cosmic Structure in Quantum Information Copy Time:\\[5pt]
+\large Operator Identifiability, Metric Response, and Reproducible Cosmological Calculations}
+\author{Sacha Mohamed\\\small Casablanca, Morocco}
+\date{19 October 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+Source correlations resolve the part of microscopic dynamics accessible to a physical probe. We determine this information for finite unitary models in quantum information copy time (QICT) and derive its consequences for spectral and cosmological calculations. Positive Toeplitz forms give optimal atomic-weight bounds; an exact flat-rank condition reconstructs the complete cyclic dynamics, and a certified gap yields exponential convergence. For the thirteen recorded C9 moments, exact rational arithmetic bounds the zero-phase weight by $0.001956273015$ at the fourth regulator. The accompanying operators support a stronger conclusion: their explicitly defined polar-unitary model has exactly zero weight at phase zero at all four regulators. An outward-rounded certificate checks every relevant spectral combination, including more than 59 million at the largest cutoff, while independent reconstruction recovers the recorded moments within $2.68\times10^{-14}$. Energy branches, interaction vertices and metric contacts are characterized through their distinct operator data. Positive finite Lehmann weights give controlled analytic response expansions. Thermal comparison bounds retain residual equilibrium production, and entropy conservation fixes the decay yield with variable degrees of freedom. Under conserved quasistatic matter dynamics, growth and lensing jointly determine the scalar response independently of density-amplitude normalization. The supplement proves quantitative pole-persistence bounds, a source-visibility certificate and source-functional identities. The cosmological calculations evaluate explicitly declared reference models; determining a QICT dark-particle mass and its abundance requires the physical odd-sector operator and cosmological state.
+\end{abstract}
+\noindent\textbf{Keywords:} matrix moment problem; dark matter; thermal production; metric response; cosmic structure; gravitational lensing.
+\section{Introduction}
+The dark sector is observed through gravity, yet its microscopic interpretation rests on several kinds of information. A source correlation function resolves the states that the source can excite. A particle mass assigns a physical energy to a spectral branch, and its production rate depends on interactions among those states. Cosmological observations combine this dynamics with the expansion history and the primordial state. Establishing the relation between these quantities is central to a quantitative microscopic theory.
+
+Quantum information copy time (QICT) expresses observables through receiver algebras, relative unitary transfer operators and selected-state response functions \cite{QICT}. This formulation places source identifiability at the centre of the dark-sector problem. Two realizations can share the same recorded moments while differing outside the cyclic source space. Within that space, positivity, rank and spectral separation carry precise and complementary information. We develop these distinctions through explicit constructions and proofs.
+
+The spectral analysis distinguishes truncated observations from a specified operator model. Matrix-valued measures on the unit circle and their Toeplitz Gram forms determine the largest atomic weight compatible with a finite sequence. An exact flat extension identifies the complete finite cyclic dynamics, and a small source-leakage defect controls the error in approximating higher moments by powers of the first. A Chebyshev construction converts spectral separation into exponential convergence. These results give precise statements about what each additional assumption determines.
+
+The supplied C9 operators permit a direct test of this distinction. We reconstruct the thirteen recorded moments from the primitive state and joint neutral dephasing, retaining coherences within degenerate eigenspaces. We then define exact unitary representatives of the stored matrices and certify their relative spectra by outward-rounded residual bounds. Every relevant phase is separated from zero at each of the four cutoffs. This proves that the finite model assigns exactly zero weight there, while the truncated moments alone admit positive upper weights. The calculation establishes a complete finite result and supplies an explicit perturbation budget; its continuum interpretation follows the separately stated uniform-gap and common-source hypotheses.
+
+The metric and thermal calculations carry the same attention to identifiable quantities. Positive Lehmann weights determine analytic response enclosures, while the second derivative of the source family supplies its independent contact contribution. Explicit operator families establish the roles of the energy branch, multiparticle interaction and momentum dependence. For particle production, comparison inequalities bound the residual equilibrium tail, and entropy conservation determines the decay yield for varying thermal degrees of freedom. A complete tree-level two-body scalar-portal calculation and a separate equilibrated-parent model provide quantitative examples.
+
+At cosmological scales, growth and lensing probe different combinations of the scalar metric potentials. Their joint inversion isolates the effective gravitational coupling and slip from the overall density-amplitude normalization under the specified background and conserved quasistatic matter assumptions. The same reference background supports calculations of collapse, correlations, angular lensing and acoustic geometry; a periodic particle--mesh experiment and a solvable gas reservoir treat specified nonlinear and baryonic dynamics. Positive transfer covariances and an explicit primordial equivalence class characterize the information in the CMB transfer functionals. Throughout the paper, each result is attached to the operator data, physical assumptions and external normalization that determine it. Supplementary Sections S1--S4 establish quantitative pole-persistence conditions, certify source visibility from a positive residue enclosure, derive interaction vertices from connected source functions, and express cosmological observables in terms of a common physical state and metric. A standalone register collects the results, their domains and the tests performed.
+\input{sections/01_spectral}
+\input{sections/01b_operator_spectra}
+\input{sections/02_metric}
+\input{sections/03_thermal}
+\input{sections/04_structure}
+\input{sections/05_lensing}
+\input{sections/06_cmb}
+\input{sections/07_inference}
+\section{Conclusions}
+Source moments identify a well-defined part of unitary dynamics. The exact boundary is the reducing cyclic source space: an exact flat Gram rank reconstructs it, a near-invariant first moment gives a quantitative approximation, and positive moment forms bound its spectral weight. The optimized atomic-weight hierarchy is sharp for the truncated problem. Under a certified angular gap, a degree-$N-1$ Chebyshev filter gives an exponential enclosure and controls the interchange of regulator and moment limits.
+
+The C9 calculation makes the additional information in the operators explicit. Exact rational evaluation gives a zero-phase upper weight of $0.001956273015$ from thirteen R4 moments. Direct reconstruction recovers those moments from the joint stationary prescription. A separate outward-rounded spectral certificate proves exactly zero weight at that phase for the polar-unitary finite model at every supplied cutoff. It covers the complete relevant spectra and holds for every stationary state, with a quantified operator perturbation margin. The finite operator conclusion, the truncated-data extremum and the continuum convergence theorem thus have individually specified hypotheses and reproducible tests.
+
+The response analysis separates quantities that enter different physical questions. Energy branches assign physical energies to transfer phases; multiparticle dynamics determine connected interactions; source-contact derivatives contribute to metric curvature. Their independence is established by explicit operator families. Positive finite Lehmann weights provide a convergent low-frequency expansion, alternating remainder bounds and global real-axis enclosures. The gravitational matching identities then relate physically normalized continuum coefficients to $G$, $\Lambda$ and the clock-independent ratio $\epsilon_0/\gamma_R^2$.
+
+The thermal and cosmological results are equally explicit about their domains. A positive-source comparison bounds the late abundance, entropy conservation gives the decay yield with variable degrees of freedom, and differentiation fixes its reheating sensitivity. Growth and lensing recover the scalar response under conserved quasistatic matter dynamics. The gas solution obeys an exact baryon balance, while the CMB transfer measure gives positive angular covariances and a constructive characterization of finite primordial information. All numerical examples are reproduced from their stated inputs. Together, the proofs and calculations establish testable relations between spectral information, interactions, gravitational response and cosmological observables.
+\appendix
+\section{Implementation and numerical conventions}
+
+The accompanying \texttt{reproduce.py} runs all declared calculations. The program \texttt{compute\_\allowbreak{}cosmology.py} uses NumPy and SciPy quadrature/ODE integration and writes a structured \texttt{results.json}. The scalar calculation assumes tree-level Higgs exchange and a fixed scalar nucleon form factor. Parent-decay freeze-in uses Maxwell--Boltzmann equilibrium, radiation domination and constant relativistic degrees of freedom; the specified decay produces one dark daughter. The reference treats nonbaryonic matter as pressureless and uses massless-neutrino radiation; these assumptions define the stated Planck-like reference background. The background uses $h=0.674$, $\Om_m=0.315$, $\Om_bh^2=0.02237$, $\sigma_8=0.811$, $n_s=0.965$, $N_{\rm eff}=3.046$, and $z_*=1089.92$ as reference inputs. The thermal benchmarks use $1.66$ as the rounded representative of $\sqrt{4\pi^3/45}$ in $H=1.66\sqrt{g_{*\rho}}T^2/M_{\rm Pl}$. Their reported numerical precision refers to that declared convention. Numerical ODE tolerances and $k$ integration ranges are in source. Figures are regenerated when the script is executed. The additional programs evaluate the thermally averaged tree-level portal, exact recorded-data moment certificates, a gas-regulator solution, a phenomenological scalar-response test and a finite three-dimensional periodic particle--mesh experiment. Their assumptions and outputs are specified in the code and accompanying data.
+
+\section{Data and computational reproducibility}
+
+The source package contains the thirteen stationary complex $6\times6$ C9 moments for each of four finite regulators, their underlying finite transfer matrices and primitive vectors, the distinct nine-state metric-response test array, and all programs and machine-readable outputs. The finite-moment theorem is evaluated by forming the $78\times78$ Hermitian Toeplitz matrix $T_{13}$ from $C_0,\ldots,C_{12}$, then solving $T_{13}X=A_{13}(0)$ without explicit matrix inversion. The spectral bound is obtained as the eigenvalues of $(A_{13}^\dagger X)^{-1}$. The scripts record the smallest eigenvalue of $T_{13}$, its condition number and a relative linear-solve residual.
+
+The independent operator programs reconstruct the recorded stationary moments, certify the polar-unitary spectral disks, and check every tensor-product centre using outward-rounded binary64 elementary operations. Their arithmetic assumptions are IEEE-754 round-to-nearest operations with subnormal support and correctly implemented adjacent-value rounding. Exact-rational matrix-product checks and known-spectrum controls validate the interval implementation. The JSON certificate records all residual bounds, candidate counts and positive separation margins. Complete source-file hashes appear in the accompanying integrity manifest. The cosmological computations use the reference parameters and domains specified in their sections.
+
+\input{references}
+
+\end{document}

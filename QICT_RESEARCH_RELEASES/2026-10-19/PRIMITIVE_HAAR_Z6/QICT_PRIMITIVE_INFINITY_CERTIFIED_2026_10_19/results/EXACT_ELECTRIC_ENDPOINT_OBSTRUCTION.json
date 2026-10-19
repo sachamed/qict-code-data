@@ -1,0 +1,47 @@
+{
+  "classification": "EXACT_ELECTRIC_FLOQUET_SEED_NOT_FULL_QICT",
+  "periodicity_h_expansion_exact": "h(n+126 eta)-h(n)=126(4 eta n+252 eta^2+eta)",
+  "periodicity_h_formula_regression_samples_passed": true,
+  "phase_one_flux_condition_exact": "r is divisible by 21",
+  "rank_formula_R_63m": "6m+1",
+  "trace_distance_formula": "(6m)/(12m+1) -> 1/2",
+  "not_trace_norm_cauchy": true,
+  "data": [
+    {
+      "R": 63,
+      "rank_R": 7,
+      "rank_2R": 13,
+      "trace_distance_exact": "6/13",
+      "trace_distance": 0.46153846153846156
+    },
+    {
+      "R": 126,
+      "rank_R": 13,
+      "rank_2R": 25,
+      "trace_distance_exact": "12/25",
+      "trace_distance": 0.48
+    },
+    {
+      "R": 252,
+      "rank_R": 25,
+      "rank_2R": 49,
+      "trace_distance_exact": "24/49",
+      "trace_distance": 0.4897959183673469
+    },
+    {
+      "R": 504,
+      "rank_R": 49,
+      "rank_2R": 97,
+      "trace_distance_exact": "48/97",
+      "trace_distance": 0.4948453608247423
+    },
+    {
+      "R": 1008,
+      "rank_R": 97,
+      "rank_2R": 193,
+      "trace_distance_exact": "96/193",
+      "trace_distance": 0.49740932642487046
+    }
+  ],
+  "physical_Floquet_Kato_density_constructed": false
+}

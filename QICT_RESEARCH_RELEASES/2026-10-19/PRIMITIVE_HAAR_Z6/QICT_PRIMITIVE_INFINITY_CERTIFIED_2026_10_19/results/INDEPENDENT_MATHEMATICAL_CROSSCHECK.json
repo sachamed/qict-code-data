@@ -1,0 +1,8 @@
+{
+  "status": "PASS_INDEPENDENT_MATHEMATICAL_CROSSCHECK_ONLY",
+  "original_cover_cost": 120.0,
+  "action_quotient_phase_noninvariance": true,
+  "toy_source_trace_residue": 6.0,
+  "physical_qict_replication": false,
+  "independent_tau_star": null
+}

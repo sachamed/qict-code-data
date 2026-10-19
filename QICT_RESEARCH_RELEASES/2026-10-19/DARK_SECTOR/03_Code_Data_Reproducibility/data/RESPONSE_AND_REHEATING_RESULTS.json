@@ -1,0 +1,43 @@
+{
+  "gravity_finite_source": {
+    "ground_gap": 0.4700000000000001,
+    "connected_static_D": 0.14949336107465527,
+    "contact": 0.2003415648585009,
+    "energy_mixed_curvature": 0.050848203783845636,
+    "connected_D_per_cell": 0.0023358337667914886,
+    "contact_per_cell": 0.0031303369509140767,
+    "energy_mixed_curvature_per_cell": 0.0007945031841225881,
+    "volume_energy_derivative": 0.015075709602196199,
+    "volume_derivative_per_cell": 0.0002355579625343156,
+    "epsilon_if_dlogvolume_dJ_equals4": 5.88894906335789e-05,
+    "momentum_qell": 0.125,
+    "N_cells": 64.0,
+    "physical_continuum_coefficients": "These finite source derivatives do not identify continuum epsilon_0 or gamma_R."
+  },
+  "finite_reheating_freezein": [
+    {
+      "x_reheat": 0.001,
+      "yield_fraction_of_high_T_limit": 0.9999999999292645,
+      "quadrature_error_estimate": 1.0087820079893562e-13,
+      "missing_fraction_upper_small_x_bound": 7.07355302630646e-11
+    },
+    {
+      "x_reheat": 0.1,
+      "yield_fraction_of_high_T_limit": 0.9999299269619143,
+      "quadrature_error_estimate": 6.265874012620802e-14,
+      "missing_fraction_upper_small_x_bound": 7.073553026306461e-05
+    },
+    {
+      "x_reheat": 1.0,
+      "yield_fraction_of_high_T_limit": 0.9495563495912019,
+      "quadrature_error_estimate": 5.139775071429304e-13,
+      "missing_fraction_upper_small_x_bound": 0.0707355302630646
+    },
+    {
+      "x_reheat": 10.0,
+      "yield_fraction_of_high_T_limit": 0.005084287790817676,
+      "quadrature_error_estimate": 2.4515556624763894e-14,
+      "missing_fraction_upper_small_x_bound": 1.0
+    }
+  ]
+}

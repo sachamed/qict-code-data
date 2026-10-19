@@ -1,0 +1,227 @@
+{
+  "arithmetic": "Outward-rounded IEEE-754 binary64 elementary operations",
+  "input_sha256": "b325c3869deac41bb61031406d6912e348319f81af603567e50352886f863cb2",
+  "model": "Tensor products of the exact polar factors of the stored matrices",
+  "regulators": [
+    {
+      "left": {
+        "candidate_count": 4050,
+        "centre_distance_lower": 0.0004959007322956065,
+        "product_error_upper": 5.17872128118004e-13,
+        "unitary_chord_gap_lower": 0.0004959007317777343,
+        "zero_phase_atom_weight": 0
+      },
+      "matrix_certificates": {
+        "charged_SU2": {
+          "basis_unitarity_defect_upper": 9.915404719380097e-15,
+          "dimension": 10,
+          "polar_spectral_disk_radius_upper": 2.158940703555582e-14,
+          "residual_norm_upper": 1.3884269526645031e-14,
+          "unitarity_defect_upper": 7.705137508910481e-15
+        },
+        "left_U1": {
+          "basis_unitarity_defect_upper": 9.517031802387678e-15,
+          "dimension": 9,
+          "polar_spectral_disk_radius_upper": 1.5224755402996857e-14,
+          "residual_norm_upper": 1.320650403272007e-14,
+          "unitarity_defect_upper": 2.0182513702766134e-15
+        },
+        "neutral_SU2": {
+          "basis_unitarity_defect_upper": 5.420135199779702e-15,
+          "dimension": 5,
+          "polar_spectral_disk_radius_upper": 1.3933298959045836e-14,
+          "residual_norm_upper": 8.840150833577815e-15,
+          "unitarity_defect_upper": 5.093148125467911e-15
+        },
+        "neutral_U1": {
+          "basis_unitarity_defect_upper": 8.28768139435026e-15,
+          "dimension": 9,
+          "polar_spectral_disk_radius_upper": 1.3986554617151943e-14,
+          "residual_norm_upper": 1.1894998874772979e-14,
+          "unitarity_defect_upper": 2.0915557423788246e-15
+        },
+        "right_U1": {
+          "basis_unitarity_defect_upper": 5.827584983043699e-15,
+          "dimension": 9,
+          "polar_spectral_disk_radius_upper": 1.0106260425387196e-14,
+          "residual_norm_upper": 8.000761511639541e-15,
+          "unitarity_defect_upper": 2.105498913747579e-15
+        }
+      },
+      "regulator": "R1",
+      "right": {
+        "candidate_count": 81,
+        "centre_distance_lower": 0.007932160537502618,
+        "product_error_upper": 4.8185630085078294e-14,
+        "unitary_chord_gap_lower": 0.00793216053745443,
+        "zero_phase_atom_weight": 0
+      },
+      "weak_source_isometry_defect_upper": 2.6645352591003785e-15
+    },
+    {
+      "left": {
+        "candidate_count": 306250,
+        "centre_distance_lower": 6.031086592070411e-06,
+        "product_error_upper": 1.5082489381275798e-12,
+        "unitary_chord_gap_lower": 6.031085083821472e-06,
+        "zero_phase_atom_weight": 0
+      },
+      "matrix_certificates": {
+        "charged_SU2": {
+          "basis_unitarity_defect_upper": 3.5779698463525067e-14,
+          "dimension": 35,
+          "polar_spectral_disk_radius_upper": 8.492501329167902e-14,
+          "residual_norm_upper": 6.018208903439938e-14,
+          "unitarity_defect_upper": 2.4742924257275657e-14
+        },
+        "left_U1": {
+          "basis_unitarity_defect_upper": 2.059818132428485e-14,
+          "dimension": 25,
+          "polar_spectral_disk_radius_upper": 3.672883595800446e-14,
+          "residual_norm_upper": 3.2614865144140034e-14,
+          "unitarity_defect_upper": 4.113970813863561e-15
+        },
+        "neutral_SU2": {
+          "basis_unitarity_defect_upper": 1.4242643184204088e-14,
+          "dimension": 14,
+          "polar_spectral_disk_radius_upper": 3.3299968685286e-14,
+          "residual_norm_upper": 2.183669911559608e-14,
+          "unitarity_defect_upper": 1.146326956968926e-14
+        },
+        "neutral_U1": {
+          "basis_unitarity_defect_upper": 2.1896381157153716e-14,
+          "dimension": 25,
+          "polar_spectral_disk_radius_upper": 3.3577299330977934e-14,
+          "residual_norm_upper": 2.9507212645496545e-14,
+          "unitarity_defect_upper": 4.0700866854805406e-15
+        },
+        "right_U1": {
+          "basis_unitarity_defect_upper": 2.1263886568079624e-14,
+          "dimension": 25,
+          "polar_spectral_disk_radius_upper": 3.0066719986965546e-14,
+          "residual_norm_upper": 2.587824080221298e-14,
+          "unitarity_defect_upper": 4.188479184751815e-15
+        }
+      },
+      "regulator": "R2",
+      "right": {
+        "candidate_count": 625,
+        "centre_distance_lower": 0.003384930199150204,
+        "product_error_upper": 1.27288038635887e-13,
+        "unitary_chord_gap_lower": 0.0033849301990229157,
+        "zero_phase_atom_weight": 0
+      },
+      "weak_source_isometry_defect_upper": 8.215650382226184e-15
+    },
+    {
+      "left": {
+        "candidate_count": 6050520,
+        "centre_distance_lower": 2.430550494203487e-08,
+        "product_error_upper": 3.208760771852857e-12,
+        "unitary_chord_gap_lower": 2.4302296181263012e-08,
+        "zero_phase_atom_weight": 0
+      },
+      "matrix_certificates": {
+        "charged_SU2": {
+          "basis_unitarity_defect_upper": 8.845515738269343e-14,
+          "dimension": 84,
+          "polar_spectral_disk_radius_upper": 2.1119962800214895e-13,
+          "residual_norm_upper": 1.6006344841218852e-13,
+          "unitarity_defect_upper": 5.1136179589937123e-14
+        },
+        "left_U1": {
+          "basis_unitarity_defect_upper": 3.3530758237008424e-14,
+          "dimension": 49,
+          "polar_spectral_disk_radius_upper": 5.653372627283622e-14,
+          "residual_norm_upper": 4.863607783488164e-14,
+          "unitarity_defect_upper": 7.897648437952395e-15
+        },
+        "neutral_SU2": {
+          "basis_unitarity_defect_upper": 3.37120155790334e-14,
+          "dimension": 30,
+          "polar_spectral_disk_radius_upper": 7.084745989402942e-14,
+          "residual_norm_upper": 4.9215839736938127e-14,
+          "unitarity_defect_upper": 2.163162015708812e-14
+        },
+        "neutral_U1": {
+          "basis_unitarity_defect_upper": 3.3874052623754016e-14,
+          "dimension": 49,
+          "polar_spectral_disk_radius_upper": 6.251428231259233e-14,
+          "residual_norm_upper": 5.458956667584245e-14,
+          "unitarity_defect_upper": 7.924715636747456e-15
+        },
+        "right_U1": {
+          "basis_unitarity_defect_upper": 3.257038724905674e-14,
+          "dimension": 49,
+          "polar_spectral_disk_radius_upper": 5.2438505956621807e-14,
+          "residual_norm_upper": 4.456001426710764e-14,
+          "unitarity_defect_upper": 7.87849168951217e-15
+        }
+      },
+      "regulator": "R3",
+      "right": {
+        "candidate_count": 2401,
+        "centre_distance_lower": 0.0024127335308398164,
+        "product_error_upper": 2.2990557653842836e-13,
+        "unitary_chord_gap_lower": 0.0024127335306099104,
+        "zero_phase_atom_weight": 0
+      },
+      "weak_source_isometry_defect_upper": 1.9095836023552793e-14
+    },
+    {
+      "left": {
+        "candidate_count": 59541075,
+        "centre_distance_lower": 1.9231476022785185e-07,
+        "product_error_upper": 6.329410558512401e-12,
+        "unitary_chord_gap_lower": 1.923084308172933e-07,
+        "zero_phase_atom_weight": 0
+      },
+      "matrix_certificates": {
+        "charged_SU2": {
+          "basis_unitarity_defect_upper": 1.7796332802327358e-13,
+          "dimension": 165,
+          "polar_spectral_disk_radius_upper": 4.61958876263589e-13,
+          "residual_norm_upper": 3.7472245865194145e-13,
+          "unitarity_defect_upper": 8.723641761154951e-14
+        },
+        "left_U1": {
+          "basis_unitarity_defect_upper": 5.35409372524306e-14,
+          "dimension": 81,
+          "polar_spectral_disk_radius_upper": 8.601684001908666e-14,
+          "residual_norm_upper": 7.208133164694663e-14,
+          "unitarity_defect_upper": 1.3935508372134625e-14
+        },
+        "neutral_SU2": {
+          "basis_unitarity_defect_upper": 6.384325148345525e-14,
+          "dimension": 55,
+          "polar_spectral_disk_radius_upper": 1.3532456702112965e-13,
+          "residual_norm_upper": 1.028717313156935e-13,
+          "unitarity_defect_upper": 3.2452835705425325e-14
+        },
+        "neutral_U1": {
+          "basis_unitarity_defect_upper": 5.887458948329833e-14,
+          "dimension": 81,
+          "polar_spectral_disk_radius_upper": 1.0787603651024433e-13,
+          "residual_norm_upper": 9.3709852845945e-14,
+          "unitarity_defect_upper": 1.4166183664292095e-14
+        },
+        "right_U1": {
+          "basis_unitarity_defect_upper": 5.90131777452831e-14,
+          "dimension": 81,
+          "polar_spectral_disk_radius_upper": 8.869551391921559e-14,
+          "residual_norm_upper": 7.45458732087986e-14,
+          "unitarity_defect_upper": 1.4149640710410855e-14
+        }
+      },
+      "regulator": "R4",
+      "right": {
+        "candidate_count": 6561,
+        "centre_distance_lower": 0.00031991218951221695,
+        "product_error_upper": 3.9314310085891993e-13,
+        "unitary_chord_gap_lower": 0.0003199121891190738,
+        "zero_phase_atom_weight": 0
+      },
+      "weak_source_isometry_defect_upper": 3.708144902248059e-14
+    }
+  ]
+}

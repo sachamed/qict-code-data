@@ -1,0 +1,99 @@
+{
+  "inputs": {
+    "h": 0.674,
+    "H0_km_s_Mpc": 67.4,
+    "Omega_m": 0.315,
+    "Omega_b": 0.04924319136384048,
+    "Omega_cdm": 0.2657568086361595,
+    "Omega_r": 9.194800932480554e-05,
+    "Omega_Lambda": 0.6849080519906753,
+    "sigma8": 0.811,
+    "ns": 0.965,
+    "zstar": 1089.92,
+    "z_lens": 0.3,
+    "z_source": 1.0,
+    "epsilon_star_illustrative": 0.05
+  },
+  "cosmology": {
+    "rhoLambda_J_m3": 5.252524076477141e-10,
+    "Lambda_m_minus2": 1.0907640691897902e-52,
+    "rhoLambda_GeV4": 2.518935626400393e-47,
+    "illustrative_68pct_input_propagation_fraction": 0.01801791207753945,
+    "rs_zstar_Mpc": 144.29357248255857,
+    "DM_zstar_Mpc": 13864.379548867888,
+    "theta_star": 0.01040750305298307,
+    "theta_star_100": 1.040750305298307,
+    "ell_acoustic": 301.8584417027222,
+    "growth_z0p5": 0.768943227757854,
+    "f_z0p5": 0.7608697573011227,
+    "fsigma8_z0p5": 0.4744882397838753
+  },
+  "lensing": {
+    "velocity_dispersion_km_s": 220.0,
+    "thetaEinstein_arcsec": 0.8883900375647885,
+    "Dl_Mpc": 951.0832075567932,
+    "Ds_Mpc": 1700.468081915831,
+    "Dls_Mpc": 1082.2639970039154,
+    "source_beta_fraction_E": 0.5,
+    "time_delay_days": 42.93093352689505,
+    "M200_Msun": 100000000000000.0,
+    "c200": 5.0,
+    "r200_Mpc": 0.88257124531824,
+    "NFW_kappa_at_0p1Mpc": 0.1197220789520407,
+    "NFW_gammat_at_0p1Mpc": 0.07081425277064965
+  },
+  "halo": {
+    "rho_m_Msun_Mpc3": 39713441166.5831,
+    "bbks_gamma": 0.11361067351563522,
+    "sigma8_reproduced": 0.811,
+    "dndlnM_1e12_Mpc3": 0.0024911102244246333,
+    "dndlnM_1e14_Mpc3": 2.704214499669341e-05
+  },
+  "dark_matter_benchmarks": {
+    "m40_GeV": 40.0,
+    "lambda40": 0.01,
+    "SI40_cm2": 5.281584322772146e-46,
+    "relative_to_LZ_40GeV_min": 240.07201467146118,
+    "m300_GeV": 300.0,
+    "lambda300": 0.2,
+    "SI300_cm2": 3.9096845892701e-45,
+    "hh_contact_only_cm3_s": 2.3453110138620822e-26,
+    "contact_only_relic_approx": 0.1125650280238375,
+    "freezein_MA_GeV": 1000.0,
+    "freezein_width_GeV": 1e-20,
+    "freezein_mchi_GeV": 10.0,
+    "freezein_Y": 3.629199032171635e-11,
+    "freezein_omega_h2": 0.09951263746214623,
+    "freezein_width_over_H_at_MA": 7.1184347199080784e-09
+  },
+  "additional": {
+    "freezein_relic_numerical_to_analytic_ratio": 0.9999999999292613,
+    "cluster_M200_Msun": 1000000000000000.0,
+    "cluster_concentration": 4.0,
+    "cluster_tangential_critical_R_Mpc": 0.02468941064614374,
+    "cluster_tangential_critical_theta_arcsec": 5.3544805152894455,
+    "galaxy_stellar_mass_at_Mhalo_1e12_Msun": 7816379581.561981
+  },
+  "spherical_top_hat": {
+    "mass_Msun": 100000000000000.0,
+    "initial_a": 0.01,
+    "initial_overdensity": 0.04,
+    "initial_radius_Mpc": 0.08330035336379046,
+    "collapse_definition_Mpc": 0.01,
+    "collapse_scale_factor": 0.46142177721816474,
+    "numerical_integration_success": true
+  },
+  "galaxy_correlation": {
+    "illustrative_constant_bias": 1.5,
+    "xi_g_at_10Mpc": 1.46240495455755,
+    "xi_g_at_20Mpc": 0.4661378765728701,
+    "quadrature_error_estimate_max": 1.5430651310382123e-09,
+    "method": "oscillatory sine transform on [0,infinity)"
+  },
+  "saha_recombination": {
+    "assumed_helium_fraction_Yp": 0.245,
+    "CMB_temperature_K": 2.7255,
+    "equilibrium_xe_half_redshift": 1369.0061916227976,
+    "xe_equilibrium_at_zstar": 0.003759968218728205
+  }
+}

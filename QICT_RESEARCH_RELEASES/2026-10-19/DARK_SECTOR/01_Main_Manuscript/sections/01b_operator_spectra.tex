@@ -1,0 +1,135 @@
+\section{Operator reconstruction and certified finite spectra}
+\label{sec:operator-spectrum}
+The supplied C9 archive contains the neutral and charged transfer matrices, the weak source and the primitive vectors used to construct the recorded moments. These additional data specify a finite operator problem. We first recover the moment construction, including coherences within joint neutral eigenspaces, and then establish a spectral separation certificate that holds for every stationary state of the defined finite unitary model.
+
+\subsection{The stationary finite Lehmann measure}
+\label{sec:finite-lehmann}
+Let $U_0=\sum_a z_aP_a$ and $U_f=\sum_b w_bQ_b$ be finite unitaries, let $S$ be an isometric source, and let $\rho\succeq0$ have unit trace and commute with $U_0$. The neutral spectral projectors include each complete degenerate eigenspace. The relative physical moments are
+\[
+C_n=\operatorname{Tr}\!\left(\rho U_0^{-n}S^\dagger U_f^nS\right).
+\]
+\begin{proposition}[Finite stationary spectral reconstruction]\label{prop:finite-lehmann}
+For every integer $n$, the moments and their source resolvent have the representations
+\begin{align}
+C_n&=\sum_{a,b}p_{ba}(w_b\overline z_a)^n,
+&p_{ba}&=\bigl\|Q_bSP_a\sqrt\rho\bigr\|_{\mathrm F}^2,\label{eq:finite-lehmann}\\
+G(\zeta)&=\sum_{a,b}\frac{p_{ba}}{\zeta-w_b\overline z_a},
+&p_{ba}&\geq0,\qquad\sum_{a,b}p_{ba}=1.\label{eq:finite-resolvent}
+\end{align}
+Consequently, the exact weight at phase zero is the sum of $p_{ba}$ over pairs with $w_b=z_a$.
+\end{proposition}
+\begin{proof}
+Stationarity makes $\rho$ block diagonal in the projectors $P_a$. Insert both spectral decompositions in $C_n$ and use cyclicity of the trace. The coefficient of $(w_b\overline z_a)^n$ is
+$\operatorname{Tr}(\rho P_aS^\dagger Q_bSP_a)$, equal to the displayed squared Frobenius norm. Summing the projectors and using $S^\dagger S=I$ gives normalization. The spectral theorem then gives Eq.~\eqref{eq:finite-resolvent}, and the term at relative eigenvalue one has precisely the stated weight.
+\end{proof}
+For several sources, the same construction replaces $p_{ba}$ by their positive Gram matrix. The recorded six-source problem consists of three identical left-source entries and three identical right-source entries.
+
+For a primitive vector $v$, the stationary selection is
+\[
+\rho=\sum_aP_a|v\rangle\langle v|P_a.
+\]
+This expression retains all coherences within a degenerate joint eigenspace. In a numerical eigenbasis, write $v=\sum_i c_i|i\rangle$ and let $\mathcal G$ denote the chosen joint clusters. Comparing the corresponding coherent and diagonal densities gives the useful bound
+\begin{equation}\label{eq:coherence-error}
+\|\rho_{\mathcal G}-\rho_{\rm diag}\|_1
+\leq\sum_{g\in\mathcal G}\sum_{\substack{i,j\in g\\i\ne j}}|c_i c_j|
+=:\varepsilon_{\rm coh}.
+\end{equation}
+Each matrix unit $|i\rangle\langle j|$ has trace norm one, so the triangle inequality proves the result. For every contraction $B$, trace duality gives
+$|\operatorname{Tr}[(\rho_{\mathcal G}-\rho_{\rm diag})B]|\leq\varepsilon_{\rm coh}$. In particular, this controls every unitary-source moment, uniformly in its order, when the operator family and basis are held fixed.
+
+The numerical reconstruction retains the joint clusters of the original prescription, with chord tolerance $10^{-12}$. It reproduces all thirteen recorded moments at all four regulators with maximum entry discrepancy $2.68\times10^{-14}$. For the stored cluster coordinates, the right-hand side of Eq.~\eqref{eq:coherence-error} is zero at R1 and R2, $1.543\times10^{-14}$ at R3, and $1.052\times10^{-14}$ at R4. These are floating-point evaluations of the stated construction. The certificate below uses the operators directly and holds independently of this numerical clustering choice.
+
+\subsection{A verified unitary interpretation of the stored matrices}
+\label{sec:operator-disks}
+An array stored in binary arithmetic defines an exact matrix $A$. We fix its unitary representative by the polar factor \cite{Higham86}
+\begin{equation}\label{eq:polar-model}
+U=A(A^\dagger A)^{-1/2}.
+\end{equation}
+The rectangular weak source is normalized by the corresponding map $S=A_S(A_S^\dagger A_S)^{-1/2}$. Positive lower singular-value bounds make both definitions unique. Across all twenty square input matrices, the certified distance satisfies $\|U-A\|_2\leq8.724\times10^{-14}$. Thus the operator statement refers to a precisely defined finite model, with an explicit distance to its stored numerical arrays.
+
+\begin{proposition}[Residual certificate for polar-unitary spectra]\label{prop:polar-disks}
+Let $Q$ be a square approximate eigenbasis and $D=\operatorname{diag}(d_j)$. Suppose verified upper bounds satisfy
+\[
+\|A^\dagger A-I\|_2\leq\delta_A<\tfrac12,\qquad
+\|Q^\dagger Q-I\|_2\leq\delta_Q<\tfrac12,\qquad
+\|AQ-QD\|_2\leq r.
+\]
+Every eigenvalue of the unitary in Eq.~\eqref{eq:polar-model} lies within distance
+\begin{equation}\label{eq:polar-disk-radius}
+\varepsilon=(1+\delta_Q)\bigl[r+\delta_A(1+\delta_Q)\bigr]
+\end{equation}
+of at least one centre $d_j$.
+\end{proposition}
+\begin{proof}
+The singular values of $A$ give $\|U-A\|_2\leq\delta_A$, since
+$|\sigma-1|=|\sigma^2-1|/(\sigma+1)\leq\delta_A$.
+The singular values of $Q$ imply
+$\|Q\|_2\leq1+\delta_Q$ and $\|Q^{-1}\|_2\leq1+\delta_Q$ for $0\leq\delta_Q<1/2$. Hence
+\[
+Q^{-1}UQ=D+E,\qquad
+\|E\|_2\leq(1+\delta_Q)\bigl[r+\delta_A(1+\delta_Q)\bigr].
+\]
+If a point is farther than $\|E\|_2$ from every diagonal entry of $D$, then the Neumann series for $I-(\zeta-D)^{-1}E$ proves that $\zeta-D-E$ is invertible. Every eigenvalue therefore belongs to the union of the stated disks.
+\end{proof}
+
+The implementation obtains candidate centres and bases by a complex Schur decomposition. It then encloses each elementary real operation by outward rounding to the adjacent binary64 values. Complex matrix products are evaluated entry by entry through interval operations. For any residual $R$, the resulting bounds use
+$\|R\|_2\leq\max\{\|R\|_1,\|R\|_\infty\}$; interval sums enclose both norms. The spectral guarantee thus depends on the verified residuals, independently of the eigensolver's accuracy estimate. Separate exact-rational checks cover the interval matrix products, including cancellation and subnormal arithmetic.
+
+\subsection{Certified separation of the zero-phase component}
+\label{sec:zero-phase-certificate}
+Write the five polar unitaries as $U_{Y0},U_{YL},U_{YR},U_{W0},U_{WL}$, corresponding to the stored neutral, left and right $U(1)$ matrices and the neutral and charged $SU(2)$ matrices. Their finite tensor structure is
+\[
+U_0=U_{Y0}\otimes U_{W0},\quad
+U_L=U_{YL}\otimes U_{WL},\quad
+U_R=U_{YR}\otimes U_{W0},\qquad
+S_L=I\otimes S,\quad S_R=I.
+\]
+The left relative phases are products of four factor eigenvalues. In the right physical trace, the common $SU(2)$ factor cancels:
+\[
+C_n^R=\operatorname{Tr}\!\left[\rho_Y U_{Y0}^{-n}U_{YR}^n\right],
+\qquad \rho_Y=\operatorname{Tr}_{W}\rho.
+\]
+Joint stationarity implies $[\rho_Y,U_{Y0}]=0$, by taking the partial trace of $U_0\rho U_0^\dagger=\rho$. The source-visible right phases therefore depend on two $U(1)$ eigenvalues.
+
+To combine the disks, let $k=2$ or $4$, let $p$ be a product of their centres, and suppose each centre has modulus less than two. Telescoping the product, using unit modulus for the exact eigenvalues, bounds its error by $2^{k-1}\sum_j\varepsilon_j$. If an outward-rounded calculation gives a common lower bound $d_*$ on $|p-1|$ for every candidate combination, then
+\begin{equation}\label{eq:certified-chord-gap}
+|z-1|\geq g:=d_*-2^{k-1}\sum_j\varepsilon_j
+\end{equation}
+for every relevant exact relative eigenvalue. The code bounds $|p-1|$ below by $\max\{|\operatorname{Re}p-1|,|\operatorname{Im}p|\}$ with interval endpoints; every candidate is included, even when its source weight vanishes.
+
+\begin{table}[htbp]\centering\small
+\caption{Certified chord-distance lower bounds for the polar-unitary finite C9 model. Displayed positive bounds are rounded down. The left column of candidate counts includes the entire relative tensor spectrum; the right source uses the exact spectator cancellation.}\label{tab:operator-gaps}
+\begin{tabular}{@{}lrrrr@{}}\toprule
+Regulator & Left candidates & $g_L$ & Right candidates & $g_R$\\\midrule
+R1 & 4050 & $4.95900\times10^{-4}$ & 81 & $7.93216\times10^{-3}$\\
+R2 & 306250 & $6.03108\times10^{-6}$ & 625 & $3.38493\times10^{-3}$\\
+R3 & 6050520 & $2.43022\times10^{-8}$ & 2401 & $2.41273\times10^{-3}$\\
+R4 & 59541075 & $1.92308\times10^{-7}$ & 6561 & $3.19912\times10^{-4}$\\
+\bottomrule\end{tabular}
+\end{table}
+
+\begin{proposition}[Zero-phase weight in the finite C9 operator model]\label{prop:finite-zero-weight}
+For each of the four polar-unitary models specified above, every stationary density gives
+\begin{equation}\label{eq:finite-zero-weight}
+\mu_L(\{1\})=\mu_R(\{1\})=0.
+\end{equation}
+The result holds for all three copies of each source. For either normalized source measure, its certified gap $g$ also gives
+\begin{equation}\label{eq:finite-long-time}
+F_N(0)\leq\min\!\left\{1,\frac{4}{N^2g^2}\right\},\qquad
+|G(1)|\leq g^{-1}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The strictly positive verified bounds in Table~\ref{tab:operator-gaps} separate every left relative eigenvalue and every source-visible right relative eigenvalue from one. Equation~\eqref{eq:finite-lehmann} then places the entire positive measure at separated phases. For such a phase,
+\[
+\left|\frac1N\sum_{j=0}^{N-1}z^j\right|
+=\left|\frac{1-z^N}{N(1-z)}\right|\leq\min\{1,2/(Ng)\}.
+\]
+Integrating its square proves the Fej\'er estimate. The resolvent bound follows by integrating $|1-z|^{-1}\leq g^{-1}$ against the normalized measure.
+\end{proof}
+
+This certificate uses more information than the truncated moment problem. The positive upper weights in Tables~\ref{tab:fejer-qict}--\ref{tab:exact-rational} describe all measures compatible with thirteen recorded moments. Equation~\eqref{eq:finite-zero-weight} selects the additional conclusion supplied by the finite operator model. The arrays and their normalized recorded-data certificate remain byte-for-byte unchanged.
+
+The separation is stable under controlled changes of the unitary factors. If their operator-norm errors are bounded by $\eta_j$, tensor-product telescoping bounds the relative-transfer change by $\sum_j\eta_j$. A total smaller than $g$ preserves separation from one by at least $g-\sum_j\eta_j$. For the right source, this statement preserves its common spectator factor and identity source. These bounds give an explicit admissible operator-error budget.
+
+The four regulators are representation cutoffs of one linked two-face static component. A continuum conclusion is governed by a uniform gap and convergence of the same source family, as in Section~\ref{sec:gap-filter}. For example, $\mu_R=\delta_{e^{i/R}}$ has zero weight at one at every finite $R$, while its weak limit is $\delta_1$. This example specifies why the finite certificate and the joint-limit theorem have distinct hypotheses. Particle masses, odd-sector states and metric poles retain the physical source, branch and continuum prescriptions stated in the corresponding sections.
