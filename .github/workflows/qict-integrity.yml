@@ -1,0 +1,35 @@
+name: QICT source integrity and preflight
+on:
+  push:
+    branches: [main, 'qict/**']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numerical dependencies
+        run: python -m pip install -r code/requirements.txt
+      - name: Compile all Python files
+        run: python -m compileall -q code snapshot-2026-10-17/reproducibility/code QICT_FULL_PHYSICAL_EXECUTION/src QICT_FULL_PHYSICAL_EXECUTION/tests tools tests
+      - name: Repository tests
+        run: python -m unittest discover -s tests -v
+      - name: Fail-closed physical tests
+        run: python -m unittest discover -s QICT_FULL_PHYSICAL_EXECUTION/tests -v
+      - name: Neutral finite spectrum diagnostics
+        run: python code/verify_neutrino_shape_obstruction.py
+      - name: Current checkout SHA-256
+        run: |
+          python tools/repository_integrity.py --write /tmp/qict-current-tree.sha256
+          python tools/repository_integrity.py --check /tmp/qict-current-tree.sha256
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-current-tree-sha256
+          path: /tmp/qict-current-tree.sha256
