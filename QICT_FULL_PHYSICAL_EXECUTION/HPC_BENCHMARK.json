@@ -1,0 +1,8 @@
+{
+  "status": "BLOCKED_MISSING_INPUT",
+  "physical_matvec_benchmark": null,
+  "L8_L12_L16_physical_benchmarks": [],
+  "MPI_scaling": null,
+  "GPU_memory": null,
+  "reason": "The complete interacting apply_U and apply_U_dagger are absent. Existing NPZ I/O checks are DIAGNOSTIC_ONLY. No HPC sizing or scaling can be responsibly inferred."
+}

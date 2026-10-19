@@ -1,0 +1,69 @@
+{
+  "L": 24,
+  "action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "dimensions": {
+    "c10_edges": 17576,
+    "c10_nodes": 3925,
+    "links": 21136,
+    "plaquettes": 18252,
+    "su2_connected_pairs": 261346
+  },
+  "family_pairs_zero_based": [
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "gates": {
+    "action_hash": true,
+    "c10_geometry": true,
+    "c10_plane_sweep": true,
+    "charged_local_blocks": true,
+    "charged_local_layer": true,
+    "first_kato_tangent": true,
+    "n9_geometry": true,
+    "second_order_seed": true,
+    "su2_connected_decompressed": true
+  },
+  "is_C9_6x6": false,
+  "is_G2": false,
+  "is_selected_lambda1_kato_state": false,
+  "missing_before_physical_rank6_state_or_moment": [
+    "complete matrix-free charged U_cone application with PiCAR=1 and six source columns propagated jointly",
+    "lambda=1 selected Riesz/Kato density with independently certified whole-contour gap",
+    "at least four nested KATO_BUFFER states plus certified tail-to-limit majorant",
+    "volume-specific quantum C10 shell CP/Kraus maps (geometry alone is insufficient)",
+    "boundary-density-to-recoupling-path insertion tensor",
+    "volume-matched explicit six-column core source/sink embedding",
+    "complete common-space transfer/matvec needed to evaluate C_n^(6)=V^dagger U^n V"
+  ],
+  "n": 9,
+  "payload_npz": "L24_N9_CHARGED_RANK6_PRECONTRACTION_PAYLOAD.npz",
+  "payload_npz_sha256": "020d21f11ce948de0cfa37889e9e050edaf5796e0b2c75fba740bb685dd20c29",
+  "physical_promotable": false,
+  "promotion_guard": "This file is an exact precontraction input bundle only. It must never be renamed or promoted as KATO_BUFFER, CN6_MOMENTS, C9^(6), G2, epsilon_f, Z_f or physical fermion masses.",
+  "source_order": [
+    "L1",
+    "L2",
+    "L3",
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "status": "PASS_EXACT_L24_N9_CHARGED_RANK6_PRECONTRACTION_PAYLOAD",
+  "what_this_payload_contains": [
+    "authentic L24 n=9 covering-lattice geometry",
+    "exact first Floquet-Kato tangent geometry/species/amplitudes",
+    "losslessly decompressed exact SU2 second-Krylov connected-pair recouplings",
+    "exact charged local matter/Gauss/chiral certificates (sidecar JSON)",
+    "exact C10 R12 geometry and shell plane-sweep IR"
+  ]
+}

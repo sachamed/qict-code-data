@@ -1,0 +1,1 @@
+The evidence blobs are exact existing Git objects from the repository. They are partial calculations and diagnostics, NEVER the physical Kato buffers, C10 Kraus maps, full Ucone provider or physical CN6.

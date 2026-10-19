@@ -1,0 +1,42 @@
+{
+  "status": "BLOCKED_MISSING_INPUT",
+  "fail_closed": true,
+  "physical_pipeline_executed": false,
+  "action_sha256": "c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7",
+  "observed_git_commit": "fd664503ca92d2d88007d68d6e3873f7df2beeb8",
+  "author_approved_commit": null,
+  "mass_GeV": null,
+  "pole": null,
+  "residue": null,
+  "blocked_conditions": [
+    "KATO_BUFFER_0.npz",
+    "KATO_BUFFER_1.npz",
+    "KATO_BUFFER_2.npz",
+    "KATO_BUFFER_3.npz",
+    "BUFFER_CONTRACTION_CERTIFICATE.json",
+    "C10_SHELL_MAPS_0.npz",
+    "C10_SHELL_MAPS_1.npz",
+    "C10_SHELL_MAPS_2.npz",
+    "C10_SHELL_MAPS_3.npz",
+    "BOUNDARY_TO_PATH_0.npz",
+    "BOUNDARY_TO_PATH_1.npz",
+    "BOUNDARY_TO_PATH_2.npz",
+    "BOUNDARY_TO_PATH_3.npz",
+    "CORE_RECOUPLING_L24.npz",
+    "RANK6_EMBEDDING_L24.npz",
+    "GLOBAL_CHARGED_UCONE_PROVIDER.py",
+    "GLOBAL_CHARGED_UCONE_PASS_CERTIFICATE.json",
+    "CN6_MOMENTS.npz",
+    "CN6_SHAPE_AND_C0_CERTIFICATE.json"
+  ],
+  "diagnostics": {
+    "canonical_action": "PASS",
+    "l24_precontraction_provenance": "PASS",
+    "physical_operator": "BLOCKED_MISSING_INPUT",
+    "physical_cn6": "BLOCKED_MISSING_INPUT",
+    "dark_source_V_chi": "BLOCKED_MISSING_INPUT",
+    "isolated_pole": "BLOCKED_MISSING_INPUT",
+    "independent_replication": "BLOCKED_MISSING_INPUT"
+  },
+  "note": "No physical result is calculated or inferred from the available precontraction."
+}
