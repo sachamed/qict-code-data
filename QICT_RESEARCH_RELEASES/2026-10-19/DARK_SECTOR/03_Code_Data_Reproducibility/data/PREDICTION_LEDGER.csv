@@ -1,0 +1,88 @@
+id,quantity_latex,domain_and_provenance_latex,document,support
+SP1,$\lambda_{\max}(F_{13}(0))=0.016084$ at R4,Table~\ref{tab:fejer-qict}; Six-source C9 Fej\'er upper bound; finite regulator,Main article,Finite moments; exact recorded-data certificate
+SP2,$\lambda_{\max}(B_{13}(0))\simeq0.001956273$ at R4,Table~\ref{tab:christoffel-qict}; Inverse-Toeplitz upper bound on the same putative atom,Main article,Finite moments; exact recorded-data certificate
+SP3,R4 atomic weight $\leq0.001956273015$,"Table~\ref{tab:exact-rational}; Exact rational, normalized recorded C9 moments",Main article,Finite moments; exact recorded-data certificate
+SP4,Flat moment rank reconstructs all cyclic dynamics,Proposition~\ref{prop:flat-rank}; exact positivity and rank equality,Main article,Analytic proof; numerical matrix controls
+SP5,"$\|C_n-C_1^n\|\leq\min\{2,n(n-1)\varepsilon/2\}$",Proposition~\ref{prop:source-leakage}; unitary transfer and isometric source,Main article,Analytic proof; numerical matrix controls
+SP6,Exponential atomic-weight enclosure,Proposition~\ref{prop:exponential-gap}; independently certified angular gap,Main article,Analytic proof; numerical matrix controls
+SP7,Joint regulator and moment limit,Section~\ref{sec:gap-filter}; uniform gap and weak convergence,Main article,Analytic proof under the stated hypotheses
+SP8,Finite-arc spectral-weight bound,Eq.~\eqref{eq:arc-bound}; stated angular resolution,Main article,Analytic proof under the stated hypotheses
+SP9,Fixed-polynomial moment-error enclosure,Eq.~\eqref{eq:polynomial-error}; verified moment errors,Main article,Analytic proof under the stated hypotheses
+SP10,Optimal bound decreases to the visible atom,Proposition~\ref{prop:atom-limit}; fixed positive measure,Main article,Analytic proof under the stated hypotheses
+SP11,Largest feasible atomic component is $B_N$,Proposition~\ref{prop:sharp}; positive-definite Toeplitz form,Main article,Analytic proof under the stated hypotheses
+SP12,$\mu_L(\{1\})=\mu_R(\{1\})=0$ at R1--R4,Proposition~\ref{prop:finite-zero-weight}; certified polar-unitary finite model,Main article,Analytic proof; outward-rounded operator certificate
+SP13,"R4 chord gaps $g_L\geq1.92308\times10^{-7}$, $g_R\geq3.19912\times10^{-4}$",Table~\ref{tab:operator-gaps}; all relevant spectral pairs,Main article,Analytic proof; outward-rounded operator certificate
+SP14,"$F_N(0)\leq\min\{1,4/(N^2g^2)\}$, $|G(1)|\leq g^{-1}$",Eq.~\eqref{eq:finite-long-time}; normalized separated finite measure,Main article,Analytic proof; outward-rounded operator certificate
+SP15,Operator errors with $\sum_j\eta_j<g$ preserve separation,Section~\ref{sec:zero-phase-certificate}; fixed source and spectator structure,Main article,Analytic proof; outward-rounded operator certificate
+SP16,Positive finite Lehmann weights reconstruct every moment,Proposition~\ref{prop:finite-lehmann}; stationary state and isometric source,Main article,Analytic proof; independent moment reconstruction
+MAT1,Distinct spectral types with identical moments through any finite order $N$,Proposition~\ref{prop:indeterminate}; explicit normalized scalar and six-channel measures,Main article,Analytic proof or explicit construction
+MAT2,Integer energy branches share one transfer unitary,Proposition~\ref{prop:energy-branch}; fixed clock,Main article,Analytic proof or explicit construction
+MAT3,Identical two-point moments admit distinct four-point interactions,Proposition~\ref{prop:interaction-data}; explicit positive Hamiltonian family,Main article,Analytic proof or explicit construction
+MAT4,Invisible odd-sector phases are independently variable,Proposition~\ref{prop:odd-nonidentification}; sources supported in the even sector,Main article,Analytic proof or explicit construction
+MAT5,Clock scaling gives $E\mapsto E/s$,Proposition~\ref{prop:scale}; fixed dimensionless transfer,Main article,Analytic proof or explicit construction
+MAT6,$\|\rho_{\mathcal G}-\rho_{\rm diag}\|_1\leq\varepsilon_{\rm coh}$,Eq.~\eqref{eq:coherence-error}; retained joint eigenspace coherences,Main article,Analytic proof or explicit construction
+GR1,"$\epsilon_{0,\mathrm{src},R}=5.889\times10^{-5}$",Section~\ref{sec:finite-gravity-rank}; Finite source convention: $\partial_J\ln\sqrt{-g}=4$,Main article,Nine-state source evaluation
+GR2,Connected $D(0)=0.1494933611$; curvature $0.05084820378$,"Equation~\eqref{eq:finite-source-numbers}; Nine-state source derivatives, distinct contact term",Main article,Nine-state source evaluation
+GR3,Positive response derivatives and alternating remainder,Proposition~\ref{prop:stieltjes-response}; positive Lehmann weights,Main article,Analytic proof; finite-response checks
+GR4,"$a_1=0.35360648$, $a_2=1.29642815$, analytic disk $|s|<0.2209$",Eq.~\eqref{eq:response-taylor-numbers}; supplied nine-state source,Main article,Nine-state source evaluation
+GR5,Contact shift $B\mapsto B+bI$ shifts curvature by $b$,Eq.~\eqref{eq:source-curvature}; fixed $K_0$ and linear source,Main article,Analytic proof; finite-response checks
+GR6,Curvature error $\leq Mx+(\delta_h+\delta_a)/x$,Eq.~\eqref{eq:curvature-sample-bound}; declared remainder and data errors,Main article,Analytic proof; finite-response checks
+DE1,$G=c^5\tau_*^2/(8\pi\hbar\gamma_R)$,Equation~\eqref{eq:matching}; Conditional QICT identity,Main article,Conditional physical identity
+DE2,$\Lambda=\epsilon_0/(\gamma_Rc^2\tau_*^2)$,Equation~\eqref{eq:matching}; Conditional QICT identity,Main article,Conditional physical identity
+DE3,$\Lambda_{\rm obs}=1.09076\times10^{-52}$ m$^{-2}$,Equation~\eqref{eq:lambdaobs}; Observational-input reconstruction,Main article,Reconstruction from stated observational inputs
+DE4,"$u_{\Lambda,\rm obs}=5.2525\times10^{-10}$ J/m$^3$",Equation~\eqref{eq:lambdaobs}; Observational-input reconstruction,Main article,Reconstruction from stated observational inputs
+DE5,$p=-u_{\rm vac}$; $w=-1$ for $u_{\rm vac}\ne0$,Proposition~\ref{prop:w}; Conditional metric-response theorem,Main article,Conditional physical identity
+DE6,$\epsilon_0/\gamma_R^2=(7.1528\pm0.1910)\times10^{-121}$,Equation~\eqref{eq:operator-vacuum-target}; Planck base-$\Lambda$CDM reference,Main article,Reconstruction from stated observational inputs
+DM1,"$m_S=10,40,300$ GeV (distinct examples)",Section~\ref{sec:thermal}; Independent effective-model inputs,Main article,Declared effective-model input
+DM2,$\sigma_{\rm SI}(40)=5.282\times10^{-46}$ cm$^2$,Section~\ref{sec:scalar-scattering}; Higgs portal benchmark; excluded; full local scalar abundance,Main article,Rate calculation; published LZ comparison
+DM3,$\sigma_{\rm SI}(300)=3.910\times10^{-45}$ cm$^2$,Section~\ref{sec:scalar-scattering}; Higgs portal benchmark,Main article,Specified thermal or scattering model calculation
+DM4,$\sigv_{hh}^{\rm contact}=2.345\times10^{-26}$ cm$^3$/s,Section~\ref{sec:contact-rate}; Higgs-pair contact contribution,Main article,Specified thermal or scattering model calculation
+DM5,$Y_{\rm FI}=3.6292\times10^{-11}$,"Equation~\eqref{eq:fi}; One daughter per parent decay; stated parent, width and thermal history",Main article,Specified thermal or scattering model calculation
+DM6,$\Om_{\rm FI}h^2=0.09951$,"Section~\ref{sec:decay-freezein}; Freeze-in, selected effective width",Main article,Specified thermal or scattering model calculation
+DM7,$|\lambda_{HS}|\leq6.454\times10^{-4}$ at 40 GeV,Equation~\eqref{eq:portalbound}; Inversion of published LZ bound in selected model,Main article,Rate calculation; published LZ comparison
+DM8,$\Gamma_A^{\rm req.}=1.205877\times10^{-20}$ GeV,Equation~\eqref{eq:widthinv}; Observation-normalized inverse calculation,Main article,Specified thermal or scattering model calculation
+DM9,Constant-rate freeze-out $\Omega_\chi h^2=0.100322$,Equation~\eqref{eq:freezeoutfull}; Numerical Boltzmann limiting equation,Main article,Specified thermal or scattering model calculation
+DM10,$Y_\infty\propto\delta_A\sqrt{8\pi\gamma_R}/\varepsilon_A^2$,Equation~\eqref{eq:operator-fi-scale}; Exact scale cancellation in specified one-daughter limit,Main article,Analytic derivation; thermal numerical controls
+DM11,"$\Omega_Sh^2=0.0234522$ at $m_S=300$ GeV, $\lambda_{HS}=0.20$","Equation~\eqref{eq:portal-results}; Thermal tree-level two-body portal, constant $g_*=90$",Main article,Specified thermal or scattering model calculation
+DM12,$I_0^{-1}\leq Y_\infty\leq(I_0-E)^{-1}$,Proposition~\ref{prop:thermal-tail}; positive source and $E<I_0$,Main article,Analytic derivation; thermal numerical controls
+DM13,Decay yield with variable thermal degrees of freedom,Eq.~\eqref{eq:variable-g-freezein}; entropy conservation and equilibrated parent,Main article,Analytic derivation; thermal numerical controls
+DM14,$\partial\ln Y/\partial\ln T_{\rm RH}=7.78357$ at $x_{\rm RH}=10$,Eq.~\eqref{eq:reheat-sensitivity}; constant-degree decay model,Main article,Analytic derivation; thermal numerical controls
+DM15,Odd-branch stability under a strict final-state threshold,Proposition~\ref{prop:copy-odd}; exact parity and energy conservation,Main article,Analytic stability proof
+LSS1,$D(0.5)=0.76894$,Section~\ref{sec:linear-growth}; Smooth-$\Lambda$ baseline,Main article,Reference-model numerical calculation
+LSS2,$f\sigma_8(0.5)=0.47449$,"Section~\ref{sec:linear-growth}; Baseline, observed $\sigma_8$ input",Main article,Reference-model numerical calculation
+LSS3,$\dd n/\dd\ln M(10^{14}\msun)=2.704\times10^{-5}$ Mpc$^{-3}$,Section~\ref{sec:halo-abundance}; Approximate Press--Schechter,Main article,Reference-model numerical calculation
+LSS4,Spherical collapse threshold $a=0.4614218$,Section~\ref{sec:spherical-collapse}; Chosen overdensity and mass,Main article,Reference-model numerical calculation
+LSS5,$C_{50}^{\kappa\kappa}=1.701\times10^{-8}$; $C_{200}^{\kappa\kappa}=2.544\times10^{-9}$,Equation~\eqref{eq:numshear}; Single-source Limber/linear GR baseline,Main article,Reference-model numerical calculation
+GAL1,$M_\star(10^{12}\msun)=7.816\times10^9\msun$,Section~\ref{sec:stellar-map}; Chosen efficiency $\varepsilon_\star$,Main article,Reference-model numerical calculation
+GAL2,$\xi_g(10\Mp)=1.462405$ for $b_g=1.5$,Section~\ref{sec:stellar-map}; Smooth-spectrum benchmark,Main article,Reference-model numerical calculation
+GAL3,"$M_g(3\,\mathrm{Gyr})=8.8841\times10^9M_\odot$",Equation~\eqref{eq:gas-sol}; Selected one-zone gas-regulator inputs,Main article,Reference-model numerical calculation
+GAL4,"$M_*(3\,\mathrm{Gyr})=5.4619\times10^9M_\odot$",Equation~\eqref{eq:gas-sol}; Same gas-regulator solution,Main article,Reference-model numerical calculation
+GAL5,Positive gas solution for time-dependent inflow,Eq.~\eqref{eq:gas-green}; nonnegative rates and stated return fraction,Main article,Exact reservoir solution and balance check
+GAL6,"$M_w(3\,\mathrm{Gyr})=9.10314\times10^9M_\odot$",Eq.~\eqref{eq:gas-balance}; exact baryon balance in the selected reservoir,Main article,Exact reservoir solution and balance check
+PM1,Final density RMS $10.4690$; peak $1484.30$,Section~\ref{sec:pm3d}; Coherent-wave periodic $32^3$ PM experiment,Main article,200/300-step comparison at the stated mesh
+LEN1,SIS $\theta_E=0.8884$ arcsec,Section~\ref{sec:sis}; Chosen geometry and dispersion,Main article,Reference-model numerical calculation
+LEN2,SIS $|\Delta t|=42.93$ d,Section~\ref{sec:sis}; Chosen source offset,Main article,Reference-model numerical calculation
+LEN3,NFW $\kappa(0.1\Mp)=0.1197$,Section~\ref{sec:cluster-lensing}; Chosen cluster mass/concentration,Main article,Reference-model numerical calculation
+LEN4,NFW $\gamma_t(0.1\Mp)=0.0708$,Section~\ref{sec:cluster-lensing}; Chosen cluster mass/concentration,Main article,Reference-model numerical calculation
+LEN5,Cluster $\theta_t=5.35$ arcsec,Section~\ref{sec:cluster-lensing}; Separate idealized massive cluster,Main article,Reference-model numerical calculation
+LEN6,Angular convergence ratio at $\ell=200$: $1.2709505$,Section~\ref{sec:metric-scalar-joint}; Selected scalar response and matched initial density,Main article,Reference-model numerical calculation
+LEN7,"$E_G(0.5)=0.41400$ (GR), $0.40097$ (selected scalar response)",Section~\ref{sec:metric-scalar-joint}; Declared background and growth conditions,Main article,Reference-model numerical calculation
+LEN8,Growth and $E_G$ invert to $\mu$ and $\eta$,Eq.~\eqref{eq:growth-inversion}; quasistatic conserved matter and fixed background,Main article,Analytic inversion; integrated-growth check
+CMB1,$r_s(z_*)=144.294$ Mpc,Section~\ref{sec:acoustic-scale}; Reference recombination input,Main article,Reference-background numerical calculation
+CMB2,$100\theta_*=1.04075$,"Section~\ref{sec:acoustic-scale}; Reference, observational normalization",Main article,Reference-background numerical calculation
+CMB3,$\ell_A=301.86$,Section~\ref{sec:acoustic-scale}; Acoustic spacing of the stated background,Main article,Reference-background numerical calculation
+CMB4,Saha $z_{x_e=1/2}=1369$,Section~\ref{sec:cmb-state}; Equilibrium-only ionization,Main article,Reference-background numerical calculation
+CMB5,"$C_\ell^{TT},C_\ell^{TE},C_\ell^{EE},C_L^{\phi\phi}$","Equations~\eqref{eq:cl}, \eqref{eq:cmb-lensing-transfer}; Analytic observables; primordial and transfer inputs specified separately",Main article,Transfer-functional identity or analytic proof
+CMB6,$|C_\ell^{TE}|^2\leq C_\ell^{TT}C_\ell^{EE}$,Proposition~\ref{prop:cmb-positive}; positive primordial measure,Main article,Transfer-functional identity or analytic proof
+CMB7,Finite spectra admit a primordial equivalence class,Eq.~\eqref{eq:primordial-null-family}; fixed transfers and positive reference spectrum,Main article,Transfer-functional identity or analytic proof
+SI1,$\|P_{\mathcal R}-P\|\leq r\eta_{\mathcal R}$; isolated rank-one eigenvalue persists,Proposition~\ref{si:prop:persistence}; common physical resolvents; source pole requires positive residue,Supplement,Contour proof; matrix-sequence controls
+SI2,"$|E_{\chi,\mathcal R}-E_\chi|\leq2r^2\eta_{\mathcal R}$; $\|Z_{\mathcal R}-Z\|\leq r\eta_{\mathcal R}+2\varepsilon_{\mathcal R}$",Equations~\eqref{si:eq:energy-bound}--\eqref{si:eq:residue-bound}; positive limiting source weight,Supplement,Analytic bounds; independent contour integration
+SI3,Connected cumulants determine $\Gamma^{(3)}$ and $\Gamma^{(4)}$,Proposition~\ref{si:prop:vertices}; locally invertible source-to-field map,Supplement,Exact cumulants; independent inverse-map derivatives
+SI4,Fixed dynamics admit distinct initial abundances,Proposition~\ref{si:prop:state}; specified admissible initial densities,Supplement,Convex density-operator construction
+SI5,$h^2+k\ell_*^2/a^2=(\widehat u+\epsilon_0)/(3\gamma_R)$,Equation~\eqref{si:eq:copy-friedmann}; matched Einstein branch and cosmological state,Supplement,Algebraic substitution of gravitational matching
+SI6,$v_c^2=r\Psi^{\prime}$; deflection from $\Phi+\Psi$,Equation~\eqref{si:eq:common-galaxy-metric}; common weak-field metric and stated symmetries,Supplement,Timelike and null-geodesic relations
+SI7,On-shell amplitude from the connected four-point function and pole residues,"Equation~\eqref{si:eq:lsz}; stable scalar branch, Lorentzian continuation and asymptotic states",Supplement,LSZ reduction with the specified field normalization
+SI8,$\mathrm d\sigma=\overline{|\mathcal M|^2}\mathrm d\Phi_f/(4F S_f)$; $F=\sqrt{(p_1\cdot p_2)^2-m_1^2m_2^2}$,Equation~\eqref{si:eq:cross-section}; specified incoming particles and final-state symmetry factor,Supplement,Relativistic flux and phase-space identity
+SI9,Primordial curvature covariance determines the power-spectrum input to CMB transfers,Equation~\eqref{si:eq:primordial-state}; homogeneous isotropic initial state and specified transfer evolution,Supplement,Spectral covariance definition and transfer integrals
+SI10,$u^\dagger Zu\geq u^\dagger Z_{\mathcal R}u-r\eta_{\mathcal R}-2\varepsilon_{\mathcal R}$,Equation~\eqref{si:eq:visibility-certificate}; unit source vector and verified common-limit error bounds,Supplement,Analytic enclosure; visible and invisible source controls
+SI11,"$\begin{gathered}[\max\{0,\sqrt{z_{\mathcal R}}-d_{\mathcal R}\}]^2\leq z\\z\leq\min\{1,(\sqrt{z_{\mathcal R}}+d_{\mathcal R})^2\}\end{gathered}$","Equation~\eqref{si:eq:amplitude-residue}; normalized source; $z=u^\dagger Zu$, $d_{\mathcal R}=r\eta_{\mathcal R}+\varepsilon_{\mathcal R}$",Supplement,Reverse-triangle proof; weak-overlap matrix control

@@ -1,0 +1,6 @@
+{
+  "exact_rational_matrix_entries_checked": 47,
+  "four_regulator_separation_checks": "passed",
+  "known_spectrum_and_zero_phase_controls": "passed",
+  "subnormal_interval_checks": "passed"
+}

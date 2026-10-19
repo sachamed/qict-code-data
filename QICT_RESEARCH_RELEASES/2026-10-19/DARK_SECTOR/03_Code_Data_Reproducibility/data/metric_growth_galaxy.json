@@ -1,0 +1,38 @@
+{
+  "background": {
+    "Omega_m0": 0.315,
+    "model_A_mu": 1.0,
+    "model_A_eta": 1.0,
+    "model_B_mu": 1.05,
+    "model_B_eta": 0.9,
+    "normalization_a": 0.01
+  },
+  "growth": {
+    "f_z0p5_GR": 0.7608697572795179,
+    "f_z0p5_B": 0.7836284872562173,
+    "EG_z0p5_GR": 0.4139998954962796,
+    "EG_z0p5_B": 0.40097125756642416,
+    "Sigma_B": 0.9974999999999999,
+    "equal_time_Weyl_power_B_over_GR_z0p5": 1.2683337496268445,
+    "angular_convergence_B_over_GR_equal_initial_density": {
+      "50": 1.2737472030593426,
+      "200": 1.2709504741992759,
+      "1000": 1.269507729396782
+    },
+    "GR_Dhalf_normalized_z0": 0.7689432277534219,
+    "B_Dhalf_with_same_D_at_ai_relative_GR_z0": 0.8681567503900824
+  },
+  "star_formation": {
+    "baryon_fraction": 0.1563275916312396,
+    "halo_accretion_Msun_per_yr": 50.0,
+    "gas_inflow_Msun_per_yr": 7.81637958156198,
+    "SFR_Msun_per_yr_at_3_Gyr": 4.442058514868451,
+    "gas_mass_Msun_at_3_Gyr": 8884117029.736902,
+    "stellar_mass_Msun_at_3_Gyr": 5461883143.105889,
+    "epsilon_per_dynamical_time": 0.05,
+    "recycling_fraction": 0.4,
+    "wind_mass_loading": 1.0,
+    "dynamical_time_Gyr": 0.1,
+    "time_Gyr": 3.0
+  }
+}
