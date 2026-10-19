@@ -1,0 +1,14 @@
+{
+  "status": "BLOCKED_MISSING_INPUT",
+  "stage": "mass",
+  "accepted_for_physical_execution": false,
+  "reasons": [
+    "missing certified physical Kato buffers",
+    "missing complete C10 maps",
+    "missing full interacting Ucone",
+    "missing physical CN6",
+    "missing dark source V_chi",
+    "missing independent author commit/clock and limit certificates"
+  ],
+  "physical_mass_GeV": null
+}

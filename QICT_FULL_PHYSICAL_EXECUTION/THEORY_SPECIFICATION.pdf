@@ -1,0 +1,115 @@
+%PDF-1.4
+%ASCII
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1917 >>
+stream
+BT
+/F1 10 Tf
+50 798 Td
+14 TL
+(QICT INDEPENDENT PHYSICAL-POLE EXECUTION) Tj T*
+(Mathematical specification and fail-closed handoff — 19 October 2026) Tj T*
+(Status: BLOCKED_MISSING_INPUT) Tj T*
+(Repository: github.com/sachamed/qict-code-data) Tj T*
+(Inspected reference commit: fd664503ca92d2d88007d68d6e3873f7df2beeb8) Tj T*
+(Canonical action SHA-256: c22ff80fcb94204984a65debf7e5636ef1d4e6caad89cf8fd6934dfdb8f684b7) Tj T*
+() Tj T*
+(1. FROZEN DISCRETE-TIME ACTION) Tj T*
+(The canonical JSON fixes compact gauge U\(1\), SU\(2\), SU\(3\), periodic BCC geometry) Tj T*
+(and a microscopic product of swaps, cell transfer, electric, magnetic and matter factors.) Tj T*
+(The primitive collision phase is pi/63. Sources follow L1,L2,L3,R1,R2,R3.) Tj T*
+(The physical contour, interacting global U-cone and independent clock are not fixed.) Tj T*
+() Tj T*
+(2. SPECTRAL OBSERVABLES) Tj T*
+(For a full physical W and isometry V, moments are C_n = V* W^n V, with C_0 = I_6.) Tj T*
+(The matrix resolvent is G\(z\) = V* \(z-W\)^\(-1\) V, outside unit spectrum.) Tj T*
+(Toeplitz positivity is necessary; finitely many moments do not identify a pole.) Tj T*
+(A physical mode needs spectral isolation, residue >= 0 and nonzero visible weight.) Tj T*
+(It also needs volume, buffer, regulator and quasienergy-branch stability.) Tj T*
+() Tj T*
+(3. AUTHENTIC EVIDENCE, NOT COMPLETE INPUT) Tj T*
+(The L24 N9 rank-six data are genuine PRECONTRACTION payloads, not a full U.) Tj T*
+(Nested buffer geometry does not give four certified Kato density matrices.) Tj T*
+(C10 shell geometry is not a complete CPTP/Kraus quantum map.) Tj T*
+(Synthetic control CN6 spectra are not physical six-source moments.) Tj T*
+() Tj T*
+(4. PROHIBITED INFERENCES) Tj T*
+(No physical pole, residue, mass in GeV, relic abundance or gravitational coupling) Tj T*
+(has been produced by this preflight. A read-I/O benchmark is not an apply_U benchmark.) Tj T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 2156 >>
+stream
+BT
+/F1 10 Tf
+50 798 Td
+14 TL
+(QICT — ACCEPTANCE GATES AND COMPUTATIONAL ORDER) Tj T*
+(5. REQUIRED CHAIN) Tj T*
+(Kato/Riesz densities and certified tail -> C10 quantum maps -> boundary-to-path) Tj T*
+(-> SU\(2\)/SU\(3\)/CAR core recoupling -> rank-six source isometry -> full U and U*) Tj T*
+(-> physical CN6 -> error-certified Toeplitz -> isolated pole and positive residue) Tj T*
+(-> multi-volume and regulator checks -> independent clock -> physical mass.) Tj T*
+() Tj T*
+(6. REQUIRED NUMERICAL AND MATHEMATICAL CHECKS) Tj T*
+(Each Kato rho = F F* / Tr\(F F*\) must be positive and trace-one.) Tj T*
+(An independently certified strictly positive Riesz gap and tail bound are required.) Tj T*
+(The full unitary must pass matvec, adjointness, and norm-preservation tests.) Tj T*
+(Six source columns must satisfy V*V = I_6.) Tj T*
+(C_0 = I_6 and block Toeplitz >= 0 require propagated error control.) Tj T*
+(Finite-volume eigenphases alone are not thermodynamic particle evidence.) Tj T*
+() Tj T*
+(7. MULTI-VOLUME PROTOCOL) Tj T*
+(L=24,32,48,64,96,128; compatible depths n=9,13,21,29,45,61.) Tj T*
+(Compare volume laws, buffer bounds, regularization and extraction methods.) Tj T*
+(Do not use an external target mass to define the QICT scale.) Tj T*
+() Tj T*
+(8. DARK SECTOR IDENTIFIABILITY) Tj T*
+(If W=W_charged direct-sum W_dark and V=\(V_charged,0\), then all charged) Tj T*
+(moments V*W^nV are independent of the hidden W_dark spectrum.) Tj T*
+(Therefore a physical neutral copy-odd source V_chi must be constructed) Tj T*
+(and shown to have nonzero projected overlap with an isolated mode.) Tj T*
+() Tj T*
+(9. INDEPENDENT EXECUTION POLICY) Tj T*
+(Fix action, author-designated commit, source conventions and toolchain hashes.) Tj T*
+(Run tests and fail-closed guards before requesting HPC resources.) Tj T*
+(A physical mass can be reported only after fully independent verification.) Tj T*
+() Tj T*
+(FINAL DECISION: BLOCKED_MISSING_INPUT — no QICT dark-particle mass prediction.) Tj T*
+(This PDF is a Github-readable handoff; see the original external audit PDF) Tj T*
+(for the full two-page documentary rendering retained in the local ZIP.) Tj T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000016 00000 n 
+0000000065 00000 n 
+0000000128 00000 n 
+0000000254 00000 n 
+0000002222 00000 n 
+0000002348 00000 n 
+0000004555 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+4625
+%%EOF
