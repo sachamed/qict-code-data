@@ -52,3 +52,11 @@ python code/test_operator_closure.py
 ```
 
 **Release policy:** the 137 original scientific release files, their SHA-256 manifest, original numerical results and frozen articles are preserved unchanged. Corrections are made to audit tools, preflight validation, unit tests, CI and documentation, not retroactively to research datasets.
+## Conservative cleanup addendum — 19 October 2026
+
+The current repository was checked for generated build artifacts, editor backups and cache objects; none were found among tracked files. The current tree contained 50 identical-content blob groups (51 additional paths), most inside frozen source snapshots or required HPC/data compatibility layouts. Those provenance-relevant paths were retained. Two strictly redundant paths were selected for deletion:
+
+1. `MANIFEST_SHA256.txt` — 288 hash records, all equivalent to `GITHUB_EXPORT_SHA256.txt` after normalizing each entry's leading `./` prefix; the preserved latter file is already documented as a historical export.
+2. `QICT_FULL_PHYSICAL_EXECUTION/hpc/run_l24_ucone.slurm` — exact Git object duplicate of retained `QICT_FULL_PHYSICAL_EXECUTION/hpc/run_l24.slurm`; neither HPC operational data nor scientific routines are removed.
+
+No records from the 137-file October releases, nor any Kato, C9/C10, G2, matrices, tensors, figures, the October 17 snapshot, frozen action, tests, or certificates, are deleted. Git object identity and immutable prior commits preserve the deleted path history. No claim is made that all identical-path occurrences are obsolete or that full physical QICT calculation is completed.

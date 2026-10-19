@@ -33,7 +33,7 @@ The optional publication-source audit is invoked by `python REPRODUCE_ALL.py --p
 
 ## Integrity and provenance
 
-Git commit IDs identify exact immutable source revisions. Files `MANIFEST_SHA256.txt` and `GITHUB_EXPORT_SHA256.txt` document a **historical export**, not every later addition. Generate and verify an up-to-date tree-wide SHA-256 manifest with `tools/repository_integrity.py`, as described in its help and the CI workflow. Do not treat an old checksum list as proof that the current checkout is complete.
+Git commit IDs identify exact immutable source revisions. File `GITHUB_EXPORT_SHA256.txt` documents a **historical export** only, not the current repository; its redundant `MANIFEST_SHA256.txt` mirror was removed after all 288 normalized entries were verified identical. Generate and verify an up-to-date tree-wide SHA-256 manifest with `tools/repository_integrity.py`, as described in its help and the CI workflow. Do not treat an old checksum list as proof that the current checkout is complete.
 
 ## HPC handoff
 
@@ -57,3 +57,7 @@ The two independently supplied research packages are now published in their enti
 ## Repository quality audit (19 October 2026)
 
 [Global corrective audit](AUDITS/GLOBAL_AUDIT_2026-10-19.md) and [independent frozen-release verifier](tools/verify_scientific_release.py) are available. The CI workflow now verifies all 137 published scientific files against their fixed SHA-256 and Git blob hashes, compiles the 19 October release scripts, and runs the primitive and dark-sector operator test suites. Numerical guards reject nonfinite and malformed input. A passing provenance check does **not** establish the complete interacting physical QICT calculation.
+
+## Conservative repository cleanup (19 October 2026)
+
+The cleanup removes only two proved redundant files: the duplicate root export manifest (`MANIFEST_SHA256.txt`, equivalent to `GITHUB_EXPORT_SHA256.txt` after removing the leading `./` in paths) and the duplicate `QICT_FULL_PHYSICAL_EXECUTION/hpc/run_l24_ucone.slurm` (byte-identical to the retained `hpc/run_l24.slurm`). Source snapshots, original 137-file releases, hashes, numerical arrays, program dependencies, and all reproducible evidence remain intact. Identical Git blobs are already stored once by Git, so duplicate paths do not automatically imply wasted storage. Historical `DEDUPLICATION_AUDIT.json` describes the older snapshot, not the latest releases.
