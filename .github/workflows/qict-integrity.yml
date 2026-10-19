@@ -17,15 +17,26 @@ jobs:
           python-version: '3.11'
       - name: Install numerical dependencies
         run: python -m pip install -r code/requirements.txt
-      - name: Compile all Python files
-        run: python -m compileall -q code snapshot-2026-10-17/reproducibility/code QICT_FULL_PHYSICAL_EXECUTION/src QICT_FULL_PHYSICAL_EXECUTION/tests tools tests
+      - name: Compile current Python and both 19 October scientific releases
+        run: |
+          python -m compileall -q code snapshot-2026-10-17/reproducibility/code QICT_FULL_PHYSICAL_EXECUTION/src QICT_FULL_PHYSICAL_EXECUTION/tests tools tests QICT_RESEARCH_RELEASES/2026-10-19
+      - name: Check complete frozen scientific release against published manifest
+        run: python tools/verify_scientific_release.py
       - name: Repository tests
         run: python -m unittest discover -s tests -v
-      - name: Fail-closed physical tests
+      - name: Fail-closed physical and numerical screening tests
         run: python -m unittest discover -s QICT_FULL_PHYSICAL_EXECUTION/tests -v
+      - name: Original Haar/Z6 mathematical tests
+        working-directory: QICT_RESEARCH_RELEASES/2026-10-19/PRIMITIVE_HAAR_Z6/QICT_PRIMITIVE_INFINITY_CERTIFIED_2026_10_19
+        run: python -m unittest discover -s tests -v
+      - name: Original dark-sector finite operator tests
+        working-directory: QICT_RESEARCH_RELEASES/2026-10-19/DARK_SECTOR/03_Code_Data_Reproducibility
+        run: |
+          python code/validate_operator_certificate.py
+          python code/test_operator_closure.py
       - name: Neutral finite spectrum diagnostics
         run: python code/verify_neutrino_shape_obstruction.py
-      - name: Current checkout SHA-256
+      - name: Generate *self-consistency* checkout manifest (not trusted baseline)
         run: |
           python tools/repository_integrity.py --write /tmp/qict-current-tree.sha256
           python tools/repository_integrity.py --check /tmp/qict-current-tree.sha256
