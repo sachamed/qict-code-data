@@ -1,0 +1,146 @@
+\section{Metric response and scale-independent gravitational matching}\label{sec:metric}
+\subsection{The metric action and its normalization}
+
+The gravitational and cosmological formulas use signature $(-,+,+,+)$ and the Einstein-action convention $c^3(R-2\Lambda)/(16\pi G)$. Under the two-derivative metric and diffeomorphism-Ward assumptions of the QICT construction, the effective action may be written
+\begin{equation}
+\Gamma_g=\int \dd^4x\sqrt{-g}\left(\frac{\hbar\gamma_R}{2\ell_*^2}R-\frac{\hbar\epsilon_0}{\ell_*^4}\right)+\Gamma_{\geq4}[g],\qquad \ell_*=c\tau_*.
+\end{equation}
+Here $\Gamma_{\geq4}$ collects local terms with four or more metric derivatives in the long-wavelength expansion; their source-normalized coefficients are separate from the displayed two-derivative action. Coefficient comparison gives the matching identities
+\begin{equation}\label{eq:matching}
+\boxed{G_{\rm QICT}=\frac{c^5\tau_*^2}{8\pi\hbar\gamma_R},\quad
+\Lambda_{\rm QICT}=\frac{\epsilon_0}{\gamma_Rc^2\tau_*^2},\quad
+u_{\Lambda,\rm QICT}=\frac{\hbar\epsilon_0}{c^3\tau_*^4}.}
+\end{equation}
+Here $u_\Lambda$ is an energy density and $x^0=ct$ in the action integral. The identities match the physically normalized metric coefficients $\gamma_R$ and $\epsilon_0$ to the dimensional gravitational quantities. The two coefficients refer to curvature and volume variations, respectively.
+
+\begin{proposition}[Vacuum-energy non-identifiability from normalized matter moments]
+Consider the set of normalized matter-sector transfer moments and connected matter correlators evaluated on one fixed background metric, without an absolute metric-response normalization. These data admit a family of effective actions with distinct coefficients multiplying $\int\dd^4x\sqrt{-g}$.
+\end{proposition}
+\begin{proof}
+At the specified fixed metric, add a source-independent constant $\delta u\int\dd^4x\sqrt{-g}/c$ to the action. It multiplies the unnormalized partition function by a source-independent factor and therefore cancels from normalized expectation values and connected derivatives with respect to matter sources. In contrast, a metric variation of the added term changes the stress response by a contribution proportional to $\delta u\,g_{\mu\nu}$. Hence the matter correlator data leave $\delta u$ unidentifiable. Metric-source derivatives resolve this shift once their normalization and renormalization prescription are specified.
+\end{proof}
+
+\noindent The physical metric prediction is therefore a function of the common-state coefficients and their continuum error enclosure. On the positive-vacuum branch, their joint covariance propagates directly into the predicted cosmological constant.
+A joint covariance matrix $\mathsf C$ of the microscopic coordinates $\bm p=(\ln\epsilon_0,\ln\gamma_R,\ln\tau_*)$, gives the first-order propagation law
+\begin{equation}
+\sigma_{\ln\Lambda}^2=\bm J_\Lambda\,\mathsf C\,\bm J_\Lambda^\top,
+\qquad \bm J_\Lambda=(1,-1,-2).
+\end{equation}
+Its entries are common-state theoretical uncertainties. Observational posterior errors describe a separate covariance and enter only the reference-data comparison.
+
+\subsection{A clock-independent vacuum target}
+
+For $\gamma_R>0$, Eq.~\eqref{eq:matching} determines a clock-independent response ratio. Eliminating the receiver clock gives the exact identity
+\begin{equation}\label{eq:operator-vacuum-invariant}
+\boxed{\mathcal I_\Lambda:=\frac{\epsilon_0}{\gamma_R^2}
+=\frac{8\pi\hbar G\Lambda}{c^3}=8\pi\Lambda\ell_P^2,\qquad
+\ell_P^2:=\frac{\hbar G}{c^3}.}
+\end{equation}
+This is the dimensionless gravitational invariant already identified algebraically in the principal QICT article; its significance here is a \emph{numerical, clock-independent observational target}. Under the flat base-$\Lambda$CDM interpretation used by Planck, the published value $\Lambda\ell_P^2=(2.846\pm0.076)\times10^{-122}$ yields
+\begin{equation}\label{eq:operator-vacuum-target}
+\boxed{\mathcal I_{\Lambda,\mathrm{reference}}=(7.1528\pm0.1910)\times10^{-121}\quad(68\%\ \mathrm{reference\ uncertainty}).}
+\end{equation}
+This uncertainty describes the adopted Planck posterior. The rounded background point in Section~\ref{sec:structure} defines a separate nominal reference. Equation~\eqref{eq:operator-vacuum-target} applies to a spacetime-constant metric-volume term; dynamical dark-energy models instead use a time-dependent stress tensor \cite{Planck,DESI25}. The independently computed ratio and its common-state covariance define the corresponding theoretical comparison. On the branch $\gamma_R>0$, positive $\Lambda$ is equivalent to positive $\epsilon_0$.
+
+\subsection{The constant-volume equation of state}
+\label{sec:consistency}
+For a spacetime-constant renormalized volume term, metric variation fixes the associated stress tensor and equation of state exactly.
+\begin{proposition}[Constant volume term and the equation of state]\label{prop:w}
+For $S_{\rm vac}=-\int\dd^4x\sqrt{-g}\,u_{\rm vac}/c$ in coordinates with $x^0=ct$, with $u_{\rm vac}$ independent of spacetime and of the metric, the associated stress tensor is $T_{\mu\nu}=-u_{\rm vac}g_{\mu\nu}$ and its pressure is $p=-u_{\rm vac}$. For $u_{\rm vac}\ne0$, its homogeneous perfect-fluid equation-of-state parameter is $w=-1$.
+\end{proposition}
+\begin{proof}
+The metric variation is $\delta\sqrt{-g}=-\tfrac12\sqrt{-g}\,g_{\mu\nu}\delta g^{\mu\nu}$. Hence the volume term yields $T_{\mu\nu}= -u_{\rm vac}g_{\mu\nu}$ after restoring consistent stress-energy units. Comparing with the perfect-fluid tensor $T_{\mu\nu}=(u+p)U_\mu U_\nu/c^2+pg_{\mu\nu}$ gives $p=-u$ and thus $w=p/u=-1$ for nonzero $u$.\end{proof}
+
+The implication fixes the equation of state conditional on the constant-volume action. Its magnitude is set by the separately normalized vacuum coefficient. A robust measured departure from $w=-1$ selects an extended dynamical stress sector; DESI DR2 provides data-combination-dependent tests of this possibility \cite{DESI25}.
+
+
+\subsection{Finite source curvature and continuum metric coefficients}\label{sec:finite-gravity-rank}
+The supplied nine-state matrix family supports a direct independent evaluation of its selected-state derivatives. Let $E_j,|j\rangle$ diagonalize $K_0$, with ground branch $j=0$, and let $K_q^\dagger=K_{-q}$. Define
+\begin{align}
+D(s)&=\sum_{j>0}\frac{\Delta_j\bigl(|\langle j|K_q|0\rangle|^2+|\langle j|K_{-q}|0\rangle|^2\bigr)}{s+\Delta_j^2},
+\quad \Delta_j=E_j-E_0>0,\\
+H_{q,-q}&=\langle0|K_{q,-q}^{(2)}|0\rangle-D(0).
+\end{align}
+The mixed derivative is the finite Lehmann--Kato energy curvature. Its connected spectral term and source-contact term are distinct observables. The input gap is $0.47$, and direct diagonalization gives
+\begin{equation}\label{eq:finite-source-numbers}
+\boxed{\begin{aligned}
+D(0)&=0.1494933610746553,\\
+\langle K_{q,-q}^{(2)}\rangle&=0.2003415648585009,\\
+H_{q,-q}&=0.0508482037838456.
+\end{aligned}}
+\end{equation}
+For $N_{\rm cell}=64$ at $q\ell_*=0.125$, the connected response per cell is $0.00233583376679$, whereas the energy curvature per cell is $0.000794503184123$. The latter quantity includes the contact term; it measures the stiffness of the selected source family.
+
+The independent homogeneous source derivative is
+\[
+\frac{\langle K_{\rm vol}^{(1)}\rangle}{N_{\rm cell}}
+=0.000235557962534.
+\]
+If its source coordinate $J$ is defined by $\partial_J\ln\sqrt{-g}=4$, division by that factor gives the source-volume representative $\epsilon_{0,\rm src}=5.88894906336\times10^{-5}$. The factor four specifies the metric-source convention of this representative. The input matrices by themselves supply the displayed derivatives, independently of a continuum metric interpretation.
+
+A continuum curvature coefficient is the quadratic momentum coefficient of a physically normalized response. The nine-state family supplies the stated finite derivatives at $q\ell_*=0.125$. Their frequency dependence and the independent role of momentum and contact data are characterized by the following results.
+
+\subsection{Analytic bounds on the finite connected response}
+\label{sec:response-bounds}
+The Lehmann weights in the nine-state calculation give more than the static susceptibility. Write
+\[
+w_j=|\langle j|K_q|0\rangle|^2+|\langle j|K_{-q}|0\rangle|^2,
+\qquad a_n=\sum_{j>0}\frac{w_j}{\Delta_j^{2n+1}}.
+\]
+\begin{proposition}[Positive spectral response and controlled expansion]\label{prop:stieltjes-response}
+For $s\geq0$ and every integer $n\geq0$,
+\begin{equation}\label{eq:response-monotonicity}
+(-1)^nD^{(n)}(s)=n!\sum_{j>0}\frac{w_j\Delta_j}{(s+\Delta_j^2)^{n+1}}\geq0.
+\end{equation}
+The Taylor series $D(s)=\sum_{n=0}^\infty(-s)^na_n$ converges for $|s|<\Delta_{\min}^2$. On the entire positive real axis its finite remainder satisfies
+\begin{equation}\label{eq:response-remainder}
+0\leq(-1)^{p+1}\left[D(s)-\sum_{n=0}^p(-s)^na_n\right]
+\leq s^{p+1}a_{p+1}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Differentiate each positive rational summand. For the expansion, apply the exact geometric identity to $(1+s/\Delta_j^2)^{-1}$. The remainder in each term has sign $(-1)^{p+1}$ and magnitude
+$w_j s^{p+1}/[\Delta_j^{2p+3}(1+s/\Delta_j^2)]$.
+Summing proves the real-axis bound, while absolute convergence of the geometric series proves the analytic-disk statement.
+\end{proof}
+The supplied arrays give
+\begin{equation}\label{eq:response-taylor-numbers}
+\begin{aligned}
+a_0&=0.1494933610746553,&a_1&=0.3536064776270250,\\
+a_2&=1.296428153315946,&a_3&=5.532355252365083,
+\end{aligned}
+\qquad \Delta_{\min}^2=0.2209.
+\end{equation}
+All quantities are expressed in the dimensionless source units of the finite matrix family.
+
+Useful global enclosures follow from the same weights. For $a_0>0$, let $\bar r=a_1/a_0$, $r_-=\Delta_{\max}^{-2}$ and $r_+=\Delta_{\min}^{-2}$. When $r_-<r_+$, define $\alpha=(\bar r-r_-)/(r_+-r_-)$. Convexity of $(1+sr)^{-1}$, first below by Jensen's inequality and then above by its endpoint chord, gives
+\begin{equation}\label{eq:response-jensen}
+\frac{a_0}{1+s\bar r}\leq D(s)\leq
+a_0\left(\frac{1-\alpha}{1+sr_-}+\frac{\alpha}{1+sr_+}\right),\qquad s\geq0.
+\end{equation}
+For equal gaps, $r_-=r_+$ and the exact result is $D(s)=a_0/(1+sr_-)$; this treats the degenerate case directly. At $s=0.1$, the recorded family gives $0.12089684\leq D(0.1)=0.12326493\leq0.12489231$. The gap controls analyticity in frequency; a spatial momentum derivative belongs to the separately specified momentum-dependent source family.
+
+\subsection{Independent contact and momentum information}
+\label{sec:contact-independence}
+The selected-state curvature can be characterized exactly at the level of source data. For a smooth real source family
+\[
+K(J)=K_0+JA+\tfrac12J^2B,
+\]
+with a nondegenerate ground state, differentiation of the eigenvalue equation gives
+\begin{equation}\label{eq:source-curvature}
+E_0''(0)=\langle0|B|0\rangle
+-2\sum_{j>0}\frac{|\langle j|A|0\rangle|^2}{E_j-E_0}.
+\end{equation}
+Indeed, choose the derivative of the normalized eigenvector perpendicular to $|0\rangle$. Its excited-state components are $\langle j|0'\rangle=-\langle j|A|0\rangle/(E_j-E_0)$; substitution in the second derivative proves the formula. Replacing $B$ by $B+bI$ preserves $K_0$, $A$ and every connected two-source Lehmann weight, while shifting $E_0''(0)$ by $b$. This explicitly separates contact data from the connected response. Physical metric sources additionally obey their specified Ward identities and renormalization conditions.
+
+Finite momentum samples likewise determine a function only within its declared functional class. For distinct positive samples $x_i=q_i^2$, an analytic response $h(x)$ and
+\begin{equation}\label{eq:momentum-sample-family}
+\widetilde h_\beta(x)=h(x)+\beta x\prod_{i=1}^m(x-x_i)
+\end{equation}
+have identical values at every $x_i$ and at zero, while
+$\widetilde h_\beta'(0)=h'(0)+\beta\prod_i(-x_i)$.
+If $h$ is strictly positive on a compact sampling interval, sufficiently small $|\beta|$ also preserves that positivity. Thus a finite list of values, even with a fixed volume term, allows distinct quadratic momentum coefficients. A specified derivative expansion with a remainder enclosure gives a precise alternative: for $h(x)=a+bx+R(x)$, $|R(x)|\leq Mx^2$,
+\begin{equation}\label{eq:curvature-sample-bound}
+\left|b-\frac{h(x)-a}{x}\right|\leq Mx\qquad(x>0).
+\end{equation}
+With verified errors $\delta_h$ and $\delta_a$, the right-hand side becomes $Mx+(\delta_h+\delta_a)/x$. These statements specify exactly how a curvature coefficient is identified from a physically normalized response.

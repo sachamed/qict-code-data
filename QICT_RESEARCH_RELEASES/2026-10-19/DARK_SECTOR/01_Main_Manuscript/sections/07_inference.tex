@@ -1,0 +1,23 @@
+\section{Physical inference and uncertainty propagation}\label{sec:inference}
+A specified microscopic model and its astrophysical environment define a joint data likelihood. Write $\vartheta$ for the microscopic coordinates and $\nu$ for nuisance parameters. For conditionally independent data subsets, with shared calibrations included in $\nu$,
+\begin{equation}
+\mathcal L_{\rm joint}(\vartheta,\nu)=\mathcal L_{\cmb}\mathcal L_{\rm BAO}
+\mathcal L_{\rm galaxy}\mathcal L_{\rm shear}\mathcal L_{\rm direct}\mathcal L_{\gamma}\mathcal L_{\bar p}.
+\end{equation}
+Correlated subsets are described by their joint likelihood. A predictive test fixes $\vartheta$ from the operator construction or from measurements disjoint from the tested observables. Calibration against an abundance or a scattering limit instead defines an inverse problem, such as Eq.~\eqref{eq:widthinv} or Eq.~\eqref{eq:portalbound}.
+
+The theoretical error distribution propagates source-moment uncertainties, regulator and volume matching, analytic continuation, interaction amplitudes, the primordial and reheating state, numerical integration, and astrophysical modelling. Their correlations enter a common covariance or a joint distribution. Numerical convergence quantifies the numerical component under the declared model assumptions. Observational covariance enters separately through the detector or survey likelihood.
+
+\subsection{Particle and survey response functions}\label{sec:comparisonhierarchy}
+The thermal collision kernel determines a relic abundance. The matched nucleon amplitude, local density and velocity distribution determine the direct-detection rate per detector mass,
+\begin{equation}\label{eq:direct-count}
+\frac{\dd R}{\dd E_R}=\frac{\rho_\chi}{m_\chi m_T}
+\int_{v>v_{\min}}\dd^3v\,f_\oplus(\mathbf v)\,v
+\frac{\dd\sigma_T}{\dd E_R}.
+\end{equation}
+Here $\rho_\chi$ is the local particle mass density, $m_T$ is the target-nucleus mass and $f_\oplus$ is normalized by $\int\dd^3v\,f_\oplus(\mathbf v)=1$. A detector with several target species uses their mass-fraction-weighted rates.
+The LZ or XENONnT detector model maps this recoil spectrum through efficiencies, energy resolution and the signal-plus-background likelihood. The selected 40-GeV, $\lambda_{HS}=0.01$ point lies outside the published LZ allowed region under the stated full-local-abundance assumptions. A different source-defined candidate carries its own mass, vertex and local phase-space distribution. The XENONnT 3.1 tonne-year analysis quotes its minimum 90\% spin-independent limit near $1.7\times10^{-47}\,\mathrm{cm}^2$ at 30 GeV \cite{XENON25}; each candidate is compared at its own mass and interaction form.
+
+Gamma-ray inference combines the annihilation rate, photon yield and target $J$-factor. Charged-particle inference additionally includes transport and secondary production. A galaxy-survey likelihood combines anisotropic clustering with bias, redshift-space distortions, selection functions and instrumental windows. DESI DR2 BAO distances constrain expansion histories in combination with other probes \cite{DESI25}. The QICT vacuum coefficient has the distinct operator definition in Eq.~\eqref{eq:matching}; its observational comparison is made through the resulting metric response and expansion history.
+
+The explicit constructions in Propositions~\ref{prop:odd-nonidentification}, \ref{prop:energy-branch} and \ref{prop:interaction-data}, together with Eqs.~\eqref{eq:source-curvature}, \eqref{eq:momentum-sample-family} and \eqref{eq:primordial-null-family}, characterize the independent physical information in this inference problem. They establish precisely which extensions preserve the recorded observables. Each numerical value in the accompanying standalone prediction register is therefore associated with the data and assumptions that determine it.
