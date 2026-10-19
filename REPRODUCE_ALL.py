@@ -43,14 +43,10 @@ def sha256(path):
     return h.hexdigest()
 
 def build_manifest():
-    manifest=ROOT/'MANIFEST_SHA256.txt'
-    rows=[]
-    for p in sorted(ROOT.rglob('*')):
-        if not p.is_file() or p==manifest: continue
-        if p.suffix in {'.aux','.blg','.fdb_latexmk','.fls','.log','.out','.toc'}: continue
-        if 'validation/renders_' in str(p.relative_to(ROOT)): continue
-        rows.append(f'{sha256(p)}  {p.relative_to(ROOT)}')
-    manifest.write_text('\n'.join(rows)+'\n')
+    # Track only the current checkout; do not hash mutable .git internals,
+    # untracked editor artifacts, or overwrite the historical export manifest.
+    current=ROOT/'CURRENT_REPRODUCTION_SHA256.txt'
+    run([sys.executable,str(ROOT/'tools/repository_integrity.py'),'--write',str(current)])
 
 ap=argparse.ArgumentParser(description='Regenerate all numerical results and, optionally, the publication PDFs.')
 ap.add_argument('--compile-pdfs',action='store_true',help='compile publication PDFs; requires the separate paper/ and cover_letter/ source packages')
