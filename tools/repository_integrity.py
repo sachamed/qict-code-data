@@ -19,6 +19,12 @@ def file_paths(root):
                       and p.suffix not in {".pyc",".tmp"})
 
 def sha256(path):
+    # Git stores symlinks as blobs whose payload is the link target string.
+    # Hash the symlink itself, not the aliased scientific file twice.
+    if path.is_symlink():
+        if not path.exists():
+            raise ValueError("Broken scientific alias: "+str(path))
+        return hashlib.sha256(os.fsencode(os.readlink(path))).hexdigest()
     h=hashlib.sha256()
     with path.open("rb") as stream:
         for block in iter(lambda:stream.read(1<<20),b""): h.update(block)
@@ -38,7 +44,7 @@ def main():
         rows=[]
         for p in files:
             f=root/p
-            if not f.is_file() or f.is_symlink(): raise ValueError("Invalid tracked file: "+str(p))
+            if not f.is_file(): raise ValueError("Invalid or broken tracked file: "+str(p))
             rows.append(f"{sha256(f)}  {p.as_posix()}")
         dest.parent.mkdir(parents=True,exist_ok=True)
         dest.write_text("\n".join(rows)+"\n",encoding="utf-8")
@@ -57,7 +63,7 @@ def main():
     missing=sorted(expected-set(data))
     extra=sorted(set(data)-expected)
     bad=sorted(str(p) for p in files if not (root/p).is_file()
-               or (root/p).is_symlink() or data.get(p.as_posix())!=sha256(root/p))
+               or data.get(p.as_posix())!=sha256(root/p))
     if missing or extra or bad:
         print(f"INTEGRITY_FAIL: missing={len(missing)} extra={len(extra)} changed={len(bad)}",file=sys.stderr)
         for label,items in (("missing",missing),("extra",extra),("changed",bad)):
