@@ -1,0 +1,162 @@
+{
+  "gravity_selftest": {
+    "N_cells": 64.0,
+    "continuum_gamma_R_extractable": false,
+    "independent_nonzero_momenta_in_input": 1,
+    "physical_vacuum_epsilon_0_extractable": false,
+    "qell": 0.125,
+    "source_sha256": "c19c7ad3b9a239cb4e8b9b57e70776d514cc9f94bc5cc468e702ea1d4253edc5"
+  },
+  "observational_gravity_target": {
+    "definition": "epsilon_0/gamma_R^2 = 8*pi*Lambda*hbar*G/c^3 = 8*pi*Lambda*ell_P^2",
+    "lambda_m_inverse2": 1.0894696084755902e-52,
+    "one_sigma_observational": 1.9100883333825944e-122,
+    "qict_prediction": false,
+    "source": "Planck Collaboration, A&A 641 A6 (2020), Eq. (16) in Planck units",
+    "value": 7.152778153693241e-121
+  },
+  "regulators": [
+    {
+      "C0_identity_frobenius_error": 6.308152408326869e-15,
+      "channel_count": 6,
+      "fejer_minus_optimized_min_eigenvalue": 0.0015141606023070862,
+      "fejer_to_optimized_max_ratio": 16.339519769746023,
+      "first_three_diagonal": [
+        0.016935574956859475,
+        0.016935574956859475,
+        0.016935574956859475
+      ],
+      "inverse_toeplitz_atom_max_eigenvalue": 0.001036479357748145,
+      "inverse_toeplitz_atom_min_eigenvalue": 5.0738372778478544e-05,
+      "last_three_diagonal": [
+        0.0015648989750855677,
+        0.0015648989750855677,
+        0.0015648989750855677
+      ],
+      "max_eigenvalue": 0.016935574956859475,
+      "min_eigenvalue": 0.0015648989750855677,
+      "moment_count": 13,
+      "neutral_carrier_dimension": 45,
+      "regulator": "R1",
+      "solve_relative_residual": 3.283653721565572e-13,
+      "toeplitz_N5_min_eig": 0.0002678104326224454,
+      "toeplitz_condition_2": 1118549.6327103018,
+      "toeplitz_min_eigenvalue": 8.778350786126474e-06
+    },
+    {
+      "C0_identity_frobenius_error": 2.6175130461692004e-15,
+      "channel_count": 6,
+      "fejer_minus_optimized_min_eigenvalue": 0.001334671595841404,
+      "fejer_to_optimized_max_ratio": 9.207502983662074,
+      "first_three_diagonal": [
+        0.015844046335816105,
+        0.015844046335816105,
+        0.015844046335816105
+      ],
+      "inverse_toeplitz_atom_max_eigenvalue": 0.00172077558529495,
+      "inverse_toeplitz_atom_min_eigenvalue": 7.708798630828011e-05,
+      "last_three_diagonal": [
+        0.0014117595821496846,
+        0.0014117595821496846,
+        0.0014117595821496846
+      ],
+      "max_eigenvalue": 0.015844046335816105,
+      "min_eigenvalue": 0.0014117595821496846,
+      "moment_count": 13,
+      "neutral_carrier_dimension": 350,
+      "regulator": "R2",
+      "solve_relative_residual": 2.2849143983451896e-13,
+      "toeplitz_N5_min_eig": 0.00047764595863938235,
+      "toeplitz_condition_2": 220549.63133998378,
+      "toeplitz_min_eigenvalue": 4.4114595748422434e-05
+    },
+    {
+      "C0_identity_frobenius_error": 4.088275711266797e-15,
+      "channel_count": 6,
+      "fejer_minus_optimized_min_eigenvalue": 0.0013528975752159379,
+      "fejer_to_optimized_max_ratio": 8.303361242920952,
+      "first_three_diagonal": [
+        0.01604635927139522,
+        0.01604635927139522,
+        0.01604635927139522
+      ],
+      "inverse_toeplitz_atom_max_eigenvalue": 0.0019325136895706637,
+      "inverse_toeplitz_atom_min_eigenvalue": 7.731875864864393e-05,
+      "last_three_diagonal": [
+        0.0014302163338645883,
+        0.0014302163338645883,
+        0.0014302163338645883
+      ],
+      "max_eigenvalue": 0.01604635927139522,
+      "min_eigenvalue": 0.0014302163338645883,
+      "moment_count": 13,
+      "neutral_carrier_dimension": 1470,
+      "regulator": "R3",
+      "solve_relative_residual": 1.9000962567316965e-13,
+      "toeplitz_N5_min_eig": 0.0005029895886902646,
+      "toeplitz_condition_2": 198155.61389105546,
+      "toeplitz_min_eigenvalue": 4.911369125869741e-05
+    },
+    {
+      "C0_identity_frobenius_error": 2.4892529965748998e-14,
+      "channel_count": 6,
+      "fejer_minus_optimized_min_eigenvalue": 0.0013529782299847937,
+      "fejer_to_optimized_max_ratio": 8.221531123878027,
+      "first_three_diagonal": [
+        0.016083559475960678,
+        0.016083559475960678,
+        0.016083559475960678
+      ],
+      "inverse_toeplitz_atom_max_eigenvalue": 0.0019562730145542767,
+      "inverse_toeplitz_atom_min_eigenvalue": 7.731777664175643e-05,
+      "last_three_diagonal": [
+        0.0014302960066265515,
+        0.0014302960066265515,
+        0.0014302960066265515
+      ],
+      "max_eigenvalue": 0.016083559475960678,
+      "min_eigenvalue": 0.0014302960066265515,
+      "moment_count": 13,
+      "neutral_carrier_dimension": 4455,
+      "regulator": "R4",
+      "solve_relative_residual": 2.1730886867748497e-13,
+      "toeplitz_N5_min_eig": 0.0005052521000552888,
+      "toeplitz_condition_2": 203862.46452689925,
+      "toeplitz_min_eigenvalue": 4.773883979232445e-05
+    }
+  ],
+  "scale_free_freeze_in": {
+    "Y_direct": 3.629199032171634e-11,
+    "benchmark_inputs": "M_A=1000 GeV, Gamma_A=1e-20 GeV, g_A=1, g_s=g_r=106.75, reference M_Pl=1.220890e19 GeV",
+    "coordinate_invariance_checks": [
+      {
+        "E_star_GeV": 5.0,
+        "Y_invariant": 3.6291990321716335e-11,
+        "delta_A": 2e-21,
+        "epsilon_A": 200.0,
+        "gamma_R_matching_reference_G": 2.372319642390258e+35,
+        "relative_error": -1.7806542100017038e-16
+      },
+      {
+        "E_star_GeV": 100.0,
+        "Y_invariant": 3.6291990321716335e-11,
+        "delta_A": 9.999999999999999e-23,
+        "epsilon_A": 10.0,
+        "gamma_R_matching_reference_G": 5.930799105975646e+32,
+        "relative_error": -1.7806542100017038e-16
+      },
+      {
+        "E_star_GeV": 10000.0,
+        "Y_invariant": 3.629199032171633e-11,
+        "delta_A": 1e-24,
+        "epsilon_A": 0.1,
+        "gamma_R_matching_reference_G": 5.930799105975645e+28,
+        "relative_error": -3.5613084200034076e-16
+      }
+    ],
+    "identity": "Y_inf = [135 g_A/(8*pi^3*1.66*g_s*sqrt(g_r))]*delta_A*sqrt(8*pi*gamma_R)/epsilon_A^2",
+    "qict_prediction": false
+  },
+  "scope": "FINITE_QICT_C9_MOMENT_BOUND_AND_OBS_GRAVITATIONAL_TARGET",
+  "source_sha256": "b325c3869deac41bb61031406d6912e348319f81af603567e50352886f863cb2"
+}
