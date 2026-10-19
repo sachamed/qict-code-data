@@ -1,0 +1,34 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm,headheight=14pt]{geometry}
+\usepackage[T1]{fontenc}\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,bm,booktabs,longtable,array,hyperref,fancyhdr}
+\hypersetup{colorlinks=true,linkcolor=black,urlcolor=black}
+\pagestyle{fancy}\fancyhf{}\lhead{QICT: Predictions and Derived Results}\rhead{Domains and supporting tests}\cfoot{\thepage}
+\setlength{\parskip}{5pt}\setlength{\parindent}{13pt}\setlength{\emergencystretch}{5em}
+\newcommand{\dd}{\mathrm{d}}\newcommand{\Mp}{\,\mathrm{Mpc}}\newcommand{\msun}{M_\odot}
+\newcommand{\Gev}{\,\mathrm{GeV}}\newcommand{\Om}{\Omega}\newcommand{\sigv}{\langle\sigma v\rangle}
+\title{\bfseries Theoretical Predictions and Derived Results\\[6pt]\large Spectral Tests of Dark Matter and Cosmic Structure in Quantum Information Copy Time}
+\author{Sacha Mohamed\\\small Casablanca, Morocco}\date{19 October 2026}
+\begin{document}\maketitle
+
+This register collects the numbered predictions, derived relations and numerical benchmarks of the main article and the supplementary identities. Each entry specifies its domain and supporting calculation. Cross-references give the section, proposition, equation or table number in the compiled document named in the same row.
+
+The entries distinguish finite QICT operator certificates, conditional physical identities, declared model parameters and calculations using observational reference inputs. The scalar-portal masses and couplings, background normalization and halo profiles retain their stated external provenance. A numerical result for a declared reference model has that model as its domain. The finite C9 certificate concerns the static chiral-source polar-unitary construction described in the main article.
+
+The supplied finite calculations establish the spectral and response results listed below. Their physical extension uses the source, state and convergence hypotheses in Supplementary Sections S1--S4. In particular, a source-visible pole requires a nonzero residue in addition to an isolated operator eigenvalue; SI10 and SI11 give complementary linear and amplitude enclosures under verified common-limit error bounds. A QICT dark-particle mass, its relic abundance, complete primordial CMB spectra and a sample-wide galaxy fit are not established by these inputs. The support column records the tests actually performed; mathematical or numerical agreement is distinct from independent experimental confirmation.
+
+\small
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\input{rows}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.065\linewidth}>{\raggedright\arraybackslash}p{.365\linewidth}>{\raggedright\arraybackslash}p{.335\linewidth}>{\raggedright\arraybackslash}p{.165\linewidth}@{}}
+\toprule ID & Statement or value & Domain and cross-reference & Support\\\midrule\endfirsthead
+\toprule ID & Statement or value & Domain and cross-reference & Support\\\midrule\endhead
+\bottomrule\endlastfoot
+\predictionrows
+\end{longtable}
+\normalsize
+
+\paragraph{Reproducibility and error conventions.}
+The numerical values, finite matrix arrays, interval certificates and formula checks are distributed in the code and data folder. Its \texttt{README.md} gives the reproduction commands and expected outputs. The exact recorded-moment certificate, outward-rounded finite-operator enclosure and floating-point numerical comparisons retain their respective arithmetic guarantees. The conditional physical identities carry the assumptions stated in their proofs. Regulator convergence and empirical error bounds enter where explicitly specified; the finite tests retain their stated regulator and model domains.
+
+\end{document}
