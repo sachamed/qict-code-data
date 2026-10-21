@@ -287,6 +287,21 @@ independent superselection argument applies. The recursion supplies the
 dressing once the link actions are available; it does not generate the
 missing interacting state or global matter--gauge update.
 
+\paragraph{Archived geometric-flow check.}
+The $L=24$, $n=9$ precontraction supplies 3925 interior vertices and 17576
+oriented edges, with the boundary identified as one sink. Applying the
+recursion to its recorded probabilities gives a mean path length
+$13.217861267754989$ in binary64 arithmetic. The resulting edge occupations
+agree with the archived flows to $1.79\times10^{-15}$ in maximum absolute
+error; the conservation residual is below $4.21\times10^{-15}$.
+For a uniform certified link error $\epsilon$ and contraction-valued links,
+Eq.~\eqref{eq:algebraic-dag-error} therefore has the geometric factor
+$\sum_e F(e)$, numerically about $13.218$. These decimals are evaluations,
+not outward-rounded enclosures. Identity link callbacks were used solely
+to check graph transport and its adjoint. They do not provide the
+interacting quantum links or a physical C10 kernel. The input checksum,
+code and residuals are supplied with the computational archive.
+
 \subsection{What is resolved, and what the physical limit requires}
 
 The source observable now has a consistent stationary formulation in domains

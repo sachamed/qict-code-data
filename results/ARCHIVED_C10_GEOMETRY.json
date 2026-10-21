@@ -1,0 +1,22 @@
+{
+  "classification": "ARCHIVED_C10_GEOMETRY_FLOATING_POINT_VALIDATION",
+  "input_sha256": "020d21f11ce948de0cfa37889e9e050edaf5796e0b2c75fba740bb685dd20c29",
+  "L": 24,
+  "n": 9,
+  "interior_nodes": 3925,
+  "boundary_sink_nodes": 1,
+  "directed_edges": 17576,
+  "expected_path_length": 13.217861267754989,
+  "uniform_edge_error_amplification": 13.217861267754987,
+  "outgoing_probability_normalization_residual": 2.220446049250313e-16,
+  "maximum_archived_flow_discrepancy": 1.7840546748248975e-15,
+  "maximum_archived_conservation_residual": 4.202367620553815e-15,
+  "identity_transport_residual": 1.1102230246251565e-16,
+  "identity_adjoint_residual": 2.19824158875781e-14,
+  "boundary_absorption_probability": 1.0,
+  "interpretation": "For exact normalized probabilities and true and approximate link contractions with a common certified error epsilon, the analytic bound is expected_path_length times epsilon. This file evaluates the archived geometry only; its decimal values do not enclose floating-point error.",
+  "physical_interacting_links_supplied": false,
+  "physical_C10_certified": false,
+  "roundoff_certified": false,
+  "particle_prediction_claimed": false
+}
