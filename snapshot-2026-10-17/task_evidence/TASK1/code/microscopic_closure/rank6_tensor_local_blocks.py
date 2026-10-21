@@ -78,10 +78,19 @@ class LinkBlock:
 def block_svd(matrix_blocks:dict[tuple, np.ndarray], rel_tol:float=0.0, abs_budget:float=1e-8):
     """Symmetry-preserving SVD of independent charge/spin blocks.
 
-    Singular values are never mixed across sectors.  For each block, the largest
-    rank is kept such that the sum of discarded spectral norms is <= abs_budget.
-    The routine returns factors and a rigorous triangle-inequality certificate.
+    Singular values are never mixed across sectors. The sum of discarded
+    singular values must stay within abs_budget. A positive rel_tol additionally
+    protects values above that fraction of their own block's largest value;
+    rel_tol=0 uses the absolute budget alone.
+
+    The discarded sum bounds the truncation error in exact arithmetic.
+    Floating-point SVD and reconstruction errors require separate validation
+    before this diagnostic can be used as a physical error certificate.
     """
+    if not math.isfinite(rel_tol) or rel_tol < 0:
+        raise ValueError("rel_tol must be finite and nonnegative")
+    if not math.isfinite(abs_budget) or abs_budget < 0:
+        raise ValueError("abs_budget must be finite and nonnegative")
     svds={}
     spectra=[]
     for q,A in matrix_blocks.items():
@@ -94,10 +103,12 @@ def block_svd(matrix_blocks:dict[tuple, np.ndarray], rel_tol:float=0.0, abs_budg
     spectra.sort(key=lambda x:x[0])
     discarded=set(); total=0.0
     for val,q,i in spectra:
-        if val <= rel_tol*(svds[q][1][0] if len(svds[q][1]) else 0.0) or total+val<=abs_budget:
-            discarded.add((q,i)); total+=val
-        else:
+        if rel_tol > 0 and val > rel_tol*svds[q][1][0]:
+            continue
+        if total+val > abs_budget:
+            # Later candidates are no smaller, so none can fit the budget.
             break
+        discarded.add((q,i)); total+=val
     out={}
     for q,(U,s,Vh) in svds.items():
         keep=[i for i in range(len(s)) if (q,i) not in discarded]
@@ -124,9 +135,31 @@ def self_test():
     A={('q0','j0'):np.diag([1.0,1e-9]),('q1','j1'):np.diag([0.5,2e-9])}
     _,cert=block_svd(A,abs_budget=1e-8)
     assert cert['discarded_singular_value_sum_bound']<=1e-8
+    # A relative threshold must never override the global absolute budget.
+    # The previous OR condition discarded 0.11 and 0.08, giving operator
+    # error 0.11 despite an absolute budget of 0.10.
+    A={('relative_budget',):np.diag([1.0,0.11,0.08])}
+    factors,cert=block_svd(A,rel_tol=0.2,abs_budget=0.1)
+    U,s,Vh=factors[('relative_budget',)]
+    assert len(s)==2
+    assert cert['discarded_singular_value_sum_bound']<=0.1
+    assert np.linalg.norm(A[('relative_budget',)]-(U*s)@Vh,2)<=0.1
+    # Relative protection is evaluated within each charge block.
+    A={('small_block',):np.diag([0.001]),('large_block',):np.diag([100.0])}
+    factors,cert=block_svd(A,rel_tol=0.01,abs_budget=1.0)
+    assert all(len(parts[1])==1 for parts in factors.values())
+    assert cert['discarded_singular_value_sum_bound']==0.0
+    for kwargs in ({'rel_tol':-1.0},{'abs_budget':-1.0},
+                   {'rel_tol':float('nan')},{'abs_budget':float('inf')}):
+        try:
+            block_svd({},**kwargs)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("invalid SVD truncation tolerance accepted")
     return {
       'status':'PASS_LOCAL_BLOCKS',
-      'tests':7,
+      'tests':10,
       'u1_x':X1,'su2_x':X2,
       'example_four_fundamental_intertwiner_multiplicity':invariant_multiplicity((1,1,1,1))
     }
