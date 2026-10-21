@@ -1,0 +1,324 @@
+\section{Stationary source spectroscopy beyond finite-rank Floquet selection}
+\label{sec:algebraic-stationary-completion}
+
+The Haar obstruction and the finite-dimensional Riesz construction refer to
+different spectral domains. They can be reconciled at the level of stationary
+source correlations without identifying their state prescriptions. The
+construction below uses standard invariant-state and GNS methods. Its role
+here is to extend the source observable, not to establish a new general GNS
+theorem or to assume a physical vacuum. The microscopic dynamics, the charged
+source algebra, and the selected limiting functional remain physical inputs.
+
+\subsection{The precise obstruction}
+
+The commuting-character argument in the Haar analysis excludes nonzero
+finite-rank Riesz projections of the microscopic update under its stated
+commutation and invariant-subspace hypotheses. It also excludes positive
+trace-class operators commuting with the character translation. It does not
+exclude every density commuting with the update, because commutation with the
+update does not imply commutation with that translation. In particular, the
+Haar argument must not be restated as a theorem that the full update has purely
+continuous spectrum. Infinite-multiplicity point spectrum remains logically
+possible.
+
+A separate useful fact is that a unitary with no eigenvectors admits no
+nonzero positive trace-class operator commuting with it. Indeed, a nonzero
+positive compact operator has a positive eigenvalue with a finite-dimensional
+eigenspace. Commutation makes that eigenspace invariant under the unitary,
+which would then have an eigenvector. This fact explains why a stationary
+state must sometimes be formulated as a functional on an observable algebra
+rather than as a trace-class density on the original Hilbert space.
+
+\subsection{Stationary functionals and their selection}
+
+Let $\mathfrak F$ be a specified unital $C^*$-algebra and let
+$\alpha:\mathfrak F\to\mathfrak F$ be a $*$-automorphism representing one
+microscopic update. The algebra must contain the bounded source operators
+used below, or an explicitly controlled extension containing them. For
+Gauss-dressed charged sources, existence of that extension and compatibility
+with the charge sectors are part of the construction. They do not follow
+from a formal path label. Starting from a specified state $\omega_{\rm seed}$,
+define
+\begin{equation}
+ \omega_T(A)=\frac1T\sum_{t=0}^{T-1}
+       \omega_{\rm seed}(\alpha^{-t}(A)).
+ \label{eq:algebraic-cesaro-state}
+\end{equation}
+The sign agrees with the density average
+$T^{-1}\sum_t U^t\rho_{\rm seed}U^{-t}$ when
+$\alpha(A)=UAU^\dagger$.
+
+\begin{proposition}[Invariant cluster states]
+\label{prop:algebraic-invariant-cluster}
+The states $\omega_T$ have weak-$*$ cluster points. Every such point $\omega$
+is $\alpha$-invariant, and
+\begin{equation}
+ |\omega_T(\alpha^n(A))-\omega_T(A)|
+ \leq\min\{2,2|n|/T\}\,\|A\|.
+ \label{eq:algebraic-stationarity-bound}
+\end{equation}
+If a symmetry acts by automorphisms commuting with $\alpha$ and leaves the
+seed state invariant, it also leaves the averages and their cluster states
+invariant.
+\end{proposition}
+\begin{proof}
+The state space of a unital $C^*$-algebra is weak-$*$ compact. Cancellation
+of the overlapping terms in the two averages gives the displayed bound;
+the universal bound is $2\|A\|$. Taking a convergent subnet proves
+invariance. The symmetry statement follows term by term. On a separable
+algebra, weak-$*$ compactness of the state space is metrizable, so convergent
+subsequences suffice.
+\end{proof}
+
+Existence does not imply uniqueness. A specified subnet or invariant mean is
+a state-selection choice unless all admissible limits agree on the source
+correlation algebra. Unique ergodicity would be a sufficient additional
+condition, but is not asserted for QICT. More general ergodic convergence
+conditions are studied in Ref.~\cite{Fidaleo2020Ergodic}. The primitive-cost
+seed, the stationary average, and a Floquet branch therefore remain distinct
+objects. No claim of a gap, purity, positive energy, or a vacuum follows from
+Proposition~\ref{prop:algebraic-invariant-cluster} alone.
+
+\subsection{Dynamic GNS representation of the six-source kernel}
+
+Let $O_a\in\mathfrak F$, $a=1,\ldots,6$, be the prescribed dressed sources,
+ordered as $L1,L2,L3,R1,R2,R3$. For an invariant state $\omega$, set
+\begin{equation}
+ K_{ab}(n)=\omega(O_a^*\alpha^n(O_b)),\qquad
+ G=K(0),\qquad G\succeq\gamma I_6,\quad\gamma>0.
+ \label{eq:algebraic-raw-kernel}
+\end{equation}
+
+\begin{theorem}[Stationary source realization]
+\label{thm:algebraic-source-realization}
+There are a Hilbert space, a unitary $W_\omega$, and an isometry
+$V_\omega:\mathbb C^6\to\mathcal H_\omega$ such that
+\begin{equation}
+ C_n=G^{-1/2}K(n)G^{-1/2}
+     =V_\omega^*W_\omega^nV_\omega.
+ \label{eq:algebraic-normalized-moments}
+\end{equation}
+Consequently $C_0=I_6$, $C_{-n}=C_n^*$, and every block Toeplitz matrix
+$[C_{j-i}]_{i,j=0}^N$ is positive semidefinite. The source measure
+$M(B)=V_\omega^*E_{W_\omega}(B)V_\omega$ is a normalized positive matrix
+measure. These statements require no finite-rank Riesz projection of the
+microscopic update and no trace-class realization of $\omega$.
+\end{theorem}
+\begin{proof}
+In the GNS representation $(\pi_\omega,\mathcal H_\omega,\Omega_\omega)$,
+define on the cyclic dense domain
+\[
+ W_\omega\pi_\omega(A)\Omega_\omega
+     =\pi_\omega(\alpha(A))\Omega_\omega.
+\]
+Invariance preserves the inner product and the null space. Surjectivity of
+$\alpha$ makes the extension unitary. With
+$Qe_a=\pi_\omega(O_a)\Omega_\omega$, one has $Q^*Q=G$ and
+$Q^*W_\omega^nQ=K(n)$. Taking $V_\omega=QG^{-1/2}$ proves the realization.
+Toeplitz positivity follows from
+\[
+ \sum_{i,j=0}^N v_i^*C_{j-i}v_j
+ =\left\|\sum_{j=0}^N W_\omega^jV_\omega v_j\right\|^2\geq0.
+\]
+The spectral theorem supplies the matrix measure.
+\end{proof}
+
+This is a dynamical extension of the static GNS controls in the archive.
+The distinction matters: the implementing unitary $W_\omega$ acts in the
+representation of the selected stationary functional. It need not have the
+spectral type of the original microscopic unitary acting on the Haar carrier.
+Its finite source residues do not contradict the Haar finite-rank Riesz
+obstruction.
+
+When the finite regulator admits a stationary density $\rho$ on the neutral
+sector, the construction agrees with the two-branch prescription. Take the
+linking algebra on $\mathcal H_0\oplus\mathcal H_f$,
+$U=U_0\oplus U_f$, the state $\operatorname{Tr}(\operatorname{diag}(\rho,0)\,
+\cdot)$, and sources in the neutral-to-charged corner. Then
+\begin{align}
+ K_{ab}(n)
+ &=\operatorname{Tr}(\rho O_a^\dagger U_f^nO_bU_0^{-n})\\
+ &=\left\langle O_a\sqrt\rho,
+           U_f^nO_b\sqrt\rho U_0^{-n}\right\rangle_{\rm HS}.
+ \label{eq:algebraic-finite-equivalence}
+\end{align}
+The second identity uses $[\rho,U_0]=0$. Thus the finite implementation uses
+$\mathcal W(X)=U_fXU_0^\dagger$ exactly as before. Replacing it with powers
+of $U_0^\dagger U_f$ remains unjustified. If $G$ is singular, its null
+directions must be diagnosed or quotiented explicitly; an arbitrary
+six-dimensional orthonormal replacement would change the observable.
+
+\subsection{Convergence of observables without trace-norm convergence of states}
+
+For compatible source labels, let $K_R(n)$ be the unnormalized stationary
+kernels of a regulator sequence. The condition needed for their spectral
+limit is convergence of these functionals on the tested source products.
+Global trace-norm convergence of density matrices is a stronger condition
+and may be unavailable.
+
+\begin{proposition}[Kernel stability under Gram normalization]
+\label{prop:algebraic-kernel-error}
+Suppose $G=K(0)$ and $\widetilde G=\widetilde K(0)$ both satisfy
+$G,\widetilde G\succeq\gamma I$, and suppose
+\[
+ \|\widetilde K(n)-K(n)\|\leq\epsilon_n,\quad
+ \|\widetilde G-G\|\leq\epsilon_0,\quad \|K(n)\|\leq B_n.
+\]
+Then the normalized kernels obey
+\begin{equation}
+ \|\widetilde C_n-C_n\|
+ \leq\frac{\epsilon_n}{\gamma}
+       +\frac{B_n\epsilon_0}{\gamma^2}.
+ \label{eq:algebraic-kernel-error}
+\end{equation}
+For stationary source kernels one may take $B_n=\|G\|$. At $n=0$,
+normalization gives zero difference exactly.
+\end{proposition}
+\begin{proof}
+The resolvent integral for the inverse square root gives
+\[
+ G^{-1/2}=\frac1\pi\int_0^\infty
+ t^{-1/2}(G+tI)^{-1}\,dt,
+\qquad
+ \|\widetilde G^{-1/2}-G^{-1/2}\|
+ \leq\frac{\epsilon_0}{2\gamma^{3/2}}.
+\]
+Insert the difference of the raw kernels between two factors
+$\widetilde G^{-1/2}$, then expand the change of the two normalization
+factors around $K(n)$. Since both inverse square roots have norm at most
+$\gamma^{-1/2}$, the triangle inequality proves the bound. The realization
+$K(n)=Q^*W_\omega^nQ$ gives $\|K(n)\|\leq\|Q\|^2=\|G\|$.
+\end{proof}
+
+In particular, suppose $G_R\succeq\gamma I$ uniformly and, for every fixed
+integer $n$,
+\begin{equation}
+ \|K_{R+1}(n)-K_R(n)\|\leq b_{R,n},\qquad
+ \sum_R b_{R,n}<\infty.
+ \label{eq:algebraic-kernel-cauchy}
+\end{equation}
+Then $K_R(n)$ has a unique limit along that sequence, with error at most
+$\sum_{s\geq R}b_{s,n}$. The proposition controls the corresponding
+normalized moments. Toeplitz positivity passes to the limit, and convergence
+of every Fourier coefficient gives weak convergence of the normalized
+matrix measures on the unit circle. To see the last assertion, first test
+trigonometric polynomials and then uniformly approximate a continuous
+function; positivity and total mass $I_6$ bound the approximation error.
+Finitely many volumes or lags do not prove the summable tails in
+Eq.~\eqref{eq:algebraic-kernel-cauchy}. Independence of another admissible
+state-selection or regulator sequence requires a comparison on the same
+source products.
+
+\subsection{An exact counterexample to the trace-density requirement}
+
+On $\ell^2(\mathbb Z)$, let $S|j\rangle=|j+1\rangle$ and
+$D_a|j\rangle=e^{2\pi iaj/7}|j\rangle$ for $a=1,\ldots,6$. Let
+$\mathfrak F=C^*(I,S,D_1,\mathcal K(\ell^2(\mathbb Z)))$, where
+$\mathcal K$ denotes the compact operators, and let $\alpha=\operatorname{Ad}S$.
+The shift has purely continuous spectrum. Its averages from $|0\rangle$ are
+\begin{equation}
+ \rho_T=\frac1T\sum_{j=0}^{T-1}|j\rangle\langle j|,
+ \qquad \|\rho_T-\rho_{2T}\|_1=1.
+ \label{eq:algebraic-shift-trace-failure}
+\end{equation}
+Nevertheless their functionals converge on $\mathfrak F$. On the dense
+polynomials in $S,D_1$ and compact operators, the limit is determined by
+\[
+ \omega(S^mD_1^k)=\begin{cases}1,&m=0,\ k=0\pmod7,\\0,&\text{otherwise},\end{cases}
+ \qquad \omega(A)=0\quad(A\in\mathcal K).
+\]
+Uniform boundedness of states extends convergence to the norm closure.
+The limit is stationary and cannot be represented by a trace-class density
+on the original $\ell^2(\mathbb Z)$, since it vanishes on every rank-one
+projection but has $\omega(I)=1$.
+
+With $O_a=D_a$, one has $\alpha^n(D_b)=e^{-2\pi ibn/7}D_b$ and hence
+\begin{equation}
+ G=I_6,\qquad
+ C_n=\operatorname{diag}_{b=1}^6(e^{-2\pi ibn/7}).
+ \label{eq:algebraic-shift-six-moments}
+\end{equation}
+These six source moments are already exact for $T$ divisible by seven.
+Their measure has six atoms, although $S$ has no eigenvectors. The atoms
+are eigenvalues of the GNS implementing unitary on the source span, not
+finite-rank spectral projections of $S$. This example demonstrates the
+mathematical mechanism only. The number seven is an illustrative period;
+it is not identified with the QICT receiver, charged particles, or a mass
+hierarchy.
+
+\subsection{Coherent C10 dressing and its error budget}
+
+The algebraic state construction retains the prescribed dressing. Let a
+finite acyclic directed graph have a unique sink $b$ and nonnegative edge
+weights with $\sum_w p_{vw}=1$. For unitary link transports, or more generally
+contractions $U_{vw}$ on a common carrier, the ordered dressing obeys
+\begin{equation}
+ D_b=I,\qquad D_v=\sum_w p_{vw}U_{vw}D_w.
+ \label{eq:algebraic-dag-recursion}
+\end{equation}
+Partitioning paths by their first edge proves that this is precisely
+$\sum_{\gamma:v\to b}(\prod_{e\in\gamma}p_e)U_\gamma$. Reverse topological
+order proves uniqueness and $\|D_v\|\leq1$. Gauge transformations give
+$D_v\mapsto g_vD_vg_b^\dagger$. Application to a vector or source block
+requires one link application per edge, while the cost of each application
+still depends on the physical Hilbert or tensor dimensions.
+
+If $\|\widetilde U_e-U_e\|\leq\epsilon_e$ and both exact and approximate
+links are contractions, the same recursion and the triangle inequality give
+\begin{equation}
+ \|\widetilde D_v-D_v\|\leq\sum_e F_v(e)\epsilon_e,
+ \label{eq:algebraic-dag-error}
+\end{equation}
+where $F_v(e)$ is the expected occupation of edge $e$ in the prescribed path
+measure. For the C10 positive-flow decomposition these are its conserved
+edge flows. Explicitly, the error recursion is
+$a_b=0$, $a_v=\sum_w p_{vw}(\epsilon_{vw}+a_w)$; its expansion is the
+expected accumulated path error. If
+$\|\widetilde U_e\|\leq s_e$ instead, use
+$a_v=\sum_w p_{vw}(\epsilon_{vw}+s_{vw}a_w)$.
+Probability uncertainties, arithmetic rounding, and approximate state
+functionals require separate bounds.
+
+Coherent terms between distinct paths occur in $D\rho D^\dagger$.
+Replacing this expression by a Kraus mixture with operators
+$\sqrt{P(\gamma)}U_\gamma$ deletes those terms and changes the source.
+Likewise, intertwiner multiplicities remain coherent coordinates unless an
+independent superselection argument applies. The recursion supplies the
+dressing once the link actions are available; it does not generate the
+missing interacting state or global matter--gauge update.
+
+\subsection{What is resolved, and what the physical limit requires}
+
+The source observable now has a consistent stationary formulation in domains
+where finite-rank Floquet selection is obstructed. Its finite normal-state
+restriction agrees with the existing relative moments. Observable convergence
+can be tested through Eq.~\eqref{eq:algebraic-kernel-cauchy}, rather than an
+unavailable global trace-density limit. The positive-moment, resolvent, and
+finite-resolution spectral estimates therefore remain applicable in the
+chosen stationary representation.
+
+Physical completion still requires the full ordered interacting update,
+Gauss-compatible dynamical sources, and a selected limiting functional on
+their algebra. A stationary state need not be a vacuum. A vacuum
+interpretation additionally requires a compatible continuous-time physical
+limit with a positive-energy generator and the stated reference-energy
+condition. Particle identification requires the appropriate source overlap,
+momentum dependence, branch and clock calibration, and threshold or
+resonance analysis. The unit-circle limit alone does not justify unwrapping
+phases into physical energies as the regulator tick tends to zero.
+
+In particular, a uniform gap above the physical vacuum is not a universal
+requirement for a theory containing massless excitations. An auxiliary
+primitive-cost gap, a finite Riesz contour, and the physical excitation gap
+are different hypotheses. Charged infrared thresholds and gravitational
+massless spin-two response retain their separate conditions. Nothing in the
+GNS construction determines the CKM or PMNS matrices, a dark-particle
+abundance, or the Einstein-response coefficient without their interacting
+correlations. The existing physical validation requirements are retained;
+this appendix supplies an alternative mathematical route that must itself
+be instantiated and checked.
+
+The accompanying tests verify the finite normal-state equivalence, the exact
+shift control, kernel normalization, the perturbation inequality, and the
+coherent path recursion. Floating-point checks exercise those implementations;
+they are not numerical QICT particle predictions or interval certificates.
