@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
-"""Read-only structural audit of every tracked Python/JSON/NumPy ZIP payload.
+"""Audit tracked Python/JSON/NPZ inputs, resolving only safe in-repository symlinks.
 
-Python validation compiles without importing or executing untrusted modules.
-NumPy archives are checked for ZIP central-directory integrity and CRCs.
-This is not a physical-certification test or a proof that numerical results are valid.
+This checks syntax and container integrity, not runtime correctness or physics.
 """
 from __future__ import annotations
 import argparse
 import io
 import json
+import os
 import subprocess
 import zipfile
 from collections import Counter
@@ -16,79 +15,110 @@ from pathlib import Path
 
 
 def tracked_paths(root: Path) -> list[Path]:
-    r = subprocess.run(['git', '-C', str(root), 'ls-files', '-z'],
-                       check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
-                       timeout=120)
-    return [Path(s.decode('utf-8', 'surrogateescape')) for s in r.stdout.split(b'\0') if s]
+    result = subprocess.run(
+        ['git', '-C', str(root), 'ls-files', '-z'],
+        check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=120,
+    )
+    return [Path(s.decode('utf-8', 'surrogateescape'))
+            for s in result.stdout.split(b'\0') if s]
 
 
-def check_file(path: Path, raw: bytes) -> None:
-    suffix = path.suffix.lower()
+def check_bytes(relative: Path, raw: bytes) -> None:
+    suffix = relative.suffix.lower()
     if suffix == '.py':
-        compile(raw, path.as_posix(), 'exec', dont_inherit=True)
+        compile(raw, relative.as_posix(), 'exec', dont_inherit=True)
     elif suffix == '.json':
         json.loads(raw.decode('utf-8-sig'))
     elif suffix == '.jsonl':
-        for line_num, line in enumerate(raw.decode('utf-8-sig').splitlines(), 1):
+        for line_number, line in enumerate(raw.decode('utf-8-sig').splitlines(), 1):
             if line.strip():
                 try:
                     json.loads(line)
-                except json.JSONDecodeError as e:
-                    raise ValueError(f'JSONL line {line_num}: {e}') from e
+                except json.JSONDecodeError as exc:
+                    raise ValueError(f'Invalid JSONL at line {line_number}: {exc}') from exc
     elif suffix == '.npz':
         with zipfile.ZipFile(io.BytesIO(raw)) as archive:
             names = archive.namelist()
             if not names:
-                raise ValueError('Empty .npz container')
+                raise ValueError('Empty NPZ container')
             if not all(x.endswith('.npy') for x in names):
-                raise ValueError('Archive contains a non-.npy member')
-            broken = archive.testzip()
-            if broken:
-                raise ValueError(f'CRC failure at member: {broken}')
-            for n in names:
-                with archive.open(n) as f:
-                    if f.read(6) != b'\x93NUMPY':
-                        raise ValueError(f'Invalid NumPy array header: {n}')
+                raise ValueError('NPZ has a non-NPY member')
+            failed = archive.testzip()
+            if failed is not None:
+                raise ValueError(f'Bad NPZ member CRC: {failed}')
+            for name in names:
+                with archive.open(name) as fp:
+                    if fp.read(6) != b'\x93NUMPY':
+                        raise ValueError(f'Bad NumPy header: {name}')
+
+
+def audited_bytes(root: Path, relative: Path, tracked: set[Path]) -> tuple[bytes, bool]:
+    original = root / relative
+    if not original.is_symlink():
+        return original.read_bytes(), False
+
+    target_text = os.readlink(original)
+    if os.path.isabs(target_text):
+        raise ValueError('Absolute symbolic-link target not permitted')
+
+    # strict=True detects broken links and circular chains.
+    resolved = original.resolve(strict=True)
+    try:
+        target_relative = resolved.relative_to(root)
+    except ValueError as exc:
+        raise ValueError('Symbolic-link target escapes repository') from exc
+    if target_relative not in tracked:
+        raise ValueError(f'Symbolic-link target is not tracked: {target_relative}')
+    if not resolved.is_file():
+        raise ValueError('Symbolic-link target is not a regular file')
+    return resolved.read_bytes(), True
 
 
 def audit(root: Path) -> dict:
-    rows = tracked_paths(root)
+    root = root.resolve(strict=True)
+    tracked = tracked_paths(root)
+    indexed = set(tracked)
+    extensions = {'.py', '.json', '.jsonl', '.npz'}
     stats = Counter()
     failures = []
-    accepted = {'.py', '.json', '.jsonl', '.npz'}
-    for rel in rows:
-        if rel.suffix.lower() not in accepted:
+    symlinks = 0
+    passed = 0
+    for relative in tracked:
+        if relative.suffix.lower() not in extensions:
             continue
-        stats[rel.suffix.lower()] += 1
-        p = root / rel
+        stats[relative.suffix.lower()] += 1
         try:
-            if p.is_symlink():
-                target = p.resolve(strict=True)
-                if not target.is_relative_to(root.resolve()) or not target.is_file():
-                    raise ValueError('Symlink points outside the repository or is not a file')
-                stats['safe_symlink_aliases'] += 1
-            check_file(rel, p.read_bytes())
-        except Exception as e:
-            failures.append({'file': rel.as_posix(), 'error': f'{type(e).__name__}: {e}'})
-    return {'checks': {k: stats[k] for k in sorted(accepted)}, 'tracked_files': len(rows),
-            'safe_symlink_aliases': stats['safe_symlink_aliases'],
-            'checked': sum(stats[k] for k in accepted), 'failed': len(failures),
-            'failures': failures, 'status': 'PASS' if not failures else 'FAIL',
-            'scope': 'Structure and syntax only; not numerical correctness or physical closure'}
+            raw, is_link = audited_bytes(root, relative, indexed)
+            symlinks += bool(is_link)
+            check_bytes(relative, raw)
+            passed += 1
+        except Exception as exc:
+            failures.append({
+                'file': relative.as_posix(),
+                'type': type(exc).__name__,
+                'error': str(exc),
+            })
+    return {
+        'tracked_files': len(tracked), 'checks_by_extension': dict(sorted(stats.items())),
+        'checked': sum(stats.values()), 'passed': passed, 'failed': len(failures),
+        'resolved_symlinks': symlinks, 'failures': failures,
+        'status': 'PASS' if not failures else 'FAIL',
+        'scope': 'Syntax, symlink, and archive structure only; not runtime or physical validation',
+    }
 
 
-def main():
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[2])
-    p.add_argument('--output', type=Path, default=None)
-    a = p.parse_args()
-    result = audit(a.root.resolve())
-    rendered = json.dumps(result, indent=2, ensure_ascii=False) + '\n'
-    print(rendered)
-    if a.output:
-        a.output.parent.mkdir(parents=True, exist_ok=True)
-        a.output.write_text(rendered, encoding='utf-8')
-    return 1 if result['failed'] else 0
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root', type=Path, default=Path(__file__).resolve().parents[2])
+    parser.add_argument('--output', type=Path)
+    options = parser.parse_args()
+    result = audit(options.root)
+    report = json.dumps(result, indent=2, ensure_ascii=False) + '\n'
+    print(report)
+    if options.output:
+        options.output.parent.mkdir(parents=True, exist_ok=True)
+        options.output.write_text(report, encoding='utf-8')
+    return int(result['failed'] != 0)
 
 
 if __name__ == '__main__':
