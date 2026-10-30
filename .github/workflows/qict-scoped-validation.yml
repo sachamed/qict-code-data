@@ -1,0 +1,31 @@
+name: QICT scoped scientific validation
+
+on:
+  push:
+    paths:
+      - "science_checks/2026-10-30/**"
+      - ".github/workflows/qict-scoped-validation.yml"
+  pull_request:
+    paths:
+      - "science_checks/2026-10-30/**"
+      - ".github/workflows/qict-scoped-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  finite-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install the numerical test dependency
+        run: python -m pip install --disable-pip-version-check numpy
+      - name: Verify the frozen input manifest
+        run: python science_checks/2026-10-30/validate_provenance.py
+      - name: Check the charged-lepton experimental reference
+        run: python science_checks/2026-10-30/charged_leptons/double_ratio_independent.py
+      - name: Check finite-moment nonuniqueness
+        run: python science_checks/2026-10-30/spectral_moments/code/finite_moment_nonuniqueness.py
