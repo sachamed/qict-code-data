@@ -1,0 +1,58 @@
+name: QICT finite numerical reproduction
+
+on:
+  push:
+    branches: ['review/**']
+  pull_request:
+    paths:
+      - 'code/**'
+      - 'data/**'
+      - 'science_checks/**'
+      - 'REPRODUCE_ALL.py'
+      - '.github/workflows/qict-full-reproduction.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  finite-numerics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install numerical dependencies
+        run: python -m pip install -r code/requirements.txt
+      - name: Reproduce all supported finite calculations
+        run: python REPRODUCE_ALL.py
+      - name: Verify primary artifacts were regenerated
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          root = Path('.')
+          required = [
+              'results/RUN_MANIFEST.json',
+              'results/REDUCED_LEPTON_INVARIANTS.json',
+              'results/UNIFIED_CLOSURE_CERTIFICATE.json',
+              'results/physical_g2_execution/PHYSICAL_G2_CONTRACT_AUDIT.json',
+              'CURRENT_REPRODUCTION_SHA256.txt',
+          ]
+          missing = [p for p in required if not (root/p).is_file()]
+          if missing: raise SystemExit('Missing regenerated files: ' + repr(missing))
+          print('PASS: all expected finite numerical output files were generated')
+          PY
+      - name: Record changes in regenerated numerical snapshots
+        if: always()
+        run: git diff --name-only -- results > /tmp/qict-regenerated-diff.txt || true
+      - name: Upload reproduction diagnostic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qict-finite-reproduction-diagnostics
+          path: |
+            CURRENT_REPRODUCTION_SHA256.txt
+            /tmp/qict-regenerated-diff.txt
+          if-no-files-found: ignore
