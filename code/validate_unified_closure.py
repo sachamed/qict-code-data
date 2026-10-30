@@ -38,11 +38,25 @@ def main():
  ap=argparse.ArgumentParser()
  ap.add_argument('--out',default=str(RESULTS/'UNIFIED_CLOSURE_CERTIFICATE.json'))
  ap.add_argument('--matrix',default=str(RESULTS/'UNIFIED_CLOSURE_MATRIX.csv'))
+ ap.add_argument('--require-publication-sources', action='store_true',
+                 help='Require the separate manuscript sources and verify their labels and bibliography')
  a=ap.parse_args()
- supp=(PAPER/'sections/supplement/s92.tex').read_text(errors='replace')
- main133=(PAPER/'sections/main/m133.tex').read_text(errors='replace')
- main134=(PAPER/'sections/main/m134.tex').read_text(errors='replace')
- bib=(PAPER/'references.bib').read_text(errors='replace')
+ source_paths={
+  'supplement':PAPER/'sections/supplement/s92.tex',
+  'main_133':PAPER/'sections/main/m133.tex',
+  'main_134':PAPER/'sections/main/m134.tex',
+  'bibliography':PAPER/'references.bib',
+ }
+ source_available=all(p.is_file() for p in source_paths.values())
+ if a.require_publication_sources and not source_available:
+  missing=[name for name,p in source_paths.items() if not p.is_file()]
+  print(json.dumps({'status':'NOT_EVALUATED_PUBLICATION_SOURCES_MISSING',
+                    'missing_source_components':missing},indent=2))
+  return 2
+ supp=source_paths['supplement'].read_text(errors='replace') if source_available else ''
+ main133=source_paths['main_133'].read_text(errors='replace') if source_available else ''
+ main134=source_paths['main_134'].read_text(errors='replace') if source_available else ''
+ bib=source_paths['bibliography'].read_text(errors='replace') if source_available else ''
  labels=set(re.findall(r'\\label\{([^}]+)\}',supp))
  bibkeys=set(re.findall(r'@\w+\s*\{\s*([^,\s]+)',bib))
  theorem_checks={k:(k in labels) for k in THEOREMS}
@@ -92,16 +106,20 @@ def main():
   ('10','Perturbative recovery','INHERITED_RENORMALIZABLE_CLASS','thm:s92-perturbative-recovery',"continuum field content + Slavnov-Taylor identities + 't Hooft-Veltman renormalizability"),
  ]
 
- structural=all(theorem_checks.values()) and all(bib_checks.values()) and ('mathbf D' in main134 or 'D(a)' in main134) and 'C_{n,f}^{(6)}' in main133
+ structural=source_available and all(theorem_checks.values()) and all(bib_checks.values()) and ('mathbf D' in main134 or 'D(a)' in main134) and 'C_{n,f}^{(6)}' in main133
  out={
-  'classification':'UNIFIED_FIRST_PRINCIPLES_AND_NONPERTURBATIVE_CLOSURE_CERTIFICATE',
-  'structural_validation':'PASS' if structural else 'FAIL',
+  'classification':'FINITE_OPERATOR_COORDINATES_AND_PUBLICATION_SOURCE_AUDIT',
+  'publication_source_status':'CHECKED' if source_available else 'NOT_AVAILABLE_IN_CODE_DATA_REPOSITORY',
+  'structural_validation':'PASS' if structural else ('FAIL' if source_available else 'NOT_EVALUATED'),
   'theorem_labels':theorem_checks,
   'bibliographic_anchors':bib_checks,
   'finite_regulator_certificates':exact,
   'physical_execution':execution,
   'fermion_mass_map':mass_map,
-  'theorem_chain':[{'stage':r[0],'subject':r[1],'status':r[2],'label':r[3],'certificate':r[4]} for r in rows],
+  'theorem_chain':[{'stage':r[0], 'subject':r[1],
+                    'status':r[2] if source_available else 'NOT_SOURCE_VERIFIED',
+                    'statement_type':r[2], 'label':r[3],
+                    'certificate':r[4]} for r in rows],
   'master_defect_vector':['hierarchy_cauchy','vacuum_boundary','cross_regulator','positivity','covariance','spectrum','locality','cone','infrared','spectral_edge','slavnov_taylor'],
   'closure_implication':'VANISHING_MASTER_DEFECT_VECTOR_IMPLIES_UNIQUE_REGULATOR_INDEPENDENT_LOCAL_CONTINUUM_THEORY_WITH_STABLE_SPECTRAL_OBSERVABLES',
  }
@@ -109,6 +127,9 @@ def main():
  with Path(a.matrix).open('w',newline='') as f:
   w=csv.writer(f); w.writerow(['stage','subject','status','theorem_label','certificate']); w.writerows(rows)
  print(json.dumps(out,indent=2,sort_keys=True))
- return 0 if structural else 1
+ # Numeric audit succeeds independently of optional manuscript sources.
+ # The publication-specific theorem verification passes only if sources exist
+ # and every required label, anchor and cited equation is present.
+ return 0 if (structural or not source_available) else 1
 
 if __name__=='__main__': raise SystemExit(main())

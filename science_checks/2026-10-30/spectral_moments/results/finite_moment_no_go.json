@@ -1,0 +1,14 @@
+[
+  {
+    "atom_count": 10,
+    "strict_positive_minimum_energy": 0.15707963267948966,
+    "max_abs_first_nine_moments": 8.6812412614675e-16,
+    "family_embeddable": "tensor with I_6 gives six-source equal moments up to n=9"
+  },
+  {
+    "atom_count": 11,
+    "strict_positive_minimum_energy": 0.14279966607226333,
+    "max_abs_first_nine_moments": 1.1363409562839852e-15,
+    "family_embeddable": "tensor with I_6 gives six-source equal moments up to n=9"
+  }
+]

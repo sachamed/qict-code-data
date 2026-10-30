@@ -1,0 +1,14 @@
+{
+  "version": "QICT-DOUBLE-TEST-2026-10-30",
+  "alpha_conn": "0.156806466326680890086",
+  "alpha_source": "fixed manuscript value; use a certified interval in publication",
+  "masses_MeV": {
+    "e": {"value": "0.51099895069", "sigma": "0.00000000016"},
+    "mu": {"value": "105.6583755", "sigma": "0.0000023"},
+    "tau": {"value": "1776.93", "sigma": "0.09"}
+  },
+  "experimental_log_mass_covariance": null,
+  "covariance_note": "When null, treat marginal mass errors as independent. This is a provisional approximation, not a certified CODATA correlation model.",
+  "sources": ["https://pdg.lbl.gov/2026/", "https://pdglive.lbl.gov/DataBlock.action?node=S004M", "https://pdg.lbl.gov/encoder_listings/lxxx005-sumtab.pdf"],
+  "mass_prescription": "same rest-mass / infrared-safe threshold-resonance definition for all three charged leptons"
+}
