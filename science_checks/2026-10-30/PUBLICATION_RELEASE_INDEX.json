@@ -1,0 +1,16 @@
+{
+  "release": "QICT_Publication_Preflight_Corrected_2026-10-30.zip",
+  "release_sha256": "005ab03f61213c5bbfa44cccbb1cd6cf3d2989e64d801add095cdf484ab284b5",
+  "archive_bytes": 184968993,
+  "archives_files": 1818,
+  "nested_checksum_pass": "1156/1156",
+  "main_pages": 120,
+  "supp_pages": 760,
+  "companion_named_links": 235,
+  "figure_count": 31,
+  "archival_unreproduced_figures": 7,
+  "scientific_modules_changed": false,
+  "charged_C8C10_full": false,
+  "unique_thermodynamic_vacuum": false,
+  "github_full_dataset_sync": false
+}
