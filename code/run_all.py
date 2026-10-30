@@ -75,7 +75,7 @@ if missing_publication_inputs:
             'physical_execution': 'NOT_CERTIFIED',
             'missing_sources': missing_publication_inputs,
             'note': 'Finite numerical tests run independently. Missing LaTeX source cannot support any physical-closure claim.',
-        }, indent=2, sort_keys=True)+'\\n'
+        }, indent=2, sort_keys=True)+'\n'
     )
 else:
     calls.insert(-3, [PYTHON, str(ROOT/'code/validate_unified_closure.py'),
