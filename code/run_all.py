@@ -53,11 +53,35 @@ calls += [
     [PYTHON, str(ROOT/'code/matrix_free_riesz_kato_physical.py'), '--self-test', '--out', str(pg2/'MATRIX_FREE_RIESZ_KATO_BACKEND_SELFTEST.json')],
     [PYTHON, str(ROOT/'code/physical_source_boundary_provider.py'), '--out', str(pg2/'BOUNDARY_PROVIDER_ALGORITHM_SELFTEST.json')],
     [PYTHON, str(ROOT/'code/execute_physical_g2_contract_audit.py'), '--input-root', str(ROOT/'data/physical_g2_inputs'), '--out', str(pg2/'PHYSICAL_G2_CONTRACT_AUDIT.json')],
-    [PYTHON, str(ROOT/'code/validate_unified_closure.py'), '--out', str(R/'UNIFIED_CLOSURE_CERTIFICATE.json'), '--matrix', str(R/'UNIFIED_CLOSURE_MATRIX.csv')],
     [PYTHON, str(ROOT/'code/validate_rg_nonperturbative_specialization.py'), '--out', str(R/'RG_NONPERTURBATIVE_CERTIFICATE.json')],
     [PYTHON, str(ROOT/'code/build_prediction_registry.py'), '--results', str(R), '--out', str(R/'FINAL_PREDICTION_REGISTRY.csv')],
     [PYTHON, str(ROOT/'code/build_full_rg_and_chi2_audit.py')],
 ]
+# The structural closure audit depends on separately distributed manuscript sources.
+# Do not interpret their absence as numerical failure or infer theorem validation.
+publication_inputs = [
+    'paper/sections/supplement/s92.tex',
+    'paper/sections/main/m133.tex',
+    'paper/sections/main/m134.tex',
+    'paper/references.bib',
+]
+missing_publication_inputs = [name for name in publication_inputs if not (ROOT/name).is_file()]
+if missing_publication_inputs:
+    (R/'UNIFIED_CLOSURE_CERTIFICATE.json').write_text(
+        json.dumps({
+            'classification': 'PUBLICATION_SOURCE_DEPENDENT_CLOSURE_AUDIT',
+            'status': 'NOT_EVALUATED_MISSING_PUBLICATION_SOURCES',
+            'structural_validation': 'NOT_EVALUATED',
+            'physical_execution': 'NOT_CERTIFIED',
+            'missing_sources': missing_publication_inputs,
+            'note': 'Finite numerical tests run independently. Missing LaTeX source cannot support any physical-closure claim.',
+        }, indent=2, sort_keys=True)+'\\n'
+    )
+else:
+    calls.insert(-3, [PYTHON, str(ROOT/'code/validate_unified_closure.py'),
+                      '--out', str(R/'UNIFIED_CLOSURE_CERTIFICATE.json'),
+                      '--matrix', str(R/'UNIFIED_CLOSURE_MATRIX.csv')])
+
 for call in calls:
     subprocess.run(call, check=True)
 
