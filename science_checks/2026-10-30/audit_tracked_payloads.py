@@ -70,8 +70,9 @@ def audit(root: Path) -> dict:
             check_file(rel, p.read_bytes())
         except Exception as e:
             failures.append({'file': rel.as_posix(), 'error': f'{type(e).__name__}: {e}'})
-    return {'checks': dict(sorted(stats.items())), 'tracked_files': len(rows),
-            'checked': sum(stats.values()), 'failed': len(failures),
+    return {'checks': {k: stats[k] for k in sorted(accepted)}, 'tracked_files': len(rows),
+            'safe_symlink_aliases': stats['safe_symlink_aliases'],
+            'checked': sum(stats[k] for k in accepted), 'failed': len(failures),
             'failures': failures, 'status': 'PASS' if not failures else 'FAIL',
             'scope': 'Structure and syntax only; not numerical correctness or physical closure'}
 
