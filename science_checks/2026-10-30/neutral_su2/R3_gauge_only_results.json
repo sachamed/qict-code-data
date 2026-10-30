@@ -1,0 +1,18 @@
+{
+  "model": "24-link SU2 neutral gauge R3 orbit-symmetric spin-network compression with electric phases (no U1, C8, C10, charged states)",
+  "basis_dimension": 2081,
+  "matrix_nnz": 13800,
+  "hermitian_error": 4.962992750494191e-14,
+  "density": 0.0031866541078626994,
+  "n_external_from_R2": 1983,
+  "mass_cutoff": "finite graph depth 3, NOT physical twice spin regulator",
+  "amplitudes": {
+    "1": {"real": -0.9646681522180679, "imag": 0.0, "abs": 0.9646681522180679, "norm": 1.0},
+    "2": {"real": 0.882931387460231, "imag": 0.04208015112328079, "abs": 0.8839335801297554, "norm": 1.0000000000000004},
+    "4": {"real": 0.7147237172004015, "imag": 0.2535927870023324, "abs": 0.7583793862891909, "norm": 1.0000000000000002},
+    "8": {"real": 0.6460004613612121, "imag": 0.6967616828600165, "abs": 0.9501544289118591, "norm": 1.0000000000000002},
+    "9": {"real": -0.6521156213875745, "imag": -0.7326996283595958, "abs": 0.9808687624019802, "norm": 1.0000000000000013},
+    "10": {"real": 0.6316683043871935, "imag": 0.7229681731339905, "abs": 0.9600457416873905, "norm": 1.0000000000000013}
+  },
+  "elapsed_seconds": 54.47976952400131
+}

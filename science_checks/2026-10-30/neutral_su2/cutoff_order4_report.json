@@ -1,0 +1,16 @@
+{
+  "status": "PASS_ORDER4_CUTOFF_INDEPENDENCE",
+  "basis_size_by_twicespin_cut": {"1": 71, "2": 98, "6": 98, "7": 98},
+  "cutoffs": [1, 2, 6, 7],
+  "physics_scope": "Neutral 24-link gauge Taylor coefficients through magnetic coupling order four only; cutoffs nmax>=2 are mathematically identical at this order. NOT a test of complete finite-coupling dynamics, C8/C10, charged masses, or cutoff convergence of physical h_d.",
+  "c4_at_d_8_9_10": {
+    "8": [-70475.64961765351, -27318.309869066645],
+    "9": [-84408.39238416357, -13321.992705083976],
+    "10": [-89068.48947585802, -1204.0904396114436]
+  },
+  "c4_at_nmax1": {
+    "8": [-53926.43445664845, -37635.240284702],
+    "9": [-71205.06087039188, -32160.575956473007],
+    "10": [-83572.3490579969, -25750.40199170478]
+  }
+}
