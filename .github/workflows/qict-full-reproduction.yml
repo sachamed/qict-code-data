@@ -46,7 +46,9 @@ jobs:
           PY
       - name: Record changes in regenerated numerical snapshots
         if: always()
-        run: git diff --name-only -- results > /tmp/qict-regenerated-diff.txt || true
+        run: |
+          git diff --name-only -- results > /tmp/qict-regenerated-diff.txt || true
+          git diff --no-ext-diff -- results > /tmp/qict-regenerated.patch || true
       - name: Upload reproduction diagnostic
         if: always()
         uses: actions/upload-artifact@v4
@@ -55,4 +57,5 @@ jobs:
           path: |
             CURRENT_REPRODUCTION_SHA256.txt
             /tmp/qict-regenerated-diff.txt
+            /tmp/qict-regenerated.patch
           if-no-files-found: ignore
