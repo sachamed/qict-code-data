@@ -63,7 +63,10 @@ def audit(root: Path) -> dict:
         p = root / rel
         try:
             if p.is_symlink():
-                raise ValueError('File is a symlink; cannot validate pointed data as tracked bytes')
+                target = p.resolve(strict=True)
+                if not target.is_relative_to(root.resolve()) or not target.is_file():
+                    raise ValueError('Symlink points outside the repository or is not a file')
+                stats['safe_symlink_aliases'] += 1
             check_file(rel, p.read_bytes())
         except Exception as e:
             failures.append({'file': rel.as_posix(), 'error': f'{type(e).__name__}: {e}'})
