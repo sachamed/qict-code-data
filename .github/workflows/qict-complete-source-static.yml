@@ -1,0 +1,29 @@
+name: QICT full tracked-source static audit
+
+on:
+  push:
+    branches: [main, 'review/**']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  every-tracked-python-and-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check every tracked Python script and data container
+        run: python science_checks/2026-10-30/audit_tracked_payloads.py --output /tmp/qict-tracked-audit.json
+      - name: Upload audit detail
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qict-tracked-source-static-audit
+          path: /tmp/qict-tracked-audit.json
+          if-no-files-found: ignore
