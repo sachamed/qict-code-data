@@ -81,6 +81,12 @@ if missing_publication_inputs:
             'note': 'Finite numerical tests run independently. Missing LaTeX source cannot support any physical-closure claim.',
         }, indent=2, sort_keys=True)+'\n'
     )
+    # The historical CSV is tracked, so replace it with an explicit
+    # non-evaluated entry instead of leaving a misleading stale certificate.
+    (R/'UNIFIED_CLOSURE_MATRIX.csv').write_text(
+        'stage,subject,status,theorem_label,certificate\\n'
+        '0,publication-dependent structural checks,NOT_EVALUATED_MISSING_PUBLICATION_SOURCES,,missing separate LaTeX source package\\n'
+    )
 else:
     calls.insert(-3, [PYTHON, str(ROOT/'code/validate_unified_closure.py'),
                       '--out', str(R/'UNIFIED_CLOSURE_CERTIFICATE.json'),
