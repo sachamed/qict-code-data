@@ -1,0 +1,44 @@
+name: QICT Planck native CMB real-likelihood preflight
+on:
+  push:
+    branches: ['qict/microphysical-cmb-closure-2026-11-06']
+    paths:
+      - '.github/workflows/qict-planck-native.yml'
+      - 'code/qict_planck_native_fixed.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  planck_official_native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install official 2018 Planck native implementations and CAMB
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'cobaya>=3.5' 'camb>=2.0.4' scipy numpy
+          cobaya-install planck_2018_lowl.TT planck_2018_lowl.EE planck_2018_highl_plik.TTTEEE_lite_native planck_2018_lensing.native -p /tmp/cobaya_packages
+      - name: Inspect exact likelihood components
+        run: |
+          python - <<'PY'
+          import importlib
+          for name in ['cobaya','camb']:
+              x=importlib.import_module(name)
+              print(name, getattr(x,'__version__','installed'))
+          from pathlib import Path
+          for p in sorted(Path('/tmp/cobaya_packages').rglob('*.dataset')):
+              print('DATASET', p, p.stat().st_size)
+          PY
+      - name: Evaluate QICT Planck observed primary and lensing likelihoods
+        run: |
+          PYTHONPATH=code python code/qict_planck_native_fixed.py --packages-path /tmp/cobaya_packages
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-planck-2018-native-likelihood
+          path: results/qict_planck_native/
+          if-no-files-found: warn
