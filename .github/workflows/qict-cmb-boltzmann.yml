@@ -44,3 +44,17 @@ jobs:
           name: qict-massive-neutrino-camb-4000
           path: results/qict_massive_nu006_camblmax4000/
           if-no-files-found: error
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-cmb-source-provenance
+          path: |
+            code/qict_cmb_microphysics.py
+            code/qict_cmb_boltzmann.py
+            code/qict_cmb_massive_boltzmann.py
+            code/qict_act_dr6_official_fixed.py
+            tests/test_qict_cmb_microphysics.py
+            docs/qict_cmb_microphysical_2026-11-06.md
+            .github/workflows/qict-cmb-boltzmann.yml
+            .github/workflows/qict-act-dr6.yml
+          if-no-files-found: error
