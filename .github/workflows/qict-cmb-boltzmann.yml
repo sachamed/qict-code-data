@@ -5,6 +5,7 @@ on:
     branches: ['qict/microphysical-cmb-closure-2026-11-06']
     paths:
       - 'code/qict_cmb_boltzmann.py'
+      - 'code/qict_cmb_massive_boltzmann.py'
       - '.github/workflows/qict-cmb-boltzmann.yml'
 permissions:
   contents: read
@@ -27,8 +28,19 @@ jobs:
           OPENBLAS_NUM_THREADS: '2'
         run: |
           python code/qict_cmb_boltzmann.py --out results/qict_fixed_camblmax4000 --lmax 4000
+      - name: Evaluate 0.06 eV massive-neutrino receiver and full Boltzmann spectra
+        env:
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: python code/qict_cmb_massive_boltzmann.py
       - uses: actions/upload-artifact@v4
         with:
           name: qict-fixed-parameter-camb-4000
           path: results/qict_fixed_camblmax4000/
+          if-no-files-found: error
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-massive-neutrino-camb-4000
+          path: results/qict_massive_nu006_camblmax4000/
           if-no-files-found: error
