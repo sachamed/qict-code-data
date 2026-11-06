@@ -100,8 +100,8 @@ def run(packages):
             model=get_model(info)
             post=model.logposterior({},as_dict=True)
             row={'status':'calculated',
-                'loglikes':{name:float(v) for name,v in zip(names,post['loglikes'])},
-                'total_loglike':float(sum(post['loglikes']))}
+                'loglikes':{name:float(v) for name,v in post['loglikes'].items()},
+                'total_loglike':float(sum(post['loglikes'].values()))}
             out['cases'][title]=row
         except Exception as e:
             out['cases'][title]={'status':'failed',
