@@ -1,0 +1,34 @@
+name: QICT CAMB 2.x fixed-parameter spectra
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/microphysical-cmb-closure-2026-11-06']
+    paths:
+      - 'code/qict_cmb_boltzmann.py'
+      - '.github/workflows/qict-cmb-boltzmann.yml'
+permissions:
+  contents: read
+jobs:
+  camb_benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CAMB and scientific dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'camb>=2.0.4' 'numpy>=1.26' 'scipy>=1.12'
+      - name: Evaluate QICT full TT TE EE BB and lensing spectra
+        env:
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: |
+          python code/qict_cmb_boltzmann.py --out results/qict_fixed_camblmax4000 --lmax 4000
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-fixed-parameter-camb-4000
+          path: results/qict_fixed_camblmax4000/
+          if-no-files-found: error
