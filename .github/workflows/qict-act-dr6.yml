@@ -26,16 +26,16 @@ jobs:
           cd /tmp/act_dr6_lenslike
           bash get-act-data.sh
           test -d act_dr6_lenslike/data/v1.2
-          # point the pip-imported official module at the released data
+          # Install the checked-out official source in editable mode: the
+          # imported module then resolves the v1.2 data inside this checkout.
+          python -m pip install -e /tmp/act_dr6_lenslike
+          cd /tmp
           python - <<'PY'
           import act_dr6_lenslike as mod
           from pathlib import Path
-          import shutil
-          src=Path('/tmp/act_dr6_lenslike/act_dr6_lenslike/data/v1.2')
-          dst=Path(mod.__file__).resolve().parent/'data/v1.2'
-          dst.parent.mkdir(parents=True,exist_ok=True)
-          if not dst.exists(): shutil.copytree(src,dst)
-          print('Installed official ACT v1.2 likelihood release:',dst)
+          directory=Path(mod.__file__).resolve().parent/'data/v1.2'
+          print('Official v1.2 data:',directory,'exists:',directory.is_dir())
+          assert directory.is_dir()
           PY
       - name: Compute two CAMB complete transfer-spectrum sets
         env:
