@@ -67,7 +67,7 @@ def run():
         row={"H0":h0,"Omega_Lambda_input":lam}
         try:
             model=get_model(config)
-            val=model.logposterior(as_dict=True)
+            val=model.logposterior({},as_dict=True)
             likes={str(k):float(v) for k,v in val["loglikes"].items()}
             if not likes or not all(np.isfinite(v) for v in likes.values()):
                 raise ValueError("At least one official likelihood is non-finite")
