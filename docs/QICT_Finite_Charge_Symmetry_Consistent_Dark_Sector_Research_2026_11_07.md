@@ -111,6 +111,39 @@ The first [dual-constraint acoustic run 42413256298](https://github.com/sachamed
 
 These observations demonstrate why restoring the **angular** acoustic scale alone is insufficient. The high-\(\ell\) and low-\(\ell\) Planck likelihoods deteriorate even while the DESI BAO terms of the tested models are sometimes more favorable than those of the fixed \(\Lambda\)CDM reference. The result constrains the chosen three-dimensional submanifold and is not a fit over all vanilla parameters, potential shapes, perturbation initial conditions, or nuisance parameters. A corresponding lower-\(H_0\) acoustic slice is provided by the separate [four-point workflow](https://github.com/sachamed/qict-code-data/actions/workflows/qict-lowh0-acoustic.yml).
 
+### Independent lower-Hubble acoustic continuation
+
+The [four-point low-\(H_0\) acoustic continuation](https://github.com/sachamed/qict-code-data/actions/runs/42413531789), evaluated with official Plik-lite+Planck lowTT/lowEE+DESI DR2 BAO, gave:
+
+| \(H_0\) | \(\omega_{\rm cdm}\) | \(n_s\) | \(f_{\rm peak}\) | \(100\theta_s\) | logL | \(\Delta\chi^2\) vs fixed control |
+|---:|---:|---:|---:|---:|---:|---:|
+| 68.5 | .1210 | .967 | .0197053 | 1.04071853 | -529.72785 | -1.02192 |
+| 69.0 | .1225 | .970 | .0342811 | 1.04109766 | -546.30319 | +32.12876 |
+| 69.5 | .1230 | .972 | .0452397 | 1.04105040 | -565.73233 | +70.98704 |
+| 70.0 | .1240 | .975 | .0581208 | 1.04110424 | -598.53435 | +136.59107 |
+
+The \(H_0=68.5\) point gains 1.02 units of \(\chi^2\) relative to a **fixed** \(\Lambda\)CDM reference, but its angular acoustic residual \(-3.71\times10^{-4}\) is larger than the other points, and a separately explored \(\Lambda\)CDM input already achieved logL \(-511.55770\). Therefore the slight fixed-point gain is **not evidence** of QICT superiority.
+
+### A new conditional kinetic route and two-receiver direction
+
+A parity-preserving generalized receiver imbalance Hamiltonian of the form
+\[
+{\cal H}_{q}=\Delta q^2-\lambda q^4+\kappa q^6
+\]
+is strictly convex for all real \(q\) when \(\Delta,\lambda>0\) and
+\[
+\kappa>3\lambda^2/(5\Delta).
+\]
+Indeed, \({\cal H}''=2\Delta-12\lambda q^2+30\kappa q^4\) has minimum \(2\Delta-6\lambda^2/(5\kappa)>0\). Its homogeneous Legendre transform admits
+\[
+L_{\rm eff}=\dot\theta^2/(4\Delta)+\lambda\dot\theta^4/(16\Delta^4)+O(\dot\theta^6).
+\]
+After canonical and covariant matching—**neither of which follows from convexity alone**—the first correction motivates \(P(X)=X+\alpha X^2+\ldots\). For positive \(\alpha\), the truncated model has \(c_s^2=(1+2\alpha X)/(1+6\alpha X)\), positive and subluminal in its domain of derivative-expansion validity. The analytic convexity and numerical Legendre expansion were checked in [GitHub Actions 42414116939](https://github.com/sachamed/qict-code-data/actions/runs/42414116939). This model cannot be credited with solving the CMB spectrum without a consistent relativistic Einstein–Boltzmann implementation.
+
+A physically distinct second receiver can introduce a second relative-phase degree of freedom; merely splitting the two flavors of one fixed-charge Schwinger representation does **not**. Multi-field EDE (Bella, Poulin, Vagnozzi and Knox, arXiv:2604.13535) has been reported to alleviate high-multipole CMB constraints, but any QICT realization must derive its second charge sector, coupling, parity and onset separation. A sum of two independently adjustable EDE potentials does not, by itself, have unique predictive content.
+
+The likelihood combination itself is a critical systematic. Poulin, Smith, Calderón and Simon, *Phys. Rev. D* 113, 063519 (2026), found dataset-dependent EDE allowance using *Planck* low-multipole cuts with ACT DR6 primary spectra, joint lensing and DESI DR2. It is methodologically incorrect to equate our full-Planck Plik-lite + ACT lensing tests with their Planck-\(\ell<1000\)+ACT-primary strategy or to combine the two uncut primary likelihoods. The [QICT ACT DR6 primary-only workflow](https://github.com/sachamed/qict-code-data/actions/workflows/qict-act-primary-native-4point.yml) supplies a separate observational diagnostic, pending its completed outputs.
+
 ## 6. The vacuum cannot be inferred from zero microscopic ground-state energy
 
 Both positive receiver parents have a zero-energy unexcited state in their isolated fixed-charge algebra. This alone does not calculate the renormalized gravitational cosmological constant: the absolute vacuum gravitation involves the full effective action and every coupled sector. The claimed \(N^{-4}\) relation between pre-recombination scalar density and late vacuum density is currently an unproved ansatz; its numerical closeness to selected EDE fractions is not evidence.
