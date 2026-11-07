@@ -46,6 +46,10 @@ jobs:
             cp /tmp/qict_idm/results/qict_class_g$g* results/qict_native_class/ || true
           done
           ls -lh results/qict_native_class
+      - name: Check QICT tensor sources, number current and spectrum finiteness
+        run: |
+          python -m pip install numpy
+          python scripts/validate_qict_native_class.py
       - uses: actions/upload-artifact@v4
         if: always()
         with:
