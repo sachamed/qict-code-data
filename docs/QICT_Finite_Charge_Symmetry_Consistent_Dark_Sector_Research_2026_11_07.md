@@ -144,6 +144,30 @@ A physically distinct second receiver can introduce a second relative-phase degr
 
 The likelihood combination itself is a critical systematic. Poulin, Smith, Calderón and Simon, *Phys. Rev. D* 113, 063519 (2026), found dataset-dependent EDE allowance using *Planck* low-multipole cuts with ACT DR6 primary spectra, joint lensing and DESI DR2. It is methodologically incorrect to equate our full-Planck Plik-lite + ACT lensing tests with their Planck-\(\ell<1000\)+ACT-primary strategy or to combine the two uncut primary likelihoods. The [QICT ACT DR6 primary-only workflow](https://github.com/sachamed/qict-code-data/actions/workflows/qict-act-primary-native-4point.yml) supplies a separate observational diagnostic, pending its completed outputs.
 
+### Independent phase optimization, not an assumed cubed-potential novelty
+
+A 14-point [initial-phase screen](https://github.com/sachamed/qict-code-data/actions/runs/42413977701) held fixed the actual \(z_{\rm peak}=3500\) and \(100\theta_s=1.04109\) by independently shooting \(F,V_0\) with native CLASS at each \(\theta_i\). Each point then used official Planck 2018 Plik-lite, Planck lowTT/lowEE and DESI DR2 likelihoods. Both \(H_0=70.5\) and 72.0 slices achieved their best *evaluated* likelihood at \(\theta_i=2.7\), compared to 2.5:
+
+| H0 | phase 2.5 logL | phase 2.7 logL | nominal improvement in \(\chi^2\) |
+|---:|---:|---:|---:|
+| 70.5 | -619.0841 | -613.2328 | 11.703 |
+| 72.0 | -907.3865 | -897.6248 | 19.523 |
+
+At phase 2.7, the predicted peak fractions were 0.063495 and 0.113334, respectively. Both points remain highly disfavored relative to the best previously *explored* LCDM parameter points; the phase freedom alone does not resolve the Hubble tension. These likelihoods are **not** profiled in nuisance, baseline cosmology, or phase beyond the sparse phase grid.
+
+### ACT DR6 *primary*, not ACT–Planck lensing
+
+The separate [official ACT DR6 primary TT/TE/EE](https://github.com/sachamed/qict-code-data/actions/runs/42414253092) diagnostic was evaluated with the same pinned coupled CLASS in four fixed input models. The ACT DR6 CMB-lite foreground-marginalized likelihood gave:
+
+| model | ACT primary logL | \(\Delta\chi^2\) vs fixed LCDM |
+|---|---:|---:|
+| LCDM H0=67.4 | -90.2532864 | 0 |
+| QICT H0=68.5 | -89.7547718 | -0.9970 |
+| QICT H0=70.5 | -95.7565448 | +11.0065 |
+| QICT H0=72.0 | -105.9557574 | +31.4049 |
+
+ACT **primary** is distinct from the ACT–Planck DR6 **lensing** likelihood used in earlier joint gate experiments. Its absolute log-likelihood normalization is different and must not be subtracted from Planck Plik-lite totals or blindly combined with overlapping Planck primary CMB multipoles. These four points are not nuisance-optimized nor independently reoptimized LCDM. They nevertheless demonstrate that the experiment choice and high-\(\ell\) covariance materially alter the scalar-sector constraints, in accord with Poulin et al., *PRD* 113, 063519 (2026) [DOI 10.1103/bx25-1g5d].
+
 ## 6. The vacuum cannot be inferred from zero microscopic ground-state energy
 
 Both positive receiver parents have a zero-energy unexcited state in their isolated fixed-charge algebra. This alone does not calculate the renormalized gravitational cosmological constant: the absolute vacuum gravitation involves the full effective action and every coupled sector. The claimed \(N^{-4}\) relation between pre-recombination scalar density and late vacuum density is currently an unproved ansatz; its numerical closeness to selected EDE fractions is not evidence.
