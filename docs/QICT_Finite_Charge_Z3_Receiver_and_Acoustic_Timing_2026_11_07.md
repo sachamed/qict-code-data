@@ -22,6 +22,17 @@ Run 42418134966: https://github.com/sachamed/qict-code-data/actions/runs/4241813
 
 The earlier calibrated H0 = 70, zpeak = 3500 point gave Delta chi2 about +136.8. Thus the redshift of energy release has a large independent effect on the observed CMB even after the acoustic peak position has been matched. Near-H0 and early-late compromise models require an independently optimized LCDM benchmark, converged parameter fits and compatible nonlinear lensing before physical superiority can be asserted.
 
+
+## 1b. A Planck–DESI-compensated H0 = 70 fixed point
+
+A subsequent 18-point grid allowed omega_cdm and n_s to vary across selected values while separately recalibrating V0 and F against the actual scalar peak at z≈2000 and the acoustic angle. GitHub Actions run 42418425583 completed all 18 measured-data evaluations: https://github.com/sachamed/qict-code-data/actions/runs/42418425583.
+
+The best recorded point has H0=70, omega_cdm=0.122, n_s=0.975, N=250, g=0.02, V0=11.00848689636948 (CLASS effective units), F/Mpl=0.14332514879730884, actual peak z=2029.6008, peak fractional density 0.0387106, and 100theta_s=1.04091074. The realized Hubble constant is H0=69.9912 in the same units.
+
+Its measured log likelihoods are Planck TTTEEE Plik-lite -309.3549435, low TT -16.8046320, low EE -198.2623812, DESI DR2 BAO -5.2051468, totaling -529.6271035. Against the previously selected non-optimized LCDM control at H0=67.4 with log L=-530.2388101, the conditional Delta chi-square is -1.2234133. This is a better score than that **specific fixed point** and does not establish superiority to a freely reoptimized LCDM or global QICT fit.
+
+At H0=70 and zpeak≈2000, a previous omega_cdm=0.124 point had Delta chi-square +41.4. The sharp change produced by omega_cdm=0.122 demonstrates that the matter density and the early scalar perturbation history must be optimized jointly. ACT primary and joint ACT-Planck lensing are independent next gates. SH0ES, when held out, still lies approximately 2.9 standard deviations from H0=70 at the quoted local Gaussian width.
+
 ## 2. A conditional Z3-to-D3 receiver phase doublet
 
 Assume three independent complex receiver-channel amplitudes with nonzero fixed magnitudes and phases theta0, theta1 and theta2. Remove their common phase, and write alpha = theta1-theta0 and beta = theta2-theta0. **On this fixed-amplitude phase submanifold**, the relative phase space is U(1)^3/U(1)_diag, a two-torus. An unconstrained normalized three-component complex quantum amplitude instead has projective state space CP^2, with four real dimensions. The two-torus is therefore a dynamical phase-only reduction, not a consequence of merely having three discrete end-class labels.
