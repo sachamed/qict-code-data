@@ -58,8 +58,19 @@ def physical(t,V,F):
   valid=(z>=100)&(z<=10000)&np.isfinite(f)
   if not np.any(valid):raise ValueError("No finite fraction")
   inds=np.where(valid)[0];i=inds[np.argmax(f[inds])]
+  zpk=float(z[i]);fpk=float(f[i])
+  # Resolve the maximum between CLASS background samples; a discrete
+  # argmax otherwise gives an artificially zero finite-difference Jacobian.
+  if 1<=i<len(z)-1 and np.all(f[i-1:i+2]>0):
+   xx=np.log1p(z[i-1:i+2]);yy=np.log(f[i-1:i+2])
+   aa,bb,cc=np.polyfit(xx,yy,2)
+   if aa<0:
+    xm=-bb/(2*aa)
+    if min(xx)<=xm<=max(xx):
+     zpk=float(np.expm1(xm))
+     fpk=float(np.exp(np.polyval([aa,bb,cc],xm)))
   H0=c.Hubble(0)*299792.458
-  r={"peak_z":float(z[i]),"peak_f":float(f[i]),"H0_realized":float(H0),
+  r={"peak_z":zpk,"peak_f":fpk,"H0_realized":float(H0),
      "H0_rel_error":float(H0/t["H0"]-1)}
   for k in ("rs_d","100*theta_s","z_rec"):
    try:r[k]=float(c.get_current_derived_parameters([k])[k])
@@ -94,6 +105,15 @@ def main():
   row={"target":t,"background_trials":[],"status":"starting"}
   t0=time.monotonic()
   V,F=seed(t);row["seed"]={"V0":V,"F":F}
+  # The alpha=4 frozen-onset approximation systematically locates the
+  # actual energy peak too late. Rescale V0 by H^2(z) ~ (1+z)^3.5
+  # before finite-difference shooting. This is merely a first guess.
+  try:
+   seed_bg=physical(t,V,F)
+   row["seed_background"]=seed_bg
+   V=float(np.clip(V*(t["zc"]/seed_bg["peak_z"])**3.5,5.01,2999.))
+   row["redshift_rescaled_seed"]={"V0":V,"F":F}
+  except Exception as exc:row["seed_rescaling_failure"]=repr(exc)
   def fun(logx):
    V,F=np.exp(logx)
    try:
@@ -108,7 +128,7 @@ def main():
    return r
   try:
    opt=least_squares(fun,np.log([V,F]),bounds=(np.log([5,.06]),np.log([3000,.9])),
-                     max_nfev=13,ftol=.005,xtol=.003,gtol=.003)
+                     max_nfev=28,diff_step=.04,ftol=.003,xtol=.003,gtol=.003)
    valid=[r for r in row["background_trials"] if "peak_f" in r]
    if not valid:raise RuntimeError("No valid physical backgrounds")
    best=min(valid,key=lambda r:np.log(r["peak_z"]/t["zc"])**2+
@@ -116,7 +136,7 @@ def main():
    row["best_background"]=best;row["solver_message"]=str(opt.message)
    dz=best["peak_z"]/t["zc"]-1;df=best["peak_f"]/t["fpeak"]-1
    row["target_rel_error"]={"z":float(dz),"f":float(df)}
-   if max(abs(dz),abs(df))>.25 or abs(best["H0_rel_error"])>.001:
+   if max(abs(dz),abs(df))>.10 or abs(best["H0_rel_error"])>.001:
     row["status"]="rejected_physical_peak_or_Friedmann"
    else:
     row["likelihood"]=official(t,best["V0"],best["F"])
