@@ -24,7 +24,7 @@ The earlier calibrated H0 = 70, zpeak = 3500 point gave Delta chi2 about +136.8.
 
 ## 2. A conditional Z3-to-D3 receiver phase doublet
 
-Assume three independent complex receiver-channel phases theta0, theta1 and theta2. Remove their common phase, and write alpha = theta1-theta0 and beta = theta2-theta0. The relative phase space is U(1)^3/U(1)_diag, a two-torus.
+Assume three independent complex receiver-channel amplitudes with nonzero fixed magnitudes and phases theta0, theta1 and theta2. Remove their common phase, and write alpha = theta1-theta0 and beta = theta2-theta0. **On this fixed-amplitude phase submanifold**, the relative phase space is U(1)^3/U(1)_diag, a two-torus. An unconstrained normalized three-component complex quantum amplitude instead has projective state space CP^2, with four real dimensions. The two-torus is therefore a dynamical phase-only reduction, not a consequence of merely having three discrete end-class labels.
 
 A cyclic channel permutation acts on the real phase doublet q=(alpha,beta) as M=[[-1,1],[-1,0]], with M^3=I. A reflection interchanging channels 1 and 2 acts as R=[[0,1],[1,0]], with R^2=I and RMR=M^-1. If both transformations are microscopic symmetries, they generate D3, isomorphic to the permutation group S3.
 
