@@ -1,0 +1,30 @@
+name: QICT dark-mass scale and cosmological vacuum uniqueness gates
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/parity-stable-multifield-closure-2026-11-07']
+    paths:
+      - 'code/qict_absolute_scale_vacuum_no_go.py'
+      - '.github/workflows/qict-scale-vacuum-no-go.yml'
+permissions:
+  contents: read
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify microscopic scaling family and symmetry-invariant vacuum shift
+        run: |
+          python -m pip install numpy
+          python -m py_compile code/qict_absolute_scale_vacuum_no_go.py
+          OPENBLAS_NUM_THREADS=1 python code/qict_absolute_scale_vacuum_no_go.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-absolute-mass-vacuum-uniqueness-no-go
+          path: results/qict_absolute_scale_no_go/
+          if-no-files-found: warn
