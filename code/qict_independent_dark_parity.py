@@ -48,11 +48,14 @@ def mchi2(v,m0=1.,kappa=.01,Lambda=1.,F=.2):
     return m0*m0+kappa*kinetic(v,F)/Lambda**2
 
 
-def total_energy_density(q,v,chi,chidot,lambda_chi=.1):
-    # Homogeneous EFT energy density, with a positive derivative
-    # coupling; ignore χ backreaction on metric kinetic for this
-    # algebraic diagnostic. For a complete UV model derive full Tmunu.
-    return kinetic(v)+V(q)+.5*chidot**2+.5*mchi2(v)*chi**2+lambda_chi/4*chi**4
+def total_energy_density(q,v,chi,chidot,lambda_chi=.1,kappa=.01,Lambda=1.):
+    # Exact homogeneous Hamiltonian for the manifestly non-ghost
+    # derivative metric L=exp[-kappa chi²/(2 Lambda²)]*X
+    # + chi_dot²/2 - V(q) - m0² chi²/2 - lambda_chi chi⁴/4.
+    # Its small-chi effective squared mass is m0²+kappa X/Lambda².
+    X=kinetic(v)
+    return (math.exp(-kappa*chi*chi/(2*Lambda*Lambda))*X
+            +V(q)+.5*chidot**2+.5*chi**2+lambda_chi/4*chi**4)
 
 
 def grad_v(q):
@@ -119,7 +122,9 @@ def main():
       "dark_spin":"bosonic here; neither flavor exchange nor Z2dark alone determines fermionic spin statistics",
       "V_even":"V0 sum over 3 links of P_N[1-cos(theta_l)]",
       "kinetic_even":"(F²/2) G_ab dq_a dq_b; G=(1/3)[[2,-1],[-1,2]]",
-      "dark_mass2":"m0²+(kappa/Lambda²)X, X=(F²/2)G_ab qdot_a qdot_b >=0 on homogeneous background",
+      "dark_mass2":"m0²+(kappa/Lambda²)X at chi=0; X=(F²/2)G_ab qdot_a qdot_b >=0",
+      "covariant_dark_EFT":"L_kin=-(F²/2) exp[-kappa chi²/(2 Lambda²)] G_ab partial_mu q^a partial^mu q^b -(partial chi)^2/2, V_total=V(q)+m0² chi²/2+lambda_chi chi⁴/4",
+      "field_metric_positivity":"the exponential coefficient is positive for all real chi, avoiding a q-sector kinetic ghost in this EFT",
       "dark_renormalization":"Static-phase-independent derivative term avoids a tree-level phase-dependent mass determinant, but no radiative EFT control is proven",
       "microscopic_status":"INDEPENDENT Z2dark NOT DERIVED; distinct from the flavor reflection Z2 already inside D3",
       "alternative":">=4 phase-bearing channels can leave two reflection-even homogeneous relative phases and one odd spectator",
