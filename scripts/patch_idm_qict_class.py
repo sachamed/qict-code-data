@@ -76,7 +76,7 @@ def background(s):
        "pba->Omega0_cdm * H0_sq / a3 * pba->cdm_f_phi0_inv *\n          ((pba->scf_potential == 10) ?\n            qict_mass_factor(pba,pvecback_B[pba->index_bi_phi_scf]) :\n            (1.0 / (1.0 + exp(2.0*pba->cdm_c*pvecback_B[pba->index_bi_phi_scf]))));",
        "rho cdm")
     # Correct present-day number normalization for g=0 QICT and for g!=0.
-    s,n=re.subn(r"pba->cdm_f_phi0 = 0\\.5;\\s+pba->cdm_f_phi0_inv = 2\\.0;",
+    s,n=re.subn(r"pba->cdm_f_phi0 = 0\.5;\s+pba->cdm_f_phi0_inv = 2\.0;",
       "pba->cdm_f_phi0 = (pba->scf_potential == 10) ? 1.0 : 0.5;\\n       pba->cdm_f_phi0_inv = (pba->scf_potential == 10) ? 1.0 : 2.0;",s)
     if n!=1:raise RuntimeError(f"uncoupled normalization: expected one anchor got {n}")
     s=replace_once(s,"double f_new = 1.0 / (1.0 + exp_2c_phi0); /* = G(f_cur) */",
