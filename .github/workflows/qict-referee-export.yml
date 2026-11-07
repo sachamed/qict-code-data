@@ -1,0 +1,25 @@
+name: QICT referee-corrected exact source reproducibility
+on:
+  push:
+    branches: ['qict/referee-act-correction-2026-11-07']
+    paths: ['.github/workflows/qict-referee-export.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Freeze exact source and commit
+        run: |
+          mkdir -p results/qict_referee_source/code results/qict_referee_source/workflows
+          git rev-parse HEAD > results/qict_referee_source/GIT_COMMIT.txt
+          cp -a code/qict_cmb_microphysics.py code/qict_cmb_massive_boltzmann.py code/qict_planck_native_fixed.py code/qict_planck_h0_lambda_grid.py code/qict_act_corrected_lensing.py code/qict_act_dr6_primary_fixed.py results/qict_referee_source/code/
+          cp -a .github/workflows/qict-act-referee.yml .github/workflows/qict-planck-referee.yml .github/workflows/qict-planck-2d-referee.yml .github/workflows/qict-act-primary-referee.yml results/qict_referee_source/workflows/
+          sha256sum results/qict_referee_source/code/*.py results/qict_referee_source/workflows/*.yml > results/qict_referee_source/SOURCE_SHA256.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-referee-cmb-executed-source
+          path: results/qict_referee_source/
+          if-no-files-found: error
