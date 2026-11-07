@@ -32,7 +32,7 @@ for g in (0.0,0.02):
         s=update(s,k,v)
     # CLASS must solve the remaining cosmological budget via Omega_Lambda.
     # Do not specify Lambda and fluid simultaneously with positive Omega_scf.
-    s=re.sub(r"(?m)^\\s*Omega_Lambda\\s*=.*$", "# Omega_Lambda set by budget closure",s)
+    s=re.sub(r"(?m)^\s*Omega_Lambda\s*=.*$", "# Omega_Lambda set by budget closure",s)
     path=root/f"qict_g{g:.2f}.ini"
     path.write_text(s)
     print(path,flush=True)
