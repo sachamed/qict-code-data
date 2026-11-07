@@ -1,0 +1,36 @@
+name: QICT resonant receiver vs LambdaCDM on real Planck TTTEEE
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/resonant-hubble-test-2026-11-07']
+    paths:
+      - '.github/workflows/qict-resonance-real-planck.yml'
+      - 'code/qict_resonance_planck_grid.py'
+      - 'code/qict_resonant_cmb_theory.py'
+permissions:
+  contents: read
+jobs:
+  resonance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CAMB 2.0.5 and official Planck native likelihoods
+        run: |
+          python -m pip install 'camb==2.0.5' 'cobaya>=3.5' numpy scipy
+          cobaya-install planck_2018_lowl.TT planck_2018_lowl.EE planck_2018_highl_plik.TTTEEE_lite_native -p /tmp/cobaya_packages
+      - name: Compute 16 full TT TE EE QICT resonance Planck likelihood points
+        env:
+          PYTHONPATH: code
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: python code/qict_resonance_planck_grid.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-resonance-vs-lcdm-planck-16point
+          path: results/qict_resonance_planck/
+          if-no-files-found: warn
