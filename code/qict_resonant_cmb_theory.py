@@ -52,8 +52,12 @@ def history(n=1600,H0=69.28,ombh2=.02237,omch2=.119,
         w[j]=-1-E[j]**2*(2*f+df)*dlnEdN/(3*rx)
         fr[j]=f
         rs[j]=(E[j]**2*(1-f)-R)/E[j]**2
-    if np.min(w)<-1-1e-7:
-        raise ValueError("Phantom reconstructed branch")
+    if np.min(w)<-1-1e-9:
+        raise ValueError("Physical phantom reconstructed branch")
+    # CAMB's tabulated-fluid constructor rejects *any* entry w<-1.
+    # Floating-point cancellation gives O(1e-16) undershoots at frozen epochs;
+    # restoring their mathematical value -1 changes no physical prediction.
+    w=np.maximum(w,-1.0)
     return a,w,E,fr,float(np.max(np.abs(rs))),float(floor)
 
 class ResonantQICTTheory(Theory):
