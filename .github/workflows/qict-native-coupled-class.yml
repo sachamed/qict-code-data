@@ -1,0 +1,56 @@
+name: QICT genuinely coupled CLASS scalar and CDM CMB smoke spectra
+on:
+  push:
+    branches: ['qict/coupled-joint-likelihood-gate-2026-11-07']
+    paths:
+      - '.github/workflows/qict-native-coupled-class.yml'
+      - 'scripts/patch_idm_qict_class.py'
+      - 'scripts/make_qict_class_ini.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native_class:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Clone GPL-3 CLASS interacting quintessence fork
+        run: |
+          git clone --depth 1 https://github.com/kabeleh/iDM.git /tmp/qict_idm
+          git -C /tmp/qict_idm rev-parse HEAD > idm_upstream_commit.txt
+      - name: Apply QICT finite-N and variable-mass patch with exact source anchors
+        run: |
+          python scripts/patch_idm_qict_class.py /tmp/qict_idm
+          python scripts/make_qict_class_ini.py /tmp/qict_idm
+      - name: Compile patched CLASS including Einstein constraint and Boltzmann hierarchies
+        run: |
+          make -C /tmp/qict_idm -j2 class
+          test -x /tmp/qict_idm/class
+      - name: Compute QICT source-coupled CMB and linear matter spectra
+        env:
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: |
+          mkdir -p results/qict_native_class
+          cp idm_upstream_commit.txt results/qict_native_class/
+          for g in 0.00 0.02; do
+            echo "g=$g"
+            (cd /tmp/qict_idm && ./class qict_g$g.ini) \
+             > results/qict_native_class/CLASS_g$g.log 2>&1
+            cp -v /tmp/qict_idm/qict_g$g.ini results/qict_native_class/
+            ls -lh /tmp/qict_idm/results/qict_class_g$g* || true
+            cp /tmp/qict_idm/results/qict_class_g$g* results/qict_native_class/ || true
+          done
+          ls -lh results/qict_native_class
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-native-CLASS-coupled-finiteN-g0-g002
+          path: |
+            results/qict_native_class/
+            idm_upstream_commit.txt
+          if-no-files-found: warn
