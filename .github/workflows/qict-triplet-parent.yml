@@ -1,0 +1,28 @@
+name: QICT exact distinct-triplet microscopic parent theorem
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/three-epoch-physical-consistency-2026-11-07']
+    paths:
+      - 'code/qict_distinct_triplet_parent.py'
+      - '.github/workflows/qict-triplet-parent.yml'
+permissions:
+  contents: read
+jobs:
+  triplet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Prove finite-charge distinct-event polynomial and harmonic identities
+        run: |
+          python -m py_compile code/qict_distinct_triplet_parent.py
+          python code/qict_distinct_triplet_parent.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-distinct-triplet-exact-parent
+          path: results/qict_triplet_parent/
+          if-no-files-found: error
