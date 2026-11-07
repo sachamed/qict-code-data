@@ -24,6 +24,9 @@ jobs:
           bash get-act-data.sh
           python -m pip install -e /tmp/act_dr6_lenslike
           cd /tmp
+          # Cobaya's global packages_path requires ACT files under its data directory.
+          mkdir -p /tmp/cobaya_packages/data/ACT_dr6_likelihood
+          ln -s /tmp/act_dr6_lenslike/act_dr6_lenslike/data/v1.2 /tmp/cobaya_packages/data/ACT_dr6_likelihood/v1.2
       - name: Confirm ACT v1.2 release installed
         run: |
           python - <<'PY'
@@ -31,6 +34,7 @@ jobs:
           from pathlib import Path
           d=Path(act_dr6_lenslike.__file__).resolve().parent/'data/v1.2'
           assert d.is_dir(), d
+          assert (Path('/tmp/cobaya_packages/data/ACT_dr6_likelihood/v1.2')).is_dir()
           print('ACT DR6 v1.2 installed:',d)
           PY
       - name: Evaluate official data likelihoods at LCDM baseline and 73.04 point
