@@ -77,6 +77,18 @@ w_{phi,mathrm{eff}}=w_phi+rac{Q}{3Hho_phi}.
 ]
 Here wφ≥−1 for a healthy canonical field. The effective crossing depends on a specified interaction and on the observational inference model; it cannot be asserted from DESI BAO alone.
 
+## III-b. Conditional acoustic feasibility bound
+
+A useful exact constraint exists when the non-scalar cosmological history, baryon sound speed and acoustic integration endpoints are **held fixed**. If a positive scalar contributes a fraction 0<=f_phi(z)<=fmax to the total energy at each relevant redshift, then H_new(z)=H_bg(z)/sqrt(1-f_phi(z)), so the sound horizon is an average of sqrt(1-f_phi(z)) weighted by positive background integrand. Therefore
+
+[
+sqrt{1-f_{max}}lerac{r_s^{m new}}{r_s^{m bg}}le1.
+]
+
+For fmax=0.10105 this implies the largest possible reduction of r_s under those assumptions is 1-sqrt(0.89895)=5.187%, compared with 1.901% in the previously reported simplified QICT background. The naive inverse H0 ratio 67.4/74.93 would require a 10.049% reduction if the distance to last scattering scaled strictly as 1/H0, which it does **not** across freely varying cosmological parameters. The illustrative fraction needed for that naive scale would be at least 19.089% even if sustained throughout the acoustic integral.
+
+The previous result is deliberately **not** a strict coupled-QICT bound: when CDM mass evolves, the non-scalar background is not fixed; and in a full likelihood the angular-diameter distance and sound horizon respond together. The correct test compares the full H(z), recombination and the angular/diffusion scales at each fitted point. This bound demonstrates why a narrow 10%-peak alone is insufficient evidence of a high-H0 solution.
+
 ## IV. A speculative but sharp test of inter-epoch charge hierarchy
 
 A proposed *microscopic question*, not a derived result, is whether a receiver vacuum projector carries a first nonvanishing suppression of order N⁻⁴ relative to the excitation scale. If a microscopic Hamiltonian demonstrated
