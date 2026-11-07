@@ -35,7 +35,7 @@ jobs:
           OMP_NUM_THREADS: '2'
           OPENBLAS_NUM_THREADS: '2'
         run: |
-          mkdir -p results/qict_native_class
+          mkdir -p results/qict_native_class /tmp/qict_idm/results
           cp idm_upstream_commit.txt results/qict_native_class/
           for g in 0.00 0.02; do
             echo "g=$g"
