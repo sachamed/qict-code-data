@@ -1,0 +1,28 @@
+name: QICT radiative-stability and chiral-phase mass gate
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/three-epoch-physical-consistency-2026-11-07']
+    paths:
+      - 'code/qict_radiative_naturalness_gate.py'
+      - '.github/workflows/qict-radiative-nature.yml'
+permissions:
+  contents: read
+jobs:
+  quantum:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check one-loop Dirac determinant and anomaly-free chiral-phase invariant
+        run: |
+          python -m py_compile code/qict_radiative_naturalness_gate.py
+          python code/qict_radiative_naturalness_gate.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-radiative-dark-sector-analytic-gate
+          path: results/qict_radiative_naturalness/
+          if-no-files-found: error
