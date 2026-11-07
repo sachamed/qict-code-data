@@ -38,10 +38,8 @@ jobs:
           git clone --depth 1 https://github.com/kabeleh/iDM.git /tmp/qict_idm
           python scripts/patch_idm_qict_class.py /tmp/qict_idm
           make -C /tmp/qict_idm -j2 class
-          (cd /tmp/qict_idm && python setup.py build_ext --inplace)
+          python -m pip install -e /tmp/qict_idm --no-build-isolation
           python - <<'PY'
-          import sys
-          sys.path.insert(0,'/tmp/qict_idm')
           import classy
           print('Patched CLASS loaded:',classy.__file__)
           PY
