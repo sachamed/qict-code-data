@@ -1,0 +1,58 @@
+name: QICT finite-N early-energy native CLASS physical test
+on:
+  push:
+    branches: ['qict/coupled-joint-likelihood-gate-2026-11-07']
+    paths:
+      - '.github/workflows/qict-native-early-energy.yml'
+      - 'code/qict_native_early_energy_gate.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native_early_energy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install data analysis dependencies
+        run: python -m pip install numpy
+      - name: Clone pinned interacting CLASS source
+        run: |
+          git clone --no-checkout https://github.com/kabeleh/iDM.git /tmp/qict_idm
+          git -C /tmp/qict_idm fetch --depth 1 origin dc55e59dec8f5c647df6e9d764f5c6960796e1df
+          git -C /tmp/qict_idm checkout --detach dc55e59dec8f5c647df6e9d764f5c6960796e1df
+          test "$(git -C /tmp/qict_idm rev-parse HEAD)" = dc55e59dec8f5c647df6e9d764f5c6960796e1df
+      - name: Apply finite-N and mass-transfer patch
+        run: python scripts/patch_idm_qict_class.py /tmp/qict_idm
+      - name: Compile Einstein-Boltzmann CLASS model
+        run: make -C /tmp/qict_idm -j2 class
+      - name: Prepare non-fitted high-energy QICT inputs
+        run: |
+          python code/qict_native_early_energy_gate.py prepare --class-root /tmp/qict_idm
+          mkdir -p /tmp/qict_idm/results results/qict_native_early_energy
+      - name: Compute TT TE EE BB lensing and matter spectra for g=0 and g=0.02
+        env:
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: |
+          cp /tmp/qict_idm/qict_early_g*.ini results/qict_native_early_energy/
+          git -C /tmp/qict_idm rev-parse HEAD > results/qict_native_early_energy/upstream_commit.txt
+          for g in 0.00 0.02; do
+            echo "Computing physical early-energy QICT branch g=$g"
+            if ! (cd /tmp/qict_idm && ./class qict_early_g$g.ini) > results/qict_native_early_energy/CLASS_g$g.log 2>&1; then
+              tail -n 140 results/qict_native_early_energy/CLASS_g$g.log
+              exit 1
+            fi
+            cp /tmp/qict_idm/results/qict_early_g$g* results/qict_native_early_energy/
+          done
+      - name: Strict finite-spectrum and conserved-number test
+        run: python code/qict_native_early_energy_gate.py validate --results results/qict_native_early_energy
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-high-early-energy-native-physical-forward-only
+          path: results/qict_native_early_energy/
+          if-no-files-found: warn
