@@ -102,6 +102,16 @@ def main():
     for t in (.001,.03,.1,.5):
         assert potential_dimensionless(t,n)>=0
     ntests+=5
+    # Under a *fixed non-scalar background* and fixed baryon sound speed,
+    # 0 <= f_phi(z) <= fmax implies r_s(new)/r_s(reference)>=sqrt(1-fmax).
+    # This cannot be applied directly as a strict bound to an interacting
+    # QICT model whose matter density history also changes.
+    fmax=0.10105
+    max_acoustic_reduction=1.0-math.sqrt(1.0-fmax)
+    naive_h0_rescaling=1.0-(67.4/74.93)
+    hypothetical_min_fmax=1.0-(67.4/74.93)**2
+    assert 0.01901 < max_acoustic_reduction < naive_h0_rescaling
+    ntests+=1
     f=assumed_charge_vacuum_fraction(n,3500,0.315,9.3e-5,0.685)
     assert 0<f<1
     ntests+=1
@@ -116,6 +126,15 @@ def main():
       "crossover":values,
       "m_chi_ratio_upper_bound_g002":math.sqrt(1.02),
       "m_chi_relative_maximum_g002":math.sqrt(1.02)-1,
+      "acoustic_conditional_bound":{
+        "assumptions":"unchanged non-scalar background, sound speed and integration endpoints; f_phi(z)<=fmax at all relevant z",
+        "fmax":fmax,
+        "maximum_possible_fractional_rs_reduction":max_acoustic_reduction,
+        "previous_simplified_QICT_acoustic_reduction":0.01901,
+        "H0_fractional_inverse_ratio_67p4_over_74p93":naive_h0_rescaling,
+        "fmax_minimum_for_that_naive_ratio":hypothetical_min_fmax,
+        "status":"CONDITIONAL_BOUND_NOT_A_DIRECT_COUPLED_QICT_OR_H0_LIMIT"
+      },
       "test_early_redshift":3500,
       "assumed_charge_hierarchy":{
         "status":"UNPROVEN_ANSATZ_NOT_PREDICTION",
