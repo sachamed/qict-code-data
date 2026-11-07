@@ -1,0 +1,28 @@
+name: QICT physical onset finite-charge tachyonic clock
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/three-epoch-physical-consistency-2026-11-07']
+    paths:
+      - 'code/qict_physical_onset_map.py'
+      - '.github/workflows/qict-physical-onset-map.yml'
+permissions:
+  contents: read
+jobs:
+  onset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Run exact finite-N derivatives and approximate physical-onset inversion
+        run: |
+          python -m py_compile code/qict_physical_onset_map.py
+          python code/qict_physical_onset_map.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-finite-charge-tachyonic-onset-reconstruction-seeds
+          path: results/qict_physical_onset_map/
+          if-no-files-found: error
