@@ -49,7 +49,7 @@ d["lcdm_reference"]=[]
 for H0 in H_GRID:
  info_ref={"packages_path":"/tmp/cobaya_packages","debug":True,
    "theory":{"classy":{"stop_at_error":True,"extra_args":{
-     "model_cdm":"h","Omega_scf":0,"Omega_fld":0,"gauge":"newtonian",
+     "Omega_scf":0,"Omega_fld":0,"gauge":"newtonian",
      "non_linear":None,"N_ncdm":0,"N_ur":3.044,"lensing":"yes"}}},
    "likelihood":{
      "planck_2018_highl_plik.TTTEEE_lite_native":None,
