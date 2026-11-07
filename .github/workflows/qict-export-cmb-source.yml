@@ -1,0 +1,25 @@
+name: QICT exact CMB source provenance export
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/microphysical-cmb-closure-2026-11-06']
+    paths:
+      - '.github/workflows/qict-export-cmb-source.yml'
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Record exact commit identity
+        run: |
+          mkdir -p results/qict_cmb_source
+          git rev-parse HEAD > results/qict_cmb_source/GITHUB_COMMIT_SHA.txt
+          cp -a code/qict_cmb_microphysics.py code/qict_cmb_boltzmann.py code/qict_cmb_massive_boltzmann.py code/qict_act_dr6_official_fixed.py code/qict_planck_native_fixed.py code/qict_planck_act_conditional_scan.py code/qict_act_dr6_primary_fixed.py code/qict_planck_h0_lambda_grid.py results/qict_cmb_source/
+          cp -a .github/workflows/qict-cmb-boltzmann.yml .github/workflows/qict-act-dr6.yml .github/workflows/qict-planck-native.yml .github/workflows/qict-planck-act-lambda.yml .github/workflows/qict-act-primary.yml .github/workflows/qict-planck-2d.yml results/qict_cmb_source/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-complete-executed-cmb-source
+          path: results/qict_cmb_source/
+          if-no-files-found: error
