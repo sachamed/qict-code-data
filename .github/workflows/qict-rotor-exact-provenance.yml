@@ -15,8 +15,8 @@ jobs:
         run: |
           mkdir -p results/qict_rotor_provenance/code results/qict_rotor_provenance/workflows results/qict_rotor_provenance/docs
           git rev-parse HEAD > results/qict_rotor_provenance/COMMIT.txt
-          cp code/qict_direct_axion_planck.py code/qict_direct_rotor_cdm_scan.py code/qict_planck_native_fixed.py results/qict_rotor_provenance/code/
-          cp .github/workflows/qict-direct-rotor-planck.yml .github/workflows/qict-direct-rotor-cdm-grid.yml results/qict_rotor_provenance/workflows/
+          cp code/qict_direct_axion_planck.py code/qict_direct_rotor_cdm_scan.py code/qict_direct_rotor_act_primary.py code/qict_planck_native_fixed.py results/qict_rotor_provenance/code/
+          cp .github/workflows/qict-direct-rotor-planck.yml .github/workflows/qict-direct-rotor-cdm-grid.yml .github/workflows/qict-direct-rotor-act-primary.yml results/qict_rotor_provenance/workflows/
           cp docs/qict_charge_normalized_receiver_finite_N_2026-11-07.md results/qict_rotor_provenance/docs/
           find results/qict_rotor_provenance -type f ! -name SHA256SUMS.txt -print0 | xargs -0 sha256sum > results/qict_rotor_provenance/SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
