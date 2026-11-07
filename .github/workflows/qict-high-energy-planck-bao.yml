@@ -1,0 +1,53 @@
+name: QICT high-energy official Planck DESI H0 fixed-point test
+on:
+  push:
+    branches: ['qict/coupled-joint-likelihood-gate-2026-11-07']
+    paths:
+      - '.github/workflows/qict-high-energy-planck-bao.yml'
+      - 'code/qict_high_planck_desi.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  planck_bao:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Planck 2018 and DESI DR2 official likelihoods
+        run: |
+          python -m pip install 'cobaya>=3.5.6' cython setuptools wheel numpy scipy
+          cobaya-install planck_2018_highl_plik.TTTEEE_lite_native planck_2018_lowl.TT planck_2018_lowl.EE bao.desi_dr2 -p /tmp/cobaya_packages
+      - name: Patch finite-N CLASS with scalar closure and bounded stiffness
+        run: |
+          git clone --no-checkout https://github.com/kabeleh/iDM.git /tmp/qict_idm
+          git -C /tmp/qict_idm fetch --depth 1 origin dc55e59dec8f5c647df6e9d764f5c6960796e1df
+          git -C /tmp/qict_idm checkout --detach dc55e59dec8f5c647df6e9d764f5c6960796e1df
+          python scripts/patch_idm_qict_class.py /tmp/qict_idm
+          python code/qict_patch_negative_scf_shoot.py /tmp/qict_idm
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('/tmp/qict_idm/source/background.c')
+          s=p.read_text(); old='#define _BACKGROUND_MAX_FEVALS_ 100000'
+          assert s.count(old)==1
+          p.write_text(s.replace(old,'#define _BACKGROUND_MAX_FEVALS_ 350000'))
+          PY
+      - name: Compile native CLASS and Python bindings
+        run: |
+          make -C /tmp/qict_idm -j2 class
+          python -m pip install -e /tmp/qict_idm --no-build-isolation
+      - name: Compute official Planck DESI log-likelihoods for H0 fixed points
+        env:
+          PYTHONPATH: code
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: python code/qict_high_planck_desi.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-high-energy-planck-desi-fixed-points
+          path: results/qict_high_planck_bao/
+          if-no-files-found: warn
