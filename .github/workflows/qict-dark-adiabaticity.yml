@@ -1,0 +1,29 @@
+name: QICT heavy odd-particle adiabatic-production consistency gate
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/parity-stable-multifield-closure-2026-11-07']
+    paths:
+      - 'code/qict_dark_particle_adiabaticity.py'
+      - '.github/workflows/qict-dark-adiabaticity.yml'
+permissions:
+  contents: read
+jobs:
+  analytic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify finite-charge mass modulation adiabaticity inequalities
+        run: |
+          python -m py_compile code/qict_dark_particle_adiabaticity.py
+          python code/qict_dark_particle_adiabaticity.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-odd-particle-mass-adiabaticity-bound
+          path: results/qict_dark_particle_adiabaticity/
+          if-no-files-found: warn
