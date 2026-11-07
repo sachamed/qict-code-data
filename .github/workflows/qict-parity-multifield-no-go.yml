@@ -1,0 +1,30 @@
+name: QICT parity-protected dark matter versus two-field EDE symmetry no-go
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/parity-stable-multifield-closure-2026-11-07']
+    paths:
+      - 'code/qict_parity_multifield_no_go.py'
+      - '.github/workflows/qict-parity-multifield-no-go.yml'
+permissions:
+  contents: read
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify exact finite-charge D3 reflection and scalar mass matrix
+        run: |
+          python -m pip install numpy
+          python -m py_compile code/qict_parity_multifield_no_go.py
+          OPENBLAS_NUM_THREADS=1 python code/qict_parity_multifield_no_go.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-parity-multifield-exact-no-go
+          path: results/qict_symmetry_no_go/
+          if-no-files-found: warn
