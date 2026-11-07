@@ -33,6 +33,12 @@ Its measured log likelihoods are Planck TTTEEE Plik-lite -309.3549435, low TT -1
 
 At H0=70 and zpeak≈2000, a previous omega_cdm=0.124 point had Delta chi-square +41.4. The sharp change produced by omega_cdm=0.122 demonstrates that the matter density and the early scalar perturbation history must be optimized jointly. ACT primary and joint ACT-Planck lensing are independent next gates. SH0ES, when held out, still lies approximately 2.9 standard deviations from H0=70 at the quoted local Gaussian width.
 
+## 1c. Held-out ACT DR6 primary-CMB diagnostic
+
+The QICT point selected from Planck+DESI at H0=70 was then evaluated in an independently installed ACT Collaboration DR6 CMB-lite primary TT/TE/EE likelihood. In [GitHub Actions run 42418982576](https://github.com/sachamed/qict-code-data/actions/runs/42418982576), the fixed-point likelihoods were: ordinary LCDM H0=67.4 logL=-90.25328636; QICT H0=68.5 logL=-89.75477175; calibrated QICT H0=70 logL=-85.76256793; and ordinary LCDM H0=70 at the same ordinary input parameters logL=-539.15546669. The conditional ACT-only Delta chi-square of QICT H0=70 relative to the selected H0=67.4 LCDM control is -8.98143685.
+
+This is an independent primary-CMB cross-check of a previously calibrated point, not an ACT nuisance-refitted or jointly optimized comparison. Its full high-ell data overlap with Planck Plik-lite, so the two primary likelihoods cannot simply be added as statistically independent measurements. The lensing-inclusive ACT–Planck joint likelihood is a separate analysis.
+
 ## 2. A conditional Z3-to-D3 receiver phase doublet
 
 Assume three independent complex receiver-channel amplitudes with nonzero fixed magnitudes and phases theta0, theta1 and theta2. Remove their common phase, and write alpha = theta1-theta0 and beta = theta2-theta0. **On this fixed-amplitude phase submanifold**, the relative phase space is U(1)^3/U(1)_diag, a two-torus. An unconstrained normalized three-component complex quantum amplitude instead has projective state space CP^2, with four real dimensions. The two-torus is therefore a dynamical phase-only reduction, not a consequence of merely having three discrete end-class labels.
