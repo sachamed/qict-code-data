@@ -1,0 +1,35 @@
+name: QICT cubic rotor full scalar Planck TTTEEE test
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/rotor-exact-boltzmann-2026-11-07']
+    paths:
+      - '.github/workflows/qict-direct-rotor-planck.yml'
+      - 'code/qict_direct_axion_planck.py'
+permissions:
+  contents: read
+jobs:
+  direct_scalar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CAMB physical EarlyQuintessence and Cobaya
+        run: |
+          python -m pip install 'camb==2.0.5' 'cobaya>=3.5' numpy scipy
+          cobaya-install planck_2018_lowl.TT planck_2018_lowl.EE planck_2018_highl_plik.TTTEEE_lite_native -p /tmp/cobaya_packages
+      - name: Evaluate actual scalar perturbation dynamics against Planck
+        env:
+          PYTHONPATH: code
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: python code/qict_direct_axion_planck.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-cubic-rotor-exact-scalar-planck
+          path: results/qict_direct_scalar_planck/
+          if-no-files-found: warn
