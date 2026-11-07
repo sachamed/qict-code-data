@@ -10,6 +10,7 @@ SH0ES is an explicit held-out Gaussian log likelihood; no posterior is claimed.
 import json,traceback
 from pathlib import Path
 import numpy as np
+from classy import Class  # Fail early unless the compiled, editable CLASS extension imports
 import act_dr6_lenslike as act
 from cobaya.likelihood import Likelihood
 from cobaya.model import get_model
@@ -39,7 +40,7 @@ def run():
     param_list="2.5e-16, 0.35, 250., 0., 0., 0., 0., 0., 0., 0., 0.875, 0."
     info={
       "packages_path":"/tmp/cobaya_packages",
-      "theory":{"classy":{"path":"/tmp/qict_idm",
+      "theory":{"classy":{
         "extra_args":{
            "model_cdm":"i","scf_potential":"QICT_finite_N",
            "scf_parameters":param_list,"attractor_ic_scf":"no",
@@ -63,6 +64,8 @@ def run():
         "cdm_c":{"prior":{"min":0.,"max":.05}},
       }
     }
+    probe=Class()  # Check compiled classy extension before Cobaya discovery
+    del probe
     report={"status":"starting","model":"QICT finite-N=250 canonical scalar + genuinely variable-mass CDM",
        "baseline":"g=0 vs g=.02, weak 1e-8 present scalar, other cosmological parameters fixed",
        "joint_sources":"Planck Plik-lite TTTEEE+Commander lowTT+SimAll lowEE+official joint ACT-Planck DR6 lensing+DESI DR2 BAO; local H0 Gaussian separate",
