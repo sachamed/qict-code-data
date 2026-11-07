@@ -31,6 +31,8 @@ The best recorded point has H0=70, omega_cdm=0.122, n_s=0.975, N=250, g=0.02, V0
 
 Its measured log likelihoods are Planck TTTEEE Plik-lite -309.3549435, low TT -16.8046320, low EE -198.2623812, DESI DR2 BAO -5.2051468, totaling -529.6271035. Against the previously selected non-optimized LCDM control at H0=67.4 with log L=-530.2388101, the conditional Delta chi-square is -1.2234133. This is a better score than that **specific fixed point** and does not establish superiority to a freely reoptimized LCDM or global QICT fit.
 
+A stricter check against the **best finite LCDM point found in the previous limited five-parameter exploration**, which has log L=-511.55769978 on the same Planck+DESI likelihoods, gives Delta chi-square QICT minus LCDM = **+36.1388074**. Therefore the newly calibrated QICT point is not superior to the strongest LCDM point located so far; neither numerical exploration is a converged global fit. ACT DR6 primary-only comparisons should not be substituted for this matched Planck+DESI model-selection test.
+
 At H0=70 and zpeak≈2000, a previous omega_cdm=0.124 point had Delta chi-square +41.4. The sharp change produced by omega_cdm=0.122 demonstrates that the matter density and the early scalar perturbation history must be optimized jointly. ACT primary and joint ACT-Planck lensing are independent next gates. SH0ES, when held out, still lies approximately 2.9 standard deviations from H0=70 at the quoted local Gaussian width.
 
 ## 1c. Held-out ACT DR6 primary-CMB diagnostic
