@@ -84,7 +84,9 @@ def run_one(kind,h0,g):
             row["background_key_rho_scf"]=scf
             row["background_key_rho_tot"]=tot
         row["Omega_m_from_classy"]=float(c.Omega_m())
-        row["sigma8_from_classy"]=float(c.sigma8())
+        # CLASS sigma8 requires mPk output. Its absence is not a Friedmann failure.
+        try: row["sigma8_from_classy"]=float(c.sigma8())
+        except Exception as ex: row["sigma8_unavailable_reason"]=str(ex)
         if "100*theta_s" in row:
             row["theta_100_distance_from_planck_reference"]=row["100*theta_s"]-1.04109
         if row.get("status")=="computed" and abs(row["H0_fractional_deviation"])<=5e-4:
