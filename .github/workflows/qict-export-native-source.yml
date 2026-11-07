@@ -1,0 +1,36 @@
+name: QICT exact native CLASS and Cobaya source freeze
+on:
+  push:
+    branches: ['qict/coupled-joint-likelihood-gate-2026-11-07']
+    paths: ['.github/workflows/qict-export-native-source.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Freeze QICT patch, CLASS configs, survey likelihood and source identity
+        run: |
+          mkdir -p provenance/scripts provenance/code provenance/workflows provenance/docs
+          git rev-parse HEAD > provenance/GIT_COMMIT_SHA.txt
+          git remote -v > provenance/GIT_REMOTE.txt
+          cp scripts/patch_idm_qict_class.py scripts/make_qict_class_ini.py scripts/validate_qict_native_class.py provenance/scripts/
+          cp code/qict_real_joint_lcdm_reference.py code/qict_class_cobaya_joint.py provenance/code/
+          cp .github/workflows/qict-native-coupled-class.yml .github/workflows/qict-native-joint-observed.yml .github/workflows/qict-real-joint-reference.yml provenance/workflows/
+          cat > provenance/docs/README.md <<'DOC'
+          # QICT native CLASS and joint likelihood reproducibility
+          This archive contains source scripts written for QICT; the GPL-3 upstream kabeleh/iDM CLASS fork is not bundled.
+          1. Follow the GitHub Actions workflow, clone kabeleh/iDM, and apply scripts/patch_idm_qict_class.py to the pinned upstream commit.
+          2. Compile CLASS. Generate QICT finite-N g=0 and g=.02 input via make_qict_class_ini.py and compute CMB TT/TE/EE/BB/lensing and P(k).
+          3. Validate data and the conserved particle number with validate_qict_native_class.py.
+          4. The observed data pipeline uses Cobaya Planck 2018 primary, official joint ACT-Planck DR6 lensing, DESI DR2 BAO and a separate SH0ES Gaussian. No inference chain is present unless explicitly attached.
+          5. Do not treat the 1e-8 present-day scalar smoke test as a solution to the Hubble tension.
+          DOC
+          find provenance -type f ! -name SHA256SUMS.txt -print0 | sort -z | xargs -0 sha256sum > provenance/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-native-class-and-joint-cobaya-exact-code
+          path: provenance/
+          if-no-files-found: error
