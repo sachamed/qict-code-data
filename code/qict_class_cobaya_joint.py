@@ -46,7 +46,7 @@ def run():
            "model_cdm":"i","scf_potential":"QICT_finite_N",
            "scf_parameters":param_list,"attractor_ic_scf":"no",
            "scf_tuning_index":0,"Omega_scf":1e-8,
-           "gauge":"newtonian","nbody_gauge_transfer_functions":"no",
+           "gauge":"newtonian",
            "Omega_fld":0,
            "N_ncdm":1,"m_ncdm":0.06,"N_ur":2.0328,
            "non linear":"hmcode",
