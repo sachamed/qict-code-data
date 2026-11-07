@@ -99,6 +99,18 @@ A subsequent physically reconstructed scalar-peak experiment [42412842684](https
 
 These are comparisons to one fixed \(\Lambda\)CDM input, not optimized evidence ratios. The corresponding acoustic parameters \(100\theta_s=1.04799,1.05093,1.05584\) visibly miss the Planck acoustic angle around 1.0411. The next [acoustic-anchored reconstruction](https://github.com/sachamed/qict-code-data/actions/workflows/qict-acoustic-anchored.yml) therefore **solves for** the physical peak redshift and observed acoustic angle, allowing the scalar fraction to emerge.
 
+### Acoustic-anchored inverse shooting resolves the geometric degeneracy
+
+The first [dual-constraint acoustic run 42413256298](https://github.com/sachamed/qict-code-data/actions/runs/42413256298) performed a genuine nonlinear inversion of the native CLASS background: each candidate independently varied \(F\) and \(V_0\) until \(100\theta_s=1.04109\) and \(z_{\rm peak}=3500\), leaving the peak scalar fraction as an output. It then evaluated official Planck 2018 Plik-lite high-\(\ell\), low-TT, low-EE and DESI DR2 BAO likelihoods. All three inversions converged locally with actual \(\theta_s\) residuals smaller than \(1.1\times10^{-5}\), peak-redshift residuals smaller than 0.05, and fractional realized-\(H_0\) errors smaller than \(1.4\times10^{-4}\).
+
+| \(H_0\) | \(\omega_{\rm cdm}\) | \(n_s\) | \(F/M_{\rm Pl}\) | \(V_0/M_{\rm Pl}^2\) [Mpc\(^{-2}\)] | \(f_{\rm peak}\) | \(\ln\mathcal L_{\rm Planck+DESI}\) | fixed-control \(\Delta\chi^2\) |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 70.50 | 0.124 | 0.975 | 0.176747 | 122.778 | 0.065756 | -619.0669 | +177.656 |
+| 72.00 | 0.130 | 0.990 | 0.237342 | 235.520 | 0.116878 | -907.3921 | +754.307 |
+| 73.04 | 0.138 | 1.000 | 0.285653 | 363.129 | 0.164727 | -1490.3520 | +1920.226 |
+
+These observations demonstrate why restoring the **angular** acoustic scale alone is insufficient. The high-\(\ell\) and low-\(\ell\) Planck likelihoods deteriorate even while the DESI BAO terms of the tested models are sometimes more favorable than those of the fixed \(\Lambda\)CDM reference. The result constrains the chosen three-dimensional submanifold and is not a fit over all vanilla parameters, potential shapes, perturbation initial conditions, or nuisance parameters. A corresponding lower-\(H_0\) acoustic slice is provided by the separate [four-point workflow](https://github.com/sachamed/qict-code-data/actions/workflows/qict-lowh0-acoustic.yml).
+
 ## 6. The vacuum cannot be inferred from zero microscopic ground-state energy
 
 Both positive receiver parents have a zero-energy unexcited state in their isolated fixed-charge algebra. This alone does not calculate the renormalized gravitational cosmological constant: the absolute vacuum gravitation involves the full effective action and every coupled sector. The claimed \(N^{-4}\) relation between pre-recombination scalar density and late vacuum density is currently an unproved ansatz; its numerical closeness to selected EDE fractions is not evidence.
