@@ -117,7 +117,7 @@ edit("source/background.c",background)
 
 def input_f(s):
     needle="       else if (strstr(string1, \"DoubleExp\") != NULL)\n       {\n         pba->scf_potential = 9;\n       }"
-    addition=needle+"\n       else if (strstr(string1, \"QICT_finite_N\") != NULL)\n       {\n         pba->scf_potential = 10;\n       }"
+    if needle not in s: needle=needle.replace("       ","      ")\n    addition=needle+"\n       else if (strstr(string1, \"QICT_finite_N\") != NULL)\n       {\n         pba->scf_potential = 10;\n       }"
     s=replace_once(s,needle,addition,"input potential enum")
     marker="    /** 8.b.2) SCF initial conditions from attractor solution */"
     guard=r"""    /* Strict QICT test branch: fixed charge N>=3 and nonnegative mass coupling.
