@@ -1,0 +1,35 @@
+name: QICT early-era resonance Planck 37-point falsification
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/resonant-hubble-test-2026-11-07']
+    paths:
+      - '.github/workflows/qict-resonance-early-planck.yml'
+      - 'code/qict_resonance_early_planck_grid.py'
+permissions:
+  contents: read
+jobs:
+  early:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CAMB and official Planck 2018 data likelihoods
+        run: |
+          python -m pip install 'camb==2.0.5' 'cobaya>=3.5' scipy numpy
+          cobaya-install planck_2018_lowl.TT planck_2018_lowl.EE planck_2018_highl_plik.TTTEEE_lite_native -p /tmp/cobaya_packages
+      - name: Refit nonzero receiver amplitudes at zc 2500, 3000 and 3400
+        env:
+          PYTHONPATH: code
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: python code/qict_resonance_early_planck_grid.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-early-resonance-37-real-planck
+          path: results/qict_resonance_early_era/
+          if-no-files-found: warn
