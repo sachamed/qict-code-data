@@ -1,0 +1,61 @@
+name: QICT independent H0 likelihood profile (bounded diagnostic)
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/h0-profile-2026-11-07']
+    paths:
+      - 'code/qict_h0_profile_limited.py'
+      - '.github/workflows/qict-h0-profile-limited.yml'
+permissions:
+  contents: read
+jobs:
+  profile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 105
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify optimizer Python syntax
+        run: python -m py_compile code/qict_h0_profile_limited.py
+      - name: Install official Planck 2018 and DESI DR2 data likelihoods
+        run: |
+          python -m pip install 'cobaya>=3.5.6' cython setuptools wheel numpy scipy
+          cobaya-install planck_2018_highl_plik.TTTEEE_lite_native planck_2018_lowl.TT planck_2018_lowl.EE bao.desi_dr2 -p /tmp/cobaya_packages
+      - name: Checkout pinned interacting CLASS and apply QICT model patches
+        run: |
+          git clone --no-checkout https://github.com/kabeleh/iDM.git /tmp/qict_idm
+          git -C /tmp/qict_idm fetch --depth 1 origin dc55e59dec8f5c647df6e9d764f5c6960796e1df
+          git -C /tmp/qict_idm checkout --detach dc55e59dec8f5c647df6e9d764f5c6960796e1df
+          python scripts/patch_idm_qict_class.py /tmp/qict_idm
+          python code/qict_patch_negative_scf_shoot.py /tmp/qict_idm
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('/tmp/qict_idm/source/background.c')
+          old='#define _BACKGROUND_MAX_FEVALS_ 100000'
+          s=p.read_text()
+          assert s.count(old)==1
+          p.write_text(s.replace(old,'#define _BACKGROUND_MAX_FEVALS_ 350000'))
+          PY
+      - name: Compile genuine scalar-CDM Einstein-Boltzmann CLASS and classy
+        run: |
+          make -C /tmp/qict_idm -j2 class
+          python -m pip install -e /tmp/qict_idm --no-build-isolation
+          python - <<'PY'
+          from classy import Class
+          print('Pinned QICT CLASS loaded', Class)
+          PY
+      - name: Profile Planck and DESI likelihoods for QICT and LCDM independently
+        env:
+          PYTHONPATH: code
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+          QICT_MAXFEV: '65'
+        run: python code/qict_h0_profile_limited.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-lcdm-independent-h0-likelihood-profiles
+          path: results/qict_h0_profile/
+          if-no-files-found: warn
