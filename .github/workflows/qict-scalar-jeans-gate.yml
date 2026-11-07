@@ -1,0 +1,28 @@
+name: QICT finite-charge scalar tail Jeans consistency
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/three-epoch-physical-consistency-2026-11-07']
+    paths:
+      - 'code/qict_scalar_jeans_gate.py'
+      - '.github/workflows/qict-scalar-jeans-gate.yml'
+permissions:
+  contents: read
+jobs:
+  jeans:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compute finite-N scalar curvature and Jeans scale
+        run: |
+          python -m py_compile code/qict_scalar_jeans_gate.py
+          python code/qict_scalar_jeans_gate.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-scalar-tail-jeans-scale-analytic
+          path: results/qict_scalar_jeans_gate/
+          if-no-files-found: error
