@@ -1,0 +1,30 @@
+name: QICT parity and vacuum hierarchy exact finite-charge compatibility
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/three-epoch-physical-consistency-2026-11-07']
+    paths:
+      - 'code/qict_parity_vacuum_hierarchy.py'
+      - '.github/workflows/qict-parity-vacuum-hierarchy.yml'
+permissions:
+  contents: read
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check finite charge, spectral parity, and vacuum hierarchy
+        run: |
+          python -m pip install numpy
+          python -m py_compile code/qict_parity_vacuum_hierarchy.py
+          OPENBLAS_NUM_THREADS=1 python code/qict_parity_vacuum_hierarchy.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-parity-vacuum-hierarchy-analytic
+          path: results/qict_parity_vacuum_hierarchy/
+          if-no-files-found: warn
