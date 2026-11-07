@@ -1,0 +1,37 @@
+name: QICT exact three-epoch and charge-hierarchy consistency gate
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/three-epoch-physical-consistency-2026-11-07']
+    paths:
+      - 'code/qict_three_epoch_consistency.py'
+      - '.github/workflows/qict-three-epoch-analytic.yml'
+permissions:
+  contents: read
+jobs:
+  analytic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate and execute independent exact coherent-moment tests
+        run: |
+          python -m py_compile code/qict_three_epoch_consistency.py
+          python code/qict_three_epoch_consistency.py
+          python - <<'PY'
+          import json
+          d=json.load(open("results/qict_three_epoch_consistency/analytic_checks.json"))
+          assert d["status"]=="analytic_tests_passed"
+          assert d["test_count"]>=60
+          assert d["assumed_charge_hierarchy"]["status"]=="UNPROVEN_ANSATZ_NOT_PREDICTION"
+          print("QICT analytic gate passed with epistemic status preserved")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-three-epoch-analytic-consistency
+          path: results/qict_three_epoch_consistency/
+          if-no-files-found: error
