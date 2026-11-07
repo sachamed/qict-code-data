@@ -27,6 +27,8 @@ jobs:
           test "$(git -C /tmp/qict_idm rev-parse HEAD)" = dc55e59dec8f5c647df6e9d764f5c6960796e1df
       - name: Apply finite-N and mass-transfer patch
         run: python scripts/patch_idm_qict_class.py /tmp/qict_idm
+      - name: Fix negative scalar budget closure before CLASS compile
+        run: python code/qict_patch_negative_scf_shoot.py /tmp/qict_idm
       - name: Compile Einstein-Boltzmann CLASS model
         run: make -C /tmp/qict_idm -j2 class
       - name: Prepare non-fitted high-energy QICT inputs
