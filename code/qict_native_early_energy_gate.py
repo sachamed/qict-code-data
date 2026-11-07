@@ -8,8 +8,8 @@ from pathlib import Path
 import numpy as np
 
 BRANCHES = {
-    "0.00": (201.55504807115258, 0.0003940231249170709),
-    "0.02": (201.55504807115258, 0.00036879670990630508),
+    "0.00": (201.55504807115258, 0.0003940231249170709, 0.6861142701611976),
+    "0.02": (201.55504807115258, 0.00036879670990630508, 0.6861394965797705),
 }
 F = 0.225
 N = 250
@@ -25,13 +25,13 @@ def update(src, key, value):
 def prepare(class_root):
     # Start with the fork's own full input file, not a guessed minimal file.
     base = (class_root / "ini/iDM.ini").read_text()
-    for g, (v0, omega_today) in BRANCHES.items():
+    for g, (v0, omega_today, lambda_floor) in BRANCHES.items():
         params = f"{v0:.17g}, {F}, {N}, 0, 0, 0, 0, 0, 0, 0, {F*THETA_INITIAL:.17g}, 0"
         value_map = {
             "h":0.674,"omega_b":0.02237,"omega_cdm":0.12,
             "N_ncdm":0,"N_ur":3.044,"model_cdm":"i","cdm_c":g,
             "scf_potential":"QICT_finite_N","scf_parameters":params,
-            "Omega_scf":f"{omega_today:.17g}","Omega_fld":0,
+            "Omega_scf":-1,"Omega_Lambda":f"{lambda_floor:.17g}","Omega_fld":0,
             "attractor_ic_scf":"no","scf_tuning_index":0,
             "tol_initial_Omega_r":"1e-0","a_ini_over_a_today_default":"1e-20",
             "gauge":"newtonian","nbody_gauge_transfer_functions":"no",
@@ -42,7 +42,6 @@ def prepare(class_root):
         s = base
         for key, val in value_map.items():
             s = update(s,key,val)
-        s = re.sub(r"(?m)^\s*Omega_Lambda\s*=.*$", "# Omega_Lambda from energy budget",s)
         s = re.sub(r"(?m)^\s*H0\s*=.*$", "# H0 set through h",s)
         dest = class_root / f"qict_early_g{g}.ini"
         dest.write_text(s)
