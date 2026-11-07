@@ -53,9 +53,16 @@ class QICTDirectRotor(Theory):
         state["Cl"]={"ell":np.arange(pp.size),"tt":cl[:,0],
                      "ee":cl[:,1],"bb":cl[:,2],"te":cl[:,3],"pp":pp}
         state["derived"]={}
+        # EarlyQuintessence's use_zc solver may update the parameters stored
+        # in the returned result, not in the input CAMBparams. Record BOTH.
+        output_de=result.Params.DarkEnergy
+        zs=np.array([1000.,2500.,3400.,4000.,6500.])
         state["micro_match"]={"n":3,"theta_i":float(p["theta_i"]),
-           "inferred_F_over_Mpl":float(cp.DarkEnergy.f),
-           "inferred_m":float(cp.DarkEnergy.m),
+           "f_input_seed":float(cp.DarkEnergy.f),
+           "m_input_seed":float(cp.DarkEnergy.m),
+           "f_result":float(output_de.f),
+           "m_result":float(output_de.m),
+           "omega_de_z":{str(int(z)):float(result.get_Omega("de",z=float(z))) for z in zs},
            "rdrag":float(result.get_derived_params()["rdrag"]),
            "thetastar":float(result.get_derived_params().get("thetastar",np.nan))}
         return True
