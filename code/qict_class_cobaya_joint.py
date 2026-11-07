@@ -47,7 +47,7 @@ def run():
            "scf_parameters":param_list,"attractor_ic_scf":"no",
            "scf_tuning_index":0,"Omega_scf":1e-8,
            "gauge":"newtonian",
-           "Omega_fld":0,
+           "Omega_fld":0,"non_linear":None,
            "N_ncdm":1,"m_ncdm":0.06,"N_ur":2.0328,
            
         }}},
