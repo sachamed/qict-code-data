@@ -1,0 +1,31 @@
+name: QICT resonant direct CAMB diagnostic
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/resonant-hubble-test-2026-11-07']
+    paths: ['.github/workflows/qict-resonance-direct-probe.yml']
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CAMB and Cobaya runtime
+        run: python -m pip install 'camb==2.0.5' 'cobaya>=3.5' numpy scipy
+      - name: Probe QICT nonzero resonance and fail on nonfinite spectra
+        env:
+          PYTHONPATH: code
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: python code/qict_resonance_direct_probe.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-resonance-direct-camb-diagnostic
+          path: results/qict_resonance_probe/
+          if-no-files-found: warn
