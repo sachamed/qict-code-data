@@ -33,7 +33,7 @@ for H0 in H_GRID:
  row={"H0_input":H0,"Omega_Lambda":lam}
  try:
   model=get_model(info)
-  val=model.logposterior(as_dict=True)
+  val=model.logposterior({},as_dict=True)
   likes={str(k):float(v) for k,v in val["loglikes"].items()}
   if not likes or not all(np.isfinite(v) for v in likes.values()): raise ValueError("a likelihood is not finite")
   row.update({"status":"computed","loglikes":likes,"total_without_SH0ES":float(sum(likes.values())),
