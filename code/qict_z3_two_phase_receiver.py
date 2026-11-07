@@ -9,6 +9,7 @@ import numpy as np
 
 N=250
 M=np.array([[-1,1],[-1,0]],dtype=int)
+R=np.array([[0,1],[1,0]],dtype=int)  # swap receiver channels 1 and 2
 LINK=np.array([[1,0],[-1,1],[0,-1]],dtype=int)
 A=np.array([[2.,-1.],[-1.,2.]])
 G=A/3
@@ -34,16 +35,28 @@ def hessian(q):
     p1=a+2*b*x+3*c*x*x;p2=2*b+6*c*x
     return LINK.T@np.diag(p2*np.sin(th)**2+p1*np.cos(th))@LINK
 
+def sign_operator(q):
+    """Cyclic invariant, reflection-odd cubic composite of three link phases."""
+    a,b=np.asarray(q,float)
+    return float(np.sin(a)+np.sin(b-a)-np.sin(b))
+
 def main():
     assert np.array_equal(M@M@M,np.eye(2,dtype=int))
+    assert np.array_equal(R@R,np.eye(2,dtype=int))
+    assert np.array_equal(R@M@R,M@M)
+    assert np.array_equal(R.T@A@R,A)
     assert np.array_equal(M.T@A@M,A)
     assert np.linalg.matrix_rank(G)==2
     assert np.all(np.linalg.eigvalsh(G)>0)
-    checks=4
+    checks=7
     for q in ([0,0],[.02,.3],[.4,1.1],[1.3,-.9],[2.7,.8]):
       q=np.array(q,float)
       for exact in (False,True):
         assert np.isclose(V(q,exact),V(M@q,exact),atol=1e-12);checks+=1
+        assert np.isclose(V(q,exact),V(R@q,exact),atol=1e-12);checks+=1
+      assert abs(sign_operator(M@q)-sign_operator(q))<1e-12
+      assert abs(sign_operator(R@q)+sign_operator(q))<1e-12
+      checks+=2
       assert np.allclose(grad(M@q),np.linalg.solve(M.T,grad(q)),atol=1e-12)
       assert np.allclose(hessian(M@q),np.linalg.solve(M.T,hessian(q))@np.linalg.inv(M),atol=1e-12)
       assert V(q)>=-1e-12;checks+=3
@@ -51,7 +64,8 @@ def main():
     masses=np.linalg.eigvals(np.linalg.solve(G,H))
     expected=12/(N*N)
     assert np.allclose(masses,[expected,expected],rtol=1e-12)
-    assert np.allclose(H,coeffs(N)[0]*A);checks+=2
+    assert np.allclose(H,coeffs(N)[0]*A)
+    assert np.allclose(R.T@H@R,H);checks+=3
     for th in (.2,1.,2.5,3.):
       assert abs((1-math.cos(th))**3-(2.5-3.75*math.cos(th)+1.5*math.cos(2*th)-.25*math.cos(3*th)))<5e-14
       checks+=1
@@ -61,7 +75,11 @@ def main():
       "microscopic_hypothesis":"three independent phase-bearing channels plus one redundant diagonal U(1)",
       "hypothesis_not_derived_from_QICT":True,
       "relative_phase_space":"U(1)^3/U(1)_diag = T²",
-      "Z3_rotation":M.tolist(),"kinetic_metric":G.tolist(),
+      "Z3_rotation":M.tolist(),"channel_reflection":R.tolist(),
+      "conditional_full_group":"D3 is isomorphic to S3 if channel reflection is an exact microscopic involution",
+      "reflection_odd_C3_invariant_composite":"sin(alpha)+sin(beta-alpha)-sin(beta)=4 sin(alpha/2)sin((beta-alpha)/2)sin(beta/2)",
+      "composite_particle_warning":"a reflection-odd composite operator is not proof of an elementary stable dark matter particle",
+      "kinetic_metric":G.tolist(),
       "link_angles":"alpha,beta-alpha,-beta",
       "invariant_potential":"sum over links of P_N(1-cos(angle)); P_N finite-charge coherent polynomial",
       "finite_N_coefficients":coeffs(N),
