@@ -40,7 +40,8 @@ def run():
     param_list="2.5e-16, 0.35, 250., 0., 0., 0., 0., 0., 0., 0., 0.875, 0."
     info={
       "packages_path":"/tmp/cobaya_packages",
-      "theory":{"classy":{
+      "debug":True,
+      "theory":{"classy":{"stop_at_error":True,
         "extra_args":{
            "model_cdm":"i","scf_potential":"QICT_finite_N",
            "scf_parameters":param_list,"attractor_ic_scf":"no",
