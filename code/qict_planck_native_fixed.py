@@ -45,7 +45,9 @@ class QICTFixedTheory(Theory):
         else:
             cp.set_dark_energy_w_a(a,w,dark_energy_model='fluid')
         cp.set_for_lmax(self._lmax,lens_potential_accuracy=4,
-                     lens_output_margin=1250,nonlinear=False)
+                     lens_output_margin=1250,nonlinear=True)
+        cp.NonLinearModel.set_params(halofit_version='mead2016')
+        cp.NonLinear=camb.model.NonLinear_both
         r=camb.get_results(cp)
         C=r.get_cmb_power_spectra(cp,CMB_unit='muK',raw_cl=True,
                                   lmax=self._lmax)['total']
@@ -84,6 +86,7 @@ def run(packages):
           lam=.03776,mnu=.06,A_planck=1.0)
     out={'engine':'Cobaya native Planck 2018 likelihoods + CAMB',
          'highl_statistical_object':'official released foreground-marginalized Plik-lite, not multifrequency nuisance-unmarginalized Plik',
+         'nonlinear_theory':'CAMB HMCode mead2016, NonLinear_both',
          'theory':'QICT one-pole decoupled canonical scalar fluid',
          'constraints':'fixed point, no MCMC posterior',
          'cmb_primary_overlap':'no ACT DR6 primary spectra added',
