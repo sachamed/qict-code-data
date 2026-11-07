@@ -24,7 +24,7 @@ for g in (0.0,0.02):
         "Omega_scf":"1e-8",
         "gauge":"newtonian",
         "output":"tCl,pCl,lCl,mPk",
-        "l_max_scalars":"1250",
+        "l_max_scalars":"4000",
         "l_max_lss":"120",
         "nbody_gauge_transfer_functions":"no",
         "root":f"results/qict_class_g{g:.2f}_",
