@@ -18,7 +18,7 @@ likes=["planck_2018_highl_plik.TTTEEE_lite_native",
        "act_dr6_lenslike.ACTDR6LensLike","bao.desi_dr2"]
 info={"packages_path":"/tmp/cobaya_packages",
  "theory":{"camb":{"extra_args":{"halofit_version":"mead2016",
-               "lens_potential_accuracy":4,"lens_margin":1250,
+               "lens_potential_accuracy":4,
                "nonlinear":True,"num_massive_neutrinos":1}}},
  "likelihood":{
    "planck_2018_highl_plik.TTTEEE_lite_native":None,
