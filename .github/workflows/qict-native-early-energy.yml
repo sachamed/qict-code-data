@@ -29,6 +29,17 @@ jobs:
         run: python scripts/patch_idm_qict_class.py /tmp/qict_idm
       - name: Fix negative scalar budget closure before CLASS compile
         run: python code/qict_patch_negative_scf_shoot.py /tmp/qict_idm
+      - name: Bounded stiffness diagnostic allowance
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          source=Path("/tmp/qict_idm/source/background.c")
+          t=source.read_text()
+          old="#define _BACKGROUND_MAX_FEVALS_ 100000"
+          assert t.count(old)==1
+          source.write_text(t.replace(old,"#define _BACKGROUND_MAX_FEVALS_ 350000"))
+          print("Finite energy: 350k background derivative-evaluation cap (diagnostic)",flush=True)
+          PY
       - name: Compile Einstein-Boltzmann CLASS model
         run: make -C /tmp/qict_idm -j2 class
       - name: Prepare non-fitted high-energy QICT inputs
@@ -44,7 +55,7 @@ jobs:
           git -C /tmp/qict_idm rev-parse HEAD > results/qict_native_early_energy/upstream_commit.txt
           for g in 0.00 0.02; do
             echo "Computing physical early-energy QICT branch g=$g"
-            if ! (cd /tmp/qict_idm && ./class qict_early_g$g.ini) > results/qict_native_early_energy/CLASS_g$g.log 2>&1; then
+            if ! (cd /tmp/qict_idm && timeout 120s ./class qict_early_g$g.ini) > results/qict_native_early_energy/CLASS_g$g.log 2>&1; then
               tail -n 140 results/qict_native_early_energy/CLASS_g$g.log
               exit 1
             fi
