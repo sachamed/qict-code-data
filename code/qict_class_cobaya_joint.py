@@ -49,7 +49,7 @@ def run():
            "gauge":"newtonian",
            "Omega_fld":0,
            "N_ncdm":1,"m_ncdm":0.06,"N_ur":2.0328,
-           "non linear":"hmcode",
+           
         }}},
       "likelihood":{
            "planck_2018_highl_plik.TTTEEE_lite_native":None,
@@ -71,6 +71,7 @@ def run():
        "baseline":"g=0 vs g=.02, weak 1e-8 present scalar, other cosmological parameters fixed",
        "joint_sources":"Planck Plik-lite TTTEEE+Commander lowTT+SimAll lowEE+official joint ACT-Planck DR6 lensing+DESI DR2 BAO; local H0 Gaussian separate",
        "ACT_corrections":"lens_only=False,like_corrections=True,ACTPlanck variant",
+       "nonlinear_matter":"OFF: linear CMB lensing only in this interface-gate test; not a production-quality lensing likelihood fit",
        "ACT_primary_overlap":"not included","MCMC_converged":False,
        "m_chi_absolute_eV":None,"relic_abundance_absolute_prediction":None,
        "code":"classy from patched /tmp/qict_idm; one cosmological model at two g values",
