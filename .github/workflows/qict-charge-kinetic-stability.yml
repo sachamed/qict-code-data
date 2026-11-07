@@ -1,0 +1,28 @@
+name: QICT convex receiver kinetic and scalar sound speed audit
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/three-epoch-physical-consistency-2026-11-07']
+    paths:
+      - 'code/qict_charge_kinetic_positivity.py'
+      - '.github/workflows/qict-charge-kinetic-stability.yml'
+permissions:
+  contents: read
+jobs:
+  kinetic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify convex microscopic charge Hamiltonian and kinetic EFT
+        run: |
+          python -m py_compile code/qict_charge_kinetic_positivity.py
+          python code/qict_charge_kinetic_positivity.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: qict-convex-inertia-sound-speed-stability
+          path: results/qict_charge_kinetic_stability/
+          if-no-files-found: error
