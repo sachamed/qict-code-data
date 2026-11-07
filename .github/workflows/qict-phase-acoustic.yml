@@ -1,0 +1,54 @@
+name: QICT receiver phase scan at fixed physical peak and observed acoustic angle
+on:
+  workflow_dispatch:
+  push:
+    branches: ['qict/three-epoch-physical-consistency-2026-11-07']
+    paths:
+      - 'code/qict_phase_acoustic_scan.py'
+      - '.github/workflows/qict-phase-acoustic.yml'
+permissions:
+  contents: read
+jobs:
+  phase:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install official Planck 2018 and DESI DR2 likelihoods
+        run: |
+          python -m pip install 'cobaya>=3.5.6' numpy scipy cython setuptools wheel
+          cobaya-install planck_2018_highl_plik.TTTEEE_lite_native planck_2018_lowl.TT planck_2018_lowl.EE bao.desi_dr2 -p /tmp/cobaya_packages
+      - name: Compile pinned QICT finite-charge interacting CLASS
+        run: |
+          git clone --no-checkout https://github.com/kabeleh/iDM.git /tmp/qict_idm
+          git -C /tmp/qict_idm fetch --depth 1 origin dc55e59dec8f5c647df6e9d764f5c6960796e1df
+          git -C /tmp/qict_idm checkout --detach dc55e59dec8f5c647df6e9d764f5c6960796e1df
+          python scripts/patch_idm_qict_class.py /tmp/qict_idm
+          python code/qict_patch_negative_scf_shoot.py /tmp/qict_idm
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('/tmp/qict_idm/source/background.c')
+          s=p.read_text()
+          old='#define _BACKGROUND_MAX_FEVALS_ 100000'
+          assert s.count(old)==1
+          p.write_text(s.replace(old,'#define _BACKGROUND_MAX_FEVALS_ 350000'))
+          PY
+          make -C /tmp/qict_idm -j2 class
+          python -m pip install -e /tmp/qict_idm --no-build-isolation
+      - name: Independently calibrate each phase and evaluate official likelihoods
+        env:
+          PYTHONPATH: code
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: |
+          python -m py_compile code/qict_phase_acoustic_scan.py
+          python code/qict_phase_acoustic_scan.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-receiver-phase-matched-acoustic-planck-desi
+          path: results/qict_phase_scan/
+          if-no-files-found: warn
