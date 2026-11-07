@@ -40,6 +40,8 @@ for H0 in hgrid:
         a,w,E,f,err,floor=history(H0=H0,A=A)
         p=model.logposterior({"H0":H0,"A_res":A},as_dict=True)
         ll={name:float(v) for name,v in p["loglikes"].items()}
+        if not np.all(np.isfinite(list(ll.values()))):
+            raise RuntimeError("Planck likelihood not finite: numerical evaluation failed; no statistical comparison")
         row.update({"status":"computed","loglikes":ll,
           "planck_primary_lnlike":float(sum(ll.values())),
           "max_w":float(np.max(w)),"min_w":float(np.min(w)),
