@@ -32,7 +32,7 @@ def info_for(h0):
                 "scf_parameters":MODEL_PARAMETERS,
                 "attractor_ic_scf":"no","scf_tuning_index":0,
                 "Omega_scf":-1,"Omega_Lambda":omega_lam,
-                "Omega_fld":0,"gauge":"newtonian",
+                "Omega_fld":0,"non_linear":None,"gauge":"newtonian",
                 "N_ncdm":0,"N_ur":NEFF,
                 "lensing":"yes",
             }
