@@ -1,7 +1,7 @@
 name: QICT calibrated H0 70 Planck ACT-Planck lensing DESI independent check
 on:
   push:
-    branches: ['qict/coupled-joint-likelihood-gate-2026-11-07']
+    branches: ['qict/three-epoch-physical-consistency-2026-11-07']
     paths:
       - '.github/workflows/qict-calibrated-joint-lensing-H0-70.yml'
       - 'code/qict_calibrated_joint_lensing_H0_70.py'
