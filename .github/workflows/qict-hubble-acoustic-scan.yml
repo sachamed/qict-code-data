@@ -1,0 +1,71 @@
+name: QICT high early energy H0 acoustic geometry scan
+on:
+  push:
+    branches: ['qict/coupled-joint-likelihood-gate-2026-11-07']
+    paths:
+      - '.github/workflows/qict-hubble-acoustic-scan.yml'
+      - 'code/qict_hubble_acoustic_scan.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  h0_geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: python -m pip install numpy
+      - name: Checkout fixed Einstein-Boltzmann source
+        run: |
+          git clone --no-checkout https://github.com/kabeleh/iDM.git /tmp/qict_idm
+          git -C /tmp/qict_idm fetch --depth 1 origin dc55e59dec8f5c647df6e9d764f5c6960796e1df
+          git -C /tmp/qict_idm checkout --detach dc55e59dec8f5c647df6e9d764f5c6960796e1df
+          test "$(git -C /tmp/qict_idm rev-parse HEAD)" = dc55e59dec8f5c647df6e9d764f5c6960796e1df
+      - name: Apply finite-N QICT and scalar closure source patches
+        run: |
+          python scripts/patch_idm_qict_class.py /tmp/qict_idm
+          python code/qict_patch_negative_scf_shoot.py /tmp/qict_idm
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('/tmp/qict_idm/source/background.c')
+          s=p.read_text()
+          old='#define _BACKGROUND_MAX_FEVALS_ 100000'
+          assert s.count(old)==1
+          p.write_text(s.replace(old,'#define _BACKGROUND_MAX_FEVALS_ 350000'))
+          PY
+      - name: Compile native CLASS and prepare H0 models
+        env:
+          PYTHONPATH: code
+        run: |
+          make -C /tmp/qict_idm -j2 class
+          mkdir -p /tmp/qict_idm/results results/qict_hubble_geometry
+          python code/qict_hubble_acoustic_scan.py prepare --class-root /tmp/qict_idm
+          cp /tmp/qict_idm/qict_scan_h*.ini results/qict_hubble_geometry/
+          git -C /tmp/qict_idm rev-parse HEAD > results/qict_hubble_geometry/upstream_commit.txt
+      - name: Run six native high-energy models and retain full spectra
+        env:
+          OMP_NUM_THREADS: '2'
+          OPENBLAS_NUM_THREADS: '2'
+        run: |
+          for h in 67.40 69.50 71.50 73.04 75.00 77.00; do
+            echo "QICT native H0=$h"
+            if ! (cd /tmp/qict_idm && timeout 120s ./class qict_scan_h${h}.ini) > results/qict_hubble_geometry/CLASS_h${h}.log 2>&1; then
+              tail -n 100 results/qict_hubble_geometry/CLASS_h${h}.log
+              exit 1
+            fi
+            cp /tmp/qict_idm/results/qict_scan_h${h}* results/qict_hubble_geometry/
+          done
+      - name: Validate acoustic geometry and complete high-l CMB spectra
+        env:
+          PYTHONPATH: code
+        run: python code/qict_hubble_acoustic_scan.py validate --results results/qict_hubble_geometry
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qict-h0-native-geometric-forward-scan
+          path: results/qict_hubble_geometry/
+          if-no-files-found: warn
