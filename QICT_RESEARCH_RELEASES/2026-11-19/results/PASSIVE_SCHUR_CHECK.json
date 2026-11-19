@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "tests": 720,
+  "independent_Hermitian_instances": 240,
+  "identity": "partial_E Ginv = I + B (E I - D)^(-2) B_dagger >= I",
+  "scope": "finite dimensional selfadjoint energy-independent H; normalized orthogonal source projection; real E outside sigma(D)"
+}

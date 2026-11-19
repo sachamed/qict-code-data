@@ -1,0 +1,10 @@
+{
+  "classification": "mathematical graph comparator, not actual microscopic seventh-cell holonomy",
+  "vertices": 4,
+  "edges": 5,
+  "cycle_rank": 2,
+  "random_comparisons": 200,
+  "largest_gauge_invariance_or_gradient_fit_error": 4.685680459230494e-16,
+  "nontrivial_cycle_phase_shift": 0.21213203435596428,
+  "theorem": "On a connected finite graph, full cycle holonomies determine edge U(1) phases up to vertex rephasing; specifying a clock reference fixes that last gauge."
+}

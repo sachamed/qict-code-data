@@ -61,3 +61,9 @@ The two independently supplied research packages are now published in their enti
 ## Conservative repository cleanup (19 October 2026)
 
 The cleanup removes only two proved redundant files: the duplicate root export manifest (`MANIFEST_SHA256.txt`, equivalent to `GITHUB_EXPORT_SHA256.txt` after removing the leading `./` in paths) and the duplicate `QICT_FULL_PHYSICAL_EXECUTION/hpc/run_l24_ucone.slurm` (byte-identical to the retained `hpc/run_l24.slurm`). Source snapshots, original 137-file releases, hashes, numerical arrays, program dependencies, and all reproducible evidence remain intact. Identical Git blobs are already stored once by Git, so duplicate paths do not automatically imply wasted storage. Historical `DEDUPLICATION_AUDIT.json` describes the older snapshot, not the latest releases.
+
+## Causal dynamics and spectral structure — 19 November 2026
+
+The [19 November research update](QICT_RESEARCH_RELEASES/2026-11-19/README.md) publishes source-preserving finite checks for clock–geometry cycle holonomies, Floquet quasienergy ambiguity and the passive Hermitian Schur-slope identity. These checks are associated with the manuscript *Quantum Information Copy Time: Causal Dynamics, Spectral Structure, and Emergent Geometry*.
+
+The original audited 19 November submission archive has SHA-256 `223cff38d7a1dbb1cb4cd9f90e3875f2aa0726e47a27bdd11edfc7e869eea8da` (199,192,790 bytes). This checksum records the locally audited archive; the 190 MB archive itself is **not** uploaded to this GitHub release. The published scripts and results are individually traceable to paths in that archive. No complete physical C8/C10 charged propagator, absolute lepton masses or emergent Newton coupling are claimed.
