@@ -1,0 +1,12 @@
+{
+  "status": "PASS_FINITE_SCHUR_CONDITIONS",
+  "scope": "Finite-dimensional checks, separate from analytic spectral-theorem proof and physical QICT mirror-sector decoupling",
+  "indefinite_counterexample_value": -0.28125,
+  "indefinite_counterexample_exact_expression": "-b^2/Delta",
+  "operator_order_rejected_for_indefinite_block": true,
+  "operator_order_verified_under_M_greater_equal_Delta_I": true,
+  "random_matrix_cases_checked": 200,
+  "seed": 20261122,
+  "positive_case_min_observed_eigenvalue": 0.0026009528484566835,
+  "full_physical_mirror_gap_proven": false
+}

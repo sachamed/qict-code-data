@@ -1,0 +1,12 @@
+{
+  "status": "PASS_INDEPENDENT_CG_VERTEX_AND_SINGLE_LOOP_CHECKS",
+  "direct_four_valent_CG_contractions": 360,
+  "coherent_off_diagonal_vertex_cases": 208,
+  "negative_Wilson_matrix_elements_checked": 56,
+  "direct_CG_vs_Racah_max_error": 6.661338147750939e-16,
+  "single_loop_vs_independent_character_spinor_max_error": 1.1102230246251565e-16,
+  "neutral_witness_weighted_norm_exact": true,
+  "source_certificate_sha256": "89288f3b28c765bd7caaef452d7f5c472f1db4127a61d6fff4414721c7158970",
+  "scope": "Independent full-vertex tensor contraction, including J_left!=J_right and signed off-diagonal matrix elements; actual shared-link SU2 component only.",
+  "full_C10_contract_completed": false
+}
