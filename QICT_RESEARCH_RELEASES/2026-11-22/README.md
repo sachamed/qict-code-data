@@ -34,10 +34,13 @@ From the release directory with numpy and scipy installed:
     python reproducibility/code/verify_coupled_su2_vertices.py
 
 The SU(2) scripts expect their dependencies in the same code directory.
-They write outputs under reproducibility/results/. The archived numerical
-binary state .npz and full 91 KB SU(2) certificate remain in the journal ZIP,
-not in this curated GitHub update. The JSON summaries here are not substitutes
-for the omitted binary state when checking byte-for-byte reproduction.
+The 1.8 MB frozen physical-chain input payload is included at
+reproducibility/data/common_physical_chain/L24_N9_CHARGED_RANK6_PRECONTRACTION_PAYLOAD.npz
+and matches the journal ZIP byte-for-byte (Git blob 4165bb88e2d6785d9514612e3e8c89c18c101ac9).
+The scripts generate their state NPZ, the full numerical certificate and an
+independent verifier certificate under reproducibility/results/.
+Archived output NPZ and the full 91 KB certificate are in the journal ZIP but
+are not included as precomputed outputs in this curated GitHub update.
 
 ## Scope and limitations
 These checks concern finite SU(2) and Schur benchmarks; they do not establish
